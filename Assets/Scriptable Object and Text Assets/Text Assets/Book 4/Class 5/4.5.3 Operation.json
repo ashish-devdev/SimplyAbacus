@@ -1,0 +1,144 @@
+{
+	"Add":
+	[		
+	
+		
+		{
+			"num_of_oprations":3,
+			"numbers":[3,4,-7],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[4,7,-7],
+			"Result":1,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[9,1,-7],
+			"Result":1,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":3,
+			"numbers":[6,5,-7],
+			"Result":0,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":3,
+			"numbers":[ 8,8,-7],
+			"Result":0,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[7,3,-7],
+			"Result":1,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[9,2,-7],
+			"Result":0,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[3,9,-8],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":3,
+			"numbers":[4,6,-7],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":3,
+			"numbers":[9,1,-9],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+
+
+		
+		{
+			"num_of_oprations":4,
+			"numbers":[29,3,8,-6],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":4,
+			"numbers":[48,2,-7,-9],
+			"Result":1,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers":[56,9,-7,-9],
+			"Result":1,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":4,
+			"numbers":[15,-7,2,-8],
+			"Result":0,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":4,
+			"numbers":[64,3,9,-7],
+			"Result":0,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers":[36,4,-7,1],
+			"Result":1,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":4,
+			"numbers":[46,5,-7,1],
+			"Result":0,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers":[25,-1,6,-7],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":4,
+			"numbers":[80,90,80,-70],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":4,
+			"numbers":[40,60,-70,40],
+			"Result":2,
+			"status":"unsolved"
+		}
+	]
+
+}

@@ -1,0 +1,41 @@
+{
+	"operation":
+	[	
+		{
+			"problem":"204.2/2.4",
+			"result":"204.2/2.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"131.42+1",
+			"result":"131.42+1",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"220/7",
+			"result":"220/7",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"10+2+3",
+			"result":"10+2+3",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"10/3",
+			"result":"10/3",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"31.428571+0.0000009",
+			"result":"31.428571+0.0000009",
+			"status":"unsolved"
+		}
+	]
+
+}

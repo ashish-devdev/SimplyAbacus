@@ -1,0 +1,33 @@
+{
+	"questions":
+	[	
+		{
+			"problem":"23.3+66",
+			"number":[],
+			"result":"23.3+66",
+			"status":"unsolved"
+		},
+
+		{
+			"problem":"Add 12 untill you reach 144",
+			"number":[144,12],
+			"result":"144/12",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"Put 2369 and reduce 23 till 0",
+			"number":[2369,23],
+			"result":"2369/23",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"_+32=66",
+			"number":[],
+			"result":"66-32",
+			"status":"unsolved"
+		}
+	]
+
+}

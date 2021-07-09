@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ColoringAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 7228e5c45935ba74dadbd64d2c8f8de3, type: 3}
+    - {fileID: 2800000, guid: 092ebbe718cc72243ab755be90472b55, type: 3}
+    - {fileID: 2800000, guid: 941c683b5ec7f1d4a8e35186115b76f2, type: 3}
+    - {fileID: 2800000, guid: 9fc04fe1841c1fa4cb4726b596d19673, type: 3}
+    - {fileID: 2800000, guid: 2ce0a731f3c5e624eb98138b08ef2807, type: 3}
+    - {fileID: 2800000, guid: 9686657cf9f41e74789085bf2de40be8, type: 3}
+    - {fileID: 2800000, guid: 8a3ddaeb454c92d4b9f2730e52fade56, type: 3}
+    - {fileID: 2800000, guid: b02726d37969b7343b128ce06cea7d35, type: 3}
+    - {fileID: 2800000, guid: fb7ff313448d11b45af4cae90560749b, type: 3}
+    - {fileID: 2800000, guid: 08d327b66dbe32b449c80ba022afcea9, type: 3}
+    - {fileID: 2800000, guid: e1414244ff72cf64cbcc846db4fa4101, type: 3}
+    - {fileID: 2800000, guid: efe0270bb95039e40be2afe5c98c382d, type: 3}
+    - {fileID: 2800000, guid: 22482e64390c6fe41affa8e9477b2825, type: 3}
+    - {fileID: 2800000, guid: ff261f38fb43d1440b9276e83416fdf4, type: 3}
+    - {fileID: 2800000, guid: c654ca316e150574d8daff7da554ddbd, type: 3}
+    - {fileID: 2800000, guid: a3a212ddfd50bf34c98ca35f38126eb1, type: 3}
+    - {fileID: 2800000, guid: 061e1ba74f4d26b44bf0f0365bb901f3, type: 3}
+    - {fileID: 2800000, guid: 9f646add4aad663439d6ed6a47adb3cc, type: 3}
+    - {fileID: 2800000, guid: 30a81f3edaecaca429a415a5adbf6a54, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 2ce0a731f3c5e624eb98138b08ef2807, type: 3}
+  - {fileID: 21300000, guid: c654ca316e150574d8daff7da554ddbd, type: 3}
+  - {fileID: 21300000, guid: 9fc04fe1841c1fa4cb4726b596d19673, type: 3}
+  - {fileID: 21300000, guid: fb7ff313448d11b45af4cae90560749b, type: 3}
+  - {fileID: 21300000, guid: b02726d37969b7343b128ce06cea7d35, type: 3}
+  - {fileID: 21300000, guid: e1414244ff72cf64cbcc846db4fa4101, type: 3}
+  - {fileID: 21300000, guid: 22482e64390c6fe41affa8e9477b2825, type: 3}
+  - {fileID: 21300000, guid: 7228e5c45935ba74dadbd64d2c8f8de3, type: 3}
+  - {fileID: 21300000, guid: 08d327b66dbe32b449c80ba022afcea9, type: 3}
+  - {fileID: 21300000, guid: 061e1ba74f4d26b44bf0f0365bb901f3, type: 3}
+  - {fileID: 21300000, guid: 092ebbe718cc72243ab755be90472b55, type: 3}
+  - {fileID: 21300000, guid: ff261f38fb43d1440b9276e83416fdf4, type: 3}
+  - {fileID: 21300000, guid: efe0270bb95039e40be2afe5c98c382d, type: 3}
+  - {fileID: 21300000, guid: 941c683b5ec7f1d4a8e35186115b76f2, type: 3}
+  - {fileID: 21300000, guid: 8a3ddaeb454c92d4b9f2730e52fade56, type: 3}
+  - {fileID: 21300000, guid: 9686657cf9f41e74789085bf2de40be8, type: 3}
+  - {fileID: 21300000, guid: a3a212ddfd50bf34c98ca35f38126eb1, type: 3}
+  - {fileID: 21300000, guid: 9f646add4aad663439d6ed6a47adb3cc, type: 3}
+  - {fileID: 21300000, guid: 30a81f3edaecaca429a415a5adbf6a54, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Green_PNG 1
+  - 3
+  - Brown_PNG
+  - Red_PNG 1
+  - Orange_PNG
+  - Yellow_PNG 1
+  - 1
+  - Blue_PNG 1
+  - Red_PNG
+  - 5
+  - Blue_PNG
+  - 2
+  - Yellow_PNG
+  - Brown_PNG 1
+  - Orange_PNG 1
+  - Green_PNG
+  - 4
+  - 6
+  - 7
+  m_Tag: ColoringAtlas
+  m_IsVariant: 0

@@ -1,0 +1,136 @@
+{
+	"Add": [
+
+
+		
+		{
+			"num_of_oprations":3,
+			"numbers": [1,4,3],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [2,4,1],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [3,4,2],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [4,-3,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [2,-1,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [4,4,1],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [8,-5,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [1,1,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [9,-6,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers": [2,2,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+
+
+
+
+
+
+		{
+			"num_of_oprations":4,
+			"numbers": [33,4,-5,1],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [61,4,4,3],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [52,4,-6,8],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [74,-2,1,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [82,2,4,-7],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [55,4,-6,3],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [41,3,-3,4],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [59,-6,4,1],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [10,40,20,10],
+			"Result": 2,
+			"status": "unsolved"
+		},
+		{
+			"num_of_oprations":4,
+			"numbers": [30,10,40,10],
+			"Result": 2,
+			"status": "unsolved"
+		}
+
+
+	]
+
+}

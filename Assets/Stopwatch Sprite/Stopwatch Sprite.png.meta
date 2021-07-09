@@ -1,0 +1,722 @@
+fileFormatVersion: 2
+guid: 59a28083acff69b4e971dc4f7901c31c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3547592785274027278
+    second: Stopwatch Sprite_0
+  - first:
+      213: -4865487871640308142
+    second: Stopwatch Sprite_1
+  - first:
+      213: -3654445267482418092
+    second: Stopwatch Sprite_2
+  - first:
+      213: 4270604753451121284
+    second: Stopwatch Sprite_3
+  - first:
+      213: -5329007229216396335
+    second: Stopwatch Sprite_4
+  - first:
+      213: 7358433260872716939
+    second: Stopwatch Sprite_5
+  - first:
+      213: -1589569426297803995
+    second: Stopwatch Sprite_6
+  - first:
+      213: -2074852544836387905
+    second: Stopwatch Sprite_7
+  - first:
+      213: 2940648925849555517
+    second: Stopwatch Sprite_8
+  - first:
+      213: -43162979189398920
+    second: Stopwatch Sprite_9
+  - first:
+      213: 8513524440667841942
+    second: Stopwatch Sprite_10
+  - first:
+      213: -1372706441680590634
+    second: Stopwatch Sprite_11
+  - first:
+      213: 6134629304780556083
+    second: Stopwatch Sprite_12
+  - first:
+      213: 7170428889026133004
+    second: Stopwatch Sprite_13
+  - first:
+      213: 7807479403974299132
+    second: Stopwatch Sprite_14
+  - first:
+      213: -2060164796440281970
+    second: Stopwatch Sprite_15
+  - first:
+      213: 3635216525750755377
+    second: Stopwatch Sprite_16
+  - first:
+      213: -609945036684406413
+    second: Stopwatch Sprite_17
+  - first:
+      213: -1023888757610457501
+    second: Stopwatch Sprite_18
+  - first:
+      213: 4314141793594519506
+    second: Stopwatch Sprite_19
+  - first:
+      213: -3816349329823636370
+    second: Stopwatch Sprite_20
+  - first:
+      213: -6353500522091086084
+    second: Stopwatch Sprite_21
+  - first:
+      213: -8608569565682971553
+    second: Stopwatch Sprite_22
+  - first:
+      213: 756885310110131266
+    second: Stopwatch Sprite_23
+  - first:
+      213: -9204740322209775462
+    second: Stopwatch Sprite_24
+  - first:
+      213: -5669515654439887561
+    second: Stopwatch Sprite_25
+  - first:
+      213: -5021238684412632629
+    second: Stopwatch Sprite_26
+  - first:
+      213: -8844332906688336777
+    second: Stopwatch Sprite_27
+  - first:
+      213: -7390344786798024234
+    second: Stopwatch Sprite_28
+  - first:
+      213: 4908077053666860302
+    second: Stopwatch Sprite_29
+  - first:
+      213: -7881340886222467207
+    second: Stopwatch Sprite_30
+  - first:
+      213: 7994429910141058660
+    second: Stopwatch Sprite_31
+  - first:
+      213: -3077300399149647268
+    second: Stopwatch Sprite_32
+  - first:
+      213: -2182508336740252125
+    second: Stopwatch Sprite_33
+  - first:
+      213: -4422129076385622631
+    second: Stopwatch Sprite_34
+  - first:
+      213: -1299307417401140093
+    second: Stopwatch Sprite_35
+  - first:
+      213: 3116070300574586164
+    second: Stopwatch Sprite_36
+  - first:
+      213: 5712482089484124687
+    second: Stopwatch Sprite_37
+  - first:
+      213: 5638721273082335721
+    second: Stopwatch Sprite_38
+  - first:
+      213: 7892218677928090291
+    second: Stopwatch Sprite_39
+  - first:
+      213: 9211858926860313231
+    second: Stopwatch Sprite_40
+  - first:
+      213: -6303023252039642952
+    second: Stopwatch Sprite_41
+  - first:
+      213: 3627957761366805039
+    second: Stopwatch Sprite_42
+  - first:
+      213: 6929466342756803298
+    second: Stopwatch Sprite_43
+  - first:
+      213: -1746847461446879376
+    second: Stopwatch Sprite_44
+  - first:
+      213: -8543656382543005618
+    second: Stopwatch Sprite_45
+  - first:
+      213: -3722126681232582423
+    second: Stopwatch Sprite_46
+  - first:
+      213: 336437948930527464
+    second: Stopwatch Sprite_47
+  - first:
+      213: 6245076409655828673
+    second: Stopwatch Sprite_48
+  - first:
+      213: -6672951711921858872
+    second: Stopwatch Sprite_49
+  - first:
+      213: 8261889620310058805
+    second: Stopwatch Sprite_50
+  - first:
+      213: -7207249959523307989
+    second: Stopwatch Sprite_51
+  - first:
+      213: 3510826110537401162
+    second: Stopwatch Sprite_52
+  - first:
+      213: -2324027888953853373
+    second: Stopwatch Sprite_53
+  - first:
+      213: 3855953048949423408
+    second: Stopwatch Sprite_54
+  - first:
+      213: -4487138277949831909
+    second: Stopwatch Sprite_55
+  - first:
+      213: 7383979360150287471
+    second: Stopwatch Sprite_56
+  - first:
+      213: 7958443457446461893
+    second: Stopwatch Sprite_57
+  - first:
+      213: -7216021174334452346
+    second: Stopwatch Sprite_58
+  - first:
+      213: -5460111484110008981
+    second: Stopwatch Sprite_59
+  - first:
+      213: -1798454943422152472
+    second: Stopwatch Sprite_60
+  - first:
+      213: -1679482378209148570
+    second: Stopwatch Sprite_61
+  - first:
+      213: -4986376562404187220
+    second: Stopwatch Sprite_62
+  - first:
+      213: 6899398421722775164
+    second: Stopwatch Sprite_63
+  - first:
+      213: -4596063375209062538
+    second: Stopwatch Sprite_64
+  - first:
+      213: 2943272103522866557
+    second: Stopwatch Sprite_65
+  - first:
+      213: -6491455400800307808
+    second: Stopwatch Sprite_66
+  - first:
+      213: 1878224624907842772
+    second: Stopwatch Sprite_67
+  - first:
+      213: -6391917555845190796
+    second: Stopwatch Sprite_68
+  - first:
+      213: -5029021854843025495
+    second: Stopwatch Sprite_69
+  - first:
+      213: 9142329300906004175
+    second: Stopwatch Sprite_70
+  - first:
+      213: -1110926280139692108
+    second: Stopwatch Sprite_71
+  - first:
+      213: -9184252283586993425
+    second: Stopwatch Sprite_72
+  - first:
+      213: 2543489938093181976
+    second: Stopwatch Sprite_73
+  - first:
+      213: -1513736877561312362
+    second: Stopwatch Sprite_74
+  - first:
+      213: -5897293493804923673
+    second: Stopwatch Sprite_75
+  - first:
+      213: -2393768000859128859
+    second: Stopwatch Sprite_76
+  - first:
+      213: 1217840337037177144
+    second: Stopwatch Sprite_77
+  - first:
+      213: 132111915076604699
+    second: Stopwatch Sprite_78
+  - first:
+      213: 1464770467876450757
+    second: Stopwatch Sprite_79
+  - first:
+      213: -6783348166332666677
+    second: Stopwatch Sprite_80
+  - first:
+      213: 719172818325337474
+    second: Stopwatch Sprite_81
+  - first:
+      213: 2086629625251906193
+    second: Stopwatch Sprite_82
+  - first:
+      213: -3924593297203023601
+    second: Stopwatch Sprite_83
+  - first:
+      213: -2375358467686015408
+    second: Stopwatch Sprite_84
+  - first:
+      213: -1720543587964643718
+    second: Stopwatch Sprite_85
+  - first:
+      213: 5188403491961984506
+    second: Stopwatch Sprite_86
+  - first:
+      213: 6625492177484013639
+    second: Stopwatch Sprite_87
+  - first:
+      213: 7814200445341564750
+    second: Stopwatch Sprite_88
+  - first:
+      213: 2552467937442177290
+    second: Stopwatch Sprite_89
+  - first:
+      213: -5565109585575901230
+    second: Stopwatch Sprite_90
+  - first:
+      213: 2663438720075733592
+    second: Stopwatch Sprite_91
+  - first:
+      213: 6702797784733171484
+    second: Stopwatch Sprite_92
+  - first:
+      213: -5707290798434202125
+    second: Stopwatch Sprite_93
+  - first:
+      213: -7140959098048569120
+    second: Stopwatch Sprite_94
+  - first:
+      213: 2542199938215042842
+    second: Stopwatch Sprite_95
+  - first:
+      213: -743056067333328608
+    second: Stopwatch Sprite_96
+  - first:
+      213: 7840839521560779951
+    second: Stopwatch Sprite_97
+  - first:
+      213: -1781336904428196582
+    second: Stopwatch Sprite_98
+  - first:
+      213: 5200446991416261439
+    second: Stopwatch Sprite_99
+  - first:
+      213: 587738263291369646
+    second: Stopwatch Sprite_100
+  - first:
+      213: 5522895293827592151
+    second: Stopwatch Sprite_101
+  - first:
+      213: -7366810443027351715
+    second: Stopwatch Sprite_102
+  - first:
+      213: 2140054952303052351
+    second: Stopwatch Sprite_103
+  - first:
+      213: 8970739673874797037
+    second: Stopwatch Sprite_104
+  - first:
+      213: -193595071081019158
+    second: Stopwatch Sprite_105
+  - first:
+      213: 9165055014826781938
+    second: Stopwatch Sprite_0
+  - first:
+      213: 7526610032244412911
+    second: Stopwatch Sprite_1
+  - first:
+      213: -110388643240436806
+    second: Stopwatch Sprite_2
+  - first:
+      213: -4257507518893731711
+    second: Stopwatch Sprite_3
+  - first:
+      213: -3793910862264835274
+    second: Stopwatch Sprite_4
+  - first:
+      213: 5502150401035748132
+    second: Stopwatch Sprite_5
+  - first:
+      213: 9147606531754116306
+    second: Stopwatch Sprite_6
+  - first:
+      213: -7996701771239227764
+    second: Stopwatch Sprite_7
+  - first:
+      213: 1486448298815768119
+    second: Stopwatch Sprite_8
+  - first:
+      213: 2746427972553648648
+    second: Stopwatch Sprite_9
+  - first:
+      213: 1813410551410267048
+    second: Stopwatch Sprite_10
+  - first:
+      213: -8038785888274836509
+    second: Stopwatch Sprite_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Stopwatch Sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 532
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fca9a93af0d03f70800000000000000
+      internalID: 9165055014826781938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_1
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 532
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1d1d652f3e37860800000000000000
+      internalID: 7526610032244412911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_2
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 532
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb9a642d12d77ef0800000000000000
+      internalID: -110388643240436806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_3
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 532
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180d8c3087b4ae4c0800000000000000
+      internalID: -4257507518893731711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 266
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6336539fb22595bc0800000000000000
+      internalID: -3793910862264835274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_5
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 266
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 423428a53a09b5c40800000000000000
+      internalID: 5502150401035748132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_6
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 266
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d44f3eaca3d2fe70800000000000000
+      internalID: 9147606531754116306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_7
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 266
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8e7c8e7b12060190800000000000000
+      internalID: -7996701771239227764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736c5eb2adce0a410800000000000000
+      internalID: 1486448298815768119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_9
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80aa14990b54d1620800000000000000
+      internalID: 2746427972553648648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_10
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 0
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a311c4e9478a2910800000000000000
+      internalID: 1813410551410267048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stopwatch Sprite_11
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 0
+        width: 238.75
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e394ff63de707090800000000000000
+      internalID: -8038785888274836509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

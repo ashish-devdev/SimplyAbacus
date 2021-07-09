@@ -1,0 +1,145 @@
+{
+	"Add":
+	[		
+	
+		{
+			"num_of_oprations":3,
+			"numbers":[7,1,-1],
+			"Result":7,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[4,-3,7],
+			"Result":8,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":3,
+			"numbers":[2,7,-3],
+			"Result":6,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":3,
+			"numbers":[3,5,-1],
+			"Result":7,
+			"status":"unsolved"
+		},
+
+		{	
+			"num_of_oprations":3,
+			"numbers":[5,2,-5],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":3,
+			"numbers":[4,-2,7],
+			"Result":9,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[1,7,-2],
+			"Result":6,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[8,-7,5],
+			"Result":6,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":3,
+			"numbers":[1,7,1],
+			"Result":9,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":3,
+			"numbers":[2,7,-2],
+			"Result":7,
+			"status":"unsolved"
+		},
+
+
+
+
+
+
+		{
+			"num_of_oprations":3,
+			"numbers":[5,2,1],
+			"Result":8,
+			"status":"unsolved"
+		},
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[5,4,-1],
+			"Result":8,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[6,1,1],
+			"Result":8,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":3,
+			"numbers":[8,-3,1],
+			"Result":6,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[8,1,-2],
+			"Result":7,
+			"status":"unsolved"
+		},
+
+
+		{	"num_of_oprations":3,
+			"numbers":[2,1,5],
+			"Result":8,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[1,8,-4],
+			"Result":5,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[8,-5,1],
+			"Result":4,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[2,-1,8],
+			"Result":9,
+			"status":"unsolved"
+		},
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[8,-5,6],
+			"Result":9,
+			"status":"unsolved"
+		}
+
+	]
+
+}

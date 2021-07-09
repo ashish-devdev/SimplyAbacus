@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: formula atlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 47
+      m_TextureCompression: 1
+      m_CompressionQuality: 100
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: ca7367ea940711c44a8cd3840d6c711f, type: 3}
+    - {fileID: 102900000, guid: 6c3394d149fcd5c478b305bda7b01dbc, type: 3}
+    - {fileID: 2800000, guid: d4be10ebb8c9aad449970b3f23710621, type: 3}
+    - {fileID: 2800000, guid: eccfeb672d2288d45b645943c667c725, type: 3}
+    - {fileID: 2800000, guid: ddd83076a5a025447b75a8af49695b25, type: 3}
+    - {fileID: 2800000, guid: fd98d61f13a1bf74dac49bf67fff2431, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 6b7a2481e7ec47c4b8339d0da84e7d66, type: 3}
+  - {fileID: 21300000, guid: 06c537a188483624082e6107fc31b833, type: 3}
+  - {fileID: 21300000, guid: aee85b03f7ef0d544bcf181088308b21, type: 3}
+  - {fileID: 21300000, guid: cc0dfdd3333fb1e4c8527f3d6dc48926, type: 3}
+  - {fileID: 21300000, guid: 61a973f4721a9e54b88b6cf7171b64b5, type: 3}
+  - {fileID: 21300000, guid: e62745052fd8a39418c5ae4c29fc9092, type: 3}
+  - {fileID: 21300000, guid: ddd83076a5a025447b75a8af49695b25, type: 3}
+  - {fileID: 21300000, guid: 4dd6c407c8658e74ab09c6ac8d7201d4, type: 3}
+  - {fileID: 21300000, guid: eccfeb672d2288d45b645943c667c725, type: 3}
+  - {fileID: 21300000, guid: 4c314948d127f0145ab299a3acf34b14, type: 3}
+  - {fileID: 21300000, guid: d5ee1099f4e61fd4eb9821967123513b, type: 3}
+  - {fileID: 21300000, guid: 8502a5baccecd6d41aedf50e8e0f62cd, type: 3}
+  - {fileID: 21300000, guid: 978a4eda2a570bd4f9b118bb96fcbf74, type: 3}
+  - {fileID: 21300000, guid: d1fb73ea0dff8194392d8a06dff2985d, type: 3}
+  - {fileID: 21300000, guid: 8d8388cbf879e7d4bbab7fa7af426d6d, type: 3}
+  - {fileID: 21300000, guid: d4be10ebb8c9aad449970b3f23710621, type: 3}
+  - {fileID: 21300000, guid: 5151101de2ea07e48ab72a2173a6ea5c, type: 3}
+  - {fileID: 21300000, guid: fd98d61f13a1bf74dac49bf67fff2431, type: 3}
+  - {fileID: 21300000, guid: fc80a85f51dd3a64085e7022771d892e, type: 3}
+  - {fileID: 21300000, guid: 8522789f1142784468304873fc059edd, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 1X
+  - 10X
+  - 5X
+  - 8X
+  - Big Friend -10
+  - 7X
+  - Multiplication_Btn
+  - 3X
+  - Formulas_Btn
+  - Little Friend  -5
+  - Family +
+  - 2X
+  - 6X
+  - Little Friend + 5
+  - 4X
+  - Button_BG_3
+  - Big Friend +10
+  - Next_Btn2
+  - 9X
+  - Family -
+  m_Tag: formula atlas
+  m_IsVariant: 0

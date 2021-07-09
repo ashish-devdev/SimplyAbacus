@@ -1,0 +1,168 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MenuAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 1
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: Android
+      m_MaxTextureSize: 4096
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 1
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: f53f9ef14a6a3f6448fd660b30f1bd94, type: 3}
+    - {fileID: 102900000, guid: 69a353b8045fa8146a1986703f3cccba, type: 3}
+    - {fileID: 102900000, guid: c1e72e6dac380694cbbd58363d7bbcec, type: 3}
+    - {fileID: 102900000, guid: fbf224917f2a58d4a93bc2842f0c2b0a, type: 3}
+    - {fileID: 2800000, guid: 463dc931863d7e24688b51864a8102e6, type: 3}
+    - {fileID: 102900000, guid: 35b7eb5403b93ef47937691e9788594a, type: 3}
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 3ef360109267fd247bff57d62ac71389, type: 3}
+  - {fileID: 21300000, guid: e0758530f0d4a6b419349f06db2141a5, type: 3}
+  - {fileID: 21300000, guid: 92a4ec9029170bb4fb580743480a076e, type: 3}
+  - {fileID: 21300000, guid: 4665aba052135154abcc7c7dbbb20f23, type: 3}
+  - {fileID: 21300000, guid: 81136ca0e968fc143807422e55667c43, type: 3}
+  - {fileID: 21300000, guid: ce9db9313645ddc47ba5c4bfd1e7b01c, type: 3}
+  - {fileID: 21300000, guid: 463dc931863d7e24688b51864a8102e6, type: 3}
+  - {fileID: 21300000, guid: 472497416714ae04780929b5237c7b26, type: 3}
+  - {fileID: 21300000, guid: 8f5b4171c90bb9a40a7013c2d39ceb1b, type: 3}
+  - {fileID: 21300000, guid: a0052ba1caeb6eb4999f6cc0e54d4476, type: 3}
+  - {fileID: 21300000, guid: d787b392dfd53664e9c818692534e98f, type: 3}
+  - {fileID: 21300000, guid: 79171d23604f49d4d997ff8dfe365c70, type: 3}
+  - {fileID: 21300000, guid: 6d96a5f370ea1de428ad2ff6d0b3aae1, type: 3}
+  - {fileID: 21300000, guid: 6b31cde4438d89143b4453f40e020132, type: 3}
+  - {fileID: 21300000, guid: 2e17c335c59eb4d4194f7cf91c6990ae, type: 3}
+  - {fileID: 21300000, guid: 883f3f35f30abe7438201dbae8227c55, type: 3}
+  - {fileID: 21300000, guid: 0f35a645737c64e4aaa8d0243cff790f, type: 3}
+  - {fileID: 21300000, guid: 0cd102c5e4078c648bee2ba73ea47958, type: 3}
+  - {fileID: 21300000, guid: 720094c5c428a994fac468ba5a9bda12, type: 3}
+  - {fileID: 21300000, guid: c5a74de553760b6418d7460036a1c7d4, type: 3}
+  - {fileID: 21300000, guid: 12b26ec6854c8614a9de22fb5204727c, type: 3}
+  - {fileID: 21300000, guid: a8e507177f8d630409d3f34ba2d2cd77, type: 3}
+  - {fileID: 21300000, guid: 4f137567390b7f0459bdc72b38472107, type: 3}
+  - {fileID: 21300000, guid: f19c3c6755d543640828a222975fb3b6, type: 3}
+  - {fileID: 21300000, guid: c452ea774b1275e4083591cf4adb72a9, type: 3}
+  - {fileID: 21300000, guid: e4690a873e6127644adae45361d59c45, type: 3}
+  - {fileID: 21300000, guid: 3b9ffd970d524d6429ffcc29f5d155cc, type: 3}
+  - {fileID: 21300000, guid: 06f549e7e812c514884d72ca6e504cbb, type: 3}
+  - {fileID: 21300000, guid: 0ba2dde71c4485142ba0f80894708909, type: 3}
+  - {fileID: 21300000, guid: b261f7f7e5977cc44809e916c883592a, type: 3}
+  - {fileID: 21300000, guid: 0afd3148250387b4db46d05ace784060, type: 3}
+  - {fileID: 21300000, guid: 72860c68515632a428fb5b061bc7724b, type: 3}
+  - {fileID: 21300000, guid: af6b6f8844857474b8d4f4e966c22b97, type: 3}
+  - {fileID: 21300000, guid: 545da5a83a2a8c24197de9969a28e8ed, type: 3}
+  - {fileID: 21300000, guid: ae948ab8091634440bf5654b1b8c53ee, type: 3}
+  - {fileID: 21300000, guid: 1f587ad880e7de745bd3c8f511bfb47a, type: 3}
+  - {fileID: 21300000, guid: ddc352196c6c0104e89dbf96f2ebf25c, type: 3}
+  - {fileID: 21300000, guid: 76f982598a54fe2418cfcc0fe13cdf8b, type: 3}
+  - {fileID: 21300000, guid: 0e985c596e0d15645b01fb8a1f7d4e02, type: 3}
+  - {fileID: 21300000, guid: af1d5d9935d1c8349be5b363ef9412d2, type: 3}
+  - {fileID: 21300000, guid: 8a1cfba9660cd27498195fe50f2e74a0, type: 3}
+  - {fileID: 21300000, guid: e999310ac13d9b04d9a34cf65637bb2e, type: 3}
+  - {fileID: 21300000, guid: 37e8b81ad84f0a64284ae49dc3ead79e, type: 3}
+  - {fileID: 21300000, guid: 08b2996a53d6bce43b85b8c8bd60fc42, type: 3}
+  - {fileID: 21300000, guid: 8f01968ad8e17d14096ffb63b8fb4173, type: 3}
+  - {fileID: 21300000, guid: 003e77caa5cd3d342bcadd8a86bcf3bc, type: 3}
+  - {fileID: 21300000, guid: 9a18dbfa51d090d42b9087fc78da2079, type: 3}
+  - {fileID: 21300000, guid: 131b035b17f114643bc2bb44ab212f7d, type: 3}
+  - {fileID: 21300000, guid: c8f4f0abb2157b84aaa49564548e4e45, type: 3}
+  - {fileID: 21300000, guid: 6a4d82db909fae742a13f5ef55cbab1d, type: 3}
+  - {fileID: 21300000, guid: 12b4f77cdab523746a21d16728cab656, type: 3}
+  - {fileID: 21300000, guid: 7bf0e34d5bfe38144b6b54080b402e18, type: 3}
+  - {fileID: 21300000, guid: bf14ef4d995b80e409880a1d1e44a864, type: 3}
+  - {fileID: 21300000, guid: 5de7813e5315f154aaf7e820fefb89a9, type: 3}
+  - {fileID: 21300000, guid: e355655f04237ec419a5e2457ad9a9b5, type: 3}
+  - {fileID: 21300000, guid: 8ebbd18f8a433974192dcdf3eb2f63a4, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - 17
+  - sidebar_BG
+  - Layer 4
+  - test2
+  - GoPremium_Icon
+  - 16
+  - Book_Panel
+  - Violet_Box
+  - Box2_3
+  - Layer 10
+  - 15
+  - 2
+  - Layer 20
+  - Box2_3_H
+  - Red_Box
+  - Violet_Box_Highlighted
+  - Layer 7
+  - test_4
+  - Box2_2_H
+  - 8
+  - Blue_Box_Highlighted
+  - Btn_Highlight
+  - 3
+  - Blue_H
+  - Layer 19
+  - Box2_1_H
+  - Box2_2
+  - Layer 2
+  - Layer 5
+  - Layer 17
+  - Red_H
+  - 14
+  - 6
+  - 7
+  - Settings_Icon
+  - 1
+  - Layer 18
+  - Concepts_Icon
+  - Red_Box_Highlighted
+  - 4
+  - Layer 8
+  - 11
+  - Layer 14
+  - Violet_H
+  - Layer 13
+  - Abacus_Icon
+  - Layer 11
+  - 12
+  - Box2_1
+  - Layer 23
+  - 9
+  - 5
+  - Layer 22
+  - 18
+  - Layer 6
+  - Blue_Box
+  m_Tag: MenuAtlas
+  m_IsVariant: 0

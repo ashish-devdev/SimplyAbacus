@@ -1,0 +1,42 @@
+{
+	"Sub":
+	[
+	
+		{
+			"num_of_oprations":2,
+			"numbers":[7,-5],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[18,-6],
+			"Result":12,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[18,-5,-2],
+			"Result":11,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[19,-6],
+			"Result":13,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[19,-8],
+			"Result":11,
+			"status":"unsolved"
+		}
+	]
+
+	inseted of drawing a circle they can just touch and spone te
+
+}

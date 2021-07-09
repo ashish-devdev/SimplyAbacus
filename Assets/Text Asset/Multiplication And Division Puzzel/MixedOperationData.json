@@ -1,0 +1,24 @@
+{
+	"questions":
+	[	
+		{
+			"problem":"Add 12 until you reach 144",
+			"result":"144/12",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"Put 2369 and reduce 23 till 0",
+			"result":"2369/23",
+			"status":"unsolved"
+
+		},
+
+		{
+			"problem":"__+32=66",
+			"result":"66-32",
+			"status":"unsolved"
+		}
+	]
+
+}

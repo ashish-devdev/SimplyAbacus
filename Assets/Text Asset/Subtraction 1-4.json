@@ -1,0 +1,40 @@
+{
+	"Sub":
+	[
+	
+		{
+			"num_of_oprations":2,
+			"numbers":[7,-2],
+			"Result":5,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":3,
+			"numbers":[14,-3,-1],
+			"Result":10,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":3,
+			"numbers":[19,-2,-2],
+			"Result":15,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[9,-3],
+			"Result":6,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[19,-4],
+			"Result":15,
+			"status":"unsolved"
+		}
+	]
+
+}

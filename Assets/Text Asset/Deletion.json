@@ -1,0 +1,38 @@
+{
+	"Del":
+	[
+		{
+			"num_of_oprations":2,
+			"numbers":[12,3],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[123,3],
+			"Result":41,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":2,
+			"numbers":[105,5],
+			"Result":21,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[108,9],
+			"Result":12,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[176,8],
+			"Result":22,
+			"status":"unsolved"
+		}
+	]
+}
