@@ -22,12 +22,12 @@ public class AddPlusSymbol : MonoBehaviour
     {
         if (textComponent.text.Length > 0)
         {
-            if (!(textComponent.text.Contains("+")) && !(textComponent.text.Contains("-")) && int.Parse(textComponent.text) >= 0)
+            if (!(textComponent.text.Contains("+")) && !(textComponent.text.Contains("-")) && decimal.Parse(textComponent.text) >= 0)
             {
 
                 textComponent.text = " + " + textComponent.text;
             }
-            else if (!(textComponent.text.Contains(" - ")) && !(textComponent.text.Contains("+")) && int.Parse(textComponent.text) <= 0)
+            else if (!(textComponent.text.Contains(" - ")) && !(textComponent.text.Contains("+")) && decimal.Parse(textComponent.text) <= 0)
             {
                 textComponent.text = textComponent.text.Replace("-", " - ");
             }

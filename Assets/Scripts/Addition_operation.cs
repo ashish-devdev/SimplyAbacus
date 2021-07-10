@@ -297,6 +297,11 @@ public class Addition_operation : MonoBehaviour
             maxDigit = FindMaxDigits(numbers);
             print(decimalPlace);
             print(maxDigit);
+            positionRodsOfAbacus.startingRod = 0;
+            positionRodsOfAbacus.endingRod = maxDigit;
+            valueClaculator.numberOfDecimalPlaces = decimalPlace;
+            valueClaculator.decimalPlaceString = GetDecimalPlaceString(decimalPlace);
+            positionRodsOfAbacus.EditRod();
         }
         catch
         {; }
@@ -306,6 +311,7 @@ public class Addition_operation : MonoBehaviour
 
         sub_operation_output = numbers[0];
         suboperationIndex = 0;
+
     }
 
     public void ResetClicked()
@@ -416,7 +422,7 @@ public class Addition_operation : MonoBehaviour
 
     void compare_abacus_and_operation_value()
     {
-        if (RemoveExtraDecimalZeros(sub_operation_output.ToString()) == RemoveExtraDecimalZeros(ValueCalculator.value.ToString(valueClaculator.decimalPlaceString)))
+        if (RemoveExtraDecimalZeros(sub_operation_output.ToString()) == RemoveExtraDecimalZeros(ValueCalculator.value1.ToString(valueClaculator.decimalPlaceString)))
         {
             if (/*sub_operation_output == jsonData.Add[Problem_Number].Result &&*/ suboperationIndex == jsonData.Add[Problem_Number].num_of_oprations - 1)
             {
@@ -530,13 +536,25 @@ public class Addition_operation : MonoBehaviour
         return decimalPlace;
     }
 
+    public string GetDecimalPlaceString(int decimalPlace)
+    {
+        string[] decimalPlaceString = new string[] { "F0", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9" };
+
+        return decimalPlaceString[decimalPlace];
+    }
+
+
     public int FindMaxDigits(double[] numbers)
     {
         int maxDigits = 0;
+        bool numberIsNegative = false;
         for (int i = 0; i < numbers.Length; i++)
         {
             if (numbers[i] < 0)
+            {
+                numberIsNegative = true;
                 numbers[i] = numbers[i] * -1;
+            }
 
 
             if (numbers[i].ToString().Contains("."))
@@ -553,9 +571,13 @@ public class Addition_operation : MonoBehaviour
                     maxDigits = numbers[i].ToString().Length;
                 }
             }
-
+            if (numberIsNegative)
+            {
+                numbers[i] = numbers[i] * -1;
+            }
+            numberIsNegative = false;
         }
 
-        return maxDigits;  
+        return maxDigits;
     }
 }

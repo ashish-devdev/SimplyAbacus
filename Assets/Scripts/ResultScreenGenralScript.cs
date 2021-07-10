@@ -76,7 +76,7 @@ public class ResultScreenGenralScript : MonoBehaviour
         secText.text = convertedTime.ToString(@"hh\:mm\:ss").Split(':')[2];
 
         Color color;
-        ColorUtility.TryParseHtmlString("#39B384", out color);
+        ColorUtility.TryParseHtmlString("#00FF00", out color);
         for (int i = 0; i < dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder.Count; i++)
         {
             if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption1Picked)
@@ -145,29 +145,7 @@ public class ResultScreenGenralScript : MonoBehaviour
             resultCard[i].transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].questionExpression;
             ColorUtility.TryParseHtmlString("#E92D4BFF", out color);
 
-            if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption1Picked)
-            {
-                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = color;
-
-                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option1;
-            }
-            else if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption2Picked)
-            {
-                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = color;
-
-                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option2;
-            }
-            else if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption3Picked)
-            {
-                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<Image>().color = color;
-
-                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option3;
-            }
-            else if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption4Picked)
-            {
-                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Image>().color = color;
-                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option4;
-            }
+          
 
 
             resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text = dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option1;
@@ -180,21 +158,62 @@ public class ResultScreenGenralScript : MonoBehaviour
             if (resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = color;
+
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.SetActive(true);
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Image>().color=Color.green;
+
             }
             else if (resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<Image>().color = color;
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).gameObject.SetActive(true);
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.green;
+
             }
             else if (resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = color;
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).gameObject.SetActive(true);
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).GetComponent<Image>().color = Color.green;
+
             }
             else if (resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Image>().color = color;
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).gameObject.SetActive(true);
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.green;
+
             }
 
+            if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption1Picked)
+            {
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).GetComponent<Image>().color = Color.white;
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.SetActive(true);
+                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option1;
+            }
+            else if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption2Picked)
+            {
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).GetComponent<Image>().color = Color.white;
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).gameObject.SetActive(true);
 
+
+                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option2;
+            }
+            else if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption3Picked)
+            {
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.white;
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).gameObject.SetActive(true);
+
+
+                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option3;
+            }
+            else if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption4Picked)
+            {
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.white;
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).gameObject.SetActive(true);
+
+                resultCard[i].transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Your Answer: " + dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].option4;
+            }
 
 
 
@@ -241,12 +260,21 @@ public class ResultScreenGenralScript : MonoBehaviour
     private void OnDisable()
     {
         Color color;
-        ColorUtility.TryParseHtmlString("#FF7C7CFF", out color);
+        ColorUtility.TryParseHtmlString("#FF0000FF", out color);
 
         for (int i = 0; i < resultCard.Length; i++)
         {
             resultCard[i].SetActive(false);
             resultCard[i].GetComponent<Image>().color = color;
+            resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.white;
+            resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).GetComponent<Image>().color = Color.white;
+            resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.white;
+            resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).GetComponent<Image>().color = Color.white;
+
+            resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).gameObject.SetActive(false);
+            resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).gameObject.SetActive(false);
+            resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).gameObject.SetActive(false);
+            resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.SetActive(false);
 
         }
         for (int i = 0; i < questionTypeName.Length; i++)

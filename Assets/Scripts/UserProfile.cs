@@ -17,12 +17,13 @@ public class UserProfile : MonoBehaviour
         userName.onValueChanged.AddListener(delegate { ChangeCreateBtnIntractibility(); });
         userID.onValueChanged.AddListener(delegate { ChangeCreateBtnIntractibility(); });
 
-        if (Directory.GetDirectories(Application.persistentDataPath).Length > 1)
+        if (Directory.GetDirectories(Application.persistentDataPath+"/User").Length > 1)
         {
             deleteBtn.interactable = true;
+            deleteBtn.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().color = new Vector4(1, 1, 1, 1f);
         }
         else
-        { deleteBtn.interactable = false; }
+        { deleteBtn.interactable = false;  deleteBtn.gameObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().color = new Vector4(1, 1, 1, 0.5f); }
 
     }
     private void OnDisable()
