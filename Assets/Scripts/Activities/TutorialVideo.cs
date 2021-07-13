@@ -17,6 +17,7 @@ public class TutorialVideo : MonoBehaviour
     public GameObject videoLoadingScreen;
     bool startVideo;
     public GameObject videoPlayerCanvas;
+    public Back BACK;
 
     private void OnEnable()
     {
@@ -44,7 +45,8 @@ public class TutorialVideo : MonoBehaviour
                 }
             }
         }
-
+        videoPlayer.Prepare();
+        
         Invoke("StartVideo", 2.5f);
     }
 
@@ -54,7 +56,7 @@ public class TutorialVideo : MonoBehaviour
 
         if (startVideo)
         {
-
+            
 
             if (videoPlayer.time >= lengthOfTheVedioInSeconds - lengthOfTheVedioInSeconds + 5)
             {
@@ -84,6 +86,12 @@ public class TutorialVideo : MonoBehaviour
                 videoLoadingScreen.SetActive(true);
                 print("Display loading screen");
             }
+
+        }
+
+        if (videoPlayer.time >= lengthOfTheVedioInSeconds + 2)
+        {
+            BACK.Escape();
 
         }
 

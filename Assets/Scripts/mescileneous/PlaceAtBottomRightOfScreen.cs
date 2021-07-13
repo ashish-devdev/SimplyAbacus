@@ -63,7 +63,7 @@ public class PlaceAtBottomRightOfScreen : MonoBehaviour
         //    this.gameObject.transform.localScale = Vector3.one * Hight_intensity * threshold;
 
         //}
-        Vector3 cameraPosition = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth*0.77f, Camera.main.pixelHeight*0.4f, Camera.main.nearClipPlane));
+        Vector3 cameraPosition = Camera.main.ScreenToWorldPoint(new Vector3(Camera.main.pixelWidth*0.75f, Camera.main.pixelHeight*0.4f, Camera.main.nearClipPlane));
         this.gameObject.transform.localPosition = new Vector3(cameraPosition.x, cameraPosition.y, this.gameObject.transform.localPosition.z);
     }
 

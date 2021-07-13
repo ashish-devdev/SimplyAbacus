@@ -106,7 +106,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                     AdditionWithDecimalProblemGenrator();
                     break;
                 case 3:
-                    SubtractionWithDecimalProblemGenrator();          
+                    SubtractionWithDecimalProblemGenrator();
                     break;
                 case 4:
                     MultiplicationProblemGenrator();
@@ -170,7 +170,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.addition;
             questionAnswerOptionAndTimeDataHolder[problemNumber].problemNumber = problemNumber + 1;
-            questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = num1.ToString() + "+" + num2.ToString();
+            questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = num1.ToString() + " + " + num2.ToString();
             questionAnswerOptionAndTimeDataHolder[problemNumber].correctAnswer = result.ToString();
 
             while (optionIndex < 4)
@@ -246,7 +246,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             {
                 num[i] = UnityEngine.Random.Range(minRangeForMedium, maxRangeForMedium);
                 result += num[i];
-                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + "+";
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + " " + "+";
             }
 
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression.Trim('+');
@@ -330,7 +330,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             {
                 num[i] = UnityEngine.Random.Range(minRangeForHard, maxRangeForHard);
                 result += num[i];
-                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + "+";
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + " " + "+";
             }
 
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression.Trim('+');
@@ -423,7 +423,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                         subtractNow = !subtractNow;
 
                         result -= num[i];
-                        questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + "-" + num[i];
+                        questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + " -" + num[i];
                     }
                     else
                     {
@@ -435,7 +435,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                 {
                     subtractNow = !subtractNow;
                     result += num[i];
-                    questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + "+" + num[i];
+                    questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + " +" + num[i];
 
                 }
 
@@ -527,7 +527,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                         subtractNow = !subtractNow;
 
                         result -= num[i];
-                        questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + "-" + num[i];
+                        questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + " -" + num[i];
                     }
                     else
                     {
@@ -540,7 +540,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                     subtractNow = !subtractNow;
 
                     result += num[i];
-                    questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + "+" + num[i];
+                    questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + " +" + num[i];
 
                 }
 
@@ -632,7 +632,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                     {
                         subtractNow = !subtractNow;
                         result -= num[i];
-                        questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + "-" + num[i];
+                        questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + " -" + num[i];
                     }
                     else
                     {
@@ -644,7 +644,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                 {
                     subtractNow = !subtractNow;
                     result += num[i];
-                    questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + "+" + num[i];
+                    questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + " +" + num[i];
 
                 }
 
@@ -730,7 +730,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             {
                 num[i] = UnityEngine.Random.Range(minRangeForEasy, maxRangeForEasy);
                 result *= num[i];
-                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + "*";
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + " *";
             }
 
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression.Trim('*');
@@ -809,7 +809,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             {
                 num[i] = UnityEngine.Random.Range(minRangeForMedium, maxRangeForMedium);
                 result *= num[i];
-                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + "*";
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + " *";
             }
 
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression.Trim('*');
@@ -891,7 +891,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             {
                 num[i] = UnityEngine.Random.Range(minRangeForHard, maxRangeForHard);
                 result *= num[i];
-                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + "*";
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + " *";
             }
 
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression.Trim('*');
@@ -973,7 +973,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             {
                 num[i] = UnityEngine.Random.Range(minRangeForEasy, maxRangeForEasy);
                 result *= num[i];
-                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = result + " / " + num[0];
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = result + " /" + num[0];
             }
 
 
@@ -1635,6 +1635,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                 {
                     if ((result - r) != result)
                     {
+                        print(Array.IndexOf(optionValues, (result - r)));
                         if (Array.IndexOf(optionValues, (result - r)) == -1)
                         {
                             optionValues[optionIndex] = result - r;
