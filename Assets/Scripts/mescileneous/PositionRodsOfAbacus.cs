@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -21,6 +22,7 @@ public class PositionRodsOfAbacus : MonoBehaviour
     float[] orignalXPositions;
     float[] tempXPositions;
     int centralRodNum;
+    public static event Action OnEditRod;
 
 
     void OnEnable()
@@ -47,7 +49,20 @@ public class PositionRodsOfAbacus : MonoBehaviour
     public void EditRod()
     {
 
-    
+       
+
+        if ((endingRod - startingRod) % 2 == 0)
+        {
+            positionPartyPoperAtLeftCorner.oddRod = true;
+            OnEditRod?.Invoke();
+
+        }
+        else
+        {
+            positionPartyPoperAtLeftCorner.oddRod = false;
+            OnEditRod?.Invoke();
+        }
+
         int mid = (startingRod + endingRod) / 2;
         int shiftValue = mid - startingRod;
 

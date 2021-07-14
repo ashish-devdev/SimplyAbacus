@@ -207,7 +207,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Coloring
+    - activityName: Colouring Pictures
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

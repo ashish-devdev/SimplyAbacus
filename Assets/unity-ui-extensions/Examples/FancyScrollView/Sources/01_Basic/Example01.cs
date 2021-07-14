@@ -76,7 +76,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 //activity
 
                 var items = Enumerable.Range(0, TabName.Count())
-                           .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, btnEvents[i], cardIsIntractable[i], completionPercentage[i]))
+                           .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, btnEvents[i], /*cardIsIntractable[i]*/ true, completionPercentage[i]))
                            .ToArray();
                 scrollView.UpdateData(items);
             }
@@ -86,7 +86,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 {
                     //class
                     var items = Enumerable.Range(0, TabName.Count())
-                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, cardIsIntractable[i], completionPercentage[i], numberImages[i % numberImages.Count].numImg1, numberImages[i % numberImages.Count].numImg2, FG_Images[i]))
+                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, /*cardIsIntractable[i]*/ true, completionPercentage[i], numberImages[i % numberImages.Count].numImg1, numberImages[i % numberImages.Count].numImg2, FG_Images[i]))
                    .ToArray();
                     scrollView.UpdateData(items);
                 }
@@ -94,7 +94,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 {
                     //book
                     var items = Enumerable.Range(0, TabName.Count())
-                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, cardIsIntractable[i], completionPercentage[i]))
+                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent,/* cardIsIntractable[i]*/ true, completionPercentage[i]))
                    .ToArray();
                     scrollView.UpdateData(items);
                 }

@@ -258,7 +258,7 @@ public class ExampleGestureHandler : MonoBehaviour
                 recognizerInstance.patterns.Add(listOf_AllPatterns[currentIndex].patterns[i]);
             }
             notificationLean.TurnOn();
-            notificationText.text = "now lets try to write with left hand";
+            notificationText.text = "Now let's try to draw with the left hand.";
             textInstrction.text = "Let's try to write 0.";
             sideNoteLean.TurnOff();
             //turn on notification and sAY write with left hand.

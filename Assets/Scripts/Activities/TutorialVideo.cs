@@ -18,7 +18,8 @@ public class TutorialVideo : MonoBehaviour
     bool startVideo;
     public GameObject videoPlayerCanvas;
     public Back BACK;
-
+    bool videoCompleted;
+    float tempTime = 0;
     private void OnEnable()
     {
         startVideo = false;
@@ -48,6 +49,8 @@ public class TutorialVideo : MonoBehaviour
         videoPlayer.Prepare();
         
         Invoke("StartVideo", 2.5f);
+        videoCompleted = false;
+        tempTime = 0;
     }
 
     // Update is called once per frame
@@ -89,10 +92,14 @@ public class TutorialVideo : MonoBehaviour
 
         }
 
-        if (videoPlayer.time >= lengthOfTheVedioInSeconds + 2)
+        if (videoPlayer.time >= lengthOfTheVedioInSeconds-1 || videoCompleted)
         {
-            BACK.Escape();
-
+            videoCompleted = true;
+            tempTime++;
+            if (tempTime * Time.deltaTime > 2)
+            {
+                BACK.Escape();
+            }
         }
 
     }
@@ -107,6 +114,9 @@ public class TutorialVideo : MonoBehaviour
     {
         SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
 
+        RenderTexture.active = videoPlayer.targetTexture;
+        GL.Clear(true, true, Color.black);
+        RenderTexture.active = null;
         try
         {
             CancelInvoke("StartVideo");
@@ -115,6 +125,7 @@ public class TutorialVideo : MonoBehaviour
         {
             ;
         }
+
 
     }
 

@@ -1643,7 +1643,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                         }
                     }
                 }
-                else if ((result + r > 0 && temp))
+                else if ((result + r > 0 && !temp))
                 {
                     if ((result + r) != result)
                     {
@@ -3005,7 +3005,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
 
             while (optionIndex < 4)
             {
-                r = decimal.Parse(UnityEngine.Random.Range(1f, 51f).ToString("F2"));
+                r = decimal.Parse(UnityEngine.Random.Range(1f, 101f).ToString("F2"));
 
                 if (optionValues[optionIndex] != -1)
                 {
@@ -3085,7 +3085,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
 
             while (optionIndex < 4)
             {
-                r = decimal.Parse(UnityEngine.Random.Range(1f, 26f).ToString("F3"));
+                r = decimal.Parse(UnityEngine.Random.Range(1f, 100f).ToString("F3"));
 
                 if (optionValues[optionIndex] != -1)
                 {
@@ -3165,7 +3165,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
 
             while (optionIndex < 4)
             {
-                r = decimal.Parse(UnityEngine.Random.Range(1f, 8f).ToString("F4"));
+                r = decimal.Parse(UnityEngine.Random.Range(1f, 100f).ToString("F4"));
 
                 if (optionValues[optionIndex] != -1)
                 {

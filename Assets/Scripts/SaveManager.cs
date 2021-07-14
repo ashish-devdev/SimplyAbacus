@@ -151,7 +151,7 @@ public class SaveManager : MonoBehaviour
     {
         if (!noUser)
         {
-            intoScreen.SetActive(false);
+          //  intoScreen.SetActive(false);
             AppUI.SetActive(true);
         }
     }

@@ -13,6 +13,7 @@ public class Count_1_to_4 : MonoBehaviour
 {
     public Activity activityScriptInstance;
     ActivityList1 activityList1;
+    ActivityList2 activityList2;
     public LeanPulse leanPulseAnimation;
     public LeanPulse LeanResetAnimation;
     public SpriteRenderer animatingSprite;
@@ -71,6 +72,7 @@ public class Count_1_to_4 : MonoBehaviour
                     if (activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeed01==true)
                     {
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
+                        activityList2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j];
                     }
                 }
             }
@@ -528,8 +530,11 @@ public class Count_1_to_4 : MonoBehaviour
         sideNoteLean.TurnOff();//sideNote.SetActive(false);
         CancelInvoke("DelayedInvokeAnimation");
         congratulationLean.TurnOn();// CongratulationPannel.SetActive(true);
+        activityList2.liftingBeed21.bestTime = 1;
+        activityList2.liftingBeed21.bestTime_string="Completed";
         //activityList1.liftBeed01 = true;
         SaveManager.Instance.saveDataToDisk(Activity.classParent);
+
 
         leanPulseAnimation.RemainingPulses = 0;
         animatingSprite.enabled = false;

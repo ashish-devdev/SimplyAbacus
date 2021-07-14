@@ -30,27 +30,27 @@ public class AdjustScrollPosition : MonoBehaviour
         {
             scrollPositions[i] =-(i*570f);
         }
-        currentScrollIndex = 0;
+            currentScrollIndex = 0;
     }
 
     void Update()
     {
         if (currentScrollIndex < 1)
         {
-            leftButton.interactable = false;
-        }
-        else
-        {
-            leftButton.interactable = true;
-        }
-
-        if (currentScrollIndex >= scrollPositions.Length-1)
-        {
             rightButton.interactable = false;
         }
         else
         {
             rightButton.interactable = true;
+        }
+
+        if (currentScrollIndex >= scrollPositions.Length-1)
+        {
+            leftButton.interactable = false;
+        }
+        else
+        {
+            leftButton.interactable = true;
         }
     }
 
