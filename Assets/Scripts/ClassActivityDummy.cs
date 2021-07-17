@@ -12,19 +12,19 @@ public class ClassActivityCompletionHolder
 
 [System.Serializable]
 public class ClassActivityCompletionHolder2
-{ 
+{
     public ClassData2 classData;
 
 }
 [System.Serializable]
 public class DailyWorkoutCompletionHolder3
-{ 
+{
     public List<DailyWorkOutInformation> dailyWorkOutInformation;
 
 }
 
 public class AppLockInformationHolder3
-{ 
+{
     public List<LockInformation> dailyWorkOutInformation;
 
 }
@@ -180,28 +180,28 @@ public class DivisionOperation1
 
 [System.Serializable]
 public class LiftBeeds1
-{ 
+{
     public bool completed;
 }
 [System.Serializable]
 public class TutorialVideo1
-{ 
+{
     public bool completed;
 }
 
 [System.Serializable]
 public class MatchValueWithImage2
 {
-   public float bestTime=-1;
-    public float currentSavedTime=0;
-    public string bestTime_string="-";
+    public float bestTime = -1;
+    public float currentSavedTime = 0;
+    public string bestTime_string = "-";
 }
 [System.Serializable]
 
 public class MatchShapeWithNumbers2
 {
     public float bestTime = -1;
-    public string bestTime_string="-";
+    public string bestTime_string = "-";
     public float currentSavedTime = 0;
 }
 [System.Serializable]
@@ -234,6 +234,7 @@ public class LiftingBeed21
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public int currentSubActivity = 0;
 }
 
 [System.Serializable]
@@ -242,6 +243,7 @@ public class LiftingBeed22
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public int currentSubActivity = 0;
 }
 [System.Serializable]
 public class Maze2
@@ -319,7 +321,7 @@ public class DailyWorkOutInformation
 {
     public int id;
     public string QuestionType;
-    public MODE mode; 
+    public MODE mode;
     public int totalQuestions;
     public int totalCorrectAnswers;
     public float totalTime;
@@ -337,5 +339,5 @@ public class LockInformation
 [System.Serializable]
 public enum MODE
 {
-    easy,medium,hard
+    easy, medium, hard
 }

@@ -17,7 +17,11 @@ public class AllowActivityIfTheUserIsSubscribed : MonoBehaviour
             dailyWorkout.SetActive(true);
         }
         else
-            buySubscription.TurnOn();
+        {
+            dailyWorkout.SetActive(true);
+
+            //    buySubscription.TurnOn();
+        }
     }
 
     public void OnClickedBook()

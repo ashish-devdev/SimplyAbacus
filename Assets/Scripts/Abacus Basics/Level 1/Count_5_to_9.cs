@@ -17,6 +17,7 @@ public class Count_5_to_9 : MonoBehaviour
     public LeanPulse leanPulseFingerUpAnimation;
     public LeanPulse leanPulseFingerDownAnimation;
     ActivityList1 activityList1;
+    ActivityList2 activityList2;
     // public LeanPulse LeanResetAnimation;
     public SpriteRenderer thumbUpAnimatingSprite;
     public SpriteRenderer thumbDownAnimatingSprite;
@@ -60,6 +61,7 @@ public class Count_5_to_9 : MonoBehaviour
     public LeanToggle congratulationLean;
     public LeanToggle sideNoteLean;
     public LeanToggle notificationLean;
+    int SubTaskToSave;
 
     void OnEnable()
     {
@@ -73,15 +75,37 @@ public class Count_5_to_9 : MonoBehaviour
                     if (activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeed02 == true)
                     {
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
+                        activityList2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j];
                     }
                 }
             }
         }
 
 
+        if (activityList2.LiftingBeed22.currentSubActivity >= 5)
+        {
+            activityList2.LiftingBeed22.currentSubActivity = 0;
+        }
+        SubTaskToSave = activityList2.LiftingBeed22.currentSubActivity;
+
+        for (int p = 0; p < Count_5_to_9_ModelData.TaskComplete.Length; p++)
+        {
+            Count_5_to_9_ModelData.TaskComplete = Count_5_to_9_ModelData.TaskComplete.Select(x => x = false).ToArray();
+            Count_5_to_9_ModelData.barValue = 0;
+
+        }
+
+        for (int i = 0; i < activityList2.LiftingBeed22.currentSubActivity; i++)
+        {
+            Count_5_to_9_ModelData.TaskComplete[i] = true;
+            Count_5_to_9_ModelData.barValue = (i + 1) * 0.2f;
+
+        }
+
+
         NotificationBtn.onClick.AddListener(OpenSideNote);
 
-        
+
 
 
         if (Count_5_to_9_ModelData.TaskComplete[Count_5_to_9_ModelData.TaskComplete.Length - 1] == true)
@@ -94,7 +118,7 @@ public class Count_5_to_9 : MonoBehaviour
         completedSubTask = new bool[5];
         currentSubTask = 0;
         temp = false;
-        loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue/5;
+        loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue / 5;
         loadingBar.BeginAllTransitions();
         Highlight1.SetActive(true);
         Highlight2.SetActive(true);
@@ -108,8 +132,10 @@ public class Count_5_to_9 : MonoBehaviour
                 break;
             }
         }
+        
 
-        loadingBar.Data.FillAmount = currentTask *1f/ 5;
+
+        loadingBar.Data.FillAmount = currentTask * 1f / 5;
         loadingBar.BeginAllTransitions();
 
         /*indexDownAnimatingSprite.transform.SetParent(beed5.transform);
@@ -136,6 +162,9 @@ public class Count_5_to_9 : MonoBehaviour
                 break;
             }
         }
+        SubTaskToSave = currentTask;
+
+
         if (currentTask == Count_5_to_9_ModelData.TaskComplete.Length)
         {
             //activityList1.liftBeed02[currentTask-1] = true;
@@ -153,7 +182,7 @@ public class Count_5_to_9 : MonoBehaviour
             }
             if (ValueCalculator.value == 0)
             {
-                
+
                 Invoke("DelayedleanPulseFingerDownAnimation", 1f);
 
                 //finger down animation
@@ -174,7 +203,7 @@ public class Count_5_to_9 : MonoBehaviour
                 }
                 if (currentSubTask == 2)
                 {
-                    Count_5_to_9_ModelData.barValue = ((1+currentTask)*1f)/5;
+                    Count_5_to_9_ModelData.barValue = ((1 + currentTask) * 1f) / 5;
                     loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue;
                     loadingBar.BeginAllTransitions();
                     activityList1.liftBeed02[currentTask] = true;
@@ -220,7 +249,7 @@ public class Count_5_to_9 : MonoBehaviour
                 }
                 if (ValueCalculator.value == 1)
                 {
-                    
+
                     Invoke("DelayedleanPulseThumbDownAnimation", 1f);
 
                     //move thumb down
@@ -263,9 +292,9 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 if (ValueCalculator.value == 0)
                 {
-                    
+
                     Invoke("DelayedleanPulseFingerDownAnimation", 1f);
-                    
+
                     Invoke("DelayedleanPulseThumbUpAnimation", 1f);
                     //move finger down
                     //move thumb up
@@ -451,7 +480,7 @@ public class Count_5_to_9 : MonoBehaviour
             ResetHighlight.transform.SetParent(beed1.transform);
             ResetHighlight.transform.localPosition = new Vector3(0, 0, 0);
 
- 
+
 
 
         }
@@ -461,7 +490,7 @@ public class Count_5_to_9 : MonoBehaviour
             Highlight1.transform.localPosition = new Vector3(0, 0, 0);
             Highlight2.transform.SetParent(beed5.transform);
             Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-           ResetHighlight.transform.SetParent(beed1.transform);
+            ResetHighlight.transform.SetParent(beed1.transform);
             ResetHighlight.transform.localPosition = new Vector3(0, 0, 0);
         }
         else if (currentTask == 3)
@@ -489,7 +518,17 @@ public class Count_5_to_9 : MonoBehaviour
     void DelayedInvokeCongratulation()
     {
         congratulationLean.TurnOn();// CongratulationPannel.SetActive(true);
+        activityList2.LiftingBeed22.bestTime = 1;
+        activityList2.LiftingBeed22.bestTime_string = "Completed";
+
+        //activityList1.liftBeed01 = true;
+        SaveManager.Instance.saveDataToDisk(Activity.classParent);
+        SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+
         sideNoteLean.TurnOff();//sideNote.SetActive(false);
+
+
+
 
 
     }
@@ -500,25 +539,33 @@ public class Count_5_to_9 : MonoBehaviour
         Highlight2.SetActive(false);
         NotificationBtn.onClick.RemoveListener(OpenSideNote);
 
+        activityList2.LiftingBeed22.currentSubActivity = SubTaskToSave;
+       
+
+        SaveManager.Instance.saveDataToDisk(Activity.classParent);
+        SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+
+        SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+
     }
 
     public void DelayedleanPulseThumbUpAnimation()
     {
-       /* CancelInvoke("DelayedleanPulseThumbUpAnimation");
-        leanPulseThumbUpAnimation.RemainingPulses = 5;*/
+        /* CancelInvoke("DelayedleanPulseThumbUpAnimation");
+         leanPulseThumbUpAnimation.RemainingPulses = 5;*/
 
     }
     public void DelayedleanPulseThumbDownAnimation()
     {
-       /* CancelInvoke("DelayedleanPulseThumbDownAnimation");
-        leanPulseThumbDownAnimation.RemainingPulses = 5;*/
+        /* CancelInvoke("DelayedleanPulseThumbDownAnimation");
+         leanPulseThumbDownAnimation.RemainingPulses = 5;*/
     }
     public void DelayedleanPulseFingerUpAnimation()
     {
-       /* CancelInvoke("DelayedleanPulseFingerUpAnimation");
-        leanPulseFingerUpAnimation.RemainingPulses = 5;*/
+        /* CancelInvoke("DelayedleanPulseFingerUpAnimation");
+         leanPulseFingerUpAnimation.RemainingPulses = 5;*/
 
-    } 
+    }
     public void DelayedleanPulseFingerDownAnimation()
     {
         /*
@@ -533,10 +580,10 @@ public class Count_5_to_9 : MonoBehaviour
 
     public void DelayedInvokeAnimation()
     {
-       /* CancelInvoke("DelayedInvokeAnimation");
-        Highlight1.SetActive(true);
-        leanPulseAnimation.RemainingPulses = 5;
-        animatingSprite.enabled = true;*/
+        /* CancelInvoke("DelayedInvokeAnimation");
+         Highlight1.SetActive(true);
+         leanPulseAnimation.RemainingPulses = 5;
+         animatingSprite.enabled = true;*/
     }
 }
 

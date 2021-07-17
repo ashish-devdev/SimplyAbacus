@@ -150,7 +150,7 @@ public class Addition_operation : MonoBehaviour
         updatedFontSize = orignalFontSize + 20;
 
         Problem_Number = 0;
-        notificationText.text = "Now let's try to solve the expression on screen using the abacus step by step. Once you get the correct result, click on the arrow mark to move to the next expression.";
+        notificationText.text = "Now let's try to solve the expression on screen using the abacus step by step.";
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)

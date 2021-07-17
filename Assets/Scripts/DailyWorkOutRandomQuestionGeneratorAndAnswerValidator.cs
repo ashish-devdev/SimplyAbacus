@@ -13,7 +13,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
     public AudioClip easy;
     public AudioClip medium;
     public AudioClip defaultMusic;
-    int problemNumber;
+    public int problemNumber;
     int numberOfQuestionTypeSelectedCard;
 
     int minRangeForEasy = 1;
@@ -1491,7 +1491,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                 {
                     if ((result + r) != result)
                     {
-                        if (Array.IndexOf(optionValues, (result + r)) == -1)
+                        if (!Array.Exists(optionValues, x => x == (result + r)))
                         {
                             optionValues[optionIndex] = result + r;
                             optionIndex++;
@@ -1517,6 +1517,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
 
         if (currentMode == Mode.Medium)
         {
+
             float result = 0;
             bool resultIsGreaterThanZero = false;
             string expression = "";
@@ -1525,75 +1526,102 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             optionValues = new float[4] { -1f, -1f, -1f, -1f };
             float r;
             bool temp = false;
-            while (!resultIsGreaterThanZero)
+            bool errorOccured = false;
+
+
+            do
             {
-                expression = GenerateMixedExpression(5, false, 51, 150);
-                result = (float)Convert.ToDecimal(new DataTable().Compute(expression, ""));
-                if (result >= 0)
+                errorOccured = false;
+                resultIsGreaterThanZero = false;
+                try
                 {
-                    resultIsGreaterThanZero = true;
-                }
 
-            }
-            questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperation;
-
-
-            questionAnswerOptionAndTimeDataHolder[problemNumber].problemNumber = problemNumber + 1;
-            questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = expression;
-            questionAnswerOptionAndTimeDataHolder[problemNumber].correctAnswer = result.ToString();
-
-            optionValues[UnityEngine.Random.Range(0, 4)] = result;
-
-            while (optionIndex < 4)
-            {
-                r = UnityEngine.Random.Range(1f, 26f);
-
-                if (optionValues[optionIndex] != -1)
-                {
-                    optionIndex++;
-                }
-
-                else if ((result - r > 0 && temp))
-                {
-                    if ((result - r) != result)
+                    while (!resultIsGreaterThanZero)
                     {
-                        if (Array.IndexOf(optionValues, (result - r)) == -1)
+                        expression = GenerateMixedExpression(5, false, 51, 150);
+                        result = (float)Convert.ToDecimal(new DataTable().Compute(expression, ""));
+                        if (result >= 0)
                         {
-                            optionValues[optionIndex] = result - r;
-                            optionIndex++;
+                            resultIsGreaterThanZero = true;
                         }
+
                     }
                 }
-                else if ((result + r > 0 && temp))
+                catch
                 {
-                    if ((result + r) != result)
-                    {
-                        if (Array.IndexOf(optionValues, (result + r)) == -1)
-                        {
-                            optionValues[optionIndex] = result + r;
-                            optionIndex++;
-                        }
-                    }
+                    errorOccured = true;
+                    print("error ocuured but solved");
                 }
 
-                temp = !temp;
+            } while (errorOccured);
 
+            if (!errorOccured)
+            {
+                questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperation;
+
+
+                questionAnswerOptionAndTimeDataHolder[problemNumber].problemNumber = problemNumber + 1;
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = expression;
+                questionAnswerOptionAndTimeDataHolder[problemNumber].correctAnswer = result.ToString();
+
+                optionValues[UnityEngine.Random.Range(0, 4)] = result;
+
+                while (optionIndex < 4)
+                {
+                    r = UnityEngine.Random.Range(100f, 300f);
+
+                    if (optionValues[optionIndex] != -1)
+                    {
+                        optionIndex++;
+                    }
+
+                    else if ((result - r > 0 && temp))
+                    {
+                        if ((result - r) != result)
+                        {
+                            if (Array.IndexOf(optionValues, (result - r)) == -1)
+                            {
+                                optionValues[optionIndex] = result - r;
+                                optionIndex++;
+                            }
+                        }
+                    }
+                    else if ((result + r > 0 && temp))
+                    {
+                        if ((result + r) != result)
+                        {
+                            if (!Array.Exists(optionValues, x => x == (result + r)))
+                            {
+                                optionValues[optionIndex] = result + r;
+                                optionIndex++;
+                            }
+                        }
+                    }
+
+                    temp = !temp;
+
+
+                }
+
+
+
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option1 = optionValues[0].ToString();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option2 = optionValues[1].ToString();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option3 = optionValues[2].ToString();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option4 = optionValues[3].ToString();
 
             }
 
 
-
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option1 = optionValues[0].ToString();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option2 = optionValues[1].ToString();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option3 = optionValues[2].ToString();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option4 = optionValues[3].ToString();
 
 
         }
 
         if (currentMode == Mode.Hard)
         {
+
+
             float result = 0;
             bool resultIsGreaterThanZero = false;
             string expression = "";
@@ -1602,70 +1630,96 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             optionValues = new float[4] { -1f, -1f, -1f, -1f };
             float r;
             bool temp = false;
-            while (!resultIsGreaterThanZero)
+            bool errorOccured = false;
+
+            do
             {
-                expression = GenerateMixedExpression(7, false, 150, 750);
-                result = (float)Convert.ToDecimal(new DataTable().Compute(expression, ""));
-                if (result >= 0)
+                errorOccured = false;
+                resultIsGreaterThanZero = false;
+                try
                 {
-                    resultIsGreaterThanZero = true;
-                }
-
-            }
-            questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperation;
-
-
-            questionAnswerOptionAndTimeDataHolder[problemNumber].problemNumber = problemNumber + 1;
-            questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = expression;
-            questionAnswerOptionAndTimeDataHolder[problemNumber].correctAnswer = result.ToString();
-
-            optionValues[UnityEngine.Random.Range(0, 4)] = result;
-
-            while (optionIndex < 4)
-            {
-                r = UnityEngine.Random.Range(1f, 8f);
-
-                if (optionValues[optionIndex] != -1)
-                {
-                    optionIndex++;
-                }
-
-                else if ((result - r > 0 && temp))
-                {
-                    if ((result - r) != result)
+                    while (!resultIsGreaterThanZero)
                     {
-                        print(Array.IndexOf(optionValues, (result - r)));
-                        if (Array.IndexOf(optionValues, (result - r)) == -1)
+                        expression = GenerateMixedExpression(7, false, 150, 750);
+                        result = (float)Convert.ToDecimal(new DataTable().Compute(expression, ""));
+                        if (result >= 0)
                         {
-                            optionValues[optionIndex] = result - r;
-                            optionIndex++;
+                            resultIsGreaterThanZero = true;
                         }
+
                     }
                 }
-                else if ((result + r > 0 && !temp))
+                catch
                 {
-                    if ((result + r) != result)
+                    errorOccured = true;
+                    print("error ocuured but solved");
+                    //problemNumber--;
+                }
+            }
+            while (errorOccured);
+
+            if (!errorOccured)
+            {
+
+                questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperation;
+
+
+                questionAnswerOptionAndTimeDataHolder[problemNumber].problemNumber = problemNumber + 1;
+                questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = expression;
+                questionAnswerOptionAndTimeDataHolder[problemNumber].correctAnswer = result.ToString();
+
+                optionValues[UnityEngine.Random.Range(0, 4)] = result;
+
+                while (optionIndex < 4)
+                {
+                    r = UnityEngine.Random.Range(100f, 300f);
+
+                    if (optionValues[optionIndex] != -1)
                     {
-                        if (Array.IndexOf(optionValues, (result + r)) == -1)
+                        optionIndex++;
+                    }
+
+                    else if ((result - r > 0 && temp))
+                    {
+                        if ((result - r) != result)
                         {
-                            optionValues[optionIndex] = result + r;
-                            optionIndex++;
+                            print(Array.IndexOf(optionValues, (result - r)));
+                            if (Array.IndexOf(optionValues, (result - r)) == -1)
+                            {
+                                optionValues[optionIndex] = result - r;
+                                optionIndex++;
+                            }
                         }
                     }
+                    else if ((result + r > 0 && !temp))
+                    {
+                        if ((result + r) != result)
+                        {
+                            if (!Array.Exists(optionValues, x => x == (result + r)))
+                            {
+                                optionValues[optionIndex] = result + r;
+                                optionIndex++;
+                            }
+                        }
+                    }
+
+                    temp = !temp;
+
+
                 }
 
-                temp = !temp;
+
+
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option1 = optionValues[0].ToString();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option2 = optionValues[1].ToString();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option3 = optionValues[2].ToString();
+                questionAnswerOptionAndTimeDataHolder[problemNumber].option4 = optionValues[3].ToString();
+
+
 
 
             }
-
-
-
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option1 = optionValues[0].ToString();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option2 = optionValues[1].ToString();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option3 = optionValues[2].ToString();
-            questionAnswerOptionAndTimeDataHolder[problemNumber].option4 = optionValues[3].ToString();
 
 
 
@@ -2984,16 +3038,37 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             optionValues = new decimal[4] { -1, -1, -1, -1 };
             decimal r;
             bool temp = false;
-            while (!resultIsGreaterThanZero)
+            bool errorOccured = false;
+
+            do
             {
-                expression = GenerateMixedExpression(3, true, 1, 50, "F2");
-                result = Convert.ToDecimal(new DataTable().Compute(expression, ""));
-                if (result >= 0)
+                errorOccured = false;
+                resultIsGreaterThanZero = false;
+                try
                 {
-                    resultIsGreaterThanZero = true;
+
+                    while (!resultIsGreaterThanZero)
+                    {
+                        expression = GenerateMixedExpression(3, true, 1, 50, "F2");
+                        result = Convert.ToDecimal(new DataTable().Compute(expression, ""));
+                        if (result >= 0)
+                        {
+                            resultIsGreaterThanZero = true;
+                        }
+
+                    }
+
+                }
+                catch
+                {
+                    errorOccured = true;
+                    print("error ocuured but solved");
+                    //problemNumber--;
                 }
 
-            }
+
+            } while (errorOccured);
+
             questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperationWithDecimal;
 
@@ -3023,11 +3098,11 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                         }
                     }
                 }
-                else if ((result + r > 0 && temp))
+                else if ((result + r > 0 && !temp))
                 {
                     if ((result + r) != result)
                     {
-                        if (Array.IndexOf(optionValues, (result + r)) == -1)
+                        if (!Array.Exists(optionValues, x => x == (result + r)))
                         {
                             optionValues[optionIndex] = result + r;
                             optionIndex++;
@@ -3063,16 +3138,36 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             optionValues = new decimal[4] { -1, -1, -1, -1 };
             decimal r;
             bool temp = false;
-            while (!resultIsGreaterThanZero)
+            bool errorOccured = false;
+
+            do
             {
-                expression = GenerateMixedExpression(5, false, 51, 150, "F3");
-                result = (decimal)Convert.ToDecimal(new DataTable().Compute(expression, ""));
-                if (result >= 0)
+                errorOccured = false;
+                resultIsGreaterThanZero = false;
+                try
                 {
-                    resultIsGreaterThanZero = true;
+
+                    while (!resultIsGreaterThanZero)
+                    {
+                        expression = GenerateMixedExpression(5, true, 51, 150, "F3");
+                        result = (decimal)Convert.ToDecimal(new DataTable().Compute(expression, ""));
+                        if (result >= 0)
+                        {
+                            resultIsGreaterThanZero = true;
+                        }
+
+                    }
                 }
 
-            }
+                catch
+                {
+                    errorOccured = true;
+                    print("error ocuured but solved");
+                    //problemNumber--;
+                }
+
+            } while (errorOccured);
+
             questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperationWithDecimal;
 
@@ -3103,11 +3198,11 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                         }
                     }
                 }
-                else if ((result + r > 0 && temp))
+                else if ((result + r > 0 && !temp))
                 {
                     if ((result + r) != result)
                     {
-                        if (Array.IndexOf(optionValues, (result + r)) == -1)
+                        if (!Array.Exists(optionValues, x => x == (result + r)))
                         {
                             optionValues[optionIndex] = result + r;
                             optionIndex++;
@@ -3143,16 +3238,36 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             optionValues = new decimal[4] { -1, -1, -1, -1 };
             decimal r;
             bool temp = false;
-            while (!resultIsGreaterThanZero)
+            bool errorOccured = false;
+
+            do
             {
-                expression = GenerateMixedExpression(7, false, 150, 570, "F4");
-                result = (decimal)Convert.ToDecimal(new DataTable().Compute(expression, ""));
-                if (result >= 0)
+
+                errorOccured = false;
+                resultIsGreaterThanZero = false;
+                try
                 {
-                    resultIsGreaterThanZero = true;
+                    while (!resultIsGreaterThanZero)
+                    {
+                        expression = GenerateMixedExpression(7, true, 150, 570, "F4");
+                        result = (decimal)Convert.ToDecimal(new DataTable().Compute(expression, ""));
+                        if (result >= 0)
+                        {
+                            resultIsGreaterThanZero = true;
+                        }
+
+                    }
                 }
 
-            }
+                catch
+                {
+                    errorOccured = true;
+                    print("error ocuured but solved");
+                    //problemNumber--;
+                }
+
+
+            } while (errorOccured);
             questionAnswerOptionAndTimeDataHolder[problemNumber] = new QuestionAnswerOptionAndTimeDataHolder();
             questionAnswerOptionAndTimeDataHolder[problemNumber].questionType = QuestionType.mixedOperationWithDecimal;
 
@@ -3183,11 +3298,11 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                         }
                     }
                 }
-                else if ((result + r > 0 && temp))
+                else if ((result + r > 0 && !temp))
                 {
                     if ((result + r) != result)
                     {
-                        if (Array.IndexOf(optionValues, (result + r)) == -1)
+                        if (!Array.Exists(optionValues, x => x == (result + r)))
                         {
                             optionValues[optionIndex] = result + r;
                             optionIndex++;

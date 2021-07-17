@@ -61,6 +61,8 @@ public class Count_1_to_4 : MonoBehaviour
     public List<GameObject> noMoveMentBeeds;
     public List<GameObject> MoveMentBeeds;
 
+    int SubTaskToSave;
+
     void OnEnable()
     {
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
@@ -69,13 +71,35 @@ public class Count_1_to_4 : MonoBehaviour
             {
                 for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
                 {
-                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeed01==true)
+                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeed01 == true)
                     {
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
                         activityList2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j];
+
                     }
                 }
             }
+        }
+
+        if (activityList2.liftingBeed21.currentSubActivity >= 4)
+        {
+            activityList2.liftingBeed21.currentSubActivity = 0;
+        }
+        SubTaskToSave = activityList2.liftingBeed21.currentSubActivity;
+
+        for (int p = 0; p < Count_1_to_4_ModelData.TaskComplete.Length; p++)
+        {
+
+            Count_1_to_4_ModelData.TaskComplete = Count_1_to_4_ModelData.TaskComplete.Select(x => x = false).ToArray();
+            Count_1_to_4_ModelData.barValue = 0;
+
+        }
+
+        for (int i = 0; i < activityList2.liftingBeed21.currentSubActivity; i++)
+        {
+            Count_1_to_4_ModelData.TaskComplete[i] = true;
+            Count_1_to_4_ModelData.barValue = (i+1)*0.25f;
+
         }
 
         if (Count_1_to_4_ModelData.TaskComplete[Count_1_to_4_ModelData.TaskComplete.Length - 1] == true)
@@ -97,7 +121,7 @@ public class Count_1_to_4 : MonoBehaviour
         ResetHighlight.transform.SetParent(beed1.transform);
         indexAnimatingSprite.transform.SetParent(beed1.transform);
         ResetHighlight.transform.localPosition = new Vector3(0, 0, 0);
-        indexAnimatingSprite.transform.localPosition = new Vector3(-0.82f, -2.22f, 2.25f);
+        indexAnimatingSprite.transform.localPosition = new Vector3(-0.82f, -2.22f, 2f);
         for (currentTask = 0; currentTask < Count_1_to_4_ModelData.TaskComplete.Length; currentTask++)
         {
             if (Count_1_to_4_ModelData.TaskComplete[currentTask] == false)
@@ -145,7 +169,7 @@ public class Count_1_to_4 : MonoBehaviour
         for (int i = 0; i < noMoveMentBeeds.Count; i++)
         {
             noMoveMentBeeds[i].GetComponent<BoxCollider>().enabled = false;
-        }  
+        }
         for (int i = 0; i < MoveMentBeeds.Count; i++)
         {
             MoveMentBeeds[i].GetComponent<BoxCollider>().enabled = false;
@@ -159,12 +183,12 @@ public class Count_1_to_4 : MonoBehaviour
     void Update()
     {
         //loadingBar.sizeDelta = new Vector2(Count_1_to_4_ModelData.barValue, loadingBar.sizeDelta.y);
-     /*   if (NotificationPannel.activeInHierarchy|| CongratulationPannel.activeInHierarchy)
-        {
-            animatingSprite.enabled = false;
+        /*   if (NotificationPannel.activeInHierarchy|| CongratulationPannel.activeInHierarchy)
+           {
+               animatingSprite.enabled = false;
 
-        }*/
-      //  else { animatingSprite.enabled = true; }
+           }*/
+        //  else { animatingSprite.enabled = true; }
 
         if (ValueCalculator.value == 0)
         {
@@ -205,7 +229,10 @@ public class Count_1_to_4 : MonoBehaviour
 
                 break;
             }
+
+
         }
+        SubTaskToSave = currentTask;
         if (currentTask == Count_1_to_4_ModelData.TaskComplete.Length)
         {
             Congratulation.text = CongratulationText;
@@ -307,7 +334,7 @@ public class Count_1_to_4 : MonoBehaviour
 
             if (ValueCalculator.value == 2 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
-              
+
 
 
                 temp = true;
@@ -372,7 +399,7 @@ public class Count_1_to_4 : MonoBehaviour
             }
 
             if (ValueCalculator.value == 3 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
-            {             
+            {
 
                 temp = true;
                 completedSubTask[currentSubTask] = true;
@@ -531,7 +558,7 @@ public class Count_1_to_4 : MonoBehaviour
         CancelInvoke("DelayedInvokeAnimation");
         congratulationLean.TurnOn();// CongratulationPannel.SetActive(true);
         activityList2.liftingBeed21.bestTime = 1;
-        activityList2.liftingBeed21.bestTime_string="Completed";
+        activityList2.liftingBeed21.bestTime_string = "Completed";
         //activityList1.liftBeed01 = true;
         SaveManager.Instance.saveDataToDisk(Activity.classParent);
 
@@ -562,9 +589,13 @@ public class Count_1_to_4 : MonoBehaviour
         {
             ;
         }
+        activityList2.liftingBeed21.currentSubActivity = SubTaskToSave;
+        //activityList1.liftBeed01 = true;
+        SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+        SaveManager.Instance.saveDataToDisk(Activity.classParent);
         NotificationBtn.onClick.RemoveListener(DelayedInvokeAnimation);
-        if(Highlight1!=null)
-        Highlight1.SetActive(false);
+        if (Highlight1 != null)
+            Highlight1.SetActive(false);
         CancelInvoke("DelayedInvokeAnimation");
         ResetHighlight.SetActive(false);
 
