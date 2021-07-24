@@ -15,7 +15,8 @@ MonoBehaviour:
   classData:
     nameOfClass: B2C10
     activityList:
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -143,7 +145,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -208,6 +211,7 @@ MonoBehaviour:
         URL: 
         time: 0
     - activityName: Speed Writing
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -271,7 +275,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -335,7 +340,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Colouring Pictures
+    - activityName: Never get bored activities
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

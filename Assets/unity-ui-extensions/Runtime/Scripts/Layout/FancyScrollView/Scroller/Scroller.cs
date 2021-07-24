@@ -201,6 +201,8 @@ namespace UnityEngine.UI.Extensions
             if (scrollbar)
             {
                 scrollbar.onValueChanged.AddListener(x => UpdatePosition(x * (totalCount - 1f), false));
+                
+
             }
         }
 
@@ -285,6 +287,12 @@ namespace UnityEngine.UI.Extensions
 
             UpdateSelection(index);
             Position = index;
+        }
+
+        public float GetCurrentPosition()
+        {
+            return Position;
+
         }
 
         /// <summary>

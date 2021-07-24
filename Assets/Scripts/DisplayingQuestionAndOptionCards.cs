@@ -37,6 +37,7 @@ public class DisplayingQuestionAndOptionCards : MonoBehaviour
     public Button option4;
 
     public Button Submit;
+    public GameObject glowImage;
 
     public GameObject[] QuestionListFrom1_20;
     public GameObject[] QuestionListFrom21_40;
@@ -45,13 +46,14 @@ public class DisplayingQuestionAndOptionCards : MonoBehaviour
 
 
 
-
+    public Reset reset;
     public List<GameObject> questionList_Questions;
 
 
     private void OnEnable()
     {
         Submit.interactable = false;
+        glowImage.SetActive(false);
         enableDone = false;
         Invoke("InvokeEnableAfterDelay", 0.1f);
 
@@ -242,6 +244,8 @@ public class DisplayingQuestionAndOptionCards : MonoBehaviour
         optionText3.text = questionAnswerOptionAndTimeData.option3;
         optionText4.text = questionAnswerOptionAndTimeData.option4;
 
+        reset.RESET();
+        
     }
 
     public void AssignAnswerToQuestion(int i)
@@ -346,6 +350,7 @@ public class DisplayingQuestionAndOptionCards : MonoBehaviour
             }
         }
         Submit.interactable = true;
+        glowImage.gameObject.SetActive(true);
 
     }
 

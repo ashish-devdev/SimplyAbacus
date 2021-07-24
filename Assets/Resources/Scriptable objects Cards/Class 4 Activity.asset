@@ -15,7 +15,8 @@ MonoBehaviour:
   classData:
     nameOfClass: Class 4
     activityList:
-    - activityName: Video
+    - activityName: Let's watch Math-e-magic
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,8 @@ MonoBehaviour:
         active: 1
         URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Add_Sub_V04.mp4
         time: 313
-    - activityName: Colouring
+    - activityName: The Unworry activities
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers:
       - img: {fileID: 21300000, guid: c654ca316e150574d8daff7da554ddbd, type: 3}
@@ -148,7 +150,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -212,7 +215,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Colouring Pictures
+    - activityName: Never get bored activities
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -280,6 +284,7 @@ MonoBehaviour:
         URL: 
         time: 0
     - activityName: Speed Writing
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

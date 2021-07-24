@@ -15,7 +15,8 @@ MonoBehaviour:
   classData:
     nameOfClass: Class 1
     activityList:
-    - activityName: Video
+    - activityName: Let's watch Math-e-magic
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,8 @@ MonoBehaviour:
         active: 1
         URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Counting-0806A.mp4
         time: 202
-    - activityName: Tutorial
+    - activityName: Me & My World of Abacus
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -143,7 +145,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Abacus Counting I
+    - activityName: Counting Well I
+      dummyActivityName: 
       matchValueWithImage:
       - img: {fileID: 21300000, guid: 2247d46cff27d6d44b1e162314e143dd, type: 3}
         val: 1
@@ -216,7 +219,8 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Colouring Pictures
+    - activityName: Never get bored activities
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -284,6 +288,7 @@ MonoBehaviour:
         URL: 
         time: 0
     - activityName: Speed Writing
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

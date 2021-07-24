@@ -14,6 +14,7 @@ public class PlayWithAbacusGenralScript : MonoBehaviour
     public int currentPosition;
     string[] strPosition = { "F0", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8" };
     public TextMeshProUGUI abacusvalueText;
+    public bool DontChangePosition;
 
     private void OnEnable()
     {
@@ -24,11 +25,12 @@ public class PlayWithAbacusGenralScript : MonoBehaviour
 
     public void DelayEnable()
     {
-        currentPosition = 5;
+        if (!DontChangePosition)
+            currentPosition = 5;
 
         LeftShift.interactable = true;
         RightShift.interactable = true;
-        reset.RESET();
+        // reset.RESET();
         LeftShift.onClick.AddListener(ShiftLeftDecimalPoint);
         RightShift.onClick.AddListener(ShiftRightDecimalPoint);
 

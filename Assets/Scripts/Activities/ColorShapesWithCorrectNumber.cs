@@ -46,7 +46,7 @@ public class ColorShapesWithCorrectNumber : MonoBehaviour
         int temp1 = 0;
         completedSubTask = 0;
         cam = Camera.main;
-        notiicationText.text = "Click the shape with correct number as instructed.";
+        notiicationText.text = "Tap the correct shape using the clue";
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)

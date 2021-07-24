@@ -26,6 +26,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         public bool gameObjectIsBookContent;
         public List<NumberImages> numberImages;
         public List<Sprite> FG_Images;
+        public List<string> className= new List<string> { "a", "b", "c", "d", "e" };
 
         [System.Serializable]
         public class NumberImages
@@ -86,7 +87,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 {
                     //class
                     var items = Enumerable.Range(0, TabName.Count())
-                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, /*cardIsIntractable[i]*/ true, completionPercentage[i], numberImages[i % numberImages.Count].numImg1, numberImages[i % numberImages.Count].numImg2, FG_Images[i]))
+                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, /*cardIsIntractable[i]*/ true, completionPercentage[i], numberImages[i % numberImages.Count].numImg1, numberImages[i % numberImages.Count].numImg2, FG_Images[i],className[i%12]))
                    .ToArray();
                     scrollView.UpdateData(items);
                 }

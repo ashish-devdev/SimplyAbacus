@@ -147,7 +147,7 @@ public class Addition_operation : MonoBehaviour
     {
 
         orignalFontSize = OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize;
-        updatedFontSize = orignalFontSize + 20;
+        updatedFontSize = orignalFontSize + 25;
 
         Problem_Number = 0;
         notificationText.text = "Now let's try to solve the expression on screen using the abacus step by step.";

@@ -9,6 +9,7 @@ using UnityEngine.UI;
 public class DisplayDailyWorkoutStats : MonoBehaviour
 {
     public List<GameObject> dailyWorkoutStatsDisplayCards;
+    public TextMeshProUGUI userName;
     int totalCards;
     public Button share;
     string stringToShare;
@@ -26,8 +27,11 @@ public class DisplayDailyWorkoutStats : MonoBehaviour
                 switch (i)
                 {
                     case 0:
-                        stringToShare += ".................\n *Easy* \n----------------\n ";
-                        break;
+                        {
+                            stringToShare += "Name: "+ userName.text;
+                            stringToShare += "\n\n.................\n *Easy* \n----------------\n ";
+                            break;
+                        }
                     case 12:
                         stringToShare += "\n................\n *Medium* \n----------------\n ";
                         break;

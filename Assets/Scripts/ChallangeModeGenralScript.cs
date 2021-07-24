@@ -9,6 +9,7 @@ public class ChallangeModeGenralScript : MonoBehaviour
     public bool modeSelected;
     public bool numberOfQuestionSelected;
     public Button TypeOfQuestionBtn;
+    public GameObject highlightGameobject;
 
     public Image[] questionButtons;
     public Image[] modeButtons;
@@ -20,6 +21,8 @@ public class ChallangeModeGenralScript : MonoBehaviour
         modeSelected = false;
         numberOfQuestionSelected = false;
         TypeOfQuestionBtn.interactable = false;
+        highlightGameobject.SetActive(false);
+
 
         for (int i = 0; i < questionButtons.Length; i++)
         {
@@ -64,10 +67,14 @@ public class ChallangeModeGenralScript : MonoBehaviour
             if (modeSelected == true && numberOfQuestionSelected == true)
             {
                 TypeOfQuestionBtn.interactable = true;
+                highlightGameobject.SetActive(true);
+
             }
             else
             { 
                 TypeOfQuestionBtn.interactable = false;
+                highlightGameobject.SetActive(false);
+
 
             }
 
@@ -86,10 +93,12 @@ public class ChallangeModeGenralScript : MonoBehaviour
             if (modeSelected == true && numberOfQuestionSelected == true)
             {
                 TypeOfQuestionBtn.interactable = true;
+                highlightGameobject.SetActive(true);
             }
             else
             {
                 TypeOfQuestionBtn.interactable = false;
+                highlightGameobject.SetActive(false);
 
             }
 

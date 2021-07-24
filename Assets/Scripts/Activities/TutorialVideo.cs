@@ -48,7 +48,7 @@ public class TutorialVideo : MonoBehaviour
         }
         videoPlayer.Prepare();
         
-        Invoke("StartVideo", 2.5f);
+        Invoke("StartVideo", 4f);
         videoCompleted = false;
         tempTime = 0;
     }

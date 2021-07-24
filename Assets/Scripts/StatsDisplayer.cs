@@ -16,6 +16,7 @@ public class StatsDisplayer : MonoBehaviour
     public static string selectedBookName;
     public static string selectedClassName;
     public static string selectedActivityName;
+    public TextMeshProUGUI userName;
     private ClassParentStats classParentsStats;
     private ClassParent classParent;
 
@@ -32,7 +33,9 @@ public class StatsDisplayer : MonoBehaviour
     public List<Button> bookBtn;
 
     public Button nextBtn;
+    public GameObject nextBtnGlowImage;
     public Button previousBtn;
+    public GameObject previousBtnGlowImage;
     public Button shareBtn;
 
     public GameObject activityStatsCells;
@@ -457,17 +460,22 @@ public class StatsDisplayer : MonoBehaviour
                     if ((temp + bookManager.books[i].statingClass) == bookManager.books[i].statingClass)
                     {
                         previousBtn.interactable = false;
+                        previousBtnGlowImage.SetActive(false);
+
                     }
                     else
                     {
                         previousBtn.interactable = true;
+                        previousBtnGlowImage.SetActive(true);
                     }
                     if ((temp + bookManager.books[i].statingClass) == bookManager.books[i].endingClass)
                     {
                         nextBtn.interactable = false;
+                        nextBtnGlowImage.SetActive(false);
                     }
                     else
                     {
+                        nextBtnGlowImage.SetActive(true);
                         nextBtn.interactable = true;
                     }
 
@@ -700,6 +708,7 @@ public class StatsDisplayer : MonoBehaviour
     {
         int i = 0;
         string shareText = "";
+        shareText += shareText + "Name: " + userName.text;
         shareText += bookNameText.text;
         shareText += "\n";
         shareText += classNameText.text;

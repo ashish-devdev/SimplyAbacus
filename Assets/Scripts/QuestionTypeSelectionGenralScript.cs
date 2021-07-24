@@ -16,6 +16,7 @@ public class QuestionTypeSelectionGenralScript : MonoBehaviour
     LeanJoin leanJoin;
     LeanJoinDelay joinDelay;
     public Button proceedBtn;
+    public GameObject glowImage;
     public List<bool> selectedList;
 
 
@@ -34,6 +35,7 @@ public class QuestionTypeSelectionGenralScript : MonoBehaviour
 
         selectedList = new List<bool>(new bool[questionTypes.Count]);
         proceedBtn.interactable = false;
+        glowImage.SetActive(false);
     }
 
 
@@ -65,10 +67,13 @@ public class QuestionTypeSelectionGenralScript : MonoBehaviour
             if (selectedList[i] == true)
             {
                 proceedBtn.interactable = true;
+                glowImage.SetActive(true);
+
                 break;
             }
             else
             {
+                glowImage.SetActive(false);
                 proceedBtn.interactable = false;
             }
         }

@@ -39,6 +39,7 @@ public class SaveManager : MonoBehaviour
     public List<Sprite> userProfileImages;
 
     public GameObject intoScreen;
+    public GameObject intoScreen2;
     public GameObject AppUI;
 
     [HideInInspector]
@@ -151,7 +152,14 @@ public class SaveManager : MonoBehaviour
     {
         if (!noUser)
         {
-          //  intoScreen.SetActive(false);
+            intoScreen.SetActive(false);
+            intoScreen2.SetActive(true);
+            AppUI.SetActive(true);
+        }
+        else
+        {
+            intoScreen.SetActive(true);
+            intoScreen2.SetActive(false);
             AppUI.SetActive(true);
         }
     }

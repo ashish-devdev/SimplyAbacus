@@ -13,6 +13,7 @@ public class ClassDisplayer : MonoBehaviour
     public int startingClass;
     public int endingClass;
     public List<string> classNames;
+    public List<string> classDisplayingName;
     public List<Sprite> FG_Images;
     public List<Sprite> FG_Images_Goal;
 
@@ -34,16 +35,16 @@ public class ClassDisplayer : MonoBehaviour
         exampleInstance.FG_Images = new List<Sprite>();
         exampleInstance.imgs = new List<Sprite>();
         exampleInstance.TabName = new List<string>();
+        exampleInstance.className = new List<string>();
         exampleInstance.completionPercentage = new List<float>(new float[endingClass - startingClass + 1]);
        // exampleInstance.cardIsIntractable = new List<bool>(new bool[endingClass - startingClass + 1]);
         for (int i = startingClass; i < endingClass + 1; i++)
         {
             exampleInstance.imgs.Add(classTabImages[(i - startingClass) % classTabImages.Count]);
             exampleInstance.TabName.Add(classNames[i]);
-            if ((i + 1) % 12 == 0 && i != 0)
-                exampleInstance.FG_Images.Add(FG_Images_Goal[((i + 1) / 12) - 1]);
-            else
-                exampleInstance.FG_Images.Add(FG_Images[i % FG_Images.Count]);
+
+            exampleInstance.FG_Images.Add(FG_Images[i%24]);
+     
 
            /* if ((i-startingClass) == 0)
                 exampleInstance.cardIsIntractable[i-startingClass]=(true);
@@ -57,6 +58,11 @@ public class ClassDisplayer : MonoBehaviour
                     exampleInstance.cardIsIntractable[i-startingClass]=(false);
             }*/
          
+        }
+
+        for (int i = startingClass; i < endingClass+1; i++)
+        {
+            exampleInstance.className.Add(classDisplayingName[(i - startingClass) % 12]);
         }
         exampleInstance.UpdateData();
     }

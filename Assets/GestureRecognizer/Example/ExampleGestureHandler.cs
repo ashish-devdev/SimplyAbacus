@@ -65,7 +65,7 @@ public class ExampleGestureHandler : MonoBehaviour
         loadingBar.Data.FillAmount = (currentIndex / (20 * 1f));
         loadingBar.BeginAllTransitions();
         textResult.text = Numbers[currentIndex].ToString();
-        textInstrction.text = "Let's try to write 0.";
+        textInstrction.text = "Let's try to write 0";
         notificationBtn.onClick.AddListener(StartTimer);
         writingWithRightIsDone = false;
         //creating a new list of patterns in the instance of a recognizer script and loading the new list of patterns(hear it is patterns of 0).
@@ -162,7 +162,7 @@ public class ExampleGestureHandler : MonoBehaviour
 
     void ShowElseMessage()
     {
-        textInstrction.text = "CAN YOU DRAW IT AGAIN. ";
+        textInstrction.text = "CAN YOU DRAW IT AGAIN ? ";
         SoundManager.Instance.Play(wrongRecognisedSound);
 
     }
@@ -259,7 +259,7 @@ public class ExampleGestureHandler : MonoBehaviour
             }
             notificationLean.TurnOn();
             notificationText.text = "Now let's try to draw with the left hand.";
-            textInstrction.text = "Let's try to write 0.";
+            textInstrction.text = "Let's try to write 0 ";
             sideNoteLean.TurnOff();
             //turn on notification and sAY write with left hand.
         }

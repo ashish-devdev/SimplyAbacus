@@ -7,7 +7,7 @@ public class LoadingScreen1 : MonoBehaviour
 
     private void OnEnable()
     {
-        Invoke("DisableTheGameObject", 3f);
+        Invoke("DisableTheGameObject", 4.2f);
     }
 
     // Start is called before the first frame update

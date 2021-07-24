@@ -40,7 +40,7 @@ public class MatchImageAbacusValue : MonoBehaviour
      //   activityIsCompletedByTheUser = false;
         temp = true;
         currentOperation = 0;
-        notificationText.text = "Count the number of animals/birds and represent the number on the abacus.";
+        notificationText.text = "Count the items and represent the value on abacus";
 
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {

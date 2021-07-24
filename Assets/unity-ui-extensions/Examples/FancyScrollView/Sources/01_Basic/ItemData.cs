@@ -13,6 +13,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
     class ItemData
     {
         public string Message { get; }
+        public string ClassName;
         public int ID;
         public Sprite Img;
         public UnityEvent BtnEvent;
@@ -31,9 +32,10 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
 
 
-        public ItemData(string message,int id,Sprite img,UnityEvent btnEvent,bool gameObjectIsClassContent,bool gameObjectIsBookContent,bool cardIsIntractable,float completionPercentage=0, Sprite numImage1 = null, Sprite numImage2 = null,Sprite fg_Image=null)
+        public ItemData(string message,int id,Sprite img,UnityEvent btnEvent,bool gameObjectIsClassContent,bool gameObjectIsBookContent,bool cardIsIntractable,float completionPercentage=0, Sprite numImage1 = null, Sprite numImage2 = null,Sprite fg_Image=null,string className="")
         {
             this.Message = message;
+            this.ClassName = className;
             this.ID = id;
             this.Img = img;
             this.BtnEvent = btnEvent;

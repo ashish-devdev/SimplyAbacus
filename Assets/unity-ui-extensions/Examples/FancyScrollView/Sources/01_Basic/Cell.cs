@@ -18,6 +18,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         [SerializeField] bool gameObjectIsClassContent = default;
         [SerializeField] bool gameObjectIsBookContent = default;
         [SerializeField] TextMeshProUGUI completionPercentage = default;
+        [SerializeField] TextMeshProUGUI ClassTextString = default;
         [SerializeField] Image numberImage1=default;
         [SerializeField] Image numberImage2=default;
         [SerializeField] Image FG_Image=default;
@@ -97,12 +98,15 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
             if (itemData.GameObjectIsClassContent)
             {
                 ClassText.SetActive(true);
+                ClassTextString.text = itemData.ClassName;
+
+
                 shadow.enabled = false;
                 message.color = new Color(message.color.r, message.color.g, message.color.b, 0);
                 if (itemData.NumImage1 != null)
                 {
                     numberImage1.color = colorsOfImageNumbers[itemData.ID % colorsOfImageNumbers.Count];
-                    numberImage1.gameObject.SetActive(true);
+                    numberImage1.gameObject.SetActive(false);// make it true to enable
                     numberImage1.sprite = itemData.NumImage1;
                 }
                 else
@@ -113,7 +117,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 if (itemData.NumImage2 != null)
                 {
                     numberImage2.color = colorsOfImageNumbers[itemData.ID % colorsOfImageNumbers.Count];
-                    numberImage2.gameObject.SetActive(true);
+                    numberImage2.gameObject.SetActive(false);// make it true to enable
                     numberImage2.sprite = itemData.NumImage2;
                 }
                 else
@@ -179,7 +183,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
             {
                 this.gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Button>().onClick.AddListener(() => itemData.onClickedActivity());
                 outLine.SetActive(true);
-                cardMainImage.color = new Color(1, 1, 1, 0.2275f);
+                cardMainImage.color = new Color(1, 1, 1, 0.7f);
 
 
             }
