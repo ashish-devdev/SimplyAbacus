@@ -76,7 +76,8 @@ public class ResultScreenGenralScript : MonoBehaviour
         secText.text = convertedTime.ToString(@"hh\:mm\:ss").Split(':')[2];
 
         Color color;
-        ColorUtility.TryParseHtmlString("#00FF00", out color);
+        Color color2;
+        ColorUtility.TryParseHtmlString("#6EFF7A", out color);
         for (int i = 0; i < dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder.Count; i++)
         {
             if (dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].isOption1Picked)
@@ -155,33 +156,34 @@ public class ResultScreenGenralScript : MonoBehaviour
 
 
             ColorUtility.TryParseHtmlString("#39B384", out color);
+            ColorUtility.TryParseHtmlString("#6EFF7A", out color2);
             if (resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetComponent<Image>().color = color;
 
                 resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.SetActive(true);
-                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Image>().color=Color.green;
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(0).GetChild(2).gameObject.GetComponent<Image>().color=color2;
 
             }
             else if (resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetComponent<Image>().color = color;
                 resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).gameObject.SetActive(true);
-                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.green;
+                resultCard[i].transform.GetChild(1).GetChild(0).GetChild(1).GetChild(2).GetComponent<Image>().color = color2;
 
             }
             else if (resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetComponent<Image>().color = color;
                 resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).gameObject.SetActive(true);
-                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).GetComponent<Image>().color = Color.green;
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(0).GetChild(2).GetComponent<Image>().color = color2;
 
             }
             else if (resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(0).GetComponent<TextMeshProUGUI>().text == dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder[i].correctAnswer)
             {
                 resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetComponent<Image>().color = color;
                 resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).gameObject.SetActive(true);
-                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).GetComponent<Image>().color = Color.green;
+                resultCard[i].transform.GetChild(1).GetChild(1).GetChild(1).GetChild(2).GetComponent<Image>().color = color2;
 
             }
 
@@ -260,7 +262,7 @@ public class ResultScreenGenralScript : MonoBehaviour
     private void OnDisable()
     {
         Color color;
-        ColorUtility.TryParseHtmlString("#FF0000FF", out color);
+        ColorUtility.TryParseHtmlString("#FF5353FF", out color);
 
         for (int i = 0; i < resultCard.Length; i++)
         {

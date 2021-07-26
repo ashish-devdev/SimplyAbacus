@@ -15,7 +15,7 @@ public class ChangActivityeBackground : MonoBehaviour
 
     public void ChangeBackground()
     {
-        backgroundImage.sprite = backgrounds[Random.Range(0, backgrounds.Count - 1)];
+       // backgroundImage.sprite = backgrounds[Random.Range(0, backgrounds.Count - 1)];
     }
 
     void Update()

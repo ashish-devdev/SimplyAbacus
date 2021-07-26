@@ -162,8 +162,8 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
                 Color coloR;
                 ColorUtility.TryParseHtmlString(textColor[itemData.ID % 3], out coloR);
-                this.gameObject.transform.GetChild(0).GetComponent<Image>().color = coloR;
-                this.gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = coloR;
+                this.gameObject.transform.GetChild(0).GetComponent<Image>().color = Color.white;
+                this.gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = Color.white;
 
                // print("name" + this.gameObject.transform.GetChild(0).gameObject.name + "   " + itemData.ID + " " + textColor[itemData.ID % 3]+ this.gameObject.transform.GetChild(0).GetComponent<Image>().color);
 
@@ -182,8 +182,8 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
             else
             {
                 this.gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Button>().onClick.AddListener(() => itemData.onClickedActivity());
-                outLine.SetActive(true);
-                cardMainImage.color = new Color(1, 1, 1, 0.7f);
+                outLine.SetActive(false);
+                cardMainImage.color = new Color(1, 1, 1, 1f);
 
 
             }
