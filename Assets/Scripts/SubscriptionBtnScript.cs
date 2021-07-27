@@ -49,7 +49,7 @@ public class SubscriptionBtnScript : MonoBehaviour
             DateTime dateTime = dateTimeOffset.DateTime;
             print(dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
             print("purchased on" + dateTime.ToString());
-            alreadySubscribedText.text = "You are already a premium member with the subscription plan of " + iapManager.getSubscriptionEpochTimeAndPlan().Item2 + ".\nYour subscription expiers on " + (dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
+            alreadySubscribedText.text = "You are already a premium subscriber";// + iapManager.getSubscriptionEpochTimeAndPlan().Item2; + ".\nYour subscription expiers on " + (dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
             alreadySubscribedText.gameObject.SetActive(true);
 
             switch (iapManager.getSubscriptionEpochTimeAndPlan().Item3)
