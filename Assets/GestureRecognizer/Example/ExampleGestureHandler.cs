@@ -192,7 +192,7 @@ public class ExampleGestureHandler : MonoBehaviour
 
     void invokeNotification()
     {
-        congratulationText.text = "Congratulation";
+        congratulationText.text = "Congratulations";
         congratulationLean.TurnOn();//congratulationPannel.SetActive(true);
         sideNoteLean.TurnOff();//sideNote.SetActive(false);
         activityList1.speedWriting = true;
