@@ -63,6 +63,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 if (Lock != null)
                 {
                     Lock.SetActive(false);
+                    Lock.transform.parent.gameObject.SetActive(false);
                 }
                 if (cardGlow != null)
                 {
@@ -78,6 +79,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
             {
                 if (Lock != null)
                 {
+                    Lock.transform.parent.gameObject.SetActive(true);
                     Lock.SetActive(true);
                 }
 

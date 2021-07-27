@@ -18,9 +18,9 @@ public class AllowActivityIfTheUserIsSubscribed : MonoBehaviour
         }
         else
         {
-            dailyWorkout.SetActive(true);
+            // dailyWorkout.SetActive(true);
 
-            //    buySubscription.TurnOn();
+            buySubscription.TurnOn();
         }
     }
 
@@ -37,12 +37,12 @@ public class AllowActivityIfTheUserIsSubscribed : MonoBehaviour
         {
             book.TurnOn();
         }
-        else if (BookManager.currentBookName == "Book1")
+        else if (BookManager.currentBookName == "FOUNDATION LEVEL I")
             book.TurnOn();
         else
         {
-            book.TurnOn();
-            //   buySubscription.TurnOn();
+            //book.TurnOn();
+            buySubscription.TurnOn();
         }
     }
 }

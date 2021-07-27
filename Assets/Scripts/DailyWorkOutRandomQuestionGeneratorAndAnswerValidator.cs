@@ -1750,7 +1750,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             for (int i = 0; i < 2; i++)
             {
                 num[i] = UnityEngine.Random.Range(minRangeForEasy * 1f, maxRangeForEasy * 1f);
-                num[i] = float.Parse(num[i].ToString("F2"));
+                num[i] = float.Parse(num[i].ToString("F1"));
                 result += num[i];
                 questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression = questionAnswerOptionAndTimeDataHolder[problemNumber].questionExpression + num[i] + "+";
             }
@@ -1765,7 +1765,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
             while (optionIndex < 4)
             {
                 r = UnityEngine.Random.Range(1f, 51f);
-                r = float.Parse(r.ToString("F2"));
+                r = float.Parse(r.ToString("F1"));
 
                 if (optionValues[optionIndex] != -1)
                 {
@@ -1778,6 +1778,7 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                     {
                         if (Array.IndexOf(optionValues, (result - r)) == -1)
                         {
+                            print(r + "  " + (result - r));
                             optionValues[optionIndex] = result - r;
                             optionIndex++;
                         }
@@ -1789,6 +1790,8 @@ public class DailyWorkOutRandomQuestionGeneratorAndAnswerValidator : MonoBehavio
                     {
                         if (Array.IndexOf(optionValues, (result + r)) == -1)
                         {
+                            print(r + "  " + (result + r));
+
                             optionValues[optionIndex] = result + r;
                             optionIndex++;
                         }
