@@ -36,11 +36,13 @@ public class ExampleGestureHandler : MonoBehaviour
     public LeanToggle sideNoteLean;
     public LeanToggle congratulationLean;
     public LeanToggle notificationLean;
+    public LeanToggle notificationLean2;
     public bool writingWithRightIsDone;
     public Recognizer recognizerInstance;
     public List<PatternList> listOf_AllPatterns;
+    public Image eraserBtnBGImage;
     SpeedWriting2 speedWriting2;
-
+    
 
 
     void OnEnable()
@@ -67,6 +69,7 @@ public class ExampleGestureHandler : MonoBehaviour
         textResult.text = Numbers[currentIndex].ToString();
         textInstrction.text = "Let's try to write 0";
         notificationBtn.onClick.AddListener(StartTimer);
+        notificationBtn.onClick.AddListener(OpenNotification2Lean);
         writingWithRightIsDone = false;
         //creating a new list of patterns in the instance of a recognizer script and loading the new list of patterns(hear it is patterns of 0).
         recognizerInstance.patterns = new List<GesturePattern>();
@@ -110,13 +113,18 @@ public class ExampleGestureHandler : MonoBehaviour
                 if (currentIndex + 1 >= (Numbers.Count) && writingWithRightIsDone)
                 {
                     textInstrction.text = instructions[currentIndex];
+                    eraserBtnBGImage.color = Color.white;
                     //invoke congratulation box;
                     Invoke("invokeNotification", 0.2f);
 
 
                 }
                 else
+                {
                     textInstrction.text = instructions[currentIndex];
+                    eraserBtnBGImage.color = Color.white;
+
+                }
 
                 currentIndex++;
                 if (currentIndex < thresholdValue.Count)
@@ -163,6 +171,7 @@ public class ExampleGestureHandler : MonoBehaviour
     void ShowElseMessage()
     {
         textInstrction.text = "CAN YOU DRAW IT AGAIN ? ";
+        eraserBtnBGImage.color = Color.green;
         SoundManager.Instance.Play(wrongRecognisedSound);
 
     }
@@ -258,16 +267,32 @@ public class ExampleGestureHandler : MonoBehaviour
                 recognizerInstance.patterns.Add(listOf_AllPatterns[currentIndex].patterns[i]);
             }
             notificationLean.TurnOn();
-            notificationText.text = "Now let's try to draw with the left hand.";
+            notificationText.text = "Now, Left hand";
             textInstrction.text = "Let's try to write 0 ";
             sideNoteLean.TurnOff();
             //turn on notification and sAY write with left hand.
         }
     }
 
+    public void OpenNotification2Lean()
+    {
+        notificationLean2.TurnOn();
+        notificationBtn.onClick.RemoveListener(OpenNotification2Lean);
+    }
+
     private void OnDisable()
     {
         notificationBtn.onClick.RemoveListener(StartTimer);
+
+        try
+        {
+            notificationBtn.onClick.RemoveListener(OpenNotification2Lean);
+
+        }
+        catch
+        {
+            print("in try catch");
+        }
 
     }
 

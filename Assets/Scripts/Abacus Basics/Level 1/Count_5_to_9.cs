@@ -120,8 +120,8 @@ public class Count_5_to_9 : MonoBehaviour
         temp = false;
         loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue / 5;
         loadingBar.BeginAllTransitions();
-        Highlight1.SetActive(true);
-        Highlight2.SetActive(true);
+        //Highlight1.SetActive(true);
+        //Highlight2.SetActive(true);
         NotificationBtn.onClick.AddListener(DelayedInvokeAnimation);
         NotificationBtn.onClick.AddListener(OpenSideNote);
         for (currentTask = 0; currentTask < Count_5_to_9_ModelData.TaskComplete.Length; currentTask++)
@@ -132,7 +132,7 @@ public class Count_5_to_9 : MonoBehaviour
                 break;
             }
         }
-        
+
 
 
         loadingBar.Data.FillAmount = currentTask * 1f / 5;
@@ -189,10 +189,10 @@ public class Count_5_to_9 : MonoBehaviour
             }
 
 
-            Highlight1.transform.SetParent(beed5.transform);
-            Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-            Highlight2.transform.SetParent(beed5.transform);
-            Highlight2.transform.localPosition = new Vector3(0, 0, 0);
+            //Highlight1.transform.SetParent(beed5.transform);
+            //Highlight1.transform.localPosition = new Vector3(0, 0, 0);
+            //Highlight2.transform.SetParent(beed5.transform);
+            //Highlight2.transform.localPosition = new Vector3(0, 0, 0);
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
                 if (ValueCalculator.value == 0)
@@ -268,8 +268,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    Highlight1.SetActive(true);
-                    ResetHighlight.SetActive(false);
+                    //Highlight1.SetActive(true);
+                    //ResetHighlight.SetActive(false);
                 }
                 if (currentSubTask == 2)
                 {
@@ -317,8 +317,8 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (ValueCalculator.value == 6 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
-                ResetHighlight.SetActive(true);
-                Highlight1.SetActive(false);
+                //ResetHighlight.SetActive(true);
+                //Highlight1.SetActive(false);
 
                 temp = true;
                 currentResetAnimation = resetCount2Animation;
@@ -336,8 +336,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    Highlight1.SetActive(true);
-                    ResetHighlight.SetActive(false);
+                    //Highlight1.SetActive(true);
+                    //ResetHighlight.SetActive(false);
                     if (currentSubTask == 2)
                     {
                         Count_5_to_9_ModelData.barValue = ((1 + currentTask) * 1f) / 5;
@@ -359,8 +359,8 @@ public class Count_5_to_9 : MonoBehaviour
                 temp = true;
                 currentResetAnimation = resetCount3Animation;
                 Invoke("DelyedInvoke", 0.5f);
-                ResetHighlight.SetActive(true);
-                Highlight1.SetActive(false);
+                //ResetHighlight.SetActive(true);
+                //Highlight1.SetActive(false);
 
 
 
@@ -376,8 +376,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    Highlight1.SetActive(true);
-                    ResetHighlight.SetActive(false);
+                    //Highlight1.SetActive(true);
+                    //ResetHighlight.SetActive(false);
 
                 }
                 if (currentSubTask == 2)
@@ -399,8 +399,8 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 8 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                ResetHighlight.SetActive(true);
-                Highlight1.SetActive(false);
+                //ResetHighlight.SetActive(true);
+                //Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount4Animation;
                 Invoke("DelyedInvoke", 0.5f);
@@ -416,8 +416,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    ResetHighlight.SetActive(false);
-                    Highlight1.SetActive(true);
+                    //ResetHighlight.SetActive(false);
+                    //Highlight1.SetActive(true);
 
 
 
@@ -441,8 +441,8 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 9 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                ResetHighlight.SetActive(true);
-                Highlight1.SetActive(false);
+                //ResetHighlight.SetActive(true);
+                //Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount5Animation;
                 Invoke("DelyedInvoke", 0.5f);
@@ -471,6 +471,7 @@ public class Count_5_to_9 : MonoBehaviour
     {
         notificationLean.TurnOn();// NotificationPannel.SetActive(true);
         sideNoteLean.TurnOff();//  sideNote.SetActive(false);
+        /*
         if (currentTask == 1)
         {
             Highlight1.transform.SetParent(beed1.transform);
@@ -511,7 +512,7 @@ public class Count_5_to_9 : MonoBehaviour
             ResetHighlight.transform.SetParent(beed1.transform);
             ResetHighlight.transform.localPosition = new Vector3(0, 0, 0);
         }
-
+        */
 
     }
 
@@ -535,12 +536,12 @@ public class Count_5_to_9 : MonoBehaviour
 
     private void OnDisable()
     {
-        Highlight1.SetActive(false);
-        Highlight2.SetActive(false);
+        //Highlight1.SetActive(false);
+        //Highlight2.SetActive(false);
         NotificationBtn.onClick.RemoveListener(OpenSideNote);
 
         activityList2.LiftingBeed22.currentSubActivity = SubTaskToSave;
-       
+
 
         SaveManager.Instance.saveDataToDisk(Activity.classParent);
         SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);

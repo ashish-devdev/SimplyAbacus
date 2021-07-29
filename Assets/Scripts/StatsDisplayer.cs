@@ -82,9 +82,20 @@ public class StatsDisplayer : MonoBehaviour
 
         nextBtn.onClick.AddListener(() => { ++temp; LoadAndDisplayStats(); ChangeClassNameText(); CalculateClassBestTimieng(); });
         previousBtn.onClick.AddListener(() => { --temp; LoadAndDisplayStats(); ChangeClassNameText(); CalculateClassBestTimieng(); });
-        shareBtn.onClick.AddListener(Share);
+
+  
     }
 
+    public void AttachShareToOnAnsweredCorrecltlyAction()
+    {
+        QAController.onAnswerdedCorrectly += Share;
+
+    }
+    public void RemoveShareToOnAnsweredCorrecltlyAction()
+    {
+        QAController.onAnswerdedCorrectly -= Share;
+
+    }
 
 
     public void InstantiateActivityStatsCells(int i)
@@ -111,7 +122,7 @@ public class StatsDisplayer : MonoBehaviour
         }
         nextBtn.onClick.RemoveAllListeners();
         previousBtn.onClick.RemoveAllListeners();
-        shareBtn.onClick.RemoveListener(Share);
+
 
     }
 
@@ -164,7 +175,7 @@ public class StatsDisplayer : MonoBehaviour
                         if (activityScriptInstance.classActivityList[j].classData.activityList[k].matchValueWithImage.Length > 0)
                         {
                             //    ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].matchValueWithImage[0].bestTime_string;
-                           
+
 
                             if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].matchValueWithImage[0].bestTime >= 0)
                             {
@@ -189,10 +200,10 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                            
+
                         }
 
-                        if (activityScriptInstance.classActivityList[j].classData.activityList[k].abacusOperations.active==true)
+                        if (activityScriptInstance.classActivityList[j].classData.activityList[k].abacusOperations.active == true)
                         {
                             //  ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].abacusOperations.bestTime_string;
                             if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].abacusOperations.bestTime >= 0)
@@ -204,7 +215,7 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                           
+
                         }
 
 
@@ -220,7 +231,7 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                            
+
 
                         }
 
@@ -236,7 +247,7 @@ public class StatsDisplayer : MonoBehaviour
                                 //classCompleted = false;
                                 //break;
                             }
-                           
+
 
                         }
 
@@ -252,7 +263,7 @@ public class StatsDisplayer : MonoBehaviour
                                 //classCompleted = false;
                                 //break;
                             }
-                          
+
 
                         }
 
@@ -269,7 +280,7 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                          
+
 
                         }
                         if (activityScriptInstance.classActivityList[j].classData.activityList[k].visualHands.active == true)
@@ -285,7 +296,7 @@ public class StatsDisplayer : MonoBehaviour
                                 break;
                             }
 
-                          
+
 
                         }
                         if (activityScriptInstance.classActivityList[j].classData.activityList[k].countBodyParts.active == true)
@@ -300,7 +311,7 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                           
+
 
                         }
 
@@ -316,7 +327,7 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                           
+
 
                         }
                         if (activityScriptInstance.classActivityList[j].classData.activityList[k].coloringPageImages.Length > 0)
@@ -331,7 +342,7 @@ public class StatsDisplayer : MonoBehaviour
                                 classCompleted = false;
                                 break;
                             }
-                           
+
 
                         }
                         if (activityScriptInstance.classActivityList[j].classData.activityList[k].multiplicationDivisionPuzzle.active == true)
@@ -420,12 +431,12 @@ public class StatsDisplayer : MonoBehaviour
 
                     spanedTime = TimeSpan.FromSeconds(classBestTime);
                     timeInString = spanedTime.ToString(@"dd\:hh\:mm\:ss");
-                    s=timeInString.Split(':');
+                    s = timeInString.Split(':');
                     timeInString = "";
                     if (classBestTime >= 60 * 60 * 24)
                         timeInString = s[0] + "d" + ":" + s[1] + "h" + ":" + s[2] + "m";
                     else
-                        timeInString = s[1] + "h" + ":" + s[2] + "m" +":"+s[3]+"s";
+                        timeInString = s[1] + "h" + ":" + s[2] + "m" + ":" + s[3] + "s";
 
                     bookBestTime[t].text = timeInString;
                 }
@@ -492,7 +503,7 @@ public class StatsDisplayer : MonoBehaviour
                                 {
 
                                     ParentContainerOfCells.transform.GetChild(t).gameObject.SetActive(true);
-                                    ParentContainerOfCells.transform.GetChild(t).GetChild(1).transform.GetComponent<TextMeshProUGUI>().text =  Regex.Replace(activityScriptInstance.classActivityList[j].classData.activityList[t].activityName, @"\s+", " ");  //activity Name                                  
+                                    ParentContainerOfCells.transform.GetChild(t).GetChild(1).transform.GetComponent<TextMeshProUGUI>().text = Regex.Replace(activityScriptInstance.classActivityList[j].classData.activityList[t].activityName, @"\s+", " ");  //activity Name                                  
 
                                 }
                                 else
@@ -536,7 +547,7 @@ public class StatsDisplayer : MonoBehaviour
                                     }
                                 }
 
-                                if (activityScriptInstance.classActivityList[j].classData.activityList[k].abacusOperations.active==true)
+                                if (activityScriptInstance.classActivityList[j].classData.activityList[k].abacusOperations.active == true)
                                 {
                                     ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].abacusOperations.bestTime_string;
                                     if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].abacusOperations.bestTime >= 0)
@@ -678,7 +689,7 @@ public class StatsDisplayer : MonoBehaviour
 
                                 if (activityScriptInstance.classActivityList[j].classData.activityList[k].tutorialVideo.active == true)
                                 {
-                                      ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime_string;
+                                    ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime_string;
                                     if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime >= 0)
                                     {
                                         classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime;
@@ -716,7 +727,7 @@ public class StatsDisplayer : MonoBehaviour
 
         while (ParentContainerOfCells.transform.GetChild(i).gameObject.activeInHierarchy)
         {
-            shareText += Regex.Replace(ParentContainerOfCells.transform.GetChild(i).GetChild(1).GetComponent<TextMeshProUGUI>().text, @"\s+", " "); 
+            shareText += Regex.Replace(ParentContainerOfCells.transform.GetChild(i).GetChild(1).GetComponent<TextMeshProUGUI>().text, @"\s+", " ");
             shareText += "   ";
             shareText += ParentContainerOfCells.transform.GetChild(i).GetChild(2).GetComponent<TextMeshProUGUI>().text;
             shareText += "\n";

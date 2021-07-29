@@ -17,7 +17,7 @@ public class DisplayDailyWorkoutStats : MonoBehaviour
     private void OnEnable()
     {
         stringToShare = "";
-        share.onClick.AddListener(ShareText);
+
         totalCards = dailyWorkoutStatsDisplayCards.Count;
         if (File.Exists(SaveManager.Instance.dailyWorkoutStatsPath))
         {
@@ -69,11 +69,17 @@ public class DisplayDailyWorkoutStats : MonoBehaviour
         }
     }
 
-    private void OnDisable()
+    public void AttachShareToOnAnsweredCorrecltlyAction()
     {
-        share.onClick.RemoveListener(ShareText);
+        QAController.onAnswerdedCorrectly += ShareText;
 
     }
+    public void RemoveShareToOnAnsweredCorrecltlyAction()
+    {
+        QAController.onAnswerdedCorrectly -= ShareText;
+
+    }
+
 
     public void ShareText()
     {

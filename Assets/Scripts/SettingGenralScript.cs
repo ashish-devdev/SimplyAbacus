@@ -88,6 +88,11 @@ public class SettingGenralScript : MonoBehaviour
         Application.OpenURL("https://www.privacypolicygenerator.info/live.php?token=zA63lsZIzhr16RFWAaxMGVnGX9D4r6pR");
     }
 
+    public void OpenTermsAndConsitions()
+    {
+        Application.OpenURL("https://www.termsandconditionsgenerator.com/live.php?token=q5mjNSa1XNbznur8t0Gn14DU5ZgIed3b");
+    }
+
 
 
 }

@@ -26,7 +26,7 @@ public class PlayWithAbacusGenralScript : MonoBehaviour
     public void DelayEnable()
     {
         if (!DontChangePosition)
-            currentPosition = 5;
+            currentPosition = 4;
 
         LeftShift.interactable = true;
         RightShift.interactable = true;

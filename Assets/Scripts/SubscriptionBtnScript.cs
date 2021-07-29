@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SubscriptionBtnScript : MonoBehaviour
 {
@@ -35,9 +36,12 @@ public class SubscriptionBtnScript : MonoBehaviour
     public GameObject _12monthPlanButton;
     public GameObject _subscriptionPlanButton;
 
+    
+
     public void OnEnable()
     {
         OnClick1YearSubscribtionBtn();
+        QAController.onAnswerdedCorrectly += BuySubscription;
 
         if (iapManager.CheckIfUserIsSubscribed())
         {
@@ -180,5 +184,8 @@ public class SubscriptionBtnScript : MonoBehaviour
         }
     }
 
-
+    private void OnDisable()
+    {
+        QAController.onAnswerdedCorrectly -= BuySubscription;
+    }
 }

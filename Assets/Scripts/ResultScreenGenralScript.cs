@@ -46,8 +46,8 @@ public class ResultScreenGenralScript : MonoBehaviour
         correctAnswerCount = 0;
         nameText.text = UserName.text;
         currentDateText.text = DateTime.Today.ToString("dd-MM-yyyy");
-        share.onClick.AddListener(ShareInformation);
-
+        //share.onClick.AddListener(ShareInformation);
+        QAController.onAnswerdedCorrectly += ShareInformation;
         for (int i = 0; i < dailyWorkOutRandomQuestionGeneratorAndAnswerValidator.questionAnswerOptionAndTimeDataHolder.Count; i++)
         {
             resultCard[i].SetActive(true);
@@ -263,7 +263,7 @@ public class ResultScreenGenralScript : MonoBehaviour
     {
         Color color;
         ColorUtility.TryParseHtmlString("#FF5353FF", out color);
-
+        QAController.onAnswerdedCorrectly -= ShareInformation;
         for (int i = 0; i < resultCard.Length; i++)
         {
             resultCard[i].SetActive(false);
@@ -283,7 +283,7 @@ public class ResultScreenGenralScript : MonoBehaviour
         {
             questionTypeName[i].transform.gameObject.SetActive(false);
         }
-        share.onClick.RemoveListener(ShareInformation);
+        //share.onClick.RemoveListener(ShareInformation);
 
     }
 
