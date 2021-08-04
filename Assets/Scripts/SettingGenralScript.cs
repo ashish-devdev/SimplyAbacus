@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -9,6 +10,16 @@ public class SettingGenralScript : MonoBehaviour
     public SaveManager saveManager;
     public ProgressLoader progressLoader;
     public Activity activity;
+    public QAController qAController;
+    bool isPrivacyPolicy;
+    bool isTermsAndCondition;
+
+    private void OnEnable()
+    {
+
+    }
+
+
     public void ClearDailyWorkout()
     {
 
@@ -85,14 +96,38 @@ public class SettingGenralScript : MonoBehaviour
 
     public void OpenPrivacyPolicy()
     {
-        Application.OpenURL("https://www.privacypolicygenerator.info/live.php?token=zA63lsZIzhr16RFWAaxMGVnGX9D4r6pR");
+        isPrivacyPolicy = true;
+        isTermsAndCondition = false;
+
+        qAController.LoadQuestion();
+
+        QAController.onAnswerdedCorrectly += OpenAppropriateURL;
+
+    }
+
+    void OpenAppropriateURL()
+    {
+        if (isPrivacyPolicy)
+            Application.OpenURL("https://www.privacypolicygenerator.info/live.php?token=zA63lsZIzhr16RFWAaxMGVnGX9D4r6pR");
+        else if (isTermsAndCondition)
+            Application.OpenURL("https://www.termsandconditionsgenerator.com/live.php?token=q5mjNSa1XNbznur8t0Gn14DU5ZgIed3b");
     }
 
     public void OpenTermsAndConsitions()
     {
-        Application.OpenURL("https://www.termsandconditionsgenerator.com/live.php?token=q5mjNSa1XNbznur8t0Gn14DU5ZgIed3b");
+        isPrivacyPolicy = false;
+        isTermsAndCondition = true;
+        qAController.LoadQuestion();
+
+        QAController.onAnswerdedCorrectly += OpenAppropriateURL;
     }
 
+    public void CheckIfDummyActionIsNullAndRemove()
+    {
+        isPrivacyPolicy = false;
+        isTermsAndCondition = false;
 
+        QAController.onAnswerdedCorrectly -= OpenAppropriateURL;
+    }
 
 }

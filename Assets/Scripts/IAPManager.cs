@@ -642,4 +642,54 @@ public class IAPManager : MonoBehaviour, IStoreListener
     }
 
 
+
+
+
+
+    public (string, string, string, string, string, string, string) GetLocalizedPrice()
+    {
+        string _3MonthsPrice = "", _6MonthsPrice = "", _12MonthsPrice = "", _3MonthsPricePerMonth = "", _6MonthsPricePerMonth = "", _12MonthsPricePerMonth = "", isoCurrencyCode = "";
+
+        foreach (var product in m_StoreController.products.all)
+        {
+            Debug.Log(product.metadata.localizedTitle);
+            Debug.Log(product.metadata.localizedDescription);
+            Debug.Log(product.metadata.localizedPriceString);
+            print(product.metadata.isoCurrencyCode);
+            if (String.Compare(product.definition.id, _3MonthsSubscription) == 0)
+            {
+                _3MonthsPrice = product.metadata.localizedPriceString;
+                _3MonthsPricePerMonth = (product.metadata.localizedPrice / 3).ToString("F2");
+                _3MonthsPrice = product.metadata.localizedPriceString;
+
+            }
+            if (String.Compare(product.definition.id, _6MonthsSubscription) == 0)
+            {
+                _6MonthsPrice = product.metadata.localizedPriceString;
+                _6MonthsPricePerMonth = (product.metadata.localizedPrice / 6).ToString("F2");
+                _6MonthsPrice = product.metadata.localizedPriceString;
+
+
+            }
+            if (String.Compare(product.definition.id, _1YearSubscription) == 0)
+            {
+                _12MonthsPrice = product.metadata.localizedPriceString;
+                _12MonthsPricePerMonth = (product.metadata.localizedPrice / 12).ToString("F2");
+                _12MonthsPrice = product.metadata.localizedPriceString;
+            }
+
+            isoCurrencyCode = product.metadata.isoCurrencyCode;
+
+        }
+
+
+
+
+
+
+
+        return (_3MonthsPrice, _6MonthsPrice, _12MonthsPrice, _3MonthsPricePerMonth, _6MonthsPricePerMonth, _12MonthsPricePerMonth, isoCurrencyCode);
+    }
+
+
 }

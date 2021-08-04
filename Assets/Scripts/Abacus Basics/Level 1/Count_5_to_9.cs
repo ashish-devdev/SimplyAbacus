@@ -68,6 +68,8 @@ public class Count_5_to_9 : MonoBehaviour
     public LeanToggle notificationLean;
     int SubTaskToSave;
 
+
+
     void OnEnable()
     {
 
@@ -100,7 +102,7 @@ public class Count_5_to_9 : MonoBehaviour
             }
         }
 
-
+        NotificationBtn.onClick.AddListener(startAnimation);
 
         if (activityList2.LiftingBeed22.currentSubActivity >= 5)
         {
@@ -168,6 +170,14 @@ public class Count_5_to_9 : MonoBehaviour
 
     }
 
+    public void startAnimation()
+    {
+        leanPulseFingerDownAnimation.RemainingPulses = 0;
+        leanPulseThumbDownAnimation.RemainingPulses = 0;
+        leanPulseThumbUpAnimation.RemainingPulses = 0;
+        Invoke("DelayedInvokeResetAnimations", 0.5f);
+    }
+
     public void hideindexFingerSpriteRenderer()
     {
         indexDownAnimatingSprite.gameObject.SetActive(false);
@@ -192,6 +202,7 @@ public class Count_5_to_9 : MonoBehaviour
         }
         try
         {
+            if(!Notification.transform.gameObject.activeInHierarchy)
             if (Input.touches[0].phase == TouchPhase.Ended)
             {
                 leanPulseFingerDownAnimation.RemainingPulses = 0;
@@ -242,7 +253,7 @@ public class Count_5_to_9 : MonoBehaviour
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
 
 
@@ -251,7 +262,7 @@ public class Count_5_to_9 : MonoBehaviour
                     if (ValueCalculator.value == 5)
                     {
 
-                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
@@ -348,13 +359,13 @@ public class Count_5_to_9 : MonoBehaviour
 
                     beed1.GetComponent<BoxCollider>().enabled = true;
 
-                    Invoke("DelayedleanPulseFingerUpAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerUpAnimation", 0.5f);
 
                     //move finger up
                 }
                 if (ValueCalculator.value == 1)
                 {
-                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                     indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
                     indexDownAnimatingSprite.transform.SetParent(beed1.transform);
@@ -362,7 +373,7 @@ public class Count_5_to_9 : MonoBehaviour
                     beed5.GetComponent<BoxCollider>().enabled = false;
 
                     beed1.GetComponent<BoxCollider>().enabled = true;
-                    Invoke("DelayedleanPulseThumbDownAnimation", 1f);
+                    Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
 
                     //move thumb down
                 }
@@ -375,8 +386,8 @@ public class Count_5_to_9 : MonoBehaviour
 
                     beed1.GetComponent<BoxCollider>().enabled = false;
 
-                    Invoke("DelayedleanPulseFingerUpAnimation", 1f);
-                    Invoke("DelayedleanPulseThumbDownAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerUpAnimation", 0.5f);
+                    Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
 
                     //move finger up
                     //move thumb down
@@ -430,7 +441,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                     beed5.GetComponent<BoxCollider>().enabled = true;
                     beed1.GetComponent<BoxCollider>().enabled = false;
-                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
                 }
                 if (ValueCalculator.value == 5)
@@ -439,7 +450,7 @@ public class Count_5_to_9 : MonoBehaviour
                     indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.SetParent(beed1.transform);
-                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -452,7 +463,7 @@ public class Count_5_to_9 : MonoBehaviour
                 if (ValueCalculator.value == 1)
                 {
 
-                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
                     indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
                     indexUpAnimatingSprite.transform.SetParent(beed1.transform);
@@ -462,14 +473,14 @@ public class Count_5_to_9 : MonoBehaviour
                     beed5.GetComponent<BoxCollider>().enabled = false;
 
                     beed1.GetComponent<BoxCollider>().enabled = true;
-                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                     //move finger down
 
                 }
 
                 if (ValueCalculator.value == 6)
                 {
-                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
                     indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
@@ -577,7 +588,7 @@ public class Count_5_to_9 : MonoBehaviour
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
                     indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
 
 
@@ -589,7 +600,7 @@ public class Count_5_to_9 : MonoBehaviour
                     indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
-                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -598,7 +609,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                 if (ValueCalculator.value == 2)
                 {
-                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                     indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
                     indexDownAnimatingSprite.transform.SetParent(beed2.transform);
@@ -608,7 +619,7 @@ public class Count_5_to_9 : MonoBehaviour
                 }
                 if (ValueCalculator.value == 7)
                 {
-                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
                     indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
@@ -711,7 +722,7 @@ public class Count_5_to_9 : MonoBehaviour
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
 
 
@@ -723,7 +734,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed3.transform);
-                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -732,7 +743,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 3)
                     {
-                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
                         indexDownAnimatingSprite.transform.SetParent(beed1.transform);
@@ -742,7 +753,7 @@ public class Count_5_to_9 : MonoBehaviour
                     }
                     if (ValueCalculator.value == 8)
                     {
-                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
@@ -840,7 +851,7 @@ public class Count_5_to_9 : MonoBehaviour
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
 
 
@@ -852,7 +863,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed4.transform);
-                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -861,7 +872,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 4)
                     {
-                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
                         indexDownAnimatingSprite.transform.SetParent(beed1.transform);
@@ -871,7 +882,7 @@ public class Count_5_to_9 : MonoBehaviour
                     }
                     if (ValueCalculator.value == 9)
                     {
-                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
@@ -1067,6 +1078,8 @@ public class Count_5_to_9 : MonoBehaviour
 
         Highlight1.SetActive(false);
         Highlight2.SetActive(false);
+
+        NotificationBtn.onClick.RemoveListener(startAnimation);
 
         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
         indexDownAnimatingSprite.transform.gameObject.SetActive(false);

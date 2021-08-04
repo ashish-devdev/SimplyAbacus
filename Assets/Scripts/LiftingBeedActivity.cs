@@ -59,7 +59,7 @@ public class LiftingBeedActivity : MonoBehaviour
         loadingBar.Data.FillAmount = ((currentSubOperation) / (totalSubOperation * 1f));
         loadingBar.BeginAllTransitions();
         notificationBtn.onClick.AddListener(StartTimer);
-        sideNote.text = "Represent " + liftBeeds.numbers[currentSubOperation] + " in abacus.";
+        sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] + ", twice ";
 
     }
 
@@ -90,7 +90,7 @@ public class LiftingBeedActivity : MonoBehaviour
         {
             resetHappened = true;
             cuurentCount++;
-            sideNote.text = "Represent " + liftBeeds.numbers[currentSubOperation] + " in abacus.";//cuurentsuboperation will be incremented by 1 at this point.
+            sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] + ", twice ";//cuurentsuboperation will be incremented by 1 at this point.
 
         }
 
@@ -103,7 +103,7 @@ public class LiftingBeedActivity : MonoBehaviour
             loadingBar.BeginAllTransitions();
             try
             {
-                sideNote.text = "Represent " + liftBeeds.numbers[currentSubOperation] + " in abacus.";//cuurentsuboperation will be incremented by 1 at this point.
+                sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] + ", twice ";//cuurentsuboperation will be incremented by 1 at this point.
             }
             catch
             {; }
@@ -162,8 +162,8 @@ public class LiftingBeedActivity : MonoBehaviour
       //  reset.RESET();
         try
         {
-            sideNote.text = "Represent " + liftBeeds.numbers[currentSubOperation] + " in abacus.";//cuurentsuboperation will be incremented by 1 at this point.
-            sideNote.text = "Represent Zero(0) in abacus.";//cuurentsuboperation will be incremented by 1 at this point.
+           // sideNote.text = "Represent " + liftBeeds.numbers[currentSubOperation] + " in abacus.";//cuurentsuboperation will be incremented by 1 at this point.
+           // sideNote.text = "Represent Zero(0) in abacus.";//cuurentsuboperation will be incremented by 1 at this point.
         }
         catch
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lean.Gui;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -36,13 +37,35 @@ public class SubscriptionBtnScript : MonoBehaviour
     public GameObject _12monthPlanButton;
     public GameObject _subscriptionPlanButton;
 
-    float refreshTimer;
+    public TextMeshProUGUI _3monthPriceTextPerMonth;
+    public TextMeshProUGUI _6monthPriceTextPerMonth;
+    public TextMeshProUGUI _1yearPriceTextPerMonth;
+    bool clickOnSubscription;
+    bool clickOnRestore;
+
+    public LeanToggle subscriptionCanvasScreenLean;
+
+    int timer = 0;
+
+
 
     public void OnEnable()
     {
-        refreshTimer = 0;
+        clickOnSubscription = false;
+        clickOnRestore = false;
+        timer = 0;
+        string isoCurrencyCode = iapManager.GetLocalizedPrice().Item7;
+        _3monthPriceText.text = iapManager.GetLocalizedPrice().Item1;
+        _6monthPriceText.text = iapManager.GetLocalizedPrice().Item2;
+        _1yearPriceText.text = iapManager.GetLocalizedPrice().Item3;
+
+        _3monthPriceTextPerMonth.text = isoCurrencyCode + " " + iapManager.GetLocalizedPrice().Item4 + " / Month";
+        _6monthPriceTextPerMonth.text = isoCurrencyCode + " " + iapManager.GetLocalizedPrice().Item5 + " / Month";
+        _1yearPriceTextPerMonth.text = isoCurrencyCode + " " + iapManager.GetLocalizedPrice().Item6 + " / Month";
+
+
         OnClick1YearSubscribtionBtn();
-        QAController.onAnswerdedCorrectly += BuySubscription;
+      
 
         if (iapManager.CheckIfUserIsSubscribed())
         {
@@ -84,44 +107,47 @@ public class SubscriptionBtnScript : MonoBehaviour
 
     private void Update()
     {
-        refreshTimer++;
+        timer++;
 
-        if (refreshTimer * Time.deltaTime > 2)
+        if (timer * Time.deltaTime > 2)
         {
-            refreshTimer = 0;
-
-            if (iapManager.CheckIfUserIsSubscribed())
+            timer = 0;
+            if (clickOnSubscription || clickOnRestore)
             {
-                // mainSubscriptionScreen.SetActive(false);
-                // allreadySubscribedScreen.SetActive(true);
-                print(iapManager.getSubscriptionEpochTimeAndPlan().Item1);
-                DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(iapManager.getSubscriptionEpochTimeAndPlan().Item1));
-                print(dateTimeOffset.DateTime);
-                DateTime dateTime = dateTimeOffset.DateTime;
-                print(dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
-                print("purchased on" + dateTime.ToString());
-                alreadySubscribedText.text = "You are already a premium subscriber";// + iapManager.getSubscriptionEpochTimeAndPlan().Item2; + ".\nYour subscription expiers on " + (dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
-                alreadySubscribedText.gameObject.SetActive(true);
 
-                switch (iapManager.getSubscriptionEpochTimeAndPlan().Item3)
+                if (iapManager.CheckIfUserIsSubscribed())
                 {
-                    case 3:
-                        _3monthPlanButton.SetActive(false);
-                        break;
-                    case 6:
-                        _3monthPlanButton.SetActive(false);
-                        _6monthPlanButton.SetActive(false);
-                        break;
-                    case 12:
-                        _3monthPlanButton.SetActive(false);
-                        _6monthPlanButton.SetActive(false);
-                        _12monthPlanButton.SetActive(false);
-                        _subscriptionPlanButton.SetActive(false);
-                        break;
+                    // mainSubscriptionScreen.SetActive(false);
+                    // allreadySubscribedScreen.SetActive(true);
+                    print(iapManager.getSubscriptionEpochTimeAndPlan().Item1);
+                    DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(iapManager.getSubscriptionEpochTimeAndPlan().Item1));
+                    print(dateTimeOffset.DateTime);
+                    DateTime dateTime = dateTimeOffset.DateTime;
+                    print(dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
+                    print("purchased on" + dateTime.ToString());
+                    alreadySubscribedText.text = "You are already a premium subscriber";// + iapManager.getSubscriptionEpochTimeAndPlan().Item2; + ".\nYour subscription expiers on " + (dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
+                    alreadySubscribedText.gameObject.SetActive(true);
+
+                    switch (iapManager.getSubscriptionEpochTimeAndPlan().Item3)
+                    {
+                        case 3:
+                            _3monthPlanButton.SetActive(false);
+                            break;
+                        case 6:
+                            _3monthPlanButton.SetActive(false);
+                            _6monthPlanButton.SetActive(false);
+                            break;
+                        case 12:
+                            _3monthPlanButton.SetActive(false);
+                            _6monthPlanButton.SetActive(false);
+                            _12monthPlanButton.SetActive(false);
+                            _subscriptionPlanButton.SetActive(false);
+                            break;
+                    }
+
+
+
                 }
-
-
-
             }
         }
     }
@@ -228,10 +254,23 @@ public class SubscriptionBtnScript : MonoBehaviour
         {
             Buy1YearSubscription();
         }
+        QAController.onAnswerdedCorrectly -= BuySubscription;
     }
 
-    private void OnDisable()
+    public void AttchSubscription()
     {
-        QAController.onAnswerdedCorrectly -= BuySubscription;
+        clickOnSubscription = true;
+        QAController.onAnswerdedCorrectly += BuySubscription;
+
+
+    }
+
+    public void RemoveSubscriptionIfPresent()
+    {
+        if (clickOnSubscription)
+        {
+            QAController.onAnswerdedCorrectly -= BuySubscription;
+
+        }
     }
 }

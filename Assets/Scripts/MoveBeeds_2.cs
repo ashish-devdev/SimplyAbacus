@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MoveBeeds_2 : MonoBehaviour
 {
@@ -24,6 +25,8 @@ public class MoveBeeds_2 : MonoBehaviour
     public float[] temp;
 
     public Camera abacusCam;
+    public Image[] imagesToBeUnintractable;
+
 
     private void OnEnable()
     {
@@ -37,6 +40,22 @@ public class MoveBeeds_2 : MonoBehaviour
     }
     private void Update()
     {
+        if (finger_is_lifted)
+        {
+            for (int i = 0; i < imagesToBeUnintractable.Length; i++)
+            {
+                imagesToBeUnintractable[i].raycastTarget = true;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < imagesToBeUnintractable.Length; i++)
+            {
+                imagesToBeUnintractable[i].raycastTarget = false;
+            }
+        }
+
+
         if (Input.touchCount == 0)
         {
             return;

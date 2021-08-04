@@ -26,10 +26,13 @@ public class PlayWithAbacusGenralScript : MonoBehaviour
     public void DelayEnable()
     {
         if (!DontChangePosition)
+        {
             currentPosition = 4;
+            LeftShift.interactable = true;
+            RightShift.interactable = true;
+        }
+        ChangeShiftButtonIntractibility();
 
-        LeftShift.interactable = true;
-        RightShift.interactable = true;
         // reset.RESET();
         LeftShift.onClick.AddListener(ShiftLeftDecimalPoint);
         RightShift.onClick.AddListener(ShiftRightDecimalPoint);
