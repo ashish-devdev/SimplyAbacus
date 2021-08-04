@@ -36,17 +36,18 @@ public class SubscriptionBtnScript : MonoBehaviour
     public GameObject _12monthPlanButton;
     public GameObject _subscriptionPlanButton;
 
-    
+    float refreshTimer;
 
     public void OnEnable()
     {
+        refreshTimer = 0;
         OnClick1YearSubscribtionBtn();
         QAController.onAnswerdedCorrectly += BuySubscription;
 
         if (iapManager.CheckIfUserIsSubscribed())
         {
-           // mainSubscriptionScreen.SetActive(false);
-           // allreadySubscribedScreen.SetActive(true);
+            // mainSubscriptionScreen.SetActive(false);
+            // allreadySubscribedScreen.SetActive(true);
             print(iapManager.getSubscriptionEpochTimeAndPlan().Item1);
             DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(iapManager.getSubscriptionEpochTimeAndPlan().Item1));
             print(dateTimeOffset.DateTime);
@@ -74,10 +75,55 @@ public class SubscriptionBtnScript : MonoBehaviour
             }
 
 
+
         }
-    
 
 
+
+    }
+
+    private void Update()
+    {
+        refreshTimer++;
+
+        if (refreshTimer * Time.deltaTime > 2)
+        {
+            refreshTimer = 0;
+
+            if (iapManager.CheckIfUserIsSubscribed())
+            {
+                // mainSubscriptionScreen.SetActive(false);
+                // allreadySubscribedScreen.SetActive(true);
+                print(iapManager.getSubscriptionEpochTimeAndPlan().Item1);
+                DateTimeOffset dateTimeOffset = DateTimeOffset.FromUnixTimeMilliseconds(long.Parse(iapManager.getSubscriptionEpochTimeAndPlan().Item1));
+                print(dateTimeOffset.DateTime);
+                DateTime dateTime = dateTimeOffset.DateTime;
+                print(dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
+                print("purchased on" + dateTime.ToString());
+                alreadySubscribedText.text = "You are already a premium subscriber";// + iapManager.getSubscriptionEpochTimeAndPlan().Item2; + ".\nYour subscription expiers on " + (dateTime.AddMonths(iapManager.getSubscriptionEpochTimeAndPlan().Item3).Date.ToString("dd/MM/yyyy"));
+                alreadySubscribedText.gameObject.SetActive(true);
+
+                switch (iapManager.getSubscriptionEpochTimeAndPlan().Item3)
+                {
+                    case 3:
+                        _3monthPlanButton.SetActive(false);
+                        break;
+                    case 6:
+                        _3monthPlanButton.SetActive(false);
+                        _6monthPlanButton.SetActive(false);
+                        break;
+                    case 12:
+                        _3monthPlanButton.SetActive(false);
+                        _6monthPlanButton.SetActive(false);
+                        _12monthPlanButton.SetActive(false);
+                        _subscriptionPlanButton.SetActive(false);
+                        break;
+                }
+
+
+
+            }
+        }
     }
 
 
@@ -87,8 +133,8 @@ public class SubscriptionBtnScript : MonoBehaviour
         REset();
         _3Months = true;
 
-      //  _3monthText.color = Color.black;
-      //  _3monthPriceText.color = Color.black;
+        //  _3monthText.color = Color.black;
+        //  _3monthPriceText.color = Color.black;
         _3monthBorder.SetActive(true);
         _3MBG.SetActive(true);
 
@@ -99,8 +145,8 @@ public class SubscriptionBtnScript : MonoBehaviour
         REset();
         _6Months = true;
 
-      //  _6monthText.color = Color.black;
-      //  _6monthPriceText.color = Color.black;
+        //  _6monthText.color = Color.black;
+        //  _6monthPriceText.color = Color.black;
         _6monthBorder.SetActive(true);
         _6MBG.SetActive(true);
 
@@ -111,8 +157,8 @@ public class SubscriptionBtnScript : MonoBehaviour
         REset();
         _1Year = true;
 
-      //  _1yearText.color = Color.black;
-      //  _1yearPriceText.color = Color.black;
+        //  _1yearText.color = Color.black;
+        //  _1yearPriceText.color = Color.black;
         _1YearBorder.SetActive(true);
         _1YBG.SetActive(true);
 

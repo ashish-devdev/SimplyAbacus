@@ -9,6 +9,7 @@ public class AllowActivityIfTheUserIsSubscribed : MonoBehaviour
     public LeanToggle buySubscription;
     public IAPManager _IAPManager;
     public LeanToggle book;
+    public LeanToggle ShowDoPreviousSectionLean;
 
     public void OnClickedDailyWorkout(GameObject dailyWorkout)
     {
@@ -45,4 +46,21 @@ public class AllowActivityIfTheUserIsSubscribed : MonoBehaviour
             buySubscription.TurnOn();
         }
     }
+
+    public void CheckIfUserIsSubscribedOnClickingLock()
+    {
+        if (_IAPManager.CheckIfUserIsSubscribed())
+        {
+            ShowDoPreviousSectionLean.TurnOn();
+        }
+        else
+        {
+            // dailyWorkout.SetActive(true);
+
+            buySubscription.TurnOn();
+        }
+    }
+
+
+
 }

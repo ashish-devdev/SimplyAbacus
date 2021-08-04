@@ -44,6 +44,11 @@ public class Count_5_to_9 : MonoBehaviour
     public GameObject beed3;
     public GameObject beed4;
     public GameObject beed5;
+    public GameObject beed6;
+    public GameObject beed7;
+    public GameObject beed8;
+    public GameObject beed9;
+    public GameObject beed10;
     public GameObject AnimatingSpriteGameObject;
     public GameObject Highlight1;
     public GameObject Highlight2;
@@ -66,6 +71,20 @@ public class Count_5_to_9 : MonoBehaviour
     void OnEnable()
     {
 
+        beed1.GetComponent<BoxCollider>().enabled = false;
+        beed2.GetComponent<BoxCollider>().enabled = false;
+        beed3.GetComponent<BoxCollider>().enabled = false;
+        beed4.GetComponent<BoxCollider>().enabled = false;
+        beed5.GetComponent<BoxCollider>().enabled = false;
+
+        beed6.GetComponent<BoxCollider>().enabled = false;
+        beed7.GetComponent<BoxCollider>().enabled = false;
+        beed8.GetComponent<BoxCollider>().enabled = false;
+        beed9.GetComponent<BoxCollider>().enabled = false;
+        beed10.GetComponent<BoxCollider>().enabled = false;
+
+
+
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -82,6 +101,7 @@ public class Count_5_to_9 : MonoBehaviour
         }
 
 
+
         if (activityList2.LiftingBeed22.currentSubActivity >= 5)
         {
             activityList2.LiftingBeed22.currentSubActivity = 0;
@@ -92,6 +112,7 @@ public class Count_5_to_9 : MonoBehaviour
         {
             Count_5_to_9_ModelData.TaskComplete = Count_5_to_9_ModelData.TaskComplete.Select(x => x = false).ToArray();
             Count_5_to_9_ModelData.barValue = 0;
+
 
         }
 
@@ -104,7 +125,7 @@ public class Count_5_to_9 : MonoBehaviour
 
 
         NotificationBtn.onClick.AddListener(OpenSideNote);
-
+        NotificationBtn.onClick.AddListener(showindexFingerSpriteRenderer);
 
 
 
@@ -120,8 +141,8 @@ public class Count_5_to_9 : MonoBehaviour
         temp = false;
         loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue / 5;
         loadingBar.BeginAllTransitions();
-        //Highlight1.SetActive(true);
-        //Highlight2.SetActive(true);
+        Highlight1.SetActive(true);
+        Highlight2.SetActive(true);
         NotificationBtn.onClick.AddListener(DelayedInvokeAnimation);
         NotificationBtn.onClick.AddListener(OpenSideNote);
         for (currentTask = 0; currentTask < Count_5_to_9_ModelData.TaskComplete.Length; currentTask++)
@@ -133,7 +154,7 @@ public class Count_5_to_9 : MonoBehaviour
             }
         }
 
-
+        Invoke("DelayedInvokeNotification", 0.4f);
 
         loadingBar.Data.FillAmount = currentTask * 1f / 5;
         loadingBar.BeginAllTransitions();
@@ -147,12 +168,43 @@ public class Count_5_to_9 : MonoBehaviour
 
     }
 
+    public void hideindexFingerSpriteRenderer()
+    {
+        indexDownAnimatingSprite.gameObject.SetActive(false);
+    }
+
+    public void showindexFingerSpriteRenderer()
+    {
+        indexDownAnimatingSprite.gameObject.SetActive(true);
+    }
 
     void Update()
     {
         // loadingBar.sizeDelta = new Vector2(Count_5_to_9_ModelData.barValue, loadingBar.sizeDelta.y);
 
+        if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
+        {
+            indexDownAnimatingSprite.enabled = false;
 
+            thumbUpAnimatingSprite.enabled = false;
+
+            //Invoke("DelyedInvoke",0.5f);
+        }
+        try
+        {
+            if (Input.touches[0].phase == TouchPhase.Ended)
+            {
+                leanPulseFingerDownAnimation.RemainingPulses = 0;
+                leanPulseThumbDownAnimation.RemainingPulses = 0;
+                leanPulseThumbUpAnimation.RemainingPulses = 0;
+                Invoke("DelayedInvokeResetAnimations", 0.5f);
+
+            }
+        }
+        catch
+        {
+            ;
+        }
 
         for (currentTask = 0; currentTask < Count_5_to_9_ModelData.TaskComplete.Length; currentTask++)
         {
@@ -174,25 +226,69 @@ public class Count_5_to_9 : MonoBehaviour
 
         if (currentTask == 0)
         {
+            beed5.GetComponent<BoxCollider>().enabled = true;
+
+
+            try
+            {
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+
+
+                    if (ValueCalculator.value == 0)
+                    {
+
+                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+
+
+
+
+                    }
+                    if (ValueCalculator.value == 5)
+                    {
+
+                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+
+
+
+
+                    }
+
+                }
+            }
+            catch
+            {
+            }
+
+
 
             if (ValueCalculator.value == 5)
             {
-                Invoke("DelayedleanPulseFingerUpAnimation", 1f);
+
+
+
                 //finger up animation
             }
             if (ValueCalculator.value == 0)
             {
 
-                Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+
 
                 //finger down animation
             }
 
 
-            //Highlight1.transform.SetParent(beed5.transform);
-            //Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-            //Highlight2.transform.SetParent(beed5.transform);
-            //Highlight2.transform.localPosition = new Vector3(0, 0, 0);
+            Highlight1.transform.SetParent(beed5.transform);
+            Highlight1.transform.localPosition = new Vector3(0, 0, 0);
+            Highlight2.transform.SetParent(beed5.transform);
+            Highlight2.transform.localPosition = new Vector3(0, 0, 0);
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
                 if (ValueCalculator.value == 0)
@@ -200,6 +296,7 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
+
                 }
                 if (currentSubTask == 2)
                 {
@@ -240,22 +337,44 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
+                beed5.GetComponent<BoxCollider>().enabled = true;
+
 
                 if (ValueCalculator.value == 5)
                 {
+
+
+                    beed5.GetComponent<BoxCollider>().enabled = false;
+
+                    beed1.GetComponent<BoxCollider>().enabled = true;
+
                     Invoke("DelayedleanPulseFingerUpAnimation", 1f);
 
                     //move finger up
                 }
                 if (ValueCalculator.value == 1)
                 {
+                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    indexDownAnimatingSprite.transform.SetParent(beed1.transform);
 
+                    beed5.GetComponent<BoxCollider>().enabled = false;
+
+                    beed1.GetComponent<BoxCollider>().enabled = true;
                     Invoke("DelayedleanPulseThumbDownAnimation", 1f);
 
                     //move thumb down
                 }
                 if (ValueCalculator.value == 6)
                 {
+
+
+
+                    beed5.GetComponent<BoxCollider>().enabled = true;
+
+                    beed1.GetComponent<BoxCollider>().enabled = false;
+
                     Invoke("DelayedleanPulseFingerUpAnimation", 1f);
                     Invoke("DelayedleanPulseThumbDownAnimation", 1f);
 
@@ -265,11 +384,22 @@ public class Count_5_to_9 : MonoBehaviour
 
                 if (ValueCalculator.value == 0)
                 {
+                    /* Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                     indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                     thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                     indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+
+                     */
+
+
+
+                    beed5.GetComponent<BoxCollider>().enabled = true;
+                    beed1.GetComponent<BoxCollider>().enabled = false;
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //Highlight1.SetActive(true);
-                    //ResetHighlight.SetActive(false);
+                    Highlight1.SetActive(true);
+                    ResetHighlight.SetActive(false);
                 }
                 if (currentSubTask == 2)
                 {
@@ -292,33 +422,73 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 if (ValueCalculator.value == 0)
                 {
+                    indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+
+
+                    beed5.GetComponent<BoxCollider>().enabled = true;
+                    beed1.GetComponent<BoxCollider>().enabled = false;
                     Invoke("DelayedleanPulseFingerDownAnimation", 1f);
 
-                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
-                    //move finger down
-                    //move thumb up
                 }
                 if (ValueCalculator.value == 5)
                 {
 
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.SetParent(beed1.transform);
                     Invoke("DelayedleanPulseThumbUpAnimation", 1f);
-                    //move thumb up
+
+
+
+                    beed5.GetComponent<BoxCollider>().enabled = false;
+
+                    beed1.GetComponent<BoxCollider>().enabled = true;
+
 
                 }
                 if (ValueCalculator.value == 1)
                 {
+
+                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    indexUpAnimatingSprite.transform.SetParent(beed1.transform);
+
+
+
+                    beed5.GetComponent<BoxCollider>().enabled = false;
+
+                    beed1.GetComponent<BoxCollider>().enabled = true;
                     Invoke("DelayedleanPulseFingerDownAnimation", 1f);
                     //move finger down
 
+                }
+
+                if (ValueCalculator.value == 6)
+                {
+                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
                 }
 
             }
 
             if (ValueCalculator.value == 6 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
-                //ResetHighlight.SetActive(true);
-                //Highlight1.SetActive(false);
+
+
+
+
+                beed5.GetComponent<BoxCollider>().enabled = true;
+
+                beed1.GetComponent<BoxCollider>().enabled = false;
+
+                ResetHighlight.SetActive(true);
+                Highlight1.SetActive(false);
 
                 temp = true;
                 currentResetAnimation = resetCount2Animation;
@@ -329,15 +499,62 @@ public class Count_5_to_9 : MonoBehaviour
 
         else if (currentTask == 2)
         {
+            if (ValueCalculator.value == 0)
+            {
+
+
+
+
+
+
+                beed1.GetComponent<BoxCollider>().enabled = false;
+                beed5.GetComponent<BoxCollider>().enabled = true;
+                beed2.GetComponent<BoxCollider>().enabled = false;
+            }
+            if (ValueCalculator.value == 5)
+            {
+
+
+
+
+
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed2.GetComponent<BoxCollider>().enabled = true;
+            }
+
+            if (ValueCalculator.value == 2)
+            {
+
+
+
+
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed1.GetComponent<BoxCollider>().enabled = true;
+            }
+            if (ValueCalculator.value == 7)
+            {
+
+
+
+
+                beed5.GetComponent<BoxCollider>().enabled = true;
+                beed2.GetComponent<BoxCollider>().enabled = false;
+            }
+
+
+
+
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
                 if (ValueCalculator.value == 0)
                 {
+
+
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //Highlight1.SetActive(true);
-                    //ResetHighlight.SetActive(false);
+                    Highlight1.SetActive(true);
+                    ResetHighlight.SetActive(false);
                     if (currentSubTask == 2)
                     {
                         Count_5_to_9_ModelData.barValue = ((1 + currentTask) * 1f) / 5;
@@ -352,15 +569,127 @@ public class Count_5_to_9 : MonoBehaviour
                     }
 
                 }
+
+                if (ValueCalculator.value == 0)
+                {
+
+                    indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+
+
+
+
+                }
+                if (ValueCalculator.value == 5)
+                {
+
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
+                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+
+
+
+
+                }
+
+                if (ValueCalculator.value == 2)
+                {
+                    Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    indexDownAnimatingSprite.transform.SetParent(beed2.transform);
+
+
+
+                }
+                if (ValueCalculator.value == 7)
+                {
+                    Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+
+
+                }
+
+
             }
+
+            try
+            {
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+
+
+                    if (ValueCalculator.value == 0)
+                    {
+
+                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+
+
+
+
+                    }
+                    if (ValueCalculator.value == 5)
+                    {
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+
+
+
+
+                    }
+
+                    if (ValueCalculator.value == 2)
+                    {
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+
+
+
+                    }
+                    if (ValueCalculator.value == 7)
+                    {
+                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+
+
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+
 
             if (ValueCalculator.value == 7 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed2.GetComponent<BoxCollider>().enabled = true;
+
                 temp = true;
                 currentResetAnimation = resetCount3Animation;
                 Invoke("DelyedInvoke", 0.5f);
-                //ResetHighlight.SetActive(true);
-                //Highlight1.SetActive(false);
+                ResetHighlight.SetActive(true);
+                Highlight1.SetActive(false);
+
+
 
 
 
@@ -369,6 +698,93 @@ public class Count_5_to_9 : MonoBehaviour
 
         else if (currentTask == 3)
         {
+            try
+            {
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+
+
+                    if (ValueCalculator.value == 0)
+                    {
+
+                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+
+
+
+
+                    }
+                    if (ValueCalculator.value == 5)
+                    {
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed3.transform);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+
+
+
+
+                    }
+
+                    if (ValueCalculator.value == 3)
+                    {
+                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+
+
+
+                    }
+                    if (ValueCalculator.value == 8)
+                    {
+                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+
+
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+
+
+
+
+            if (ValueCalculator.value == 0)
+            {
+
+                beed5.GetComponent<BoxCollider>().enabled = true;
+                beed1.GetComponent<BoxCollider>().enabled = false;
+                beed3.GetComponent<BoxCollider>().enabled = false;
+
+            }
+            if (ValueCalculator.value == 5)
+            {
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed3.GetComponent<BoxCollider>().enabled = true;
+            }
+
+            if (ValueCalculator.value == 8)
+            {
+                beed5.GetComponent<BoxCollider>().enabled = true;
+                beed3.GetComponent<BoxCollider>().enabled = false;
+            }
+
+            if (ValueCalculator.value == 3)
+            {
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed1.GetComponent<BoxCollider>().enabled = true;
+            }
+
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
                 if (ValueCalculator.value == 0)
@@ -376,8 +792,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //Highlight1.SetActive(true);
-                    //ResetHighlight.SetActive(false);
+                    Highlight1.SetActive(true);
+                    ResetHighlight.SetActive(false);
 
                 }
                 if (currentSubTask == 2)
@@ -399,16 +815,114 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 8 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                //ResetHighlight.SetActive(true);
-                //Highlight1.SetActive(false);
+                ResetHighlight.SetActive(true);
+                Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount4Animation;
                 Invoke("DelyedInvoke", 0.5f);
 
             }
         }
+
         else if (currentTask == 4)
         {
+
+            try
+            {
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+
+
+                    if (ValueCalculator.value == 0)
+                    {
+
+                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+
+
+
+
+                    }
+                    if (ValueCalculator.value == 5)
+                    {
+
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed4.transform);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+
+
+
+
+                    }
+
+                    if (ValueCalculator.value == 4)
+                    {
+                        Invoke("DelayedleanPulseFingerDownAnimation", 1f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+
+
+
+                    }
+                    if (ValueCalculator.value == 9)
+                    {
+                        Invoke("DelayedleanPulseThumbUpAnimation", 1f);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+
+
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            if (ValueCalculator.value == 0)
+            {
+                beed1.GetComponent<BoxCollider>().enabled = false;
+                beed5.GetComponent<BoxCollider>().enabled = true;
+                beed4.GetComponent<BoxCollider>().enabled = false;
+            }
+            if (ValueCalculator.value == 5)
+            {
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed4.GetComponent<BoxCollider>().enabled = true;
+            }
+            if (ValueCalculator.value == 9)
+            {
+                beed5.GetComponent<BoxCollider>().enabled = true;
+                beed4.GetComponent<BoxCollider>().enabled = false;
+            }
+            if (ValueCalculator.value == 4)
+            {
+                beed5.GetComponent<BoxCollider>().enabled = false;
+                beed1.GetComponent<BoxCollider>().enabled = true;
+
+            }
+
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
                 if (ValueCalculator.value == 0)
@@ -416,8 +930,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //ResetHighlight.SetActive(false);
-                    //Highlight1.SetActive(true);
+                    ResetHighlight.SetActive(false);
+                    Highlight1.SetActive(true);
 
 
 
@@ -441,8 +955,8 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 9 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                //ResetHighlight.SetActive(true);
-                //Highlight1.SetActive(false);
+                ResetHighlight.SetActive(true);
+                Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount5Animation;
                 Invoke("DelyedInvoke", 0.5f);
@@ -471,7 +985,8 @@ public class Count_5_to_9 : MonoBehaviour
     {
         notificationLean.TurnOn();// NotificationPannel.SetActive(true);
         sideNoteLean.TurnOff();//  sideNote.SetActive(false);
-        /*
+        hideindexFingerSpriteRenderer();
+
         if (currentTask == 1)
         {
             Highlight1.transform.SetParent(beed1.transform);
@@ -512,13 +1027,14 @@ public class Count_5_to_9 : MonoBehaviour
             ResetHighlight.transform.SetParent(beed1.transform);
             ResetHighlight.transform.localPosition = new Vector3(0, 0, 0);
         }
-        */
+
 
     }
 
     void DelayedInvokeCongratulation()
     {
         congratulationLean.TurnOn();// CongratulationPannel.SetActive(true);
+        hideindexFingerSpriteRenderer();
         activityList2.LiftingBeed22.bestTime = 1;
         activityList2.LiftingBeed22.bestTime_string = "Completed";
 
@@ -536,8 +1052,26 @@ public class Count_5_to_9 : MonoBehaviour
 
     private void OnDisable()
     {
-        //Highlight1.SetActive(false);
-        //Highlight2.SetActive(false);
+
+        beed1.GetComponent<BoxCollider>().enabled = true;
+        beed2.GetComponent<BoxCollider>().enabled = true;
+        beed3.GetComponent<BoxCollider>().enabled = true;
+        beed4.GetComponent<BoxCollider>().enabled = true;
+        beed5.GetComponent<BoxCollider>().enabled = true;
+
+        beed6.GetComponent<BoxCollider>().enabled = true;
+        beed7.GetComponent<BoxCollider>().enabled = true;
+        beed8.GetComponent<BoxCollider>().enabled = true;
+        beed9.GetComponent<BoxCollider>().enabled = true;
+        beed10.GetComponent<BoxCollider>().enabled = true;
+
+        Highlight1.SetActive(false);
+        Highlight2.SetActive(false);
+
+        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+
+        NotificationBtn.onClick.RemoveListener(showindexFingerSpriteRenderer);
         NotificationBtn.onClick.RemoveListener(OpenSideNote);
 
         activityList2.LiftingBeed22.currentSubActivity = SubTaskToSave;
@@ -552,30 +1086,60 @@ public class Count_5_to_9 : MonoBehaviour
 
     public void DelayedleanPulseThumbUpAnimation()
     {
-        /* CancelInvoke("DelayedleanPulseThumbUpAnimation");
-         leanPulseThumbUpAnimation.RemainingPulses = 5;*/
+        thumbUpAnimatingSprite.transform.localPosition = new Vector3(-1.25f, -0.25f, 2f);
+        thumbUpAnimatingSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+        leanPulseThumbUpAnimation.RemainingPulses = 5;
+        //CancelInvoke("DelayedleanPulseThumbUpAnimation");
+        if (leanPulseThumbUpAnimation.RemainingPulses <= 0)
+        {
+        }
+
+        if (leanPulseThumbUpAnimation.RemainingPulses == 5)
+        {
+            thumbUpAnimatingSprite.transform.localPosition = new Vector3(-1.25f, -0.25f, 2f);
+            thumbUpAnimatingSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+        }
 
     }
     public void DelayedleanPulseThumbDownAnimation()
     {
-        /* CancelInvoke("DelayedleanPulseThumbDownAnimation");
-         leanPulseThumbDownAnimation.RemainingPulses = 5;*/
+        CancelInvoke("DelayedleanPulseThumbDownAnimation");
+        leanPulseThumbDownAnimation.RemainingPulses = 5;
     }
     public void DelayedleanPulseFingerUpAnimation()
     {
-        /* CancelInvoke("DelayedleanPulseFingerUpAnimation");
-         leanPulseFingerUpAnimation.RemainingPulses = 5;*/
+        CancelInvoke("DelayedleanPulseFingerUpAnimation");
+        leanPulseFingerUpAnimation.RemainingPulses = 5;
 
     }
     public void DelayedleanPulseFingerDownAnimation()
     {
-        /*
+        indexDownAnimatingSprite.transform.localPosition = new Vector3(-1.25f, -2.8f, 2f);
+        indexDownAnimatingSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+        leanPulseFingerDownAnimation.RemainingPulses = 5;
+
         CancelInvoke("DelayedleanPulseFingerDownAnimation");
-        leanPulseThumbDownAnimation.RemainingPulses = 5;*/
+        if (leanPulseFingerDownAnimation.RemainingPulses <= 0)
+        {
+        }
 
     }
 
+    public void DelayedInvokeResetAnimations()
+    {
+        CancelInvoke("DelayedInvokeResetAnimations");
+        leanPulseFingerDownAnimation.RemainingPulses = 5;
+        leanPulseFingerDownAnimation.RemainingTime = 0;
+        indexDownAnimatingSprite.enabled = true;
+        leanPulseThumbDownAnimation.RemainingPulses = 5;
+        leanPulseThumbDownAnimation.RemainingTime = 0;
 
+        thumbUpAnimatingSprite.enabled = true;
+        leanPulseThumbUpAnimation.RemainingPulses = 5;
+        leanPulseThumbUpAnimation.RemainingTime = 0;
+
+        thumbUpAnimatingSprite.enabled = true;
+    }
 
 
 
@@ -588,517 +1152,4 @@ public class Count_5_to_9 : MonoBehaviour
     }
 }
 
-//using Lean.Gui;
-//using Lean.Transition.Method;
-//using System;
-//using System.Collections;
-//using System.Collections.Generic;
-//using System.Linq;
-//using TMPro;
-//using UnityEngine;
-//using UnityEngine.Events;
-//using UnityEngine.UI;
-
-//public class Count_5_to_9 : MonoBehaviour
-//{
-//    public LeanPulse leanPulseAnimation;
-//    public LeanPulse LeanResetAnimation;
-//    public SpriteRenderer animatingSprite;
-//    public SpriteRenderer indexAnimatingSprite;
-//    public LeanRectTransformSizeDelta loadingBar;
-
-//    public LeanEvent resetCount1Animation;
-//    public LeanEvent resetCount2Animation;
-//    public LeanEvent resetCount3Animation;
-//    public LeanEvent resetCount4Animation;
-//    public TextMeshProUGUI Notification;
-//    public TextMeshProUGUI sidenoteText;
-//    public TextMeshProUGUI Congratulation;
-
-//    public GameObject NotificationPannel;
-//    public Button NotificationBtn;
-//    public GameObject CongratulationPannel;
-
-
-//    public GameObject sideNote;
-//    public GameObject beed1;
-//    public GameObject beed2;
-//    public GameObject beed3;
-//    public GameObject beed4;
-//    public GameObject beed5;
-//    public GameObject[] Beeds;
-//    public GameObject AnimatingSpriteGameObject;
-
-//    public GameObject Highlight1;
-//    public GameObject Highlight2;
-//    public GameObject ResetHighlight;
-
-
-//    public List<string> notificationData;
-//    public string CongratulationText;
-//    public bool[] completedSubTask;
-//    bool temp;
-//    int currentTask, currentSubTask;
-//    public LeanEvent currentResetAnimation;
-//    float completeBarValue = 500;
-
-//    void OnEnable()
-//    {
-//        print(Count_1_to_4_ModelData.TaskComplete[Count_1_to_4_ModelData.TaskComplete.Length - 1] + "  " + (Count_1_to_4_ModelData.TaskComplete.Length - 1));
-//        if (Count_1_to_4_ModelData.TaskComplete[Count_1_to_4_ModelData.TaskComplete.Length - 1] == true)
-//        {
-//            Count_1_to_4_ModelData.TaskComplete = Count_1_to_4_ModelData.TaskComplete.Select(x => x = false).ToArray();
-//            Count_1_to_4_ModelData.barValue = 0;
-//        }
-//        completedSubTask = new bool[4];
-//        currentSubTask = 0;
-//        temp = false;
-//        loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//        loadingBar.BeginAllTransitions();
-
-//        Highlight1.SetActive(true);
-//        NotificationBtn.onClick.AddListener(DelayedInvokeAnimation);
-//        NotificationBtn.onClick.AddListener(OpenSideNote);
-//        //Highlight2.SetActive(true);
-
-//        ResetHighlight.transform.SetParent(beed1.transform);
-//        indexAnimatingSprite.transform.SetParent(Beeds[4].transform);
-//        ResetHighlight.transform.localPosition = new Vector3(0, 0, 0);
-//        indexAnimatingSprite.transform.localPosition = new Vector3(-0.82f, -2.22f, 2.25f);
-//        for (currentTask = 0; currentTask < Count_1_to_4_ModelData.TaskComplete.Length; currentTask++)
-//        {
-//            print(currentTask);
-//            if (Count_1_to_4_ModelData.TaskComplete[currentTask] == false)
-//            {
-//                sidenoteText.text = notificationData[currentTask];
-
-//                if (currentTask == 0)
-//                {
-//                    Highlight1.transform.SetParent(Beeds[4].transform);
-//                    Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-//                    Highlight2.transform.SetParent(Beeds[4].transform);
-//                    Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-//                }
-//                else
-//                {
-
-
-//                    Highlight1.transform.SetParent(Beeds[currentTask - 1].transform);
-//                    Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-//                    Highlight2.transform.SetParent(Beeds[4].transform);
-//                    Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-
-
-//                }
-
-//                AnimatingSpriteGameObject.transform.SetParent(Beeds[currentTask].transform);
-//                AnimatingSpriteGameObject.transform.localPosition = new Vector3(-2.7f, 0, 2);
-//                break;
-//                #region abc
-//                //if (currentTask == 1)
-//                //{
-//                //    Highlight1.transform.SetParent(beed2.transform);
-//                //    Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-
-//                //    AnimatingSpriteGameObject.transform.SetParent(beed2.transform);
-//                //    AnimatingSpriteGameObject.transform.localPosition = new Vector3(1, 0, -1);
-//                //    break;
-//                //}
-//                //if (currentTask == 2)
-//                //{
-//                //    Highlight1.transform.SetParent(beed3.transform);
-//                //    Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-
-//                //    AnimatingSpriteGameObject.transform.SetParent(beed3.transform);
-//                //    AnimatingSpriteGameObject.transform.localPosition = new Vector3(1, 0, -1);
-//                //    break;
-//                //}
-//                //if (currentTask == 3)
-//                //{
-//                //    Highlight1.transform.SetParent(beed4.transform);
-//                //    Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-
-//                //    AnimatingSpriteGameObject.transform.SetParent(beed4.transform);
-//                //    AnimatingSpriteGameObject.transform.localPosition = new Vector3(1, 0, -1);
-//                //    break;
-//                //}
-//                #endregion
-//            }
-//        }
-//    }
-
-
-
-//    void Update()
-//    {
-//        //loadingBar.sizeDelta = new Vector2(Count_1_to_4_ModelData.barValue, loadingBar.sizeDelta.y);
-//        if (NotificationPannel.activeInHierarchy)
-//        {
-//            animatingSprite.enabled = false;
-
-//        }
-
-//        if (ValueCalculator.value == 0)
-//        {
-//            indexAnimatingSprite.transform.gameObject.SetActive(false);
-//            temp = false;
-//            ResetHighlight.SetActive(false);
-//            animatingSprite.transform.gameObject.SetActive(true);
-
-
-
-//        }
-//        else
-//        {
-//            CancelInvoke("DelayedInvokeAnimation");
-//            Highlight1.SetActive(false);
-//            if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Ended))
-//            {
-//                Invoke("DelyedInvoke", 0.5f);
-
-//            }
-
-//            else if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
-//            {
-//                LeanResetAnimation.RemainingPulses = 0;
-//                animatingSprite.transform.gameObject.SetActive(false);
-//                indexAnimatingSprite.transform.gameObject.SetActive(false);
-
-//                //Invoke("DelyedInvoke",0.5f);
-//            }
-//        }
-
-//        for (currentTask = 0; currentTask < Count_1_to_4_ModelData.TaskComplete.Length; currentTask++)
-//        {
-//            print(currentTask);
-//            if (Count_1_to_4_ModelData.TaskComplete[currentTask] == false)
-//            {
-//                Notification.text = notificationData[currentTask];
-
-//                break;
-//            }
-//        }
-//        if (currentTask == Count_1_to_4_ModelData.TaskComplete.Length)
-//        {
-//            Congratulation.text = CongratulationText;
-//        }
-
-//        if (currentTask == 0)
-//        {
-
-
-//            if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Ended))
-//            {
-//                if (NotificationPannel.activeInHierarchy == false)
-//                    Invoke("DelayedInvokeAnimation", 1f);
-//            }
-//            else if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
-//            {
-//                leanPulseAnimation.RemainingPulses = 0;
-//                animatingSprite.enabled = false;
-//                CancelInvoke("DelayedInvokeAnimation");
-//            }
-
-
-
-//            if (ValueCalculator.value == 1 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
-//            {
-
-
-
-//                temp = true;
-//                completedSubTask[currentSubTask] = true;
-//                currentSubTask++;
-//                print("hello world");
-
-//                //currentResetAnimation = resetCount1Animation;
-//                //Invoke("DelyedInvoke", 0.5f);
-//                //if (currentSubTask == 4 && ValueCalculator.value == 0)
-//                //{
-//                //    Count_1_to_4_ModelData.barValue = 0.25f * completeBarValue;
-//                //    loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                //    loadingBar.BeginAllTransitions();
-//                //    Invoke("DelayedInvokeNotification", 1f);
-//                //    Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                //    currentSubTask = 0;
-//                //    completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-
-
-
-//                //}
-
-//            }
-//            if (currentSubTask == 2 && ValueCalculator.value == 0)
-//            {
-//                Count_1_to_4_ModelData.barValue = 0.25f * completeBarValue;
-//                loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                loadingBar.BeginAllTransitions();
-//                Invoke("DelayedInvokeNotification", 0.2f);
-//                Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                currentSubTask = 0;
-//                completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-
-
-
-//            }
-//        }
-
-//        else if (currentTask == 1)
-//        {
-
-
-//            if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Ended))
-//            {
-//                if (NotificationPannel.activeInHierarchy == false)
-//                    Invoke("DelayedInvokeAnimation", 1f);
-//            }
-//            else if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
-//            {
-//                leanPulseAnimation.RemainingPulses = 0;
-//                animatingSprite.enabled = false;
-//                CancelInvoke("DelayedInvokeAnimation");
-//            }
-
-
-//            if (ValueCalculator.value == 2 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
-//            {
-//                temp = true;
-//                completedSubTask[currentSubTask] = true;
-//                currentSubTask++;
-//                print("hello world");
-//                //currentResetAnimation = resetCount2Animation;
-//                //Invoke("DelyedInvoke", 0.5f);
-//                //if (currentSubTask == 4)
-//                //{
-//                //    Count_1_to_4_ModelData.barValue = 0.5f * completeBarValue;
-//                //    loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                //    loadingBar.BeginAllTransitions();
-//                //    Invoke("DelayedInvokeNotification", 1f);
-//                //    Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                //    currentSubTask = 0;
-//                //    completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-
-//                //}
-
-//            }
-//            if (currentSubTask == 2 && ValueCalculator.value == 0)
-//            {
-//                Count_1_to_4_ModelData.barValue = 0.5f * completeBarValue;
-//                loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                loadingBar.BeginAllTransitions();
-//                Invoke("DelayedInvokeNotification", 0.2f);
-//                Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                currentSubTask = 0;
-//                completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-
-//            }
-//        }
-
-//        else if (currentTask == 2)
-//        {
-
-
-//            if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Ended))
-//            {
-//                if (NotificationPannel.activeInHierarchy == false)
-//                    Invoke("DelayedInvokeAnimation", 1f);
-//            }
-//            else if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
-//            {
-//                leanPulseAnimation.RemainingPulses = 0;
-//                animatingSprite.enabled = false;
-//                CancelInvoke("DelayedInvokeAnimation");
-//            }
-
-//            if (ValueCalculator.value == 3 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
-//            {
-//                temp = true;
-//                completedSubTask[currentSubTask] = true;
-//                currentSubTask++;
-//                print("hello world");
-//                //currentResetAnimation = resetCount3Animation;
-//                //Invoke("DelyedInvoke", 0.5f);
-//                //if (currentSubTask == 4 &&  ValueCalculator.value == 0)
-//                //{
-
-//                //    Count_1_to_4_ModelData.barValue = 0.75f * completeBarValue;
-//                //    loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                //    loadingBar.BeginAllTransitions();
-
-//                //    Invoke("DelayedInvokeNotification", 1f);
-//                //    Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                //    currentSubTask = 0;
-//                //    completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-//                //}
-
-//            }
-
-//            if (currentSubTask == 2 && ValueCalculator.value == 0)
-//            {
-
-//                Count_1_to_4_ModelData.barValue = 0.75f * completeBarValue;
-//                loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                loadingBar.BeginAllTransitions();
-
-//                Invoke("DelayedInvokeNotification", 0.2f);
-//                Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                currentSubTask = 0;
-//                completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-//            }
-//        }
-
-//        else if (currentTask == 3)
-//        {
-
-//            if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Ended))
-//            {
-//                if (NotificationPannel.activeInHierarchy == false)
-//                    Invoke("DelayedInvokeAnimation", 1f);
-//            }
-//            else if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
-//            {
-//                leanPulseAnimation.RemainingPulses = 0;
-//                animatingSprite.enabled = false;
-//                CancelInvoke("DelayedInvokeAnimation");
-//            }
-
-//            if (ValueCalculator.value == 4 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
-//            {
-//                temp = true;
-//                completedSubTask[currentSubTask] = true;
-//                currentSubTask++;
-//                print("hello world");
-//                //currentResetAnimation = resetCount4Animation;
-//                //Invoke("DelyedInvoke", 0.5f);
-//                //if (currentSubTask == 4 && ValueCalculator.value == 0)
-//                //{
-//                //    Count_1_to_4_ModelData.barValue = 1f * completeBarValue;
-//                //    loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                //    loadingBar.BeginAllTransitions();
-//                //    Invoke("DelayedInvokeCongratulation", 1f);
-//                //    Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                //    currentSubTask = 0;
-//                //    completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-
-//                //}
-
-//            }
-//            if (currentSubTask == 2 && ValueCalculator.value == 0)
-//            {
-//                Count_1_to_4_ModelData.barValue = 1f * completeBarValue;
-//                loadingBar.Data.SizeDelta.x = Count_1_to_4_ModelData.barValue;
-//                loadingBar.BeginAllTransitions();
-//                Invoke("DelayedInvokeCongratulation", 0.2f);
-//                Count_1_to_4_ModelData.TaskComplete[currentTask] = true;
-//                currentSubTask = 0;
-//                completedSubTask = completedSubTask.Select(x => x = false).ToArray();
-
-//            }
-//        }
-
-
-
-//    }
-
-//    private void OpenSideNote()
-//    {
-//        sideNote.SetActive(true);
-//    }
-
-//    void DelyedInvoke()
-//    {
-//        CancelInvoke("DelyedInvoke");
-//        ResetHighlight.SetActive(true);
-//        indexAnimatingSprite.transform.gameObject.SetActive(true);
-
-//        //currentResetAnimation.BeginAllTransitions();
-//        LeanResetAnimation.RemainingPulses = 3;
-//        // if the first beed is at the top stop and hide the thumb animation and start and dislay the index finger animation . and aslo highlight the first animation
-
-//    }
-
-//    void DelayedInvokeNotification()
-//    {
-//        sidenoteText.text = notificationData[currentTask];
-//        sideNote.SetActive(false);
-//        CancelInvoke("DelayedInvokeAnimation");
-//        NotificationPannel.SetActive(true);
-//        if (currentTask == 1)
-//        {
-//            Highlight1.transform.SetParent(Beeds[0].transform);
-//            Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-//            Highlight2.transform.SetParent(Beeds[4].transform);
-//            Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-//            AnimatingSpriteGameObject.transform.SetParent(Beeds[0].transform);
-//            AnimatingSpriteGameObject.transform.localPosition = new Vector3(-2.7f, 0, 2);
-
-//        }
-//        else if (currentTask == 2)
-//        {
-//            Highlight1.transform.SetParent(Beeds[1].transform);
-//            Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-//            Highlight2.transform.SetParent(Beeds[4].transform);
-//            Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-//            AnimatingSpriteGameObject.transform.SetParent(Beeds[1].transform);
-//            AnimatingSpriteGameObject.transform.localPosition = new Vector3(-2.7f, 0, 2);
-//        }
-//        else if (currentTask == 3)
-//        {
-//            Highlight1.transform.SetParent(Beeds[2].transform);
-//            Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-//            Highlight2.transform.SetParent(Beeds[4].transform);
-//            Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-//            AnimatingSpriteGameObject.transform.SetParent(Beeds[2].transform);
-//            AnimatingSpriteGameObject.transform.localPosition = new Vector3(-2.7f, 0, 2);
-//        }  
-//        else if (currentTask == 4)
-//        {
-//            Highlight1.transform.SetParent(Beeds[3].transform);
-//            Highlight1.transform.localPosition = new Vector3(0, 0, 0);
-//            Highlight2.transform.SetParent(Beeds[4].transform);
-//            Highlight2.transform.localPosition = new Vector3(0, 0, 0);
-//            AnimatingSpriteGameObject.transform.SetParent(Beeds[3].transform);
-//            AnimatingSpriteGameObject.transform.localPosition = new Vector3(-2.7f, 0, 2);
-//        }
-//    }
-
-//    void DelayedInvokeCongratulation()
-//    {
-//        sideNote.SetActive(false);
-//        CancelInvoke("DelayedInvokeAnimation");
-//        CongratulationPannel.SetActive(true);
-//        leanPulseAnimation.RemainingPulses = 0;
-//        animatingSprite.enabled = false;
-
-//    }
-
-//    private void OnDisable()
-//    {
-//        NotificationBtn.onClick.RemoveListener(OpenSideNote);
-//        try
-//        {
-//            sideNote.SetActive(false);
-//        }
-//        catch
-//        {
-//            ;
-//        }
-//        NotificationBtn.onClick.RemoveListener(DelayedInvokeAnimation);
-//        Highlight1.SetActive(false);
-//        CancelInvoke("DelayedInvokeAnimation");
-//        ResetHighlight.SetActive(false);
-
-//        //Highlight2.SetActive(false);
-//    }
-
-//    public void DelayedInvokeAnimation()
-//    {
-//        CancelInvoke("DelayedInvokeAnimation");
-//        Highlight1.SetActive(true);
-//        leanPulseAnimation.RemainingPulses = 5;
-//        animatingSprite.enabled = true;
-//    }
-
-
-//}
 

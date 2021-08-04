@@ -24,6 +24,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         [SerializeField] Image FG_Image=default;
         [SerializeField] GameObject ClassText = default;
         [SerializeField] Button cardBtn=default;
+        [SerializeField] Button lockBtn=default;
         [SerializeField] List<Color> colorsOfImageNumbers;
         [SerializeField] ParticleSystem cardGlow;
         [SerializeField] ParticleSystem spark;
@@ -156,7 +157,15 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
 
             }
+
+
+
+
+
+
+
             this.gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Button>().onClick.AddListener(() => { itemData.BtnEvent.Invoke(); });
+            lockBtn.onClick.AddListener(() => { itemData.OnClickedLock.Invoke(); });
 
             if (gameObjectIsBookContent)
             {

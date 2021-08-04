@@ -42,11 +42,14 @@ public class ExampleGestureHandler : MonoBehaviour
     public List<PatternList> listOf_AllPatterns;
     public Image eraserBtnBGImage;
     SpeedWriting2 speedWriting2;
-    
+    public int continuesWrongCount;
+    bool isWrong;
 
 
     void OnEnable()
     {
+        continuesWrongCount = 0;
+        isWrong = false;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -100,10 +103,12 @@ public class ExampleGestureHandler : MonoBehaviour
 
     public void OnRecognize(RecognitionResult result)
     {
+        print("called");
         StopAllCoroutines();
         ShowAll();
         if (result != RecognitionResult.Empty)
         {
+            continuesWrongCount = 0;
 
             if (Convert.ToInt32(result.gesture.id) == Numbers[currentIndex])
             {
@@ -125,7 +130,7 @@ public class ExampleGestureHandler : MonoBehaviour
                     eraserBtnBGImage.color = Color.white;
 
                 }
-
+                continuesWrongCount = 0;
                 currentIndex++;
                 if (currentIndex < thresholdValue.Count)
                     drawDetector.scoreToAccept = thresholdValue[currentIndex];
@@ -163,6 +168,7 @@ public class ExampleGestureHandler : MonoBehaviour
         else
         {
 
+            isWrong = true;
             Invoke("ShowElseMessage", 0.8f);
             //  textInstrction.text = "CAN YOU DRAW IT AGAIN. ";
         }
@@ -170,6 +176,7 @@ public class ExampleGestureHandler : MonoBehaviour
 
     void ShowElseMessage()
     {
+
         textInstrction.text = "CAN YOU DRAW IT AGAIN ? ";
         eraserBtnBGImage.color = Color.green;
         SoundManager.Instance.Play(wrongRecognisedSound);
@@ -302,4 +309,73 @@ public class ExampleGestureHandler : MonoBehaviour
         public string patternName;
         public List<GesturePattern> patterns;
     }
+
+
+    public void IncrementContinuesWrongCount()
+    {
+        if (isWrong)
+        {
+            isWrong = false; ;
+            continuesWrongCount++;
+        }
+
+        if (continuesWrongCount > 2)
+        {
+            // currentIndex++;
+            continuesWrongCount = 0;
+
+
+
+
+            CancelInvoke("ShowElseMessage");
+            textResult.fontSize = 300;
+            if (currentIndex + 1 >= (Numbers.Count) && writingWithRightIsDone)
+            {
+                textInstrction.text = instructions[currentIndex];
+                eraserBtnBGImage.color = Color.white;
+                //invoke congratulation box;
+                Invoke("invokeNotification", 0.2f);
+
+
+            }
+            else
+            {
+                textInstrction.text = instructions[currentIndex];
+                eraserBtnBGImage.color = Color.white;
+
+            }
+            continuesWrongCount = 0;
+            currentIndex++;
+            if (currentIndex < thresholdValue.Count)
+                drawDetector.scoreToAccept = thresholdValue[currentIndex];
+            Invoke("ClearLines", 0.6f);
+            // StartCoroutine(Blink(result.gesture.id));
+            if (writingWithRightIsDone)
+            {
+                SoundManager.Instance.Play(correctRecognisedSound);
+                loadingBar.Data.FillAmount = ((currentIndex + 10) / (20 * 1f));
+
+            }
+            else
+            {
+                SoundManager.Instance.Play(correctRecognisedSound);
+                loadingBar.Data.FillAmount = (currentIndex / (20 * 1f));
+            }
+            loadingBar.BeginAllTransitions();
+
+            // loading new set of patterns to the the list of patterns in  recognizer script instance ,based on the index value.
+            if (currentIndex < listOf_AllPatterns.Count)
+            {
+                recognizerInstance.patterns = new List<GesturePattern>();
+                for (int i = 0; i < listOf_AllPatterns[currentIndex].patterns.Count; i++)
+                {
+                    recognizerInstance.patterns.Add(listOf_AllPatterns[currentIndex].patterns[i]);
+                }
+            }
+
+
+
+        }
+    }
+
 }
