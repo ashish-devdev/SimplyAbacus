@@ -105,6 +105,11 @@ public class SubscriptionBtnScript : MonoBehaviour
 
     }
 
+    public void OnClickRestore()
+    {
+        clickOnRestore = true;
+    }
+
     private void Update()
     {
         timer++;

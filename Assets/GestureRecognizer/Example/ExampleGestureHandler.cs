@@ -48,6 +48,15 @@ public class ExampleGestureHandler : MonoBehaviour
 
     void OnEnable()
     {
+
+        Invoke("OnEnableWithDelay", 0.1f);
+
+    }
+
+
+    public void OnEnableWithDelay()
+    {
+
         continuesWrongCount = 0;
         isWrong = false;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
@@ -81,8 +90,9 @@ public class ExampleGestureHandler : MonoBehaviour
             recognizerInstance.patterns.Add(listOf_AllPatterns[currentIndex].patterns[i]);
         }
 
-
     }
+
+
 
     void StartTimer()
     {
@@ -177,7 +187,7 @@ public class ExampleGestureHandler : MonoBehaviour
     void ShowElseMessage()
     {
 
-        textInstrction.text = "CAN YOU DRAW IT AGAIN ? ";
+        textInstrction.text = "Let’s try it once more ";
         eraserBtnBGImage.color = Color.green;
         SoundManager.Instance.Play(wrongRecognisedSound);
 
@@ -331,7 +341,7 @@ public class ExampleGestureHandler : MonoBehaviour
             textResult.fontSize = 300;
             if (currentIndex + 1 >= (Numbers.Count) && writingWithRightIsDone)
             {
-                textInstrction.text = instructions[currentIndex];
+                textInstrction.text =  instructions[currentIndex].Replace("Congratulations.", "Well tried! You are doing very well!!\n");
                 eraserBtnBGImage.color = Color.white;
                 //invoke congratulation box;
                 Invoke("invokeNotification", 0.2f);
@@ -340,7 +350,7 @@ public class ExampleGestureHandler : MonoBehaviour
             }
             else
             {
-                textInstrction.text = instructions[currentIndex];
+                textInstrction.text = instructions[currentIndex].Replace("Congratulations.", "Well tried! You are doing very well!!\n");
                 eraserBtnBGImage.color = Color.white;
 
             }

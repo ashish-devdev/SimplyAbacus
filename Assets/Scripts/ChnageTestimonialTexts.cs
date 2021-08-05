@@ -10,7 +10,7 @@ public class ChnageTestimonialTexts : MonoBehaviour
     public TextMeshProUGUI nameTMP;
     public TextMeshProUGUI contextTMP;
     public TextMeshProUGUI supportingTMP;
-    public TextMeshProUGUI fiveGiantStridesText;
+    public Image fiveGiantStridesText;
     
     public Image simplyAbcusImg;
 

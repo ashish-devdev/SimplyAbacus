@@ -16,6 +16,7 @@ MonoBehaviour:
     nameOfClass: 
     activityList:
     - activityName: 
+      dummyActivityName: 
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -23,7 +24,10 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
-      coloringPageImages: []
+      coloringPageImages:
+      - index: 1
+        completed: 0
+        numberOfImages: 
       speedWriting: 0
       liftBeed01: 0
       liftBeed02: 0
@@ -75,3 +79,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showMutilplicationTable: 0
         showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
