@@ -40,6 +40,7 @@ public class ActivityList
     public MutliplicationOperation mutliplicationOperation;
     public DivisionOperation divisionOperation;
     public TutotialVideo tutorialVideo;
+    public AnimatingCountingTutorial animatingCountingTutorial;
 }
 
 [System.Serializable]
@@ -185,4 +186,12 @@ public class TutotialVideo
     public bool active;
     public string URL;
     public float time;
+}
+
+[System.Serializable]
+public class AnimatingCountingTutorial
+{
+    public bool active;
+    public float[] numbes;
+    public int numberOfTimesToRepeate;
 }

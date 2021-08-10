@@ -80,6 +80,10 @@ MonoBehaviour:
         active: 1
         URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Counting-0806A.mp4
         time: 202
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Me & My World of Abacus
       dummyActivityName: 
       matchValueWithImage: []
@@ -145,6 +149,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Counting Well I
       dummyActivityName: 
       matchValueWithImage:
@@ -219,6 +227,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
       dummyActivityName: 
       matchValueWithImage: []
@@ -287,6 +299,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
       dummyActivityName: 
       matchValueWithImage: []
@@ -352,3 +368,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

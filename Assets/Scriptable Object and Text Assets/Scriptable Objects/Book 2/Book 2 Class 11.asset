@@ -22,7 +22,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: f202f79f5b0e05444806bb93f458fe2f, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -80,6 +80,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
       dummyActivityName: 
       matchValueWithImage: []
@@ -87,7 +91,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 67fee0f62e5943f4581235bbf5e28d34, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -145,6 +149,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
       dummyActivityName: 
       matchValueWithImage: []
@@ -210,3 +218,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

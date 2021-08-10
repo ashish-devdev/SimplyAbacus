@@ -314,6 +314,27 @@ public class ProgressLoader : MonoBehaviour
                         classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
 
                 }
+                else if (activity.classActivityList[i].classData.activityList[j].animatingCountingTutorial.active == true)
+                {
+                    int completed = 0;
+
+                    for (int k = 0; k < activity.classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length; k++)
+                    {
+                        if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed[k] == true)
+                            completed++;
+
+                        if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2.bestTime == -1)
+                        {
+                            classProgresses[i].allActivityprogress[j].activitiesPercentage = (completed * 100f) / (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed.Length);
+                        }
+                        else
+                        {
+                            classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
+                        }
+
+                    }
+
+                }
 
 
 
@@ -645,8 +666,34 @@ public class ProgressLoader : MonoBehaviour
                     {
                         classProgresses[i].allActivityprogress[j].activitiesPercentage = 0f * 100;
                     }
-                    if(Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2.bestTime >0)
+                    if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2.bestTime > 0)
                         classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
+
+
+
+                }
+                else if (activity.classActivityList[i].classData.activityList[j].animatingCountingTutorial.active == true)
+                {
+                    int completed = 0;
+                    for (int k = 0; k < activity.classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length; k++)
+                    {
+                        if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed[k] == true)
+                            completed++;
+
+                        if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2.bestTime == -1)
+                        {
+                            classProgresses[i].allActivityprogress[j].activitiesPercentage = (completed * 100f) / (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed.Length);
+
+                        }
+                        else
+                        {
+                            classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
+                        }
+
+                    }
+
+
+
 
 
 
@@ -670,15 +717,15 @@ public class ProgressLoader : MonoBehaviour
             //print(classProgresses[i].TotalclassProgress);
             classInstance.completionPercentage.Add(classProgresses[i].TotalclassProgress);
 
-            if (i%12 == 0)
+            if (i % 12 == 0)
                 classInstance.cardIsIntractable.Add(true);
             else
             {
-                if (classInstance.completionPercentage[i%12 - 1] >= 100)
+                if (classInstance.completionPercentage[i % 12 - 1] >= 100)
                 {
                     classInstance.cardIsIntractable.Add(true);
                 }
-                else if (classInstance.completionPercentage[i%12] > 0)
+                else if (classInstance.completionPercentage[i % 12] > 0)
                 {
                     classInstance.cardIsIntractable.Add(true);
                 }

@@ -146,7 +146,7 @@ public class Count_5_to_9 : MonoBehaviour
         Highlight1.SetActive(true);
         Highlight2.SetActive(true);
         NotificationBtn.onClick.AddListener(DelayedInvokeAnimation);
-        NotificationBtn.onClick.AddListener(OpenSideNote);
+        //NotificationBtn.onClick.AddListener(OpenSideNote);
         for (currentTask = 0; currentTask < Count_5_to_9_ModelData.TaskComplete.Length; currentTask++)
         {
             if (Count_5_to_9_ModelData.TaskComplete[currentTask] == false)

@@ -74,6 +74,7 @@ public class ActivityList1
     public MultiplicationOperation1 multiplicationOperation1;
     public DivisionOperation1 divisionOperation1;
     public TutorialVideo1 tutorialVideo1;
+    public AnimatingCountingTutorial1 animatingCountingTutorial1;
 }
 
 [System.Serializable]
@@ -96,6 +97,7 @@ public class ActivityList2
     public MultiplicationOperation2 multiplicationOperation2;
     public DivisionOperation2 divisionOperation2;
     public TutorialVideo2 tutorialVideo2;
+    public AnimatingCountingTutorial2 animatingCountingTutorial2;
 
 
 }
@@ -188,6 +190,13 @@ public class TutorialVideo1
 {
     public bool completed;
 }
+
+[System.Serializable]
+public class AnimatingCountingTutorial1
+{
+    public bool[] completed;
+}
+
 
 [System.Serializable]
 public class MatchValueWithImage2
@@ -314,6 +323,17 @@ public class TutorialVideo2
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
 }
+
+
+[System.Serializable]
+public class AnimatingCountingTutorial2
+{
+    public float bestTime = -1;
+    public string bestTime_string = "-";
+    public float currentSavedTime = 0;
+
+}
+
 
 
 [System.Serializable]

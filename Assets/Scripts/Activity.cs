@@ -165,7 +165,11 @@ public class Activity : MonoBehaviour
                         UnityAction action = () => { activityScriptList[15].SetActive(true); loadingScreen.SetActive(true); };
                         activitiesGameObject.btnEvents.Add(action);
                     }
-
+                    else if (classActivityList[i].classData.activityList[j].animatingCountingTutorial.active == true)
+                    {
+                        UnityAction action = () => { activityScriptList[16].SetActive(true); loadingScreen.SetActive(true); };
+                        activitiesGameObject.btnEvents.Add(action);
+                    }
 
                 }
                 break;
@@ -1134,6 +1138,7 @@ public class Activity : MonoBehaviour
                                 }
                             }
 
+                            
 
                             if (classActivityList[i].classData.activityList[j].liftBeed01 == true)
                             {
@@ -1282,6 +1287,64 @@ public class Activity : MonoBehaviour
                                         tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
 
 
+                                        print("create " + w + " " + j);
+
+                                        break;
+                                    }
+
+                                }
+                            }
+
+                            if (classActivityList[i].classData.activityList[j].animatingCountingTutorial.active == true)
+                            {
+                                if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].animatingCountingTutorial2 != null)
+                                {
+                                    if (isActivityAdded[w] == false)
+                                    {
+                                        isActivityAdded[w] = true;
+                                        //replace 
+
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
+                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
+
+                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                        print("replace" + w + " " + j);
+
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
+                                        {
+                                            //create New
+
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
+
+
+                                            print("create " + w + " " + j);
+
+                                        }
+
+                                        //move forward
+
+
+                                        continue;
+                                    }
+                                }
+                                else
+                                {
+                                    if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
+                                    {
+                                        //create New
+
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
+                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
                                         print("create " + w + " " + j);
 
                                         break;
@@ -1966,6 +2029,12 @@ public class Activity : MonoBehaviour
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
                         }
+
+                        if (classActivityList[i].classData.activityList[i].animatingCountingTutorial.active == true)
+                        {
+                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                        }
                     }
 
                 }
@@ -2142,6 +2211,14 @@ public class Activity : MonoBehaviour
                         {
                             classParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
                             classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
+                        }
+
+                        if (classActivityList[i].classData.activityList[j].animatingCountingTutorial.active == true)
+                        {
+                            classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
+                            classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                            classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
+
                         }
                     }
 

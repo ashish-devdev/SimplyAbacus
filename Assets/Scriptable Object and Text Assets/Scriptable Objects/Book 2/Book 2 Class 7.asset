@@ -22,7 +22,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: e3307a30f289efc40a21a4b5e4892261, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -80,6 +80,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Counting Well II
       dummyActivityName: 
       matchValueWithImage: []
@@ -145,6 +149,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Counting Well II
       dummyActivityName: 
       matchValueWithImage: []
@@ -210,6 +218,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
       dummyActivityName: 
       matchValueWithImage: []
@@ -217,7 +229,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 17b41bb9a3aed8e42986aacecc8c007c, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -275,6 +287,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
       dummyActivityName: 
       matchValueWithImage: []
@@ -340,3 +356,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

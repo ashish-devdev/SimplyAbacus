@@ -22,7 +22,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 0efdae5c299d0e2469b83bd330070125, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -80,6 +80,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
       dummyActivityName: 
       matchValueWithImage: []
@@ -87,7 +91,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 9f66edb76d70bee44b1f7b1f758d0957, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -145,6 +149,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
       dummyActivityName: 
       matchValueWithImage: []
@@ -152,7 +160,7 @@ MonoBehaviour:
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 7bb303ef40c07274cb8e1061674d0f58, type: 3}
-        showFriendTable: 1
+        showFriendTable: 0
         showMultiplicationTable: 0
       coloringPageImages: []
       speedWriting: 0
@@ -210,6 +218,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
       dummyActivityName: 
       matchValueWithImage: []
@@ -275,6 +287,10 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
       dummyActivityName: 
       matchValueWithImage: []
@@ -343,3 +359,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
