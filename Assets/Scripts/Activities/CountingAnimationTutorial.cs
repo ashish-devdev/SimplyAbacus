@@ -34,6 +34,8 @@ public class CountingAnimationTutorial : MonoBehaviour
     public SpriteRenderer thumbsUpSprite;
     public SpriteRenderer fingerDownSprite;
 
+    public ValueCalculator valueCalculator;
+
     ActivityList1 activityList1;
     ActivityList2 activityList2;
     float[] numbers;
@@ -53,6 +55,7 @@ public class CountingAnimationTutorial : MonoBehaviour
 
     private void OnEnable()
     {
+        Invoke(nameof(OnEnableWithDelay), 0.1f);
 
         currentTask = 0;
         currentSubTask = 0;
@@ -116,6 +119,10 @@ public class CountingAnimationTutorial : MonoBehaviour
         PerformTask();
     }
 
+    public void OnEnableWithDelay()
+    {
+        valueCalculator.decimalPlaceString = "F0";
+    }
 
 
     private void Update()
@@ -453,6 +460,7 @@ public class CountingAnimationTutorial : MonoBehaviour
 
         fingerDownSprite.transform.gameObject.SetActive(false);
         thumbsUpSprite.transform.gameObject.SetActive(false);
+        valueCalculator.decimalPlaceString = "F2";
 
         MakeALlBeedsIntractable();
         MoveBeeds_1.dosomthing -= CompareValue;

@@ -16,6 +16,8 @@ public class LiftingBeedActivity : MonoBehaviour
     public LeanImageFillAmount loadingBar;
     public Button notificationBtn;
     public GameObject timer;
+    public ValueCalculator valueCalculator;
+
     LiftBeeds1 liftBeeds1;
     LiftBeeds2 liftBeeds2;
     LiftBeeds liftBeeds;
@@ -29,8 +31,14 @@ public class LiftingBeedActivity : MonoBehaviour
 
     private void OnEnable()
     {
+        Invoke(nameof(OnEnableWithDelay), 0.1f);
+    }
+
+
+    public void OnEnableWithDelay()
+    {
         currentSubOperation = 0;
-        totalCount = 2;
+        totalCount = 1;
         cuurentCount = 0;
         resetHappened = true;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
@@ -39,9 +47,9 @@ public class LiftingBeedActivity : MonoBehaviour
             {
                 for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
                 {
-                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeeds.active == true&& ClassManager.currentActivityIndex==j)
+                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeeds.active == true && ClassManager.currentActivityIndex == j)
                     {
-                        liftBeeds=activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeeds;
+                        liftBeeds = activityScriptInstance.classActivityList[i].classData.activityList[j].liftBeeds;
                         liftBeeds1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeeds1;
                         liftBeeds2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2;
                         totalSubOperation = liftBeeds.numbers.Length;
@@ -50,7 +58,7 @@ public class LiftingBeedActivity : MonoBehaviour
             }
         }
 
-       
+
 
         MoveBeeds_1.dosomthing += CompareValue;
         MoveBeeds_2.dosomthing += CompareValue;
@@ -59,7 +67,9 @@ public class LiftingBeedActivity : MonoBehaviour
         loadingBar.Data.FillAmount = ((currentSubOperation) / (totalSubOperation * 1f));
         loadingBar.BeginAllTransitions();
         notificationBtn.onClick.AddListener(StartTimer);
-        sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] + ", twice ";
+        sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation];
+
+        valueCalculator.decimalPlaceString = "F0";
 
     }
 
@@ -90,7 +100,7 @@ public class LiftingBeedActivity : MonoBehaviour
         {
             resetHappened = true;
             cuurentCount++;
-            sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] + ", twice ";//cuurentsuboperation will be incremented by 1 at this point.
+            sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] ;//cuurentsuboperation will be incremented by 1 at this point.
 
         }
 
@@ -103,7 +113,7 @@ public class LiftingBeedActivity : MonoBehaviour
             loadingBar.BeginAllTransitions();
             try
             {
-                sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation] + ", twice ";//cuurentsuboperation will be incremented by 1 at this point.
+                sideNote.text = "Count to " + liftBeeds.numbers[currentSubOperation];//cuurentsuboperation will be incremented by 1 at this point.
             }
             catch
             {; }
@@ -148,6 +158,7 @@ public class LiftingBeedActivity : MonoBehaviour
     private void OnDisable()
     {
         timer.SetActive(false);
+        valueCalculator.decimalPlaceString = "F2";
 
         notificationBtn.onClick.RemoveListener(StartTimer);
         MoveBeeds_1.dosomthing -= CompareValue;

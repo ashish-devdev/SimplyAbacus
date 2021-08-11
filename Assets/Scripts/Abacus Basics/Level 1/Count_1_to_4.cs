@@ -61,10 +61,12 @@ public class Count_1_to_4 : MonoBehaviour
     public List<GameObject> noMoveMentBeeds;
     public List<GameObject> MoveMentBeeds;
 
+    public ValueCalculator valueCalculator;
     int SubTaskToSave;
 
     void OnEnable()
     {
+        Invoke(nameof(OnEnableAfterDelay), 0.1f);
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -178,7 +180,10 @@ public class Count_1_to_4 : MonoBehaviour
 
     }
 
-
+    public void OnEnableAfterDelay()
+    {
+        valueCalculator.decimalPlaceString = "F0";
+    }
 
     void Update()
     {
@@ -570,6 +575,7 @@ public class Count_1_to_4 : MonoBehaviour
 
     private void OnDisable()
     {
+        valueCalculator.decimalPlaceString = "F2";
 
         for (int i = 0; i < noMoveMentBeeds.Count; i++)
         {

@@ -62,7 +62,7 @@ public class Count_5_to_9 : MonoBehaviour
     public int currentTask, currentSubTask;
     LeanEvent currentResetAnimation;
     float completeBarValue = 500;
-
+    public ValueCalculator valueCalculator;
     public LeanToggle congratulationLean;
     public LeanToggle sideNoteLean;
     public LeanToggle notificationLean;
@@ -72,6 +72,7 @@ public class Count_5_to_9 : MonoBehaviour
 
     void OnEnable()
     {
+        Invoke(nameof(OnEnableWithDelay), 0.1f);
 
         beed1.GetComponent<BoxCollider>().enabled = false;
         beed2.GetComponent<BoxCollider>().enabled = false;
@@ -170,6 +171,11 @@ public class Count_5_to_9 : MonoBehaviour
 
     }
 
+    public void OnEnableWithDelay()
+    {
+        valueCalculator.decimalPlaceString = "F0";
+    }
+
     public void startAnimation()
     {
         leanPulseFingerDownAnimation.RemainingPulses = 0;
@@ -202,15 +208,15 @@ public class Count_5_to_9 : MonoBehaviour
         }
         try
         {
-            if(!Notification.transform.gameObject.activeInHierarchy)
-            if (Input.touches[0].phase == TouchPhase.Ended)
-            {
-                leanPulseFingerDownAnimation.RemainingPulses = 0;
-                leanPulseThumbDownAnimation.RemainingPulses = 0;
-                leanPulseThumbUpAnimation.RemainingPulses = 0;
-                Invoke("DelayedInvokeResetAnimations", 0.5f);
+            if (!Notification.transform.gameObject.activeInHierarchy)
+                if (Input.touches[0].phase == TouchPhase.Ended)
+                {
+                    leanPulseFingerDownAnimation.RemainingPulses = 0;
+                    leanPulseThumbDownAnimation.RemainingPulses = 0;
+                    leanPulseThumbUpAnimation.RemainingPulses = 0;
+                    Invoke("DelayedInvokeResetAnimations", 0.5f);
 
-            }
+                }
         }
         catch
         {
@@ -1078,6 +1084,8 @@ public class Count_5_to_9 : MonoBehaviour
 
         Highlight1.SetActive(false);
         Highlight2.SetActive(false);
+
+        valueCalculator.decimalPlaceString = "F2";
 
         NotificationBtn.onClick.RemoveListener(startAnimation);
 
