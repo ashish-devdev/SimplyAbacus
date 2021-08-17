@@ -15,12 +15,12 @@ MonoBehaviour:
   classData:
     nameOfClass: B3C3
     activityList:
-    - activityName: Adding made Super Simple
-      iD: 03.03.01
+    - activityName: Everyday Fun Counting I
+      iD: 03.03.011
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: b6539d7c7a6a540a6836b265f25e48ef, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
@@ -44,11 +44,12 @@ MonoBehaviour:
         startingImage: {fileID: 0}
         sideNoteMessage: 
       visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
+        active: 1
+        showHand1: 1
+        showHand2: 1
         showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
+        abacusOperations: {fileID: 4900000, guid: b6539d7c7a6a540a6836b265f25e48ef,
+          type: 3}
       countBodyParts:
         active: 0
         animalImage: {fileID: 0}
@@ -58,6 +59,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -84,12 +86,12 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
-      iD: 03.03.02
+    - activityName: Everyday Fun Counting II
+      iD: 03.03.012
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: 07d6b5b5d8ff6445e81687929bc1c6dc, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
@@ -113,11 +115,12 @@ MonoBehaviour:
         startingImage: {fileID: 0}
         sideNoteMessage: 
       visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
+        active: 1
+        showHand1: 1
+        showHand2: 1
         showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
+        abacusOperations: {fileID: 4900000, guid: 07d6b5b5d8ff6445e81687929bc1c6dc,
+          type: 3}
       countBodyParts:
         active: 0
         animalImage: {fileID: 0}
@@ -127,6 +130,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -153,12 +157,12 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
-      iD: 03.03.03
+    - activityName: Everyday Fun Counting III
+      iD: 03.03.013
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: 05e9ad0a53cd8459da62e299ba4cee34, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
@@ -182,11 +186,12 @@ MonoBehaviour:
         startingImage: {fileID: 0}
         sideNoteMessage: 
       visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
+        active: 1
+        showHand1: 1
+        showHand2: 1
         showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
+        abacusOperations: {fileID: 4900000, guid: 05e9ad0a53cd8459da62e299ba4cee34,
+          type: 3}
       countBodyParts:
         active: 0
         animalImage: {fileID: 0}
@@ -196,6 +201,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -222,12 +228,12 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
+    - activityName: Everyday Fun Counting IV
       iD: 03.03.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: a5fa9a18cd42c44e682bba157d55a1af, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
@@ -251,11 +257,12 @@ MonoBehaviour:
         startingImage: {fileID: 0}
         sideNoteMessage: 
       visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
+        active: 1
+        showHand1: 1
+        showHand2: 1
         showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
+        abacusOperations: {fileID: 4900000, guid: a5fa9a18cd42c44e682bba157d55a1af,
+          type: 3}
       countBodyParts:
         active: 0
         animalImage: {fileID: 0}
@@ -265,6 +272,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -291,12 +299,12 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
-      iD: 03.03.05
+    - activityName: Everyday Fun Counting V
+      iD: 03.03.015
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: e4c14993b7f02431caf7f81eb3a1dc3f, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
@@ -320,11 +328,12 @@ MonoBehaviour:
         startingImage: {fileID: 0}
         sideNoteMessage: 
       visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
+        active: 1
+        showHand1: 1
+        showHand2: 1
         showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
+        abacusOperations: {fileID: 4900000, guid: e4c14993b7f02431caf7f81eb3a1dc3f,
+          type: 3}
       countBodyParts:
         active: 0
         animalImage: {fileID: 0}
@@ -334,6 +343,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -403,6 +413,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -475,6 +486,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0

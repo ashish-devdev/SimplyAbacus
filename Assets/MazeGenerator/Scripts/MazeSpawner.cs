@@ -221,8 +221,8 @@ public class MazeSpawner : MonoBehaviour
                 if (row == Rows - 1 && column == Columns - 1)  //checking if its the last round of the double for loop.
                 {
                     randomVal = Random.Range(0, listOfPossibleCellSponningGoals.Count);   // getting the random value between 0 to number of element of the list.
-                   // ball.transform.parent = transform;
-                   
+                                                                                          // ball.transform.parent = transform;
+
 
                     try
                     {
@@ -262,10 +262,15 @@ public class MazeSpawner : MonoBehaviour
         this.gameObject.transform.localEulerAngles = new Vector3(-90, 0, 0);
         this.gameObject.transform.localScale = new Vector3(0.185f * 10 / Rows, 0.185f * 10 / Columns, 0.2f);
         temp = transform.localPosition;
-        if(Rows==3)
-        transform.localPosition = new Vector3(transform.localPosition.x - 4.4f, transform.localPosition.y - 100, 3.1f);
-        else if(Rows ==4)
-        transform.localPosition = new Vector3(transform.localPosition.x - 5.4f, transform.localPosition.y - 95, 3.1f);
+        if (Rows == 3)
+            transform.localPosition = new Vector3(transform.localPosition.x - 4.4f, transform.localPosition.y - 100, 3.1f);
+        else if (Rows == 4)
+        {
+            Invoke(nameof(PositionTheMAze), 0.2f);// time should be greater than PLaceGameObjectAtDesiredLocation script's function
+        }        else if (Rows == 5)
+        {
+            Invoke(nameof(PositionTheMAze), 0.2f);// time should be greater than PLaceGameObjectAtDesiredLocation script's function
+        }
         Invoke(nameof(PositionTheBallOntheFirstBox), 0.11f);
     }
 
@@ -287,5 +292,14 @@ public class MazeSpawner : MonoBehaviour
     {
         ball.transform.position = new Vector3(transform.GetChild(0).transform.position.x, transform.GetChild(0).transform.position.y, transform.GetChild(0).transform.position.z - 0.05f);
 
+    }
+
+    public void PositionTheMAze()
+    {
+         if (Rows == 4)
+            transform.localPosition = new Vector3(transform.localPosition.x - 3.5f, -100, 4.48f);       
+        if (Rows == 5)
+            transform.localPosition = new Vector3(transform.localPosition.x - 4.9f, -100, 3.48f);
+        Invoke(nameof(PositionTheBallOntheFirstBox), 0.11f);
     }
 }
