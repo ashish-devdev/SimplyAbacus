@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: B2C7
     activityList:
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 02.07.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -85,7 +85,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Counting Well II
-      dummyActivityName: 
+      iD: 02.07.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -154,7 +154,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Counting Well II
-      dummyActivityName: 
+      iD: 02.07.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -223,7 +223,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 02.07.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -292,7 +292,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 02.07.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

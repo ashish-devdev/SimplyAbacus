@@ -354,29 +354,41 @@ public class Activity : MonoBehaviour
 
                             if (classActivityList[i].classData.activityList[j].matchValueWithImage.Length > 0)
                             {
+
+
                                 if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchValueWithImage.Count > 0)
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2());
-
-                                        for (int k = 0; k < classActivityList[i].classData.activityList[j].matchValueWithImage.Length; k++)
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchValueWithImage[0].id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchValueWithImage[0].id == classActivityList[i].classData.activityList[j].iD)
                                         {
-                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage1());
-                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchValueWithImage[k].completed = false;
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchValueWithImage[0].id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchValueWithImage[0].id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
+                                            isActivityAdded[w] = true;
+
+                                            //replace 
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2());
+
+                                            for (int k = 0; k < classActivityList[i].classData.activityList[j].matchValueWithImage.Length; k++)
+                                            {
+                                                tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage1());
+                                                tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchValueWithImage[k].completed = false;
+
+                                            }
+
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+
+
+                                            break;
                                         }
-
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
-
-                                        print("replace" + w + " " + j);
-
-
-
-                                        break;
                                     }
                                     else
                                     {
@@ -384,7 +396,8 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
 
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2());
+                                            print("IIIIIIIIIIIIIIIIIIIIIIIIDDDDDDDDDDDDDDDDDDDDDDDDDDDDD" + classActivityList[i].classData.activityList[j].iD);
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2() { id = classActivityList[i].classData.activityList[j].iD });
 
                                             for (int k = 0; k < classActivityList[i].classData.activityList[j].matchValueWithImage.Length; k++)
                                             {
@@ -410,7 +423,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2());
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2() { id = classActivityList[i].classData.activityList[j].iD });
 
                                         for (int k = 0; k < classActivityList[i].classData.activityList[j].matchValueWithImage.Length; k++)
                                         {
@@ -433,29 +446,39 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2());
-                                        for (int k = 0; k < classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length; k++)
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchShapeWithNumbers[0].id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchShapeWithNumbers[0].id == classActivityList[i].classData.activityList[j].iD)
                                         {
-                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers1());
-                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers[k].completed = new List<bool>(classActivityList[i].classData.activityList[j].matchShapeWithNumbers[k].completed.Length);
 
-                                            for (int l = 0; l < classActivityList[i].classData.activityList[j].matchShapeWithNumbers[k].completed.Length; l++)
+
+                                            isActivityAdded[w] = true;
+                                            //replace 
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchShapeWithNumbers[0].id == null)
                                             {
-                                                tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers[k].completed.Add(new bool());
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].matchShapeWithNumbers[0].id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
                                             }
 
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2());
+                                            for (int k = 0; k < classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length; k++)
+                                            {
+                                                tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers1());
+                                                tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers[k].completed = new List<bool>(classActivityList[i].classData.activityList[j].matchShapeWithNumbers[k].completed.Length);
 
+                                                for (int l = 0; l < classActivityList[i].classData.activityList[j].matchShapeWithNumbers[k].completed.Length; l++)
+                                                {
+                                                    tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers[k].completed.Add(new bool());
+                                                }
+
+
+                                            }
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
                                         }
-
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
-
-                                        print("replace" + w + " " + j);
-
-                                        break;
                                     }
                                     else
                                     {
@@ -463,7 +486,7 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
 
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2());
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2() { id = classActivityList[i].classData.activityList[j].iD });
                                             for (int k = 0; k < classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length; k++)
                                             {
                                                 tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers1());
@@ -493,7 +516,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2());
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2() { id = classActivityList[i].classData.activityList[j].iD });
                                         for (int k = 0; k < classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length; k++)
                                         {
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers1());
@@ -522,26 +545,35 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length];
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].abacusOperations.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].abacusOperations.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].abacusOperations.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].abacusOperations.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
+
+                                            isActivityAdded[w] = true;
+                                            //replace 
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length];
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
 
 
-                                        print("replace" + w + " " + j);
+                                            print("replace" + w + " " + j);
 
-                                        break;
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length];
 
 
@@ -560,7 +592,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length];
 
 
@@ -578,22 +610,31 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].coloringPageImages.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].coloringPageImages.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            //replace 
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].coloringPageImages.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].coloringPageImages.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        print("replace" + w + " " + j);
 
-                                        break;
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2() { id = classActivityList[i].classData.activityList[j].iD };
 
 
                                             print("create " + w + " " + j);
@@ -612,7 +653,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2() { id = classActivityList[i].classData.activityList[j].iD };
 
                                         print("create " + w + " " + j);
 
@@ -628,24 +669,33 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].speedWriting.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].speedWriting.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].speedWriting.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].speedWriting.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            //replace 
+
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
 
-                                        print("replace" + w + " " + j);
+                                            print("replace" + w + " " + j);
 
-                                        break;
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2() { id = classActivityList[i].classData.activityList[j].iD };
 
 
                                             print("create " + w + " " + j);
@@ -663,7 +713,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2() { id = classActivityList[i].classData.activityList[j].iD };
 
 
                                         print("create " + w + " " + j);
@@ -680,17 +730,32 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].maze1 = new Maze1();
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+
+                                            isActivityAdded[w] = true;
 
 
-                                        print("replace" + w + " " + j);
 
-                                        break;
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
+
+
+
+
+                                            //replace 
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].maze1 = new Maze1();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -698,7 +763,7 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].maze1 = new Maze1();
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2() { id = classActivityList[i].classData.activityList[j].iD };
                                             print("create " + w + " " + j);
 
                                         }
@@ -716,7 +781,7 @@ public class Activity : MonoBehaviour
                                         //create New
 
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].maze1 = new Maze1();
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2() { id = classActivityList[i].classData.activityList[j].iD };
                                         print("create " + w + " " + j);
 
                                         break;
@@ -731,20 +796,31 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].visualHands1 = new VisualHands1()
+
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].visualHands2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].visualHands2.id == classActivityList[i].classData.activityList[j].iD)
                                         {
-                                            completed = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].visualHands.abacusOperations.text).Add.Length]
-                                        };
+                                            isActivityAdded[w] = true;
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
-                                        print("replace" + w + " " + j);
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].visualHands2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].visualHands2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        break;
+                                            //replace 
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].visualHands1 = new VisualHands1()
+                                            {
+                                                completed = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].visualHands.abacusOperations.text).Add.Length]
+                                            };
+
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -755,7 +831,7 @@ public class Activity : MonoBehaviour
                                             {
                                                 completed = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].visualHands.abacusOperations.text).Add.Length]
                                             };
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2() { id = classActivityList[i].classData.activityList[j].iD };
 
                                             print("create " + w + " " + j);
 
@@ -777,7 +853,7 @@ public class Activity : MonoBehaviour
                                         {
                                             completed = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].visualHands.abacusOperations.text).Add.Length]
                                         };
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2() { id = classActivityList[i].classData.activityList[j].iD };
 
                                         print("create " + w + " " + j);
 
@@ -793,20 +869,30 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].countBodyParts1 = new CountBodyParts1()
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].countBodyParts2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].countBodyParts2.id == classActivityList[i].classData.activityList[j].iD)
                                         {
-                                            completed = new bool[classActivityList[i].classData.activityList[j].countBodyParts.bodyPartAndCountOfOne.Count * classActivityList[i].classData.activityList[j].countBodyParts.countOfAnimals.Count]
-                                        };
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2();
+                                            isActivityAdded[w] = true;
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].countBodyParts2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].countBodyParts2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        print("replace" + w + " " + j);
 
-                                        break;
+                                            //replace 
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].countBodyParts1 = new CountBodyParts1()
+                                            {
+                                                completed = new bool[classActivityList[i].classData.activityList[j].countBodyParts.bodyPartAndCountOfOne.Count * classActivityList[i].classData.activityList[j].countBodyParts.countOfAnimals.Count]
+                                            };
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2();
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -818,7 +904,7 @@ public class Activity : MonoBehaviour
                                             {
                                                 completed = new bool[classActivityList[i].classData.activityList[j].countBodyParts.bodyPartAndCountOfOne.Count * classActivityList[i].classData.activityList[j].countBodyParts.countOfAnimals.Count]
                                             };
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2() { id = classActivityList[i].classData.activityList[j].iD };
 
                                             print("create " + w + " " + j);
 
@@ -840,7 +926,7 @@ public class Activity : MonoBehaviour
                                         {
                                             completed = new bool[classActivityList[i].classData.activityList[j].countBodyParts.bodyPartAndCountOfOne.Count * classActivityList[i].classData.activityList[j].countBodyParts.countOfAnimals.Count]
                                         };
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2() { id = classActivityList[i].classData.activityList[j].iD };
 
                                         print("create " + w + " " + j);
 
@@ -856,19 +942,28 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].mixedMathematicalOperations2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].mixedMathematicalOperations2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1 = new MixedMathematicalOperations1();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1.completed = new bool[JsonUtility.FromJson<MixedOpeartionJsonWrapper>(classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text).operation.Length];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].mixedMathematicalOperations2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].mixedMathematicalOperations2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            //replace 
 
-                                        print("replace" + w + " " + j);
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1 = new MixedMathematicalOperations1();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1.completed = new bool[JsonUtility.FromJson<MixedOpeartionJsonWrapper>(classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text).operation.Length];
 
-                                        break;
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -876,7 +971,7 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
 
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1 = new MixedMathematicalOperations1();
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1.completed = new bool[JsonUtility.FromJson<MixedOpeartionJsonWrapper>(classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text).operation.Length];
 
@@ -897,7 +992,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1 = new MixedMathematicalOperations1();
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1.completed = new bool[JsonUtility.FromJson<MixedOpeartionJsonWrapper>(classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text).operation.Length];
 
@@ -916,26 +1011,36 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationDivisionPuzzle2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationDivisionPuzzle2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1 = new MultiplicationDivisionPuzzle1();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1.completed = new bool[JsonUtility.FromJson<MultiplicationAndDivisionPuzzleJsonWrapper>(classActivityList[i].classData.activityList[j].multiplicationDivisionPuzzle.jsonData.text).questions.Length];
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationDivisionPuzzle2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationDivisionPuzzle2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        print("replace" + w + " " + j);
+                                            //replace 
 
-                                        break;
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1 = new MultiplicationDivisionPuzzle1();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1.completed = new bool[JsonUtility.FromJson<MultiplicationAndDivisionPuzzleJsonWrapper>(classActivityList[i].classData.activityList[j].multiplicationDivisionPuzzle.jsonData.text).questions.Length];
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1 = new MultiplicationDivisionPuzzle1();
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1.completed = new bool[JsonUtility.FromJson<MultiplicationAndDivisionPuzzleJsonWrapper>(classActivityList[i].classData.activityList[j].multiplicationDivisionPuzzle.jsonData.text).questions.Length];
 
@@ -956,7 +1061,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1 = new MultiplicationDivisionPuzzle1();
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1.completed = new bool[JsonUtility.FromJson<MultiplicationAndDivisionPuzzleJsonWrapper>(classActivityList[i].classData.activityList[j].multiplicationDivisionPuzzle.jsonData.text).questions.Length];
 
@@ -975,19 +1080,27 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationOperation2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationOperation2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1 = new MultiplicationOperation1();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationOperation2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].multiplicationOperation2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
+                                            //replace 
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1 = new MultiplicationOperation1();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];
 
-                                        print("replace" + w + " " + j);
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
-                                        break;
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -995,7 +1108,7 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
 
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1 = new MultiplicationOperation1();
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];
 
@@ -1016,7 +1129,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1 = new MultiplicationOperation1();
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];
 
@@ -1035,24 +1148,37 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeeds1 = new LiftBeeds1();
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftBeeds2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftBeeds2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
-                                        print("replace" + w + " " + j);
+                                            isActivityAdded[w] = true;
 
-                                        break;
+
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftBeeds2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftBeeds2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
+
+
+                                            //replace 
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeeds1 = new LiftBeeds1();
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeeds1 = new LiftBeeds1();
 
 
@@ -1071,7 +1197,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeeds1 = new LiftBeeds1();
 
                                         print("create " + w + " " + j);
@@ -1088,26 +1214,35 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].divisionOperation2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].divisionOperation2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            //replace 
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1 = new DivisionOperation1();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1.completed = new bool[JsonUtility.FromJson<DivisionJsonWrapper>(classActivityList[i].classData.activityList[j].divisionOperation.jsonData.text).div.Length];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].divisionOperation2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].divisionOperation2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
-                                        print("replace" + w + " " + j);
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1 = new DivisionOperation1();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1.completed = new bool[JsonUtility.FromJson<DivisionJsonWrapper>(classActivityList[i].classData.activityList[j].divisionOperation.jsonData.text).div.Length];
 
-                                        break;
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1 = new DivisionOperation1();
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1.completed = new bool[JsonUtility.FromJson<DivisionJsonWrapper>(classActivityList[i].classData.activityList[j].divisionOperation.jsonData.text).div.Length];
 
@@ -1126,7 +1261,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1 = new DivisionOperation1();
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1.completed = new bool[JsonUtility.FromJson<DivisionJsonWrapper>(classActivityList[i].classData.activityList[j].divisionOperation.jsonData.text).div.Length];
 
@@ -1138,25 +1273,33 @@ public class Activity : MonoBehaviour
                                 }
                             }
 
-                            
-
                             if (classActivityList[i].classData.activityList[j].liftBeed01 == true)
                             {
                                 if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftingBeed21 != null)
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeed01 = new bool[4];
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftingBeed21.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftingBeed21.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            //replace 
+
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftingBeed21.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].liftingBeed21.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeed01 = new bool[4];
 
-                                        print("replace" + w + " " + j);
 
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                        }
                                         break;
                                     }
                                     else
@@ -1164,7 +1307,7 @@ public class Activity : MonoBehaviour
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21() { id = classActivityList[i].classData.activityList[j].iD };
 
                                             print("create " + w + " " + j);
 
@@ -1181,7 +1324,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21() { id = classActivityList[i].classData.activityList[j].iD };
 
                                         print("create " + w + " " + j);
 
@@ -1197,24 +1340,33 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeed02 = new bool[5];
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].LiftingBeed22.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].LiftingBeed22.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].LiftingBeed22.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].LiftingBeed22.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        print("replace" + w + " " + j);
+                                            //replace 
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeed02 = new bool[5];
 
-                                        break;
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
                                         if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                         {
                                             //create New
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22() { id = classActivityList[i].classData.activityList[j].iD };
 
                                             print("create " + w + " " + j);
 
@@ -1231,7 +1383,7 @@ public class Activity : MonoBehaviour
                                     if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
                                     {
                                         //create New
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22() { id = classActivityList[i].classData.activityList[j].iD };
 
 
                                         print("create " + w + " " + j);
@@ -1248,17 +1400,25 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].tutorialVideo2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].tutorialVideo2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            //replace 
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].tutorialVideo2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].tutorialVideo2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
 
-                                        print("replace" + w + " " + j);
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
-                                        break;
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -1266,7 +1426,7 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2() { id = classActivityList[i].classData.activityList[j].iD };
 
                                             print("create " + w + " " + j);
 
@@ -1284,7 +1444,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2() { id = classActivityList[i].classData.activityList[j].iD };
 
 
                                         print("create " + w + " " + j);
@@ -1301,19 +1461,28 @@ public class Activity : MonoBehaviour
                                 {
                                     if (isActivityAdded[w] == false)
                                     {
-                                        isActivityAdded[w] = true;
-                                        //replace 
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].animatingCountingTutorial2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].animatingCountingTutorial2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            //replace 
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
 
-                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].animatingCountingTutorial2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].animatingCountingTutorial2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
 
-                                        print("replace" + w + " " + j);
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
 
-                                        break;
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
                                     }
                                     else
                                     {
@@ -1321,7 +1490,7 @@ public class Activity : MonoBehaviour
                                         {
                                             //create New
 
-                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2() { id = classActivityList[i].classData.activityList[j].iD };
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
 
@@ -1342,7 +1511,7 @@ public class Activity : MonoBehaviour
                                     {
                                         //create New
 
-                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2() { id = classActivityList[i].classData.activityList[j].iD };
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
                                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
                                         print("create " + w + " " + j);
@@ -1903,7 +2072,8 @@ public class Activity : MonoBehaviour
                         if (classActivityList[i].classData.activityList[j].matchValueWithImage.Length > 0)
                         {
 
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2());
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchValueWithImage.Add(new MatchValueWithImage2() { id = classActivityList[i].classData.activityList[j].iD });
+
 
                             for (int k = 0; k < classActivityList[i].classData.activityList[j].matchValueWithImage.Length; k++)
                             {
@@ -1913,11 +2083,14 @@ public class Activity : MonoBehaviour
                                 tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].matchValueWithImage[k].completed = false;
 
                             }
+                            print("Created");
 
                         }
                         if (classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length > 0)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2());
+                            print("Created");
+
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].matchShapeWithNumbers.Add(new MatchShapeWithNumbers2() { id = classActivityList[i].classData.activityList[j].iD });
                             //  classParent.classActivityCompletionHolderList[i].classData.activityList[j].matchShapeWithNumbers[0] = new MatchShapeWithNumbers1();
                             for (int k = 0; k < classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length; k++)
                             {
@@ -1936,37 +2109,42 @@ public class Activity : MonoBehaviour
 
                         if (classActivityList[i].classData.activityList[j].abacusOperations.active == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2();
+                            print("Created");
+
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length];
 
                         }
 
                         if (classActivityList[i].classData.activityList[j].coloringPageImages.Length > 0)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2();
+                            print("Created");
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].coloringPageImages = new ColoringPageImages2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
                         if (classActivityList[i].classData.activityList[j].speedWriting == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2();
+                            print("Created");
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting = new SpeedWriting2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
 
                         if (classActivityList[i].classData.activityList[j].liftBeed01 == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21();
+                            print("Created");
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftingBeed21 = new LiftingBeed21() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeed01 = new bool[4];
 
                         }
 
                         if (classActivityList[i].classData.activityList[j].liftBeed02 == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].LiftingBeed22 = new LiftingBeed22() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeed02 = new bool[5];
                         }
 
                         if (classActivityList[i].classData.activityList[j].maze.active == true)
                         {
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].maze1 = new Maze1();
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].maze2 = new Maze2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
                         if (classActivityList[i].classData.activityList[j].visualHands.active == true)
                         {
@@ -1974,7 +2152,7 @@ public class Activity : MonoBehaviour
                             {
                                 completed = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].visualHands.abacusOperations.text).Add.Length]
                             };
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2 = new VisualHands2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
                         if (classActivityList[i].classData.activityList[j].countBodyParts.active == true)
                         {
@@ -1982,26 +2160,26 @@ public class Activity : MonoBehaviour
                             {
                                 completed = new bool[classActivityList[i].classData.activityList[j].countBodyParts.bodyPartAndCountOfOne.Count * classActivityList[i].classData.activityList[j].countBodyParts.countOfAnimals.Count]
                             };
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].countBodyParts2 = new CountBodyParts2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
 
                         if (classActivityList[i].classData.activityList[j].mixedMathematicalOperations.active == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1 = new MixedMathematicalOperations1();
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1.completed = new bool[JsonUtility.FromJson<MixedOpeartionJsonWrapper>(classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text).operation.Length];
                         }
 
                         if (classActivityList[i].classData.activityList[j].multiplicationDivisionPuzzle.active == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationDivisionPuzzle2 = new MultiplicationDivisionPuzzle2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1 = new MultiplicationDivisionPuzzle1();
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationDivisionPuzzle1.completed = new bool[JsonUtility.FromJson<MultiplicationAndDivisionPuzzleJsonWrapper>(classActivityList[i].classData.activityList[j].multiplicationDivisionPuzzle.jsonData.text).questions.Length];
 
                         }
                         if (classActivityList[i].classData.activityList[j].mutliplicationOperation.active == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1 = new MultiplicationOperation1();
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];
 
@@ -2009,7 +2187,7 @@ public class Activity : MonoBehaviour
                         }
                         if (classActivityList[i].classData.activityList[j].liftBeeds.active == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].liftBeeds2 = new LiftBeeds2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].liftBeeds1 = new LiftBeeds1();
                             //  classParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];
 
@@ -2018,7 +2196,7 @@ public class Activity : MonoBehaviour
 
                         if (classActivityList[i].classData.activityList[j].divisionOperation.active == true)
                         {
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].divisionOperation2 = new DivisionOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1 = new DivisionOperation1();
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].divisionOperation1.completed = new bool[JsonUtility.FromJson<DivisionJsonWrapper>(classActivityList[i].classData.activityList[j].divisionOperation.jsonData.text).div.Length];
 
@@ -2027,13 +2205,13 @@ public class Activity : MonoBehaviour
                         if (classActivityList[i].classData.activityList[j].tutorialVideo.active == true)
                         {
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1 = new TutorialVideo1();
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
 
                         if (classActivityList[i].classData.activityList[i].animatingCountingTutorial.active == true)
                         {
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
-                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
                     }
 

@@ -15,7 +15,8 @@ MonoBehaviour:
   classData:
     nameOfClass: B3C5
     activityList:
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      iD: 03.05.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.05.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -143,7 +149,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.05.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -207,7 +218,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.05.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -271,7 +287,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.05.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -335,7 +356,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.05.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -399,7 +425,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
+      iD: 03.05.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -463,3 +494,76 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: The Maze Runner
+      iD: 03.05.08
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 1
+        row: 4
+        col: 4
+        beginingSponingCol: 1
+        beginingSponingrow: 1
+        endingSponingcol: 2
+        endingSponingRow: 2
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

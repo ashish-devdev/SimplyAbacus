@@ -23,7 +23,7 @@ public class ClassData
 public class ActivityList
 {
     public string activityName;
-    public string dummyActivityName;
+    public string iD;
     public MatchValueWithImage[] matchValueWithImage;
     public MatchShapeWithNumbers[] matchShapeWithNumbers;
     public AbacusOperation abacusOperations;
@@ -136,6 +136,7 @@ public class BodyPartAndCountOfOne
 public class MixedMathematicalOperations
 {
     public bool active;
+    public bool isPercentage;
     public TextAsset jsonData;
     public bool showMultiplicationTable;
     public bool showFriendTable;

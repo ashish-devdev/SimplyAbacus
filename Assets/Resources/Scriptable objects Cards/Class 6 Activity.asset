@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: Class 6
     activityList:
     - activityName: The Unworry activities
-      dummyActivityName: 
+      iD: 01.06.01
       matchValueWithImage: []
       matchShapeWithNumbers:
       - img: {fileID: 21300000, guid: 061e1ba74f4d26b44bf0f0365bb901f3, type: 3}
@@ -85,8 +85,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Me & My World of Abacus
-      dummyActivityName: 
+      iD: 01.06.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -150,8 +154,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 01.06.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -215,8 +223,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
-      dummyActivityName: 
+      iD: 01.06.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -283,8 +295,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 01.06.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -348,3 +364,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

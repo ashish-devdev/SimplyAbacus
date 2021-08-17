@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: B2C6
     activityList:
     - activityName: Me & My World of Abacus
-      dummyActivityName: 
+      iD: 02.06.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -90,7 +90,7 @@ MonoBehaviour:
         - 90
         numberOfTimesToRepeate: 1
     - activityName: Counting Well II
-      dummyActivityName: 
+      iD: 02.06.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -159,7 +159,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Counting Well II
-      dummyActivityName: 
+      iD: 02.06.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -228,7 +228,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 02.06.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -297,7 +297,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 02.06.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -366,7 +366,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
-      dummyActivityName: 
+      iD: 02.06.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

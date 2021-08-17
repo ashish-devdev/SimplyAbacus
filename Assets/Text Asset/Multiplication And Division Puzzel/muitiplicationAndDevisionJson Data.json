@@ -2,10 +2,18 @@
 	"questions":
 	[	
 		{
-			"problem":"23.3+66",
-			"number":[],
-			"result":"23.3+66",
+			"problem":"Add 1026 - 59 times",
+			"number":[60534,1],
+			"result":"60534/1",
 			"status":"unsolved"
+
+		},
+		{
+			"problem":"Add 12 untill you reach 144",
+			"number":[144,12],
+			"result":"144/12",
+			"status":"unsolved"
+
 		},
 
 		{
@@ -23,7 +31,7 @@
 
 		},
 		{
-			"problem":"_+32=66",
+			"problem":"_ + 32 = 66",
 			"number":[],
 			"result":"66-32",
 			"status":"unsolved"

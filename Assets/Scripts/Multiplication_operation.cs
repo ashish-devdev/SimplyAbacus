@@ -91,7 +91,7 @@ public class Multiplication_operation : MonoBehaviour
 
 
         orignalTextSize = OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize;
-        updatedTextSize = orignalTextSize + 10;
+        updatedTextSize = orignalTextSize + 15;
 
         performNext = true;
         Problem_Number = 0;
@@ -204,6 +204,7 @@ public class Multiplication_operation : MonoBehaviour
         }
 
         Result_text.transform.SetAsLastSibling();
+        Result_text.text = "Result: ";
         for (int i = 0; i < num_of_oprations + 1; i++)
         {
             if (i < num_of_oprations)
@@ -316,6 +317,7 @@ public class Multiplication_operation : MonoBehaviour
         if (jsonData.Mul[Problem_Number].status == "solved")
         {
             Problem_Number++;
+            Result_text.text = "Result: ";
 
             if (OperationNumbers_PARENT.childCount > 2)
             {

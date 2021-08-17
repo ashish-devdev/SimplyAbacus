@@ -16,6 +16,7 @@ MonoBehaviour:
     nameOfClass: B4C7
     activityList:
     - activityName: Addition                  &                  Subtraction
+      iD: 04.07.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.07.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -143,7 +149,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.07.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -207,7 +218,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.07.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -271,7 +287,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.07.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -335,7 +356,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Hand Counting
+      iD: 04.07.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -400,7 +426,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Hand Counting
+      iD: 04.07.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -465,7 +496,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.07.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -529,7 +565,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
+      iD: 04.07.09
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -593,3 +634,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

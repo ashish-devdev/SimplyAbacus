@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: Class 4
     activityList:
     - activityName: Let's watch Math-e-magic
-      dummyActivityName: 
+      iD: 01.04.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -80,8 +80,12 @@ MonoBehaviour:
         active: 1
         URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Add_Sub_V04.mp4
         time: 313
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: The Unworry activities
-      dummyActivityName: 
+      iD: 01.04.02
       matchValueWithImage: []
       matchShapeWithNumbers:
       - img: {fileID: 21300000, guid: c654ca316e150574d8daff7da554ddbd, type: 3}
@@ -150,8 +154,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 01.04.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -215,8 +223,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
-      dummyActivityName: 
+      iD: 01.04.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -283,8 +295,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 01.04.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -348,3 +364,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

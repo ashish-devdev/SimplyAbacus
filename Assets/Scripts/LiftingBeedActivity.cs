@@ -94,6 +94,8 @@ public class LiftingBeedActivity : MonoBehaviour
             resetHappened = false;
             //cuurentCount++;
             Invoke("DelayedInvokeReset", 0.5f);
+            sideNote.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";//cuurentsuboperation will be incremented by 1 at this point.
+
         }
 
         if (ValueCalculator.value1 == 0 && resetHappened == false)

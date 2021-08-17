@@ -705,9 +705,9 @@ public class StatsDisplayer : MonoBehaviour
                                 if (activityScriptInstance.classActivityList[j].classData.activityList[k].animatingCountingTutorial.active == true)
                                 {
                                     ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].animatingCountingTutorial2.bestTime_string;
-                                    if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime >= 0)
+                                    if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].animatingCountingTutorial2.bestTime >= 0)
                                     {
-                                        classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime;
+                                        classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].animatingCountingTutorial2.bestTime;
                                     }
                                     else
                                     {

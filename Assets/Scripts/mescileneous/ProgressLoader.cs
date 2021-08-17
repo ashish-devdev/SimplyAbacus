@@ -129,8 +129,10 @@ public class ProgressLoader : MonoBehaviour
                     int completed = 0;
                     for (int k = 0; k < JsonUtility.FromJson<AdditionJsonWrapper>(activity.classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length; k++)
                     {
-                        if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[k] == true)
-                            completed++;
+                       
+                            if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[k] == true)
+                                completed++;
+                       
                         if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations.bestTime == -1)
                             classProgresses[i].allActivityprogress[j].activitiesPercentage = (completed * 1f / JsonUtility.FromJson<AdditionJsonWrapper>(activity.classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length) * 100;
                         else

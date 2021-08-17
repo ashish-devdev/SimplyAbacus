@@ -16,6 +16,7 @@ MonoBehaviour:
     nameOfClass: B4C9
     activityList:
     - activityName: Addition                  &                  Subtraction
+      iD: 04.09.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Hand Counting
+      iD: 04.09.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -144,7 +150,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Hand Counting
+      iD: 04.09.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -209,7 +220,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.09.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -273,7 +289,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.09.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -337,7 +358,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Addition                  &                  Subtraction
+      iD: 04.09.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -401,7 +427,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
+      iD: 04.09.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -465,7 +496,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Colouring
+      iD: 04.09.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -532,3 +568,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

@@ -204,6 +204,7 @@ public class MatchValueWithImage2
     public float bestTime = -1;
     public float currentSavedTime = 0;
     public string bestTime_string = "-";
+    public string id = "";
 }
 [System.Serializable]
 
@@ -212,6 +213,8 @@ public class MatchShapeWithNumbers2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 [System.Serializable]
 
@@ -220,6 +223,8 @@ public class ColoringPageImages2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -228,6 +233,8 @@ public class AbacusOperations2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 [System.Serializable]
 public class SpeedWriting2
@@ -235,6 +242,8 @@ public class SpeedWriting2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -244,6 +253,8 @@ public class LiftingBeed21
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
     public int currentSubActivity = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -253,6 +264,8 @@ public class LiftingBeed22
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
     public int currentSubActivity = 0;
+    public string id = "";
+
 }
 [System.Serializable]
 public class Maze2
@@ -260,6 +273,8 @@ public class Maze2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -268,6 +283,8 @@ public class VisualHands2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -276,6 +293,8 @@ public class CountBodyParts2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -284,6 +303,8 @@ public class MixedMathematicalOperations2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -292,6 +313,8 @@ public class MultiplicationDivisionPuzzle2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 [System.Serializable]
 public class MultiplicationOperation2
@@ -299,6 +322,8 @@ public class MultiplicationOperation2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 [System.Serializable]
 public class LiftBeeds2
@@ -306,6 +331,8 @@ public class LiftBeeds2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -314,6 +341,8 @@ public class DivisionOperation2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 [System.Serializable]
@@ -322,6 +351,8 @@ public class TutorialVideo2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 }
 
 
@@ -331,6 +362,8 @@ public class AnimatingCountingTutorial2
     public float bestTime = -1;
     public string bestTime_string = "-";
     public float currentSavedTime = 0;
+    public string id = "";
+
 
 }
 

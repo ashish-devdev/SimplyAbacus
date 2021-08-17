@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.U2D;
 
 //<summary>
 //Game object, that creates maze and instantiates it in scene
@@ -47,7 +48,10 @@ public class MazeSpawner : MonoBehaviour
     public MazeScriptableInputs mazeScriptableInputs;
     public TrailRenderer trailRenderer;
     public GameObject mageBG_Plane;
+    public SpriteAtlas spriteAtlas;
+    public Sprite tempText;
     int R;
+
     [System.Serializable]
     public class GoalCell
     {
@@ -130,11 +134,16 @@ public class MazeSpawner : MonoBehaviour
         }
         else if (Rows == 5)
         {
-            mageBG_Plane.transform.localPosition = new Vector3(-0.18f, 3.89f, 19.89f);
+            mageBG_Plane.transform.localPosition = new Vector3(-0.18f, 4.13f, 19.89f);
         }
         else if (Rows == 6)
         {
             mageBG_Plane.transform.localPosition = new Vector3(0.08f, 3.99f, 19.89f);
+
+        }
+        else if (Rows == 5)
+        {
+            mageBG_Plane.transform.localPosition = new Vector3(4.4f, 3.99f, 19.89f);
 
         }
 
@@ -212,10 +221,14 @@ public class MazeSpawner : MonoBehaviour
                 if (row == Rows - 1 && column == Columns - 1)  //checking if its the last round of the double for loop.
                 {
                     randomVal = Random.Range(0, listOfPossibleCellSponningGoals.Count);   // getting the random value between 0 to number of element of the list.
+                   // ball.transform.parent = transform;
+                   
+
                     try
                     {
                         tmp = Instantiate(GoalPrefab, new Vector3(listOfPossibleCellSponningGoals[randomVal].x, 1, listOfPossibleCellSponningGoals[randomVal].z), Quaternion.Euler(0, 0, 0)) as GameObject;  //spooning only one goal at randomly seclect location.
                         tmp.transform.parent = transform;
+
                     }
                     catch
                     {
@@ -246,12 +259,14 @@ public class MazeSpawner : MonoBehaviour
         }
 
         ball.transform.localPosition = new Vector3((-3.922755f - (0.15f) * 10 / Rows) + 3.5f, 0.6393967f, 19.64454f);
-
         this.gameObject.transform.localEulerAngles = new Vector3(-90, 0, 0);
-        this.gameObject.transform.localScale = new Vector3(0.2f * 10 / Rows, 0.2f * 10 / Columns, 0.2f);
+        this.gameObject.transform.localScale = new Vector3(0.185f * 10 / Rows, 0.185f * 10 / Columns, 0.2f);
         temp = transform.localPosition;
-        transform.localPosition = new Vector3(transform.localPosition.x - 12, transform.localPosition.y - 100, 3.1f);
-
+        if(Rows==3)
+        transform.localPosition = new Vector3(transform.localPosition.x - 4.4f, transform.localPosition.y - 100, 3.1f);
+        else if(Rows ==4)
+        transform.localPosition = new Vector3(transform.localPosition.x - 5.4f, transform.localPosition.y - 95, 3.1f);
+        Invoke(nameof(PositionTheBallOntheFirstBox), 0.11f);
     }
 
     private void OnDisable()
@@ -268,5 +283,9 @@ public class MazeSpawner : MonoBehaviour
     }
 
 
+    public void PositionTheBallOntheFirstBox()
+    {
+        ball.transform.position = new Vector3(transform.GetChild(0).transform.position.x, transform.GetChild(0).transform.position.y, transform.GetChild(0).transform.position.z - 0.05f);
 
+    }
 }

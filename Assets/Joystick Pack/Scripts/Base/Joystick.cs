@@ -38,10 +38,13 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
     private Canvas canvas;
     private Camera cam;
 
+    Camera defaultCam ;
+
     private Vector2 input = Vector2.zero;
 
     protected virtual void Start()
     {
+        defaultCam = Camera.main;
         HandleRange = handleRange;
         DeadZone = deadZone;
         baseRect = GetComponent<RectTransform>();
@@ -59,7 +62,8 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
 
     public virtual void OnPointerDown(PointerEventData eventData)
     {
-        OnDrag(eventData);
+      //  eventData.delta.
+      //  OnDrag(eventData);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -67,6 +71,10 @@ public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoint
         cam = null;
         if (canvas.renderMode == RenderMode.ScreenSpaceCamera)
             cam = canvas.worldCamera;
+        if (cam == null)
+        {
+          //  cam = defaultCam;
+        }
 
         Vector2 position = RectTransformUtility.WorldToScreenPoint(cam, background.position);
         Vector2 radius = background.sizeDelta / 2;

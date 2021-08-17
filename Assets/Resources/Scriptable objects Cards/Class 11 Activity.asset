@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: Class 11
     activityList:
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 01.11.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -80,8 +80,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 01.11.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -145,8 +149,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 01.11.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -210,8 +218,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
-      dummyActivityName: 
+      iD: 01.11.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -278,8 +290,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 01.11.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -343,3 +359,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

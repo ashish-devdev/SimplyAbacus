@@ -55,6 +55,12 @@ public class MultiplicationAndDivisionPuzzle : MonoBehaviour
 
     private void OnEnable()
     {
+        Invoke(nameof(OnEnableAfterDelay),0.1f);
+
+    }
+
+    public void OnEnableAfterDelay()
+    {
         problem_number = 0;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
@@ -107,6 +113,9 @@ public class MultiplicationAndDivisionPuzzle : MonoBehaviour
         CreateAndDisplayProblem();
 
     }
+
+
+
 
     private void OnDisable()
     {
@@ -184,6 +193,7 @@ public class MultiplicationAndDivisionPuzzle : MonoBehaviour
             {
                 NonDecimalDigitsInNumber = numberOfNonDecimalDigits(answer);
                 floatingDecimalDegitString = "F0";
+                positionRodsOfAbacus.startingRod = 0;
             }
 
             else

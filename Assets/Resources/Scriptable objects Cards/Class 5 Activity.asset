@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: Class 5
     activityList:
     - activityName: The Unworry activities
-      dummyActivityName: 
+      iD: 01.05.01
       matchValueWithImage: []
       matchShapeWithNumbers:
       - img: {fileID: 21300000, guid: a3a212ddfd50bf34c98ca35f38126eb1, type: 3}
@@ -85,8 +85,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Adding made Super Simple
-      dummyActivityName: 
+      iD: 01.05.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -150,8 +154,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
-      dummyActivityName: 
+      iD: 01.05.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -218,8 +226,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 01.05.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -283,3 +295,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

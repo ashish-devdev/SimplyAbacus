@@ -16,7 +16,7 @@ MonoBehaviour:
     nameOfClass: Class 1
     activityList:
     - activityName: Let's watch Math-e-magic
-      dummyActivityName: 
+      iD: 01.01.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -85,7 +85,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Me & My World of Abacus
-      dummyActivityName: 
+      iD: 01.01.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -154,7 +154,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Counting Well I
-      dummyActivityName: 
+      iD: 01.01.03
       matchValueWithImage:
       - img: {fileID: 21300000, guid: 2247d46cff27d6d44b1e162314e143dd, type: 3}
         val: 1
@@ -232,7 +232,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Never get bored activities
-      dummyActivityName: 
+      iD: 01.01.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -304,7 +304,7 @@ MonoBehaviour:
         numbes: []
         numberOfTimesToRepeate: 0
     - activityName: Speed Writing
-      dummyActivityName: 
+      iD: 01.01.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

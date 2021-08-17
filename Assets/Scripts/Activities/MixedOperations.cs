@@ -47,17 +47,27 @@ public class MixedOperations : MonoBehaviour
     int decimalDigitsInNumber;
     string floatingDecimalDegitString;
     List<string> setOfNumbersInProblem;
+    bool isPercentageActivity;
 
 
     private void OnEnable()
     {
+
+        Invoke(nameof(OnEnableAfterDelay), 0.1f);
+    }
+
+
+
+    public void OnEnableAfterDelay()
+    {
+        isPercentageActivity = true;
         dt = new DataTable();
         Problem_Number = 0;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
             {
-                if (activityScriptInstance.classActivityList[i].classData.activityList[j].mixedMathematicalOperations.active == true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName&& ClassManager.currentActivityIndex==j)
+                if (activityScriptInstance.classActivityList[i].classData.activityList[j].mixedMathematicalOperations.active == true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName && ClassManager.currentActivityIndex == j)
                 {
 
                     if (activityScriptInstance.classActivityList[i].classData.activityList[j].mixedMathematicalOperations.showMultiplicationTable)
@@ -75,6 +85,7 @@ public class MixedOperations : MonoBehaviour
 
                     }
                     mixedMathematicalOperations2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2;
+                    isPercentageActivity = activityScriptInstance.classActivityList[i].classData.activityList[j].mixedMathematicalOperations.isPercentage;
                     activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
                     jsonData = JsonUtility.FromJson<MixedOpeartionJsonWrapper>(activityScriptInstance.classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text);
                     nextOperationBtn.onClick.AddListener(CreateAndDisplayProblem);
@@ -96,9 +107,8 @@ public class MixedOperations : MonoBehaviour
         notificationBtn.onClick.AddListener(StartTimer);
         CreateAndDisplayProblem();
 
-
-
     }
+
 
     public void OnDisable()
     {
@@ -289,6 +299,14 @@ public class MixedOperations : MonoBehaviour
             valueCalculator.numberOfDecimalPlaces = 0;
             valueCalculator.decimalPlaceString = "F0";
             PositionRodsOfAbacus.endingRod = RemoveExtraDecimalZeros(answer.ToString()).Length ;
+        }
+
+        if (isPercentageActivity)
+        {
+            valueCalculator.numberOfDecimalPlaces = 4;
+            valueCalculator.decimalPlaceString = "F4";
+            PositionRodsOfAbacus.endingRod = 8;
+            
         }
 
 

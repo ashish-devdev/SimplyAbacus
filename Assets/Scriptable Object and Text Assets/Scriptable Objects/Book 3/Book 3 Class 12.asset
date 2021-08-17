@@ -15,7 +15,8 @@ MonoBehaviour:
   classData:
     nameOfClass: B3C12
     activityList:
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple
+      iD: 03.12.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,7 +80,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.12.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -143,7 +149,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.12.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -207,7 +218,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.12.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -271,7 +287,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.12.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -335,7 +356,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
+      iD: 03.12.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -399,3 +425,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

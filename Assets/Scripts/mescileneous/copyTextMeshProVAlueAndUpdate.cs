@@ -24,6 +24,9 @@ public class copyTextMeshProVAlueAndUpdate : MonoBehaviour
             operationResult.text= operationResult.text.Replace("=", "");
         }
         self.text = "" + operationResult.text;
+        if(ismultiplication)
+            self.text = "Result: " + operationResult.text;
+
         if (isAbacusValue)
         {
             self.text =  operationResult.text;

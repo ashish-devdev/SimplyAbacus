@@ -48,6 +48,12 @@ public class Division : MonoBehaviour
 
     private void OnEnable()
     {
+        Invoke(nameof(OnEnableDelay),0.1f);
+
+    }
+
+    public void OnEnableDelay()
+    {
         firstProblemCreated = false;
         problem_number = 0;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)

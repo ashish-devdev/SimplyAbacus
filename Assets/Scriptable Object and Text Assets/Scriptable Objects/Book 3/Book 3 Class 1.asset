@@ -15,7 +15,8 @@ MonoBehaviour:
   classData:
     nameOfClass: B3C1
     activityList:
-    - activityName: Video
+    - activityName: Let's watch Math-e-magic
+      iD: 03.01.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -79,11 +80,16 @@ MonoBehaviour:
         active: 1
         URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Small-Friend-14062021.mp4
         time: 309
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.01.025
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: 1891022a013824293afc8c3223666569, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
@@ -107,11 +113,12 @@ MonoBehaviour:
         startingImage: {fileID: 0}
         sideNoteMessage: 
       visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
-        showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
+        active: 1
+        showHand1: 1
+        showHand2: 1
+        showFriendFamilyTable: 1
+        abacusOperations: {fileID: 4900000, guid: 1891022a013824293afc8c3223666569,
+          type: 3}
       countBodyParts:
         active: 0
         animalImage: {fileID: 0}
@@ -143,7 +150,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.01.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -207,7 +219,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.01.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -271,7 +288,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.01.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -335,7 +357,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Addition                  &                  Subtraction
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Adding made Super Simple
+      iD: 03.01.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -399,7 +426,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
     - activityName: Speed Writing
+      iD: 03.01.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -463,7 +495,12 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
-    - activityName: Colouring
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+    - activityName: Never get bored activities
+      iD: 03.01.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -530,3 +567,7 @@ MonoBehaviour:
         active: 0
         URL: 
         time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0

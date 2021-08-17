@@ -52,7 +52,7 @@ public class RollerBall : MonoBehaviour
 
     void FixedUpdate()
     {
-        print(activityList2.maze2.bestTime + " " + activityList2.maze2.bestTime_string + " " + activityList2.maze2.currentSavedTime);
+       // print(activityList2.maze2.bestTime + " " + activityList2.maze2.bestTime_string + " " + activityList2.maze2.currentSavedTime);
 
 
 

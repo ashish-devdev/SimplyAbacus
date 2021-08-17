@@ -1,15 +1,16 @@
 {
 	"operation":
 	[	
+
 		{
-			"problem":"204.2/2.4",
-			"result":"204.2/2.4",
+			"problem":"0.5 % of 20",
+			"result":"(0.005)*20",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"131.42+1",
-			"result":"131.42+1",
+			"problem":"10+2+13",
+			"result":"10+2+13",
 			"status":"unsolved"
 
 		},
@@ -20,8 +21,8 @@
 
 		},
 		{
-			"problem":"10+2+3",
-			"result":"10+2+3",
+			"problem":"131.42+1",
+			"result":"131.42+1",
 			"status":"unsolved"
 
 		},
@@ -36,6 +37,7 @@
 			"result":"31.428571+0.0000009",
 			"status":"unsolved"
 		}
+
 	]
 
 }

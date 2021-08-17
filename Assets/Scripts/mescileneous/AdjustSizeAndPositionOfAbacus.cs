@@ -14,6 +14,8 @@ public class AdjustSizeAndPositionOfAbacus : MonoBehaviour
 
     public GameObject[] rods;
 
+    public bool keepAbacusShrinked;
+
     private void OnEnable()
     {
         abacusParentTransform = abacusParent.transform;
@@ -38,7 +40,7 @@ public class AdjustSizeAndPositionOfAbacus : MonoBehaviour
 
         }
 
-        if (countOfRodsEnabled > 5)
+        if (countOfRodsEnabled > 5|| keepAbacusShrinked)   //i added is mixedOpration to make the abacus stay in size in mixed operation even if the operation value is below 5
         {
             abacusParentTransform.localScale = new Vector3(0.65f, 0.65f, 0.65f);
             abacusParentTransform.localPosition = new Vector3(0.93f, 1.82f, 0.41f);
