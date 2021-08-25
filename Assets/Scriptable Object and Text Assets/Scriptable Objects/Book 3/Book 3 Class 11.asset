@@ -58,6 +58,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -127,6 +128,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -196,6 +198,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -265,6 +268,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -334,6 +338,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -403,6 +408,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -446,13 +452,13 @@ MonoBehaviour:
         active: 0
         numbers: 
       maze:
-        active: 0
-        row: 0
-        col: 0
-        beginingSponingCol: 0
-        beginingSponingrow: 0
-        endingSponingcol: 0
-        endingSponingRow: 0
+        active: 1
+        row: 3
+        col: 3
+        beginingSponingCol: 2
+        beginingSponingrow: 2
+        endingSponingcol: 1
+        endingSponingRow: 1
         floor: {fileID: 0}
         goalImage: {fileID: 0}
         startingImage: {fileID: 0}
@@ -472,6 +478,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0

@@ -122,11 +122,11 @@ MonoBehaviour:
       countBodyParts:
         active: 1
         animalImage: {fileID: 21300000, guid: 2e5e62f097f193c4d88e10f97b73f1e6, type: 3}
-        animalName: Dog
+        animalName: rabbits
         bodyPartAndCountOfOne:
-        - bodyPart: Ears
+        - bodyPart: ears
           count: 2
-        - bodyPart: Tail
+        - bodyPart: tails
           count: 1
         countOfAnimals: 0500000003000000
         showMultiplicationTable: 1
@@ -455,7 +455,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: mAZE 3 X 3
+    - activityName: Maze 3 X 3
       iD: temp04.01.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -529,7 +529,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: mAZE 4 X 4
+    - activityName: Maze 4 X 4
       iD: temp04.01.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -603,7 +603,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: mAZE 5 X 5
+    - activityName: Maze 5 X 5
       iD: temp04.01.09
       matchValueWithImage: []
       matchShapeWithNumbers: []

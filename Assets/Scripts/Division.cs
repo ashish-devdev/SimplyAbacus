@@ -158,6 +158,14 @@ public class Division : MonoBehaviour
 
 
             questionText.text = jsonData.div[problem_number].Problem;
+            questionText.text = questionText.text.Replace("*", " * ");
+            questionText.text = questionText.text.Replace("/", " / ");
+            questionText.text = questionText.text.Replace("+", " + ");
+            questionText.text = questionText.text.Replace("-", " - ");
+            questionText.text = questionText.text.Replace("%", " % ");
+
+
+
             answer = Convert.ToDecimal(new DataTable().Compute(jsonData.div[problem_number].answer.ToString(), ""));
 
             decimalStringToCompare = getDecimalStringForGivenNumber(answer);

@@ -72,7 +72,12 @@ public class CountAnimalBodyParts : MonoBehaviour
         MoveBeeds_2.dosomthing += compareAbacusValueWithAnswer;
         NotificationBtn.onClick.AddListener(StartTimer);
 
-        question = "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size>" + " " + countBodyParts.animalName + " " + "will have how many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + "?";
+      //  question = "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size>" + " " + countBodyParts.animalName + " " + "will have how many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + "?";
+
+        question = "How many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + " dose " + "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size> " + countBodyParts.animalName + " have?";
+
+
+
         sideNoteText.text = question;
 
         loadingBar.Data.FillAmount = (problemNumber / (activityList1.countBodyParts1.completed.Length * 1f));
@@ -217,7 +222,9 @@ public class CountAnimalBodyParts : MonoBehaviour
 
     public void DelayedChangeQuestion()
     {
-        question = "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size>" + " " + countBodyParts.animalName + " " + "will have how many " + "<B><#0080ff><size=50>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + "?";
+      //  question = "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size>" + " " + countBodyParts.animalName + " " + "will have how many " + "<B><#0080ff><size=50>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + "?";
+        question = "How many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + " dose " + "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size> " + countBodyParts.animalName + " have?";
+
         sideNoteText.text = question;
     }
 

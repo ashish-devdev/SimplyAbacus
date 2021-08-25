@@ -15,7 +15,7 @@ MonoBehaviour:
   classData:
     nameOfClass: B4C2
     activityList:
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple I
       iD: 04.02.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -58,6 +58,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple II
       iD: 04.02.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -127,6 +128,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -153,7 +155,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple III
       iD: 04.02.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -196,6 +198,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -222,7 +225,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple IV
       iD: 04.02.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -265,6 +268,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -291,7 +295,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple V
       iD: 04.02.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -334,6 +338,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -360,7 +365,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple VI
       iD: 04.02.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -403,6 +408,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -473,6 +479,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -499,7 +506,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple VII
       iD: 04.02.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -542,6 +549,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -611,6 +619,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -683,6 +692,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0

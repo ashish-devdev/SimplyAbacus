@@ -15,7 +15,7 @@ MonoBehaviour:
   classData:
     nameOfClass: B4C11
     activityList:
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple I
       iD: 04.11.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -58,6 +58,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting
+    - activityName: Hand Counting I
       iD: 04.11.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -128,6 +129,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -197,6 +199,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -223,7 +226,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple II
       iD: 04.11.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -266,6 +269,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -292,7 +296,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting
+    - activityName: Hand Counting II
       iD: 04.11.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -336,6 +340,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -362,7 +367,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple III
       iD: 04.11.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -405,6 +410,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -431,7 +437,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple IV
       iD: 04.11.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -474,6 +480,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -500,7 +507,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting
+    - activityName: Hand Counting III
       iD: 04.11.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -544,6 +551,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -570,7 +578,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting
+    - activityName: Hand Counting IV
       iD: 04.11.09
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -614,6 +622,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -640,7 +649,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple V
       iD: 04.11.10
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -683,6 +692,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -709,7 +719,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Addition                  &                  Subtraction
+    - activityName: Adding made Super Simple VI
       iD: 04.11.11
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -752,6 +762,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -821,6 +832,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0

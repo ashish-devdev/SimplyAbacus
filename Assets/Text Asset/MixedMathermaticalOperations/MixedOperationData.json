@@ -3,14 +3,14 @@
 	[	
 
 		{
-			"problem":"0.5 % of 20",
-			"result":"(0.005)*20",
+			"problem":"30*12+3",
+			"result":"30*12+3",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"10+2+13",
-			"result":"10+2+13",
+			"problem":"22.2*89*6",
+			"result":"22.2*89*6",
 			"status":"unsolved"
 
 		},
@@ -27,8 +27,8 @@
 
 		},
 		{
-			"problem":"10/3",
-			"result":"10/3",
+			"problem":"10/3+6",
+			"result":"10/3+6",
 			"status":"unsolved"
 
 		},

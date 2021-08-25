@@ -186,6 +186,11 @@ public class MultiplicationAndDivisionPuzzle : MonoBehaviour
         else
         {
             questionText.text = jsonData.questions[problem_number].problem;
+            questionText.text = questionText.text.Replace("*", " * ");
+            questionText.text = questionText.text.Replace("/", " / ");
+            questionText.text = questionText.text.Replace("+", " + ");
+            questionText.text = questionText.text.Replace("-", " - ");
+            questionText.text = questionText.text.Replace("%", " % ");
 
             answer = Convert.ToDouble(new DataTable().Compute(jsonData.questions[problem_number].result.ToString(), ""));
             resultContainsdecimals = CheckForDecimals(answer);
