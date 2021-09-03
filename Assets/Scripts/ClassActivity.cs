@@ -87,6 +87,7 @@ public class AbacusOperation
 public class Maze
 {
     public bool active;
+    public int totalMaze=3;
     public int row;
     public int col;
     public int beginingSponingCol;

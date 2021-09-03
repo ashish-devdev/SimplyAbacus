@@ -42,7 +42,7 @@ public class AllowActivityIfTheUserIsSubscribed : MonoBehaviour
             book.TurnOn();
         else
         {
-            //book.TurnOn();
+          //  book.TurnOn();
             buySubscription.TurnOn();
         }
     }

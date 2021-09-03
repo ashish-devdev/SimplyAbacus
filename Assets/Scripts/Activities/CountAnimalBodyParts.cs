@@ -74,7 +74,7 @@ public class CountAnimalBodyParts : MonoBehaviour
 
       //  question = "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size>" + " " + countBodyParts.animalName + " " + "will have how many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + "?";
 
-        question = "How many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + " dose " + "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size> " + countBodyParts.animalName + " have?";
+        question = "How many " + "<B><#0080ff><size=55>" + countBodyParts.bodyPartAndCountOfOne[CurrentAnimalCountAndBodyPart().Item2].bodyPart + "</color></B></size>" + " does " + "<B><#0080ff><size=60>" + countBodyParts.countOfAnimals[CurrentAnimalCountAndBodyPart().Item1] + "</color></B></size> " + countBodyParts.animalName + " have?";
 
 
 

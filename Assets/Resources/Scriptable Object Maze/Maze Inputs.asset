@@ -17,7 +17,7 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: dcaa45f50f0eb6b4cb217d83c137f5e3, type: 3}
     background: {fileID: 21300000, guid: 294b575bfab18cf4db69e00220878d99, type: 3}
     trailColor: {r: 1, g: 1, b: 1, a: 1}
-    noteMessage: Make the Ball Reach The Goal Post.
+    noteMessage: Make the ball reach the goal post.
     wallColor: {r: 1, g: 0.7254902, b: 0, a: 1}
   - startSprite: {fileID: 21300000, guid: 11c0cd0a4f13f6d4b8986cec085469d5, type: 3}
     endSprite: {fileID: 21300000, guid: 69fa314e4e6255a46bb3319221b5c472, type: 3}
@@ -35,31 +35,31 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: 67a3b2041898f31489226d0d9dd0d33b, type: 3}
     background: {fileID: 21300000, guid: 672b6d39721ddfd4f961757fd2bdb904, type: 3}
     trailColor: {r: 1, g: 0.8980392, b: 0.43137255, a: 1}
-    noteMessage: Help the bird reach its nest.
+    noteMessage: Help the bird reach it's nest.
     wallColor: {r: 0.26666668, g: 0.9882353, b: 0.9647059, a: 1}
   - startSprite: {fileID: 21300000, guid: d57420e79a2b5424cb4a59c4e2fffd3a, type: 3}
     endSprite: {fileID: 21300000, guid: b4c8aafaada3936419008ea12c447570, type: 3}
     background: {fileID: 21300000, guid: 676fb06f69d04ef448ff9d220b1644bc, type: 3}
     trailColor: {r: 0.43529412, g: 0.3647059, b: 0.35686275, a: 1}
-    noteMessage: Help the Dog to get its bone.
+    noteMessage: Help the Dog to get it's bone.
     wallColor: {r: 0.105882354, g: 0.6313726, b: 0.3764706, a: 1}
   - startSprite: {fileID: 21300000, guid: 002b8617557e94d40a4cf9b07dbf8a46, type: 3}
     endSprite: {fileID: 21300000, guid: 5abd8562152aff147b20721888c7d5c0, type: 3}
     background: {fileID: 21300000, guid: da025d1e3494cb141a476f246ee79ab5, type: 3}
     trailColor: {r: 0.92156863, g: 0.7137255, b: 0.54901963, a: 1}
-    noteMessage: Help the boy to rach school as soon as possible.
+    noteMessage: Help the boy to reach school as soon as possible.
     wallColor: {r: 1, g: 1, b: 1, a: 1}
   - startSprite: {fileID: 21300000, guid: d724b6f084c30634e965a299253e72c7, type: 3}
     endSprite: {fileID: 21300000, guid: ffb7413467aec4648b82802023876b2e, type: 3}
     background: {fileID: 21300000, guid: 2d78a7b21267769428b37855e99d30f1, type: 3}
     trailColor: {r: 0.972549, g: 0.5372549, b: 0.14117648, a: 1}
-    noteMessage: Help the Butterfly to reach flower.
+    noteMessage: Help the butterfly to reach flower.
     wallColor: {r: 0.5411765, g: 0.84313726, b: 0.5411765, a: 1}
   - startSprite: {fileID: 21300000, guid: a772a090d050f20449ab9a5c841f268f, type: 3}
     endSprite: {fileID: 21300000, guid: 7038654c3f10d314e8695dee0edac687, type: 3}
     background: {fileID: 21300000, guid: 84f406247bffb8c4f9e8a5b8f4ec8033, type: 3}
     trailColor: {r: 0.83137256, g: 0.49019608, b: 0.28235295, a: 1}
-    noteMessage: cat is very hungrey, help him to get the fish.
+    noteMessage: Cat is very hungry, help him to get the fish.
     wallColor: {r: 0.7647059, g: 0.1764706, b: 0.1764706, a: 1}
   - startSprite: {fileID: 21300000, guid: daf6d3558deaac14cbd53a7bf5e12e82, type: 3}
     endSprite: {fileID: 21300000, guid: c74c88314be91ba4fb538ff0ed80b568, type: 3}
@@ -71,13 +71,13 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: 29bc68e2d3990dc4eb84718755e2a9af, type: 3}
     background: {fileID: 21300000, guid: cff15a273ee5e17489f1688cdb72c1f5, type: 3}
     trailColor: {r: 0.40392157, g: 0.8, b: 0.81960785, a: 1}
-    noteMessage: Aliens wants to go back to their planet , help them.
+    noteMessage: Aliens wants to go back to their planet, help them.
     wallColor: {r: 0.48235294, g: 0.7058824, b: 0.4117647, a: 1}
   - startSprite: {fileID: 21300000, guid: c6645864e977c1f43904812d97f0cdef, type: 3}
     endSprite: {fileID: 21300000, guid: 9b714aeb85899d34f84eb1c21b39147b, type: 3}
     background: {fileID: 21300000, guid: c89fb9a66597d774686eefdf8a0b7f41, type: 3}
     trailColor: {r: 0.972549, g: 0.8666667, b: 0.03529412, a: 1}
-    noteMessage: Help the chicken to get ti her mother.
+    noteMessage: Help the chicken to get to her mother.
     wallColor: {r: 0.14117648, g: 0.49019608, b: 0.03137255, a: 1}
   - startSprite: {fileID: 21300000, guid: 2ce33845f0b8c0e459e483ad45a69688, type: 3}
     endSprite: {fileID: 21300000, guid: cb0f590e89cf17d4382fa9d04c0fdad4, type: 3}
@@ -101,7 +101,7 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: ddae4c3381fffb044a728ca7488c42db, type: 3}
     background: {fileID: 21300000, guid: 827c0f68aaee02e4fa53fec486aae576, type: 3}
     trailColor: {r: 0.7490196, g: 0.7490196, b: 0.7490196, a: 1}
-    noteMessage: Help Panada to get bamboos.
+    noteMessage: Help panda to get bamboo.
     wallColor: {r: 0.48235294, g: 0.7058824, b: 0.4117647, a: 1}
   - startSprite: {fileID: 21300000, guid: a44c2077ccda2ff4a84845891dea3d1b, type: 3}
     endSprite: {fileID: 21300000, guid: 17c87b04590c4604d92b270c1c51285e, type: 3}
@@ -125,5 +125,5 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: c1fba16da81977c46810f10250adb42c, type: 3}
     background: {fileID: 21300000, guid: a344f9fc2f3369040b0c7df29579e7db, type: 3}
     trailColor: {r: 0.8627451, g: 0.42352942, b: 0.23529412, a: 1}
-    noteMessage: Help the Squirrel to get the nut.
+    noteMessage: Help squirrel to get the nut.
     wallColor: {r: 0.43529412, g: 0.23529412, b: 0.023529412, a: 1}

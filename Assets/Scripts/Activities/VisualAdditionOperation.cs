@@ -19,6 +19,7 @@ public class VisualAdditionOperation : MonoBehaviour
     public TextMeshProUGUI notificationText;
     public TextMeshProUGUI abacusOutput;
     public TextMeshProUGUI Result_text;
+    public TextMeshProUGUI visible_result_text;
     public TextMeshProUGUI CongratulationText;
 
 
@@ -59,6 +60,9 @@ public class VisualAdditionOperation : MonoBehaviour
     public ValueCalculator valueCalculator;
     public GameObject leftHand;
     public GameObject rightHand;
+
+    float orignalSize, updatedSize;
+    
 
     private void OnEnable()
     {
@@ -118,7 +122,7 @@ public class VisualAdditionOperation : MonoBehaviour
             {
                 Transform textPrefab = Instantiate(Text_prefab, new Vector3(Text_prefab.transform.localPosition.x, Text_prefab.transform.localPosition.y, Text_prefab.transform.localPosition.z), Text_prefab.transform.rotation, OperationNumbers_PARENT);
                 textPrefab.localPosition = new Vector3(Text_prefab.transform.localPosition.x, 0 + ((i - 1) * -100), Text_prefab.transform.localPosition.z);
-                textPrefab.GetComponent<TextMeshProUGUI>().fontSize = 57;
+                textPrefab.GetComponent<TextMeshProUGUI>().fontSize = orignalSize;
             }
             Result_text.rectTransform.localPosition = new Vector3(Result_text.transform.localPosition.x, 0, Result_text.transform.localPosition.z);//Result_text.transform.localPosition = new Vector3(Result_text.transform.localPosition.x, num_of_oprations * -100, Result_text.transform.localPosition.z);
         }
@@ -140,12 +144,17 @@ public class VisualAdditionOperation : MonoBehaviour
         }
 
         OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.red;
+        OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = updatedSize;
         sub_operation_output = numbers[0];
         suboperationIndex = 0;
+        visible_result_text.text = "Result:";
     }
 
     public void ResetClicked()
     {
+        visible_result_text.text = "Result:";
+        reset.gameObject.SetActive(true);
+
         if (Problem_Number == jsonData.Add.Length)
         {
             CongratulationText.text = Congratulation_message;
@@ -226,7 +235,11 @@ public class VisualAdditionOperation : MonoBehaviour
         else
         {
             OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.white;
+            OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = orignalSize;
+
+
             OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.red;
+            OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = updatedSize;
             sub_operation_output = jsonData.Add[Problem_Number].numbers[0];
             suboperationIndex = 0;
         }
@@ -242,18 +255,24 @@ public class VisualAdditionOperation : MonoBehaviour
             if (/*sub_operation_output == jsonData.Add[Problem_Number].Result &&*/ suboperationIndex == jsonData.Add[Problem_Number].num_of_oprations - 1)
             {
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.white;
+                OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize= orignalSize;
                 suboperationIndex++;
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().text = jsonData.Add[Problem_Number].Result.ToString();
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.red;
+                OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize= updatedSize;
                 jsonData.Add[Problem_Number].status = "solved";
                 activityList1.visualHands1.completed[Problem_Number] = true;
                 SaveManager.Instance.saveDataToDisk(Activity.classParent);
                 loadingBar.Data.FillAmount = ((Problem_Number + 1) / (jsonData.Add.Length * 1f));
                 loadingBar.BeginAllTransitions();
                 Result_text.text = sub_operation_output.ToString();
+                visible_result_text.text = "Result: "+ sub_operation_output.ToString();
+
                 sub_operation_output = -1;
                 nextOperationBtn.gameObject.transform.parent.gameObject.SetActive(true);
                 reset.interactable = false;
+                reset.gameObject.SetActive(false);
+
             }
             else if (sub_operation_output == -1)
             {
@@ -262,9 +281,11 @@ public class VisualAdditionOperation : MonoBehaviour
             else
             {
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.white;
+                OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = orignalSize;
                 suboperationIndex++;
                 sub_operation_output = sub_operation_output + jsonData.Add[Problem_Number].numbers[suboperationIndex];
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.red;
+                OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = updatedSize;
             }
 
         }
@@ -279,11 +300,12 @@ public class VisualAdditionOperation : MonoBehaviour
         MoveBeeds_1.dosomthing -= compare_abacus_and_operation_value;
         MoveBeeds_2.dosomthing -= compare_abacus_and_operation_value;
         VisualHandMovements.dosomthing2 -= compare_abacus_and_operation_value;
+        visible_result_text.text = "Result:";
 
         reset.interactable = true;
         reset.onClick.RemoveListener(ResetClicked);
         nextOperationBtn.onClick.RemoveListener(ResetClicked);
-        resetHandPositionLean.TurnOff();
+       // resetHandPositionLean.TurnOff();
 
 
         ResetBar.OnReset -= ResetClicked;
@@ -314,9 +336,11 @@ public class VisualAdditionOperation : MonoBehaviour
     public void CalledOnEnableAfterDelay()
     {
         calledOnenable = true;
+        orignalSize = 105;
+        updatedSize = 130;
 
         Problem_Number = 0;
-        notificationText.text = "perform the operation";
+        notificationText.text = "Perform the operation";
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -338,7 +362,7 @@ public class VisualAdditionOperation : MonoBehaviour
                         }
                         else
                         {
-                            resetHandPositionLean.TurnOn();
+                         //   resetHandPositionLean.TurnOn();
                             leftHand.SetActive(false);
                         }
 

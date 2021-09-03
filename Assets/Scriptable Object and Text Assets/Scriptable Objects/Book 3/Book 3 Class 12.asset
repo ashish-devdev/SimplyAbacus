@@ -15,7 +15,7 @@ MonoBehaviour:
   classData:
     nameOfClass: B3C12
     activityList:
-    - activityName: Adding made Super Simple
+    - activityName: Adding made Super Simple I
       iD: 03.12.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -58,6 +58,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
+    - activityName: Adding made Super Simple II
       iD: 03.12.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -127,6 +128,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -153,7 +155,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
+    - activityName: Adding made Super Simple III
       iD: 03.12.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -196,6 +198,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -222,7 +225,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
+    - activityName: Adding made Super Simple IV
       iD: 03.12.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -265,6 +268,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -291,7 +295,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Adding made Super Simple
+    - activityName: Adding made Super Simple V
       iD: 03.12.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -334,6 +338,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0
@@ -403,6 +408,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
       mixedMathematicalOperations:
         active: 0
+        isPercentage: 0
         jsonData: {fileID: 0}
         showMultiplicationTable: 0
         showFriendTable: 0

@@ -79,8 +79,8 @@ MonoBehaviour:
         showFriendTable: 0
       tutorialVideo:
         active: 1
-        URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Small-Friend-14062021.mp4
-        time: 309
+        URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/Hand+Counting.mp4
+        time: 150
       animatingCountingTutorial:
         active: 0
         numbes: []

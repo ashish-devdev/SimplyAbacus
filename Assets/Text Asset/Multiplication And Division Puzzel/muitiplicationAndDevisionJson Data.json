@@ -2,14 +2,14 @@
 	"questions":
 	[	
 		{
-			"problem":"Add 1026 - 59 times",
+			"problem":"What will be the result if you add 1026, 59 times?",
 			"number":[60534,1],
 			"result":"60534/1",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"Add 12 untill you reach 144",
+			"problem":"How many times would you add 12 to reach 144?",
 			"number":[144,12],
 			"result":"144/12",
 			"status":"unsolved"
@@ -17,14 +17,14 @@
 		},
 
 		{
-			"problem":"Add 12 untill you reach 144",
+			"problem":"How many times would you add 12 to reach 144?",
 			"number":[144,12],
 			"result":"144/12",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"Put 2369 and reduce 23 till 0",
+			"problem":" How many times would you subtract 23 from 2369 to reach 0?",
 			"number":[2369,23],
 			"result":"2369/23",
 			"status":"unsolved"

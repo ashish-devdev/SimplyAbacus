@@ -9,7 +9,7 @@ public class copyTextMeshProVAlueAndUpdate : MonoBehaviour
     public TextMeshProUGUI self;
     public bool isAbacusValue;
    public  bool ismultiplication;
-    
+    public bool ishandCounting;
     void Start()
     {
         
@@ -31,6 +31,11 @@ public class copyTextMeshProVAlueAndUpdate : MonoBehaviour
         {
             self.text =  operationResult.text;
 
+        }
+
+        if (ishandCounting)
+        {
+            self.text = decimal.Parse(operationResult.text).ToString("F0");
         }
     }
 }

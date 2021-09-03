@@ -19,6 +19,7 @@ public class Addition_operation : MonoBehaviour
     public TextMeshProUGUI notificationText;
     public TextMeshProUGUI abacusOutput;
     public TextMeshProUGUI Result_text;
+    public TextMeshProUGUI visual_result_text;
     public TextMeshProUGUI CongratulationText;
 
 
@@ -311,7 +312,7 @@ public class Addition_operation : MonoBehaviour
 
         sub_operation_output = numbers[0];
         suboperationIndex = 0;
-
+        visual_result_text.text = "Result:";
     }
 
     public void ResetClicked()
@@ -441,6 +442,7 @@ public class Addition_operation : MonoBehaviour
                 loadingBar.Data.FillAmount = ((Problem_Number + 1) / (jsonData.Add.Length * 1f));
                 loadingBar.BeginAllTransitions();
                 Result_text.text = RemoveExtraDecimalZeros(sub_operation_output.ToString());
+                visual_result_text.text = "Result: " + Result_text.text;
                 sub_operation_output = -1;
                 nextOperationBtn.gameObject.transform.parent.gameObject.SetActive(true);
                 reset.interactable = false;
