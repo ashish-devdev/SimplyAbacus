@@ -1,0 +1,296 @@
+{
+	"Mul":
+	[		
+	
+		{
+			"num_of_oprations":2,
+			"numbers":[29,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[22,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[40,2],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+
+
+		{	"num_of_oprations":2,
+			"numbers":[56,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+		{	"num_of_oprations":2,
+			"numbers":[62,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[47,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[19,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[42,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[54,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[43,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+
+
+
+
+
+
+		{
+			"num_of_oprations":2,
+			"numbers":[47,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[31,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[48,2],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+
+
+		{	"num_of_oprations":2,
+			"numbers":[2,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+		{	"num_of_oprations":2,
+			"numbers":[37,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[69,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[21,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[19,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[99,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[26,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+
+
+
+
+
+
+
+		{
+			"num_of_oprations":2,
+			"numbers":[8,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[20,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[9,2],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+
+
+		{	"num_of_oprations":2,
+			"numbers":[72,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+		{	"num_of_oprations":2,
+			"numbers":[11,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[32,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[41,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[27,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[3,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[72,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+		{
+			"num_of_oprations":2,
+			"numbers":[50,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[48,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[28,2],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+
+
+		{	"num_of_oprations":2,
+			"numbers":[29,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+		{	"num_of_oprations":2,
+			"numbers":[12,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[42,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[54,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[79,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":2,
+			"numbers":[34,2],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":2,
+			"numbers":[77,2],
+			"Result":2,
+			"status":"unsolved"
+		}
+
+
+
+	]
+
+}

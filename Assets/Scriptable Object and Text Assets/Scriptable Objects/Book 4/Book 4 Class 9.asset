@@ -33,6 +33,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -85,7 +86,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting I
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Everyday Fun Counting I
       iD: 04.09.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -103,6 +108,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -117,7 +123,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 0
+        showFriendFamilyTable: 1
         abacusOperations: {fileID: 4900000, guid: 6970e5e0b87a8404ca646f56a8fecbf9,
           type: 3}
       countBodyParts:
@@ -156,7 +162,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting II
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Everyday Fun Counting II
       iD: 04.09.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -174,6 +184,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -188,7 +199,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 0
+        showFriendFamilyTable: 1
         abacusOperations: {fileID: 4900000, guid: a60b0be2281fb894497d94d1f4c2fd59,
           type: 3}
       countBodyParts:
@@ -227,6 +238,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple II
       iD: 04.09.04
       matchValueWithImage: []
@@ -245,6 +260,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -297,6 +313,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple III
       iD: 04.09.05
       matchValueWithImage: []
@@ -315,6 +335,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -367,6 +388,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple IV
       iD: 04.09.06
       matchValueWithImage: []
@@ -385,6 +410,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -437,6 +463,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Speed Writing
       iD: 04.09.07
       matchValueWithImage: []
@@ -455,6 +485,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -507,7 +538,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Colouring
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Never get bored activities
       iD: 04.09.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -528,6 +563,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -580,3 +616,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0

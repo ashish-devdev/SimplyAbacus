@@ -1,0 +1,38 @@
+{
+	"Add":
+	[		
+	
+		{
+			"num_of_oprations":6,
+			"numbers":[94,-38,28,89,90,16],
+			"Result":4,
+			"status":"unsolved"
+		},
+		{ 
+			"num_of_oprations":6,
+			"numbers":[57,75,-28,58,11,35],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{
+			"num_of_oprations":6,
+			"numbers":[73,62,59,-14,64,59],
+			"Result":3,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":6,
+			"numbers":[94,-57,75,81,64,59],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":6,
+			"numbers":[47,-19,21,51,76,91],
+			"Result":2,
+			"status":"unsolved"
+		}
+
+		
+
+	]
+
+}

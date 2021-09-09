@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "45012743",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "45012743",
+        "name": "com.StepByStep.SimplyAbacus",
+        "processId": 23964,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,18 @@
             "deviceId": "98066ac5",
             "name": "com.google.android.youtube",
             "processId": 18748,
+            "exited": false
+        },
+        {
+            "deviceId": "45012743",
+            "name": "net.oneplus.launcher",
+            "processId": 857,
+            "exited": false
+        },
+        {
+            "deviceId": "45012743",
+            "name": "com.StepByStep.SimplyAbacus",
+            "processId": 23964,
             "exited": false
         }
     ],

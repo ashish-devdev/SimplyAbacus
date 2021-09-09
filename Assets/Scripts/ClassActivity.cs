@@ -41,6 +41,7 @@ public class ActivityList
     public DivisionOperation divisionOperation;
     public TutotialVideo tutorialVideo;
     public AnimatingCountingTutorial animatingCountingTutorial;
+    public SudokuGame sudokuGame;
 }
 
 [System.Serializable]
@@ -197,3 +198,14 @@ public class AnimatingCountingTutorial
     public float[] numbes;
     public int numberOfTimesToRepeate;
 }
+
+[System.Serializable]
+public class SudokuGame
+{
+    public bool active;
+    public SudokuDifficultiMode sudokuDifficultiMode;
+    public MazeSize mazeSize;
+}
+
+public enum SudokuDifficultiMode { easy,medium,hard}
+public enum MazeSize { _4x4,_6x6,_8x8,_9x9 }

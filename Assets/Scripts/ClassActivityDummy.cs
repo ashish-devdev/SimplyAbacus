@@ -75,6 +75,7 @@ public class ActivityList1
     public DivisionOperation1 divisionOperation1;
     public TutorialVideo1 tutorialVideo1;
     public AnimatingCountingTutorial1 animatingCountingTutorial1;
+    public SudokuGame1 sudokuGame1;
 }
 
 [System.Serializable]
@@ -98,6 +99,7 @@ public class ActivityList2
     public DivisionOperation2 divisionOperation2;
     public TutorialVideo2 tutorialVideo2;
     public AnimatingCountingTutorial2 animatingCountingTutorial2;
+    public SudokuGame2 sudokuGame2;
 
 
 }
@@ -195,6 +197,12 @@ public class TutorialVideo1
 public class AnimatingCountingTutorial1
 {
     public bool[] completed;
+}
+
+[System.Serializable]
+public class SudokuGame1
+{
+    public bool completed;
 }
 
 
@@ -365,6 +373,15 @@ public class AnimatingCountingTutorial2
     public string id = "";
 
 
+}
+
+[System.Serializable]
+public class SudokuGame2
+{
+    public float bestTime = -1;
+    public string bestTime_string = "-";
+    public float currentSavedTime = 0;
+    public string id = "";
 }
 
 

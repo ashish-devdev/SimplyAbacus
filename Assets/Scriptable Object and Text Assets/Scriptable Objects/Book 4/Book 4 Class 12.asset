@@ -33,6 +33,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -85,7 +86,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting I
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Everyday Fun Counting I
       iD: 04.12.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -103,6 +108,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -117,7 +123,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 0
+        showFriendFamilyTable: 1
         abacusOperations: {fileID: 4900000, guid: 7ae64733b46a432428b8fb0dd63e6214,
           type: 3}
       countBodyParts:
@@ -156,6 +162,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple II
       iD: 04.12.03
       matchValueWithImage: []
@@ -174,6 +184,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -226,6 +237,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple III
       iD: 04.12.04
       matchValueWithImage: []
@@ -244,6 +259,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -296,7 +312,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting II
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Everyday Fun Counting II
       iD: 04.12.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -314,6 +334,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -328,7 +349,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 0
+        showFriendFamilyTable: 1
         abacusOperations: {fileID: 4900000, guid: 87584cc617b65de4e96aad4e13b2b6a3,
           type: 3}
       countBodyParts:
@@ -367,7 +388,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting III
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Everyday Fun Counting III
       iD: 04.12.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -385,6 +410,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -399,7 +425,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 0
+        showFriendFamilyTable: 1
         abacusOperations: {fileID: 4900000, guid: 317f3d2047c59c2478d3460a7b3f561c,
           type: 3}
       countBodyParts:
@@ -438,6 +464,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple IV
       iD: 04.12.07
       matchValueWithImage: []
@@ -456,6 +486,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -508,7 +539,11 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
-    - activityName: Hand Counting IV
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Everyday Fun Counting IV
       iD: 04.12.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -526,6 +561,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -540,7 +576,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 0
+        showFriendFamilyTable: 1
         abacusOperations: {fileID: 4900000, guid: 5cbc15d781cd71a4b8d191258ef5a71c,
           type: 3}
       countBodyParts:
@@ -579,6 +615,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple V
       iD: 04.12.09
       matchValueWithImage: []
@@ -597,6 +637,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -649,6 +690,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple VI
       iD: 04.12.10
       matchValueWithImage: []
@@ -667,6 +712,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -720,6 +766,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Speed Writing
       iD: 04.12.11
       matchValueWithImage: []
@@ -738,6 +788,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -791,3 +842,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0

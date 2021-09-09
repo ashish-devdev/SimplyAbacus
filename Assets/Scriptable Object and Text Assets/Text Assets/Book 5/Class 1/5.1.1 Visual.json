@@ -1,0 +1,72 @@
+{
+	"Add":
+	[		
+	
+		{
+			"num_of_oprations":4,
+			"numbers":[21,8,39,-3],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":4,
+			"numbers":[7,14,9,-9],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":4,
+			"numbers":[7,28,-1,15],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+
+
+		{	"num_of_oprations":4,
+			"numbers":[25,8,15,-7],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+
+		{	"num_of_oprations":4,
+			"numbers":[8,57,4,17],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":4,
+			"numbers":[81,2,-23,9],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":4,
+			"numbers":[6,68,2,-1],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":4,
+			"numbers":[9,44,1,-51],
+			"Result":2,
+			"status":"unsolved"
+		},
+		{	"num_of_oprations":4,
+			"numbers":[14,-3,8,27],
+			"Result":2,
+			"status":"unsolved"
+		},
+
+		{	"num_of_oprations":4,
+			"numbers":[3,22,1,-1],
+			"Result":2,
+			"status":"unsolved"
+		}
+
+	]
+
+}

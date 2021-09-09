@@ -8,6 +8,7 @@ public class ClassDisplayer : MonoBehaviour
 {
 
     public BookManager bookManager;
+    public ProgressLoader progressLoader;
     public Example01 exampleInstance;
     public List<Sprite> classTabImages;
     public int startingClass;
@@ -64,7 +65,8 @@ public class ClassDisplayer : MonoBehaviour
         {
             exampleInstance.className.Add(classDisplayingName[(i - startingClass) % 12]);
         }
-        exampleInstance.UpdateData();
+        progressLoader.CalculatePercentage();
+        exampleInstance.UpdateData();// can be commented out as its called in CalculatePercentage();
     }
 
     void Update()

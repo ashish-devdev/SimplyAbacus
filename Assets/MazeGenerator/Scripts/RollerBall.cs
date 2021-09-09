@@ -25,6 +25,7 @@ public class RollerBall : MonoBehaviour
     public LeanToggle notificationLean;
     public GameObject timer;
     public GameObject mazeParent;
+    public GameObject bg;
     public GameObject blurrImageCanvas;
     public Button notificationBtn;
     public BallMovement ballMovement;
@@ -199,6 +200,7 @@ public class RollerBall : MonoBehaviour
     public void EnableMazeParent()
     {
         mazeParent.SetActive(true);
+        bg.SetActive(true);
       //  joystick.SetActive(true);
 
 
@@ -216,6 +218,7 @@ public class RollerBall : MonoBehaviour
     {
         ballMovement.stopTakingInput = true;
         mazeParent.SetActive(false);
+        bg.SetActive(false);
         notificationLean.TurnOn();
         sidenoteLean.TurnOff();
     //    joystick.SetActive(false);

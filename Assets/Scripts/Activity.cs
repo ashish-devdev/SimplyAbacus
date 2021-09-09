@@ -170,6 +170,11 @@ public class Activity : MonoBehaviour
                         UnityAction action = () => { activityScriptList[16].SetActive(true); loadingScreen.SetActive(true); };
                         activitiesGameObject.btnEvents.Add(action);
                     }
+                    else if (classActivityList[i].classData.activityList[j].sudokuGame.active == true)
+                    {
+                        UnityAction action = () => { activityScriptList[17].SetActive(true); loadingScreen.SetActive(true); };
+                        activitiesGameObject.btnEvents.Add(action);
+                    }
 
                 }
                 break;
@@ -1522,6 +1527,67 @@ public class Activity : MonoBehaviour
                                 }
                             }
 
+                            if (classActivityList[i].classData.activityList[j].sudokuGame.active == true)
+                            {
+                                if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].sudokuGame2 != null)
+                                {
+                                    if (isActivityAdded[w] == false)
+                                    {
+                                        if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].sudokuGame2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].sudokuGame2.id == classActivityList[i].classData.activityList[j].iD)
+                                        {
+                                            isActivityAdded[w] = true;
+                                            //replace 
+                                            if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].sudokuGame2.id == null)
+                                            {
+                                                classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].sudokuGame2.id = (((i / 12) + 1).ToString("D2") + "." + ((i % 12) + 1).ToString("D2") + "." + (w + 1).ToString("D2"));
+                                            }
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1 = new SudokuGame1();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2 = new SudokuGame2();
+
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
+
+                                            print("replace" + w + " " + j);
+
+                                            break;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
+                                        {
+                                            //create New
+                                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1 = new SudokuGame1();
+                                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2 = new SudokuGame2() { id = classActivityList[i].classData.activityList[j].iD };
+
+                                            print("create " + w + " " + j);
+
+                                        }
+
+                                        //move forward
+
+
+                                        continue;
+                                    }
+                                }
+                                else
+                                {
+                                    if (w == classParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Count - 1)
+                                    {
+                                        //create New
+                                        tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1 = new SudokuGame1();
+                                        tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2 = new SudokuGame2() { id = classActivityList[i].classData.activityList[j].iD };
+
+
+                                        print("create " + w + " " + j);
+
+                                        break;
+                                    }
+
+                                }
+                            }
+
 
                         }
 
@@ -2213,6 +2279,12 @@ public class Activity : MonoBehaviour
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
+
+                        if (classActivityList[i].classData.activityList[j].sudokuGame.active == true)
+                        {
+                            tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1 = new SudokuGame1();
+                            tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2 = new SudokuGame2() { id = classActivityList[i].classData.activityList[j].iD };
+                        }
                     }
 
                 }
@@ -2397,6 +2469,12 @@ public class Activity : MonoBehaviour
                             classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2() { id = classActivityList[i].classData.activityList[j].iD };
                             classParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
 
+                        }
+
+                        if (classActivityList[i].classData.activityList[j].sudokuGame.active == true)
+                        {
+                            classParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1 = new SudokuGame1();
+                            classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2 = new SudokuGame2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
                     }
 

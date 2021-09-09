@@ -129,10 +129,10 @@ public class ProgressLoader : MonoBehaviour
                     int completed = 0;
                     for (int k = 0; k < JsonUtility.FromJson<AdditionJsonWrapper>(activity.classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length; k++)
                     {
-                       
-                            if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[k] == true)
-                                completed++;
-                       
+
+                        if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[k] == true)
+                            completed++;
+
                         if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations.bestTime == -1)
                             classProgresses[i].allActivityprogress[j].activitiesPercentage = (completed * 1f / JsonUtility.FromJson<AdditionJsonWrapper>(activity.classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length) * 100;
                         else
@@ -335,6 +335,21 @@ public class ProgressLoader : MonoBehaviour
                         }
 
                     }
+
+                }
+
+                else if (activity.classActivityList[i].classData.activityList[j].sudokuGame.active == true)
+                {
+                    if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1.completed == true)
+                    {
+                        classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
+                    }
+                    else
+                    {
+                        classProgresses[i].allActivityprogress[j].activitiesPercentage = 0f * 100;
+                    }
+                    if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2.bestTime > 0)
+                        classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
 
                 }
 
@@ -693,15 +708,21 @@ public class ProgressLoader : MonoBehaviour
                         }
 
                     }
-
-
-
-
-
-
                 }
 
-
+                else if (activity.classActivityList[i].classData.activityList[j].sudokuGame.active == true)
+                {
+                    if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1.completed == true)
+                    {
+                        classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
+                    }
+                    else
+                    {
+                        classProgresses[i].allActivityprogress[j].activitiesPercentage = 0f * 100;
+                    }
+                    if (Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2.bestTime > 0)
+                        classProgresses[i].allActivityprogress[j].activitiesPercentage = 1f * 100;
+                }
                 //print(i + "%age  " +j +"  "+ classProgresses[i].allActivityprogress[j].activitiesPercentage);
             }
 
