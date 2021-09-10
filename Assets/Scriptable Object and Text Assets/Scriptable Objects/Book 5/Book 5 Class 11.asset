@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Book 5 Class 11
   m_EditorClassIdentifier: 
   classData:
-    nameOfClass: Book 5 Class 11
+    nameOfClass: B5C11
     activityList:
     - activityName: Adding made Super Simple I
       iD: 05.11.01

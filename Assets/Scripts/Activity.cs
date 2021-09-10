@@ -2274,7 +2274,7 @@ public class Activity : MonoBehaviour
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2 = new TutorialVideo2() { id = classActivityList[i].classData.activityList[j].iD };
                         }
 
-                        if (classActivityList[i].classData.activityList[i].animatingCountingTutorial.active == true)
+                        if (classActivityList[i].classData.activityList[j].animatingCountingTutorial.active == true)
                         {
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].animatingCountingTutorial2 = new AnimatingCountingTutorial2() { id = classActivityList[i].classData.activityList[j].iD };
