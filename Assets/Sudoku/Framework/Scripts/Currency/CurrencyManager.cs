@@ -55,6 +55,10 @@ namespace BizzyBeeGames
 
 			InitSave();
 		}
+		public void LoadInitSave()
+		{
+			InitSave();
+		}
 
 		#endregion
 

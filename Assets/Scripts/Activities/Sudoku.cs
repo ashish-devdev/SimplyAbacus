@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using BizzyBeeGames.Sudoku;
 using UnityEngine.UI;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 public class Sudoku : MonoBehaviour
 {
@@ -27,11 +29,13 @@ public class Sudoku : MonoBehaviour
 
     public GameObject timer;
     public Button notificationBtn;
+    public BizzyBeeGames.SaveManager saveManager;
 
     [SerializeField]
     string gameMode;
     string mazeSize;
-
+    string directory;
+    bool continueGame;
 
     public void OnEnable()
     {
@@ -40,7 +44,7 @@ public class Sudoku : MonoBehaviour
 
     public void OnEnableAfterDelay()
     {
-
+        continueGame = false;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -53,7 +57,36 @@ public class Sudoku : MonoBehaviour
                         gameMode = activityScriptInstance.classActivityList[i].classData.activityList[j].sudokuGame.sudokuDifficultiMode.ToString();
                         mazeSize = activityScriptInstance.classActivityList[i].classData.activityList[j].sudokuGame.mazeSize.ToString();
 
+                        int userCount = Directory.GetDirectories(Application.persistentDataPath + "/User").Length;
+                        for (int t = 0; t < userCount; t++)
+                        {
 
+
+                            ClassUserInformation classUser = new ClassUserInformation();
+                            if (File.Exists(Directory.GetDirectories(Application.persistentDataPath + "/User")[t] + "/AppUserInformation.dat"))
+                            {
+                                BinaryFormatter bf = new BinaryFormatter();
+                                FileStream file;
+
+                                file = File.Open(Directory.GetDirectories(Application.persistentDataPath + "/User")[t] + "/AppUserInformation.dat", FileMode.Open);
+                                classUser = (ClassUserInformation)bf.Deserialize(file);
+                                file.Close();
+                                if (classUser.currentUser == true)
+                                {
+                                    directory = Directory.GetDirectories(Application.persistentDataPath + "/User")[t] + "/Sudoku" + "/" + activityScriptInstance.classActivityList[i].classData.activityList[j].iD;
+
+                                    if (Directory.Exists((Directory.GetDirectories(Application.persistentDataPath + "/User")[t] + "/Sudoku" + "/" + activityScriptInstance.classActivityList[i].classData.activityList[j].iD)))
+                                    {
+                                        directory = Directory.GetDirectories(Application.persistentDataPath + "/User")[t] + "/Sudoku" + "/" + activityScriptInstance.classActivityList[i].classData.activityList[j].iD;
+                                        string str = saveManager.SaveFolderPath;
+                                        saveManager.CallAllInitLoadSave();
+                                        continueGame = true;
+                                    }
+                                }
+
+                            }
+
+                        }
 
                     }
                 }
@@ -62,17 +95,23 @@ public class Sudoku : MonoBehaviour
 
         notificationBtn.onClick.AddListener(StartTimer);
         AssigneListOfMaze(mazeSize);
-        sudokuGameManager.PlayNewGame(gameMode);
+
+        if (continueGame)
+            sudokuGameManager.ContinueActiveGame();
+        else
+            sudokuGameManager.PlayNewGame(gameMode);
     }
 
 
     void Update()
     {
-
+       
     }
 
     private void OnDisable()
     {
+
+
         notificationBtn.onClick.RemoveListener(StartTimer);
 
     }
@@ -171,4 +210,10 @@ public class Sudoku : MonoBehaviour
         }
     }
 
+    public void DeleteSudokuFile()
+    {
+        if (Directory.Exists(directory))
+            Directory.Delete(directory, true);
+
+    }
 }

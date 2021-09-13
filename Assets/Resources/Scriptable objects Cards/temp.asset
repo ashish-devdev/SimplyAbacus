@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: temp
   m_EditorClassIdentifier: 
   classData:
-    nameOfClass: B4C1
+    nameOfClass: B5C1
     activityList:
     - activityName: Brain skills I
       iD: temp04.01.015

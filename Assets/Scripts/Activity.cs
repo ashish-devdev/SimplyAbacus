@@ -31,6 +31,7 @@ public class Activity : MonoBehaviour
     public GameObject loadingScreen;
     public List<ClassActivity> classActivityList;
     public Sprite[] activityBoxImages;
+    public Sudoku sudoku;
     string currentClass;
     public void OnEnable()
     {
@@ -2558,6 +2559,11 @@ public class Activity : MonoBehaviour
         SaveManager.Instance.SaveDailyWorkoutStatsToDisk(classParentDailyWorkoutStats);
     }
 
+
+    public void DeleteSudokuFile()
+    {
+        sudoku.DeleteSudokuFile();
+    }
 }
 
 
@@ -2603,3 +2609,4 @@ public class Book
     public string book;
     public List<ClassActivity> classActivities;
 }
+

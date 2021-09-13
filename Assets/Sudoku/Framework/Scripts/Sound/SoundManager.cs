@@ -70,6 +70,10 @@ namespace BizzyBeeGames
 
 			InitSave();
 		}
+		public void LoadInitSave()
+		{
+			InitSave();
+		}
 
 		private void Start()
 		{

@@ -55,6 +55,10 @@ namespace BizzyBeeGames.Sudoku
 
 			InitSave();
 		}
+		public void LoadInitSave()
+		{
+			InitSave();
+		}
 
 		#endregion
 

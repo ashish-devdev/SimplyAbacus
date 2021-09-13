@@ -81,7 +81,10 @@ namespace BizzyBeeGames.Sudoku
 
 			InitSave();
 		}
-
+		public void LoadInitSave()
+		{
+			InitSave();
+		}
 		private void Update()
 		{
 			if (!IsPaused && ActivePuzzleData != null && ScreenManager.Instance.CurrentScreenId == "game")

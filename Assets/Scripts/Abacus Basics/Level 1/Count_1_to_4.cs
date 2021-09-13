@@ -100,7 +100,7 @@ public class Count_1_to_4 : MonoBehaviour
         for (int i = 0; i < activityList2.liftingBeed21.currentSubActivity; i++)
         {
             Count_1_to_4_ModelData.TaskComplete[i] = true;
-            Count_1_to_4_ModelData.barValue = (i+1)*0.25f;
+            Count_1_to_4_ModelData.barValue = (i + 1) * 0.25f;
 
         }
 
@@ -129,6 +129,7 @@ public class Count_1_to_4 : MonoBehaviour
             if (Count_1_to_4_ModelData.TaskComplete[currentTask] == false)
             {
                 sidenoteText.text = notificationData[currentTask];
+
 
                 Highlight1.transform.SetParent(Beeds[currentTask].transform);
                 Highlight1.transform.localPosition = new Vector3(0, 0, 0);
@@ -195,6 +196,8 @@ public class Count_1_to_4 : MonoBehaviour
            }*/
         //  else { animatingSprite.enabled = true; }
 
+
+
         if (ValueCalculator.value == 0)
         {
             indexAnimatingSprite.transform.gameObject.SetActive(false);
@@ -202,12 +205,24 @@ public class Count_1_to_4 : MonoBehaviour
             ResetHighlight.SetActive(false);
             animatingSprite.transform.gameObject.SetActive(true);
             //animatingSprite.enabled = true;
-
+            try
+            {
+               
+                sidenoteText.text = notificationData[currentTask];
+                
+            }
+            catch
+            {
+                ;
+            }
 
 
         }
         else
         {
+
+            sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
+
             CancelInvoke("DelayedInvokeAnimation");
             Highlight1.SetActive(false);
             if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Ended))

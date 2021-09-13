@@ -31,6 +31,7 @@ public class MatchImageAbacusValue : MonoBehaviour
     MatchValueWithImage2 matchValueWithImage2;
     public Button notificatinBtn;
     public GameObject timer;
+    public ValueCalculator valueCalculator;
    // bool activityIsCompletedByTheUser;
 
 
@@ -41,7 +42,8 @@ public class MatchImageAbacusValue : MonoBehaviour
         temp = true;
         currentOperation = 0;
         notificationText.text = "Count the items and represent the value on abacus";
-
+        valueCalculator.decimalPlaceString = "F0";
+        valueCalculator.numberOfDecimalPlaces = 2;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -201,6 +203,9 @@ public class MatchImageAbacusValue : MonoBehaviour
     {
         timer.SetActive(false);
         notificatinBtn.onClick.RemoveListener(StartTimer);
+        valueCalculator.decimalPlaceString = "F2";
+        valueCalculator.numberOfDecimalPlaces = 2;
+
         /*
         if (activityIsCompletedByTheUser)
         {
