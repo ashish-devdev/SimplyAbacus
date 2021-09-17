@@ -1,0 +1,43 @@
+{,
+	"Mul":
+	[		
+	
+		{
+			"num_of_oprations":2,
+			"numbers":[400,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":2,
+			"numbers":[107,7],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[307,4],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[406,8],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{	
+			"num_of_oprations":2,
+			"numbers":[304,9],
+			"Result":1,
+			"status":"unsolved"
+		},
+	                                
+	]
+
+}

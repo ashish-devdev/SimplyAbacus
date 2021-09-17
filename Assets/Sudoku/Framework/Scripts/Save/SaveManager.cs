@@ -44,6 +44,7 @@ namespace BizzyBeeGames
         public MobileAdsManager mobileAdsManager;
         public SoundManager soundManager;
         public ThemeManager themeManager;
+      //  public PuzzleData puzzleData;
 
         /// <summary>
         /// Path to the save file on the device
@@ -89,10 +90,10 @@ namespace BizzyBeeGames
 
                 }
                 if (temp != -1)
-                { 
+                {
 
                     return Directory.GetDirectories(Application.persistentDataPath + "/User")[temp] + "/Sudoku" + "/" + id;
-                    
+
                 }
                 else
                     return null;
@@ -157,8 +158,9 @@ namespace BizzyBeeGames
         protected override void OnDestroy()
         {
             base.OnDestroy();
-
-            Save();
+            List<int> numberCounts;
+            if (!puzzleBoard.ReturnIsPuzzelSolved())
+                Save();
         }
 
         private void OnDisable()
@@ -199,8 +201,11 @@ namespace BizzyBeeGames
         /// </summary>
         public void Unregister(ISaveable saveable)
         {
+
             // Save the Saveable if it needs saving
-            Save(saveable);
+            List<int> numberCounts;
+            if (!puzzleBoard.ReturnIsPuzzelSolved())
+                Save(saveable);
 
             Saveables.Remove(saveable);
         }

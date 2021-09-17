@@ -9,31 +9,31 @@
 
 		},
 		{
-			"problem":"9%3010",
+			"problem":"9 % 3010",
 			"result":"0.09*3010",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"3%9979",
+			"problem":"3 % 9979",
 			"result":"0.03*9979",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"7%9979",
+			"problem":"7 % 9979",
 			"result":"0.07*9979",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"2%2970",
+			"problem":"2 % 2970",
 			"result":"0.02*2970",
 			"status":"unsolved"
 
 		},
 		{
-			"problem":"8%1647",
+			"problem":"8 % 1647",
 			"result":"0.08*1647",
 			"status":"unsolved"
 		}

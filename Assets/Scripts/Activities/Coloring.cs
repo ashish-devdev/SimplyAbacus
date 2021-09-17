@@ -36,7 +36,7 @@ public class Coloring : MonoBehaviour
     public LeanMaterialFloat coloringShaderEffectLean;
     bool congratulationInvoked;
     ColoringPageImages2 coloringPageImages2;
-
+    Vector3 PaintPosition;
     public AudioClip correctColorSound;
     public AudioClip wrongColorSound;
     private void OnEnable()
@@ -80,7 +80,8 @@ public class Coloring : MonoBehaviour
                 print("10");
 
                 ChangeColorPaletHighlightPosition.isDraggedFromColorPalet = false;
-                ray = cam.ScreenPointToRay(Input.mousePosition);
+                PaintPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y+ (Screen.height * 10 / 100), Input.mousePosition.z);
+                ray = cam.ScreenPointToRay(PaintPosition);
                 if (Physics.Raycast(ray, out RaycastHit hit))
                 {
                     print("20");

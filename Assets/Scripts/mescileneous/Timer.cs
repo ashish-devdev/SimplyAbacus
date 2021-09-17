@@ -66,7 +66,11 @@ public class Timer : MonoBehaviour
         }
     }
 
-
+    public void ResetTime()
+    {
+        startingTime = 0;
+        savedTime = 0;
+    }
     #endregion
 
 }

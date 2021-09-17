@@ -2560,9 +2560,9 @@ public class Activity : MonoBehaviour
     }
 
 
-    public void DeleteSudokuFile()
+    public void OnSudokuSolved()
     {
-        sudoku.DeleteSudokuFile();
+        sudoku.OnSudokuSolved();
     }
 }
 

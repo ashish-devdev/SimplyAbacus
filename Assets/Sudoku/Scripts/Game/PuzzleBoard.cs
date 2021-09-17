@@ -804,7 +804,8 @@ namespace BizzyBeeGames.Sudoku
             if (isSolved)
             {
                 GameManager.Instance.ActivePuzzleCompleted();
-                activity.DeleteSudokuFile();
+                activity.OnSudokuSolved();
+
                 //SoundManager.Instance.Play("puzzle-complete");
 
                 //call congratulation function
@@ -832,6 +833,14 @@ namespace BizzyBeeGames.Sudoku
             }
         }
 
+        public bool ReturnIsPuzzelSolved()
+        {
+            List<int> numberCounts;
+
+            bool isSolved = activePuzzleData.CheckBoard(out numberCounts);
+
+            return isSolved;
+        }
         public bool CheckBoard3()
         {
             List<int> numberCounts;
@@ -886,7 +895,7 @@ namespace BizzyBeeGames.Sudoku
 
                     }
                     else
-                        activeCells[i][j].cellBackground.color = Color.red;
+                        activeCells[i][j].bGColorRedToWhiteFade.BeginAllTransitions();
                 }
             }
 

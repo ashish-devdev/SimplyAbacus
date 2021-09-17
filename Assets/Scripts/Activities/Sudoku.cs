@@ -36,6 +36,8 @@ public class Sudoku : MonoBehaviour
     string mazeSize;
     string directory;
     bool continueGame;
+    SudokuGame1 sudokuGame1;
+    SudokuGame2 sudokuGame2;
 
     public void OnEnable()
     {
@@ -56,7 +58,8 @@ public class Sudoku : MonoBehaviour
 
                         gameMode = activityScriptInstance.classActivityList[i].classData.activityList[j].sudokuGame.sudokuDifficultiMode.ToString();
                         mazeSize = activityScriptInstance.classActivityList[i].classData.activityList[j].sudokuGame.mazeSize.ToString();
-
+                        sudokuGame1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].sudokuGame1;
+                        sudokuGame2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].sudokuGame2;
                         int userCount = Directory.GetDirectories(Application.persistentDataPath + "/User").Length;
                         for (int t = 0; t < userCount; t++)
                         {
@@ -105,21 +108,28 @@ public class Sudoku : MonoBehaviour
 
     void Update()
     {
-       
+        if (timer.gameObject.activeInHierarchy)
+        {
+            sudokuGame2.currentSavedTime = Timer.currentTime;
+        }
+
     }
+
+
+
 
     private void OnDisable()
     {
 
 
         notificationBtn.onClick.RemoveListener(StartTimer);
-
+        SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
     }
 
 
     public void StartTimer()
     {
-        Timer.savedTime = 0;
+        Timer.savedTime = sudokuGame2.currentSavedTime; ;
         timer.SetActive(true);
     }
 
@@ -208,6 +218,37 @@ public class Sudoku : MonoBehaviour
                 sudokuGameManager.puzzleGroups[2].puzzleFiles.Add(_9x9_Hard[i]);
             }
         }
+    }
+
+
+    public void OnSudokuSolved()
+    {
+        if (sudokuGame2.bestTime == -1)
+        {
+            timer.SetActive(false);
+
+            sudokuGame2.currentSavedTime = 0;
+            sudokuGame2.bestTime_string = Timer.timerText.text;
+            sudokuGame2.bestTime = Timer.currentTime;
+            SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+        }
+        else if (sudokuGame2.bestTime > Timer.currentTime)
+        {
+            timer.SetActive(false);
+
+            sudokuGame2.currentSavedTime = 0;
+            sudokuGame2.bestTime_string = Timer.timerText.text;
+            sudokuGame2.bestTime = Timer.currentTime;
+            SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+        }
+        else
+        {
+            timer.SetActive(false);
+            sudokuGame2.currentSavedTime = 0;
+            SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+
+        }
+        DeleteSudokuFile();
     }
 
     public void DeleteSudokuFile()

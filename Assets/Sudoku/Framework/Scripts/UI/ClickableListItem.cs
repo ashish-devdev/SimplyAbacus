@@ -7,102 +7,139 @@ using BizzyBeeGames.Sudoku;
 
 namespace BizzyBeeGames
 {
-	[RequireComponent(typeof(Button))]
-	public class ClickableListItem : UIMonoBehaviour,IPointerUpHandler,IDropHandler,IPointerDownHandler,IDragHandler
-	{
-		#region Member Variables
+    [RequireComponent(typeof(Button))]
+    public class ClickableListItem : UIMonoBehaviour, IPointerUpHandler, IDropHandler, IPointerDownHandler, IDragHandler
+    {
+        #region Member Variables
 
-		private Button uiButton;
+        private Button uiButton;
+        Vector3 PaintPosition;
+        Ray ray;
+        Camera cam;
+        GraphicRaycaster m_Raycaster;
+        PointerEventData m_PointerEventData;
+        EventSystem m_EventSystem;
+        #endregion
 
-		#endregion
+        #region Properties
 
-		#region Properties
+        public int Index { get; set; }
+        public object Data { get; set; }
+        public System.Action<int, object> OnListItemClicked { get; set; }
 
-		public int							Index				{ get; set; }
-		public object						Data				{ get; set; }
-		public System.Action<int, object>	OnListItemClicked	{ get; set; }
+        /// <summary>
+        /// Gets the Button component attached to this GameObject
+        /// </summary>
+        private Button UIButton
+        {
+            get
+            {
+                if (uiButton == null)
+                {
+                    uiButton = gameObject.GetComponent<Button>();
+                }
 
-		/// <summary>
-		/// Gets the Button component attached to this GameObject
-		/// </summary>
-		private Button UIButton
-		{
-			get
-			{
-				if (uiButton == null)
-				{
-					uiButton = gameObject.GetComponent<Button>();
-				}
+                return uiButton;
+            }
+        }
 
-				return uiButton;
-			}
-		}
+        #endregion
 
-		#endregion
+        #region Unity Methods
 
-		#region Unity Methods
+        private void Start()
+        {
+            if (UIButton != null)
+            {
+                UIButton.onClick.AddListener(OnButtonClicked);
 
-		private void Start()
-		{
-			if (UIButton != null)
-			{
-				UIButton.onClick.AddListener(OnButtonClicked);
-				
-			}
-			else
-			{
-				Debug.LogError("[ClickableListItem] There is no Button component on this GameObject.");
-			}
-		}
+            }
+            else
+            {
+                Debug.LogError("[ClickableListItem] There is no Button component on this GameObject.");
+            }
+            cam = Camera.main;
+            m_Raycaster = AccessGameObjectToPrefab.canvasWithGraphicRaycaster.GetComponent<GraphicRaycaster>();
+            m_EventSystem =GetComponent<EventSystem>();
 
-		#endregion
+        }
 
-		#region Private Methods
+        private void Update()
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
 
-		private void OnButtonClicked()
-		{
-			if (OnListItemClicked != null)
-			{
-				OnListItemClicked(Index, Data);
-			}
-			else
-			{
-				Debug.LogWarning("[ClickableListItem] OnListItemClicked has not been set on object " + gameObject.name);
-			}
-		}
+                print("10");
+                m_PointerEventData = new PointerEventData(m_EventSystem);
+                m_PointerEventData.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y + (UnityEngine.Screen.height * 10 / 100), Input.mousePosition.z);
+                List<RaycastResult> results = new List<RaycastResult>();
+                m_Raycaster.Raycast(m_PointerEventData, results);
+                foreach (RaycastResult result in results)
+                {
+                    if (result.gameObject == this.gameObject.transform.GetChild(0).gameObject)
+                    {
+                        OnDrop();
+                    }
+
+                }
+            }
+        }
+
+        #endregion
+
+        #region Private Methods
+
+        private void OnButtonClicked()
+        {
+            if (OnListItemClicked != null)
+            {
+                OnListItemClicked(Index, Data);
+            }
+            else
+            {
+                Debug.LogWarning("[ClickableListItem] OnListItemClicked has not been set on object " + gameObject.name);
+            }
+        }
 
         public void OnPointerUp(PointerEventData eventData)
         {
-			//  throw new System.NotImplementedException();
-			//print(gameObject.name);
-			//OnButtonClicked();
-			Invoke(nameof(MakeClickedOnNumbersFalse), 0.1f);
-			//PuzzleBoard.clickedOnNumber = false;
+            //  throw new System.NotImplementedException();
+            //print(gameObject.name);
+            //OnButtonClicked();
+            Invoke(nameof(MakeClickedOnNumbersFalse), 0.1f);
+            //PuzzleBoard.clickedOnNumber = false;
 
-		}
+        }
 
-		public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerDown(PointerEventData eventData)
         {
-			
-		}
+
+        }
 
         public void OnDrop(PointerEventData eventData)
         {
-			print(gameObject.name);
-			OnButtonClicked();
-			PuzzleBoard.clickedOnNumber = false;
-		}
+            //print(gameObject.name);
+            //OnButtonClicked();
+            //PuzzleBoard.clickedOnNumber = false;
+        }
+
+        public void OnDrop()
+        {
+            print(gameObject.name);
+            OnButtonClicked();
+            PuzzleBoard.clickedOnNumber = false;
+        }
 
         public void OnDrag(PointerEventData eventData)
         {
-			print(gameObject.name);
-			OnButtonClicked();
-		}
+            print(gameObject.name);
+            OnButtonClicked();
+        }
 
-		public void MakeClickedOnNumbersFalse()
-		{
-			PuzzleBoard.clickedOnNumber = false;
-		}
+        public void MakeClickedOnNumbersFalse()
+        {
+            PuzzleBoard.clickedOnNumber = false;
+        }
 
 
 

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Lean.Transition.Method;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ namespace BizzyBeeGames.Sudoku
 
 		[SerializeField] public Text				numberText		= null;
 		[SerializeField] public Image				cellBackground	= null;
+		[SerializeField] public LeanGraphicColor  bGColorRedToWhiteFade= null;
+
 		[SerializeField] private GridLayoutGroup	notesContainer	= null;
 
 		[Header("Borders")]

@@ -403,7 +403,7 @@ public class StatsDisplayer : MonoBehaviour
 
                         if (activityScriptInstance.classActivityList[j].classData.activityList[k].tutorialVideo.active == true)
                         {
-                            //  ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].liftingBeed21.bestTime_string;
+                             // ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].liftingBeed21.bestTime_string;
                             if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime >= 0)
                             {
                                 classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].tutorialVideo2.bestTime;
@@ -412,6 +412,37 @@ public class StatsDisplayer : MonoBehaviour
                             {
                                 //classCompleted = false;
                                 //break;
+                            }
+
+
+                        }
+                        if (activityScriptInstance.classActivityList[j].classData.activityList[k].animatingCountingTutorial.active == true)
+                        {
+                          //  ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].animatingCountingTutorial2.bestTime_string;
+                            if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].animatingCountingTutorial2.bestTime >= 0)
+                            {
+                                classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].animatingCountingTutorial2.bestTime;
+                            }
+                            else
+                            {
+                              //  classCompleted = false;
+                               // break;
+                            }
+
+
+                        }
+
+                        if (activityScriptInstance.classActivityList[j].classData.activityList[k].sudokuGame.active == true)
+                        {
+                            //  ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].sudokuGame2.bestTime_string;
+                            if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].sudokuGame2.bestTime >= 0)
+                            {
+                                classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].sudokuGame2.bestTime;
+                            }
+                            else
+                            {
+                                classCompleted = false;
+                                break;
                             }
 
 
@@ -711,8 +742,24 @@ public class StatsDisplayer : MonoBehaviour
                                     }
                                     else
                                     {
-                                        //classCompleted = false;
+                                       // classCompleted = false;
                                         //break;
+                                    }
+
+
+                                }
+
+                                if (activityScriptInstance.classActivityList[j].classData.activityList[k].sudokuGame.active == true)
+                                {
+                                      ParentContainerOfCells.transform.GetChild(t).GetChild(2).transform.GetComponent<TextMeshProUGUI>().text = Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].sudokuGame2.bestTime_string;
+                                    if (Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].sudokuGame2.bestTime >= 0)
+                                    {
+                                        classBestTime += Activity.classParentsStats.classActivityCompletionHolderList2[j].classData.activityList[k].sudokuGame2.bestTime;
+                                    }
+                                    else
+                                    {
+                                        classCompleted = false;
+                                        break;
                                     }
 
 

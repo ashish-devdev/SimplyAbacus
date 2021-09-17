@@ -19,7 +19,7 @@ public class Create_SwitchNewUserProfile : MonoBehaviour
     public Transform ParentTransform;
     public SaveManager saveManager;
     public static UnityAction onNewprofileCreation;
-
+    public static string currentUserPath;
 
     public LeanToggle bookScrollView;
 

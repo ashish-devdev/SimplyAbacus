@@ -17,7 +17,7 @@ public class MakeUIFollowPointer : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {  // Vector3 a= camMain.ScreenToWorldPoint(Input.mousePosition);
-            rectTransform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y+(Screen.height*4/100),10);//.x, camMain.ScreenToWorldPoint(Input.mousePosition).y, camMain.ScreenToWorldPoint(Input.mousePosition).z);
+            rectTransform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y+(Screen.height*10/100),10);//.x, camMain.ScreenToWorldPoint(Input.mousePosition).y, camMain.ScreenToWorldPoint(Input.mousePosition).z);
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 namespace BizzyBeeGames
 {
-	public class UIMonoBehaviour : MonoBehaviour 
+	public class UIMonoBehaviour : AccessGameObjectToPrefab_Wrapper
 	{
 		#region Properties
 
