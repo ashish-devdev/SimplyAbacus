@@ -294,9 +294,9 @@ namespace BizzyBeeGames.Sudoku
 
         public void ResetSudoku()
         {
-            for (int i = 0; i < activePuzzleData.boxRows * activePuzzleData.boxRows; i++)
+            for (int i = 0; i < activePuzzleData.boxRows * activePuzzleData.boxCols; i++)
             {
-                for (int j = 0; j < activePuzzleData.boxCols * activePuzzleData.boxCols; j++)
+                for (int j = 0; j < activePuzzleData.boxRows * activePuzzleData.boxCols; j++)
                 {
                     PuzzleData.CellType cellType = activePuzzleData.GetCellType(i, j);
 

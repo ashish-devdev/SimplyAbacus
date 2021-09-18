@@ -491,86 +491,6 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
-    - activityName: Maze 3 X 3
-      iD: temp04.01.07
-      matchValueWithImage: []
-      matchShapeWithNumbers: []
-      abacusOperations:
-        active: 0
-        jsonData: {fileID: 4900000, guid: 01d3d57f6d506d94e842a050bfa33eb5, type: 3}
-        showFriendTable: 0
-        showMultiplicationTable: 0
-        isLong: 0
-      coloringPageImages: []
-      speedWriting: 0
-      liftBeed01: 0
-      liftBeed02: 0
-      liftBeeds:
-        active: 0
-        numbers: 
-      maze:
-        active: 1
-        totalMaze: 2
-        row: 3
-        col: 3
-        beginingSponingCol: 1
-        beginingSponingrow: 1
-        endingSponingcol: 2
-        endingSponingRow: 2
-        floor: {fileID: 0}
-        goalImage: {fileID: 0}
-        startingImage: {fileID: 0}
-        sideNoteMessage: 
-      visualHands:
-        active: 0
-        showHand1: 0
-        showHand2: 0
-        showFriendFamilyTable: 0
-        abacusOperations: {fileID: 0}
-      countBodyParts:
-        active: 0
-        animalImage: {fileID: 21300000, guid: 2e5e62f097f193c4d88e10f97b73f1e6, type: 3}
-        animalName: Dog
-        bodyPartAndCountOfOne:
-        - bodyPart: Ears
-          count: 2
-        - bodyPart: Tail
-          count: 1
-        countOfAnimals: 0500000003000000
-        showMultiplicationTable: 1
-      mixedMathematicalOperations:
-        active: 0
-        isPercentage: 1
-        jsonData: {fileID: 4900000, guid: 6c8119f147926334581255032defaa72, type: 3}
-        showMultiplicationTable: 0
-        showFriendTable: 0
-      multiplicationDivisionPuzzle:
-        active: 0
-        jsonData: {fileID: 4900000, guid: 82a1604086ee9484d89dd88bd7164922, type: 3}
-        showMultiplicationTable: 0
-        showFriendTable: 0
-      mutliplicationOperation:
-        active: 0
-        jsonData: {fileID: 4900000, guid: 01d3d57f6d506d94e842a050bfa33eb5, type: 3}
-        showMutilplicationTable: 1
-        showFriendTable: 0
-      divisionOperation:
-        active: 0
-        jsonData: {fileID: 4900000, guid: e853936119b01b34da2e28dc1e554646, type: 3}
-        showMutilplicationTable: 0
-        showFriendTable: 0
-      tutorialVideo:
-        active: 0
-        URL: 
-        time: 0
-      animatingCountingTutorial:
-        active: 0
-        numbes: []
-        numberOfTimesToRepeate: 0
-      sudokuGame:
-        active: 0
-        sudokuDifficultiMode: 0
-        mazeSize: 0
     - activityName: Maze 4 X 4
       iD: temp04.01.08
       matchValueWithImage: []
@@ -731,7 +651,7 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
-    - activityName: Sudoku
+    - activityName: Sudoku_4x4
       iD: temp04.01.10
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -811,7 +731,7 @@ MonoBehaviour:
         active: 1
         sudokuDifficultiMode: 0
         mazeSize: 0
-    - activityName: Sudoku
+    - activityName: Sudoku_6x6
       iD: temp04.01.11
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -891,7 +811,7 @@ MonoBehaviour:
         active: 1
         sudokuDifficultiMode: 0
         mazeSize: 1
-    - activityName: Sudoku
+    - activityName: Sudoku_8x8
       iD: temp04.01.12
       matchValueWithImage: []
       matchShapeWithNumbers: []
@@ -971,7 +891,7 @@ MonoBehaviour:
         active: 1
         sudokuDifficultiMode: 0
         mazeSize: 2
-    - activityName: Sudoku
+    - activityName: Sudoku_9x9
       iD: temp04.01.13
       matchValueWithImage: []
       matchShapeWithNumbers: []
