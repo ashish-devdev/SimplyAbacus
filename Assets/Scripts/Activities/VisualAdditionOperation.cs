@@ -115,6 +115,7 @@ public class VisualAdditionOperation : MonoBehaviour
     void CreateAnOperation(int num_of_oprations, double[] numbers, double Result)
     {
         int p = 0;
+        MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
         Result_text.rectTransform.localPosition = new Vector3(Result_text.transform.localPosition.x, 0, Result_text.transform.localPosition.z);// Result_text.transform.localPosition = new Vector3(Result_text.transform.localPosition.x, -200, Result_text.transform.localPosition.z);
         if (num_of_oprations != 2)
         {
@@ -252,7 +253,7 @@ public class VisualAdditionOperation : MonoBehaviour
     {
         if (RemoveExtraDecimalZeros(sub_operation_output.ToString()) == RemoveExtraDecimalZeros(ValueCalculator.value.ToString(valueCalculator.decimalPlaceString)))
         {
-            if (/*sub_operation_output == jsonData.Add[Problem_Number].Result &&*/ suboperationIndex == jsonData.Add[Problem_Number].num_of_oprations - 1)
+            if ( suboperationIndex == jsonData.Add[Problem_Number].num_of_oprations - 1)
             {
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.white;
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize= orignalSize;
@@ -265,6 +266,7 @@ public class VisualAdditionOperation : MonoBehaviour
                 SaveManager.Instance.saveDataToDisk(Activity.classParent);
                 loadingBar.Data.FillAmount = ((Problem_Number + 1) / (jsonData.Add.Length * 1f));
                 loadingBar.BeginAllTransitions();
+                MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiUnintractable();
                 Result_text.text = sub_operation_output.ToString();
                 visible_result_text.text = "Result: "+ sub_operation_output.ToString();
 
@@ -327,6 +329,7 @@ public class VisualAdditionOperation : MonoBehaviour
         }
 
 
+        MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
 
     }
 

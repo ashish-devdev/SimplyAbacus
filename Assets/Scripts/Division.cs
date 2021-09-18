@@ -62,7 +62,7 @@ public class Division : MonoBehaviour
             {
                 for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
                 {
-                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].divisionOperation.active == true && ClassManager.currentActivityIndex == j)
+                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].divisionOperation.active == true && ClassManager.currentActivityIndex == j && ClassManager.currentClassName==activityScriptInstance.classActivityList[i].classData.nameOfClass)
                     {
                         if (activityScriptInstance.classActivityList[i].classData.activityList[j].divisionOperation.showMutilplicationTable)
                             multplicationTable.SetActive(true);
@@ -180,6 +180,7 @@ public class Division : MonoBehaviour
 
     public void compare_abacus_and_operation_value()
     {
+        print("ValueCalculator.value1.ToString(decimalStringToCompare)" + ValueCalculator.value1.ToString(decimalStringToCompare) + " =-=---=- " + "answer.ToString(decimalStringToCompare)" + answer.ToString(decimalStringToCompare));
         if (ValueCalculator.value1.ToString(decimalStringToCompare) == answer.ToString(decimalStringToCompare) && newQuestion)
         {
             activityList1.divisionOperation1.completed[problem_number] = true;

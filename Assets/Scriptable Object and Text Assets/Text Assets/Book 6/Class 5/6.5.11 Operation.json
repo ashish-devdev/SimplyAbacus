@@ -4,7 +4,7 @@
 	
 		{
 			"num_of_oprations":8,
-			"numbers":[80,60,-61,71,45,-,34,-11,66],
+			"numbers":[80,60,-61,71,45,-10,34,-11,66],
 			"Result":4,
 			"status":"unsolved"
 		},
@@ -36,7 +36,7 @@
 			"numbers":[42,15,38,-50,39,43,-98,41],
 			"Result":1,
 			"status":"unsolved"
-		},                                
+		}                                
 	]
 
 }

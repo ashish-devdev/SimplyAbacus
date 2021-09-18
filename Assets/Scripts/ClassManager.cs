@@ -16,6 +16,7 @@ public class ClassManager : MonoBehaviour
     public static string currentClassName;
     public static string currentActivityName;
     public static int currentActivityIndex;
+    public static int currentClassIndex;
     public ClassActivity currentClassActivity;
 
     // Start is called before the first frame update

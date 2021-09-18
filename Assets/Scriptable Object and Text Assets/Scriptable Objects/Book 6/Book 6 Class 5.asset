@@ -857,7 +857,7 @@ MonoBehaviour:
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 0
+        active: 1
         jsonData: {fileID: 4900000, guid: d8dc9af0e704ee1419172b3f5ec4ae42, type: 3}
         showFriendTable: 0
         showMultiplicationTable: 0

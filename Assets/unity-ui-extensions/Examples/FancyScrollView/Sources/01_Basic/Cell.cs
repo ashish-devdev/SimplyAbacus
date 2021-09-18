@@ -139,7 +139,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
             }
 
-            itemData.onClickedClass = () => {  ClassManager.currentClassName = message.text; };
+            itemData.onClickedClass = () => {  ClassManager.currentClassName = message.text; ClassManager.currentClassIndex = ID; };
             itemData.onClickedActivity = () => {  ClassManager.currentActivityName = message.text;  ClassManager.currentActivityIndex = ID; print("ID" + ID); };
             itemData.onClickedBook = () => { BookManager.currentBookName = message.text;  };
             if (itemData.BtnEvents != null)

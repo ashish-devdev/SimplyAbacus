@@ -1,4 +1,4 @@
-{,
+{
 	"Mul":
 	[		
 	
@@ -36,7 +36,7 @@
 			"numbers":[705,6],
 			"Result":1,
 			"status":"unsolved"
-		},
+		}
 	                                
 	]
 

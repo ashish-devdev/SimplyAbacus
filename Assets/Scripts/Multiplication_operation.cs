@@ -100,7 +100,7 @@ public class Multiplication_operation : MonoBehaviour
         {
             for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
             {
-                if (activityScriptInstance.classActivityList[i].classData.activityList[j].mutliplicationOperation.active == true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName && ClassManager.currentActivityIndex == j)
+                if (activityScriptInstance.classActivityList[i].classData.activityList[j].mutliplicationOperation.active == true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName && ClassManager.currentActivityIndex == j && ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
                 {
 
                     if (activityScriptInstance.classActivityList[i].classData.activityList[j].mutliplicationOperation.showMutilplicationTable)
@@ -193,6 +193,8 @@ public class Multiplication_operation : MonoBehaviour
         digitsInNum2 = 0;
         int p = 0;
         Result_text.transform.localPosition = new Vector3(Result_text.transform.localPosition.x, -200, Result_text.transform.localPosition.z);
+
+        MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
         if (num_of_oprations != 2)
         {
             for (int i = 3; i < num_of_oprations + 1; i++)
@@ -358,7 +360,7 @@ public class Multiplication_operation : MonoBehaviour
 
             OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().text = jsonData.Mul[Problem_Number].numbers[0].ToString();
             OperationNumbers_PARENT.GetChild(1).GetComponent<TextMeshProUGUI>().text = jsonData.Mul[Problem_Number].numbers[1].ToString();
-            OperationNumbers_PARENT.GetChild(2).GetComponent<TextMeshProUGUI>().text = jsonData.Mul[Problem_Number].Result.ToString();
+            OperationNumbers_PARENT.GetChild(2).GetComponent<TextMeshProUGUI>().text = ValueCalculator.value1.ToString();
             jsonData.Mul[Problem_Number].status = "solved";
             // OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.white;
             // OperationNumbers_PARENT.GetChild(1).GetComponent<TextMeshProUGUI>().color = Color.white;
@@ -394,6 +396,8 @@ public class Multiplication_operation : MonoBehaviour
             activityList1.multiplicationOperation1.completed[Problem_Number] = true;
             loadingBar.Data.FillAmount = ((Problem_Number + 1) / (jsonData.Mul.Length * 1f));
             loadingBar.BeginAllTransitions();
+            MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiUnintractable();
+
         }
         else if (sub_operation_output[suboperationIndex] == (decimal)ValueCalculator.value1)
         {
@@ -459,6 +463,7 @@ public class Multiplication_operation : MonoBehaviour
         valueCalculator.decimalPlaceString = "F2";
         valueCalculator.numberOfDecimalPlaces = 2;
 
+        MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
 
     }
 

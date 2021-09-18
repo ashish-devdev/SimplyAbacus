@@ -33,6 +33,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -85,6 +86,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting I
       iD: 03.01.012
       matchValueWithImage: []
@@ -103,6 +108,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -156,6 +162,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting II
       iD: 03.01.013
       matchValueWithImage: []
@@ -174,6 +184,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -227,6 +238,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting III
       iD: 03.01.014
       matchValueWithImage: []
@@ -245,6 +260,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -298,6 +314,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting IV
       iD: 03.01.015
       matchValueWithImage: []
@@ -316,6 +336,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -369,6 +390,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting V
       iD: 03.01.016
       matchValueWithImage: []
@@ -387,6 +412,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -440,6 +466,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Speed Writing
       iD: 03.01.017
       matchValueWithImage: []
@@ -458,6 +488,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -510,6 +541,10 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Never get bored activities
       iD: 03.01.018
       matchValueWithImage: []
@@ -531,6 +566,7 @@ MonoBehaviour:
         numbers: 
       maze:
         active: 0
+        totalMaze: 3
         row: 0
         col: 0
         beginingSponingCol: 0
@@ -583,3 +619,7 @@ MonoBehaviour:
         active: 0
         numbes: []
         numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0

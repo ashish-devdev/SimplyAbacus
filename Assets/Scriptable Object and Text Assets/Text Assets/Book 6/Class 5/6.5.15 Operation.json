@@ -46,7 +46,7 @@
 		},
 			
 		{
-			"num_of_oprations":8,
+			"num_of_oprations":7,
 			"numbers":[22,83,66,30,25,86,24],
 			"Result":3,
 			"status":"unsolved"
@@ -67,10 +67,10 @@
 		},
 
 		{	"num_of_oprations":8,
-			"numbers":75,33,39,-37,78,-36,97,-95],
+			"numbers":[75,33,39,-37,78,-36,97,-95],
 			"Result":3,
 			"status":"unsolved"
-		},		                                
+		}		                                
 	]
 
 }

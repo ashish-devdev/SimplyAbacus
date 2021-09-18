@@ -705,10 +705,10 @@ MonoBehaviour:
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 0
+        active: 1
         jsonData: {fileID: 4900000, guid: 3cbeac65908715048a453e84e302ad9e, type: 3}
-        showFriendTable: 0
-        showMultiplicationTable: 0
+        showFriendTable: 1
+        showMultiplicationTable: 1
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0

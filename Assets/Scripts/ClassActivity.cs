@@ -83,6 +83,7 @@ public class AbacusOperation
     public TextAsset jsonData;
     public bool showFriendTable;
     public bool showMultiplicationTable;
+    public bool isLong=false;
 }
 [System.Serializable]
 public class Maze

@@ -857,10 +857,10 @@ MonoBehaviour:
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 0
+        active: 1
         jsonData: {fileID: 4900000, guid: e3eae354f94fd144199a6cdadbbaa7e7, type: 3}
-        showFriendTable: 0
-        showMultiplicationTable: 0
+        showFriendTable: 1
+        showMultiplicationTable: 1
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0

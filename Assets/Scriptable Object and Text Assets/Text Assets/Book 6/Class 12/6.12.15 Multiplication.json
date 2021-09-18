@@ -98,7 +98,7 @@
 
 		{
 			"num_of_oprations":2,
-			"numbers":981,3],
+			"numbers":[981,3],
 			"Result":4,
 			"status":"unsolved"
 		},
@@ -108,7 +108,7 @@
 			"numbers":[734,9],
 			"Result":4,
 			"status":"unsolved"
-		},                      
+		}                      
 	]
 
 }

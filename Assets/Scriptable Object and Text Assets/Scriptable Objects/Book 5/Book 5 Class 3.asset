@@ -24,6 +24,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: c8b3a37006be1460b9a018e1687d5f84, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -99,6 +100,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 4732050bc21e44f76b6299aa393328d8, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -170,10 +172,11 @@ MonoBehaviour:
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: 4732050bc21e44f76b6299aa393328d8, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -249,6 +252,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -334,6 +338,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -409,6 +414,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -484,6 +490,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -559,6 +566,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -634,6 +642,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 1413bc869fdc24148a7a9e05ac527d9d, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -709,6 +718,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -785,6 +795,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -860,6 +871,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 750b7fb2b481a425583b1290c2d94cfc, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -935,6 +947,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -1011,6 +1024,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -1086,6 +1100,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 9a3231203c9a74caa82e42633793c761, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -1161,6 +1176,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -1237,6 +1253,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -1312,6 +1329,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 1
       liftBeed01: 0
@@ -1387,6 +1405,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages:
       - index: 2
         completed: 0

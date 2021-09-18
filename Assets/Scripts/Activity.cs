@@ -330,7 +330,7 @@ public class Activity : MonoBehaviour
 
             for (int i = 0; i < classActivityList.Count; i++)
             {
-                print(i);
+               
 
                 #region number of classes less or equal to previous update
                 if (classActivityList.Count <= classParent.classActivityCompletionHolderList.Count)
@@ -2128,6 +2128,7 @@ public class Activity : MonoBehaviour
                     for (int j = 0; j < classActivityList[i].classData.activityList.Count; j++)
                     {
 
+                       
                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList.Add(new ActivityList1());
                         tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Add(new ActivityList2());
 

@@ -65,6 +65,22 @@ public class Addition_operation : MonoBehaviour
     float orignalFontSize;
     float updatedFontSize;
 
+    public RectTransform numberParentRect;
+    public RectTransform resultRect;
+    public RectTransform numberParentRectBG;
+    public RectTransform resultRectBG;
+
+    Vector2 minAnchorNumberParent;
+    Vector2 maxAnchorNumberParent;
+    Vector2 minAnchorNumberParentBG;
+    Vector2 maxAnchorNumberParentBG;
+
+    Vector2 minAnchorResult;
+    Vector2 maxAnchorResult;
+    Vector2 minAnchorResultBG;
+    Vector2 maxAnchorResultBG;
+
+    bool isLong;
     private void OnEnable()
     {
 
@@ -146,9 +162,17 @@ public class Addition_operation : MonoBehaviour
 
     public void InvokeOnenableAfterDelay()
     {
-
+        isLong = false;
         orignalFontSize = OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize;
-        updatedFontSize = orignalFontSize + 25;
+        updatedFontSize = orignalFontSize;
+
+        minAnchorResult = resultRect.anchorMin;
+        maxAnchorResult = resultRect.anchorMax;
+
+        minAnchorNumberParent = numberParentRect.anchorMin;
+        maxAnchorNumberParent = numberParentRect.anchorMax;
+
+
 
         Problem_Number = 0;
         notificationText.text = "Now let's try to solve the expression on screen using the abacus step by step.";
@@ -158,13 +182,14 @@ public class Addition_operation : MonoBehaviour
             {
                 for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
                 {
-                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.active == true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName && ClassManager.currentActivityIndex == j)
+                    if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.active == true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName && ClassManager.currentActivityIndex == j && ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
                     {
                         for (int m = 0; m < Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations.Length; m++)
                         {
                             if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[m] == true)
                                 Problem_Number++;
                         }
+
                         if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.showFriendTable)
                             friendTableBtn.SetActive(true);
                         else
@@ -173,6 +198,14 @@ public class Addition_operation : MonoBehaviour
                             mulyiplicationTableBtn.SetActive(true);
                         else
                             mulyiplicationTableBtn.SetActive(false);
+                        if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.isLong)
+                        {
+                            Invoke(nameof(ResizeOperationRectAndResultRect), 2f);
+                            isLong = true;
+
+                        }
+
+
 
                         abacusOperations2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations;
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
@@ -220,6 +253,33 @@ public class Addition_operation : MonoBehaviour
         notificationBtn.onClick.AddListener(StartTimer);
     }
 
+    public void ResizeOperationRectAndResultRect()
+    {
+        numberParentRect.anchorMin = new Vector2(0.085f, 0.57155f);
+        numberParentRect.anchorMax = new Vector2(0.906f, 0.7444f);
+        numberParentRect.offsetMin = new Vector2(0, 0);
+        numberParentRect.offsetMax = new Vector2(0, 0);
+
+
+        numberParentRectBG.anchorMin = new Vector2(0.085f, 0.57155f);
+        numberParentRectBG.anchorMax = new Vector2(0.906f, 0.7444f);
+        numberParentRectBG.offsetMin = new Vector2(0, 0);
+        numberParentRectBG.offsetMax = new Vector2(0, 0);
+
+        resultRect.anchorMin = new Vector2(0.57f, 0.75f);
+        resultRect.anchorMax = new Vector2(0.906f, 0.9144f);
+        resultRect.offsetMin = new Vector2(0, 0);
+        resultRect.offsetMax = new Vector2(0, 0);
+
+
+
+        resultRectBG.anchorMin = new Vector2(0.57f, 0.75f);
+        resultRectBG.anchorMax = new Vector2(0.906f, 0.9144f);
+        resultRectBG.offsetMin = new Vector2(0, 0);
+        resultRectBG.offsetMax = new Vector2(0, 0);
+        orignalFontSize = 75;
+        updatedFontSize = orignalFontSize;
+    }
 
     public void StartTimer()
     {
@@ -264,6 +324,8 @@ public class Addition_operation : MonoBehaviour
         int decimalPlace;
         int maxDigit;
         int p = 0;
+        MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
+
         Result_text.rectTransform.localPosition = new Vector3(Result_text.transform.localPosition.x, 0, Result_text.transform.localPosition.z);// Result_text.transform.localPosition = new Vector3(Result_text.transform.localPosition.x, -200, Result_text.transform.localPosition.z);
         if (num_of_oprations != 2)
         {
@@ -283,7 +345,8 @@ public class Addition_operation : MonoBehaviour
             if (i < num_of_oprations)
             {
                 OperationNumbers_PARENT.GetChild(i).GetComponent<TextMeshProUGUI>().text = numbers[i].ToString();
-
+                if (isLong)
+                    OperationNumbers_PARENT.GetChild(i).GetComponent<TextMeshProUGUI>().fontSize = 75;
             }
             else
             {
@@ -309,6 +372,8 @@ public class Addition_operation : MonoBehaviour
 
         OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.red;
         OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = updatedFontSize;
+        if (isLong)
+            OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = 75;
 
         sub_operation_output = numbers[0];
         suboperationIndex = 0;
@@ -411,7 +476,10 @@ public class Addition_operation : MonoBehaviour
 
 
             OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.red;
-            OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = updatedFontSize;
+            if (isLong)
+                OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = 75;
+            else
+                OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = updatedFontSize;
 
             sub_operation_output = jsonData.Add[Problem_Number].numbers[0];
             suboperationIndex = 0;
@@ -440,6 +508,7 @@ public class Addition_operation : MonoBehaviour
                 activityList1.abacusOperations[Problem_Number] = true;
                 SaveManager.Instance.saveDataToDisk(Activity.classParent);
                 loadingBar.Data.FillAmount = ((Problem_Number + 1) / (jsonData.Add.Length * 1f));
+                MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiUnintractable();
                 loadingBar.BeginAllTransitions();
                 Result_text.text = RemoveExtraDecimalZeros(sub_operation_output.ToString());
                 visual_result_text.text = "Result: " + Result_text.text;
@@ -459,7 +528,10 @@ public class Addition_operation : MonoBehaviour
                 suboperationIndex++;
                 sub_operation_output = sub_operation_output + jsonData.Add[Problem_Number].numbers[suboperationIndex];
                 OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.red;
-                OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = updatedFontSize;
+                if (isLong)
+                    OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = 75;
+                else
+                    OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = updatedFontSize;
 
             }
 
@@ -507,7 +579,27 @@ public class Addition_operation : MonoBehaviour
             ;
         }
 
+        MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
 
+        resultRect.anchorMin = minAnchorResult;
+        resultRect.anchorMax = maxAnchorResult;
+        resultRect.offsetMin = new Vector2(0, 0);
+        resultRect.offsetMax = new Vector2(0, 0);
+
+        resultRectBG.anchorMin = minAnchorResult;
+        resultRectBG.anchorMax = maxAnchorResult;
+        resultRectBG.offsetMin = new Vector2(0, 0);
+        resultRectBG.offsetMax = new Vector2(0, 0);
+
+        // numberParentRect.anchorMin = minAnchorNumberParent;
+        //  numberParentRect.anchorMax = maxAnchorNumberParent;
+        //  numberParentRect.offsetMin = new Vector2(0, 0);
+        //   numberParentRect.offsetMax = new Vector2(0, 0);   
+
+        numberParentRectBG.anchorMin = new Vector2(0.5187709f, 0.5715555f);
+        numberParentRectBG.anchorMax = new Vector2(0.9886103f, 0.9142964f);
+        numberParentRectBG.offsetMin = new Vector2(0, 0);
+        numberParentRectBG.offsetMax = new Vector2(0, 0);
 
     }
     public string RemoveExtraDecimalZeros(string str)

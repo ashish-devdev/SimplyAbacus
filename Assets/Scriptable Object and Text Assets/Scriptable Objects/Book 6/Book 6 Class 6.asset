@@ -857,7 +857,7 @@ MonoBehaviour:
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
-        active: 0
+        active: 1
         jsonData: {fileID: 4900000, guid: 71673c05ec440c1448b8d10f12f3f910, type: 3}
         showFriendTable: 0
         showMultiplicationTable: 0
@@ -1053,8 +1053,8 @@ MonoBehaviour:
         showFriendTable: 0
       multiplicationDivisionPuzzle:
         active: 0
-        jsonData: {fileID: 0}
-        showMultiplicationTable: 0
+        jsonData: {fileID: 4900000, guid: 91db421c071403645be3b814860164fc, type: 3}
+        showMultiplicationTable: 1
         showFriendTable: 0
       mutliplicationOperation:
         active: 1
@@ -1132,15 +1132,15 @@ MonoBehaviour:
         showMultiplicationTable: 0
         showFriendTable: 0
       mutliplicationOperation:
-        active: 1
+        active: 0
         jsonData: {fileID: 4900000, guid: 3c5c093b45412de4eacac3c49e29fd23, type: 3}
         showMutilplicationTable: 1
         showFriendTable: 1
       divisionOperation:
-        active: 0
-        jsonData: {fileID: 0}
-        showMutilplicationTable: 0
-        showFriendTable: 0
+        active: 1
+        jsonData: {fileID: 4900000, guid: 3c5c093b45412de4eacac3c49e29fd23, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 1
       tutorialVideo:
         active: 0
         URL: 
