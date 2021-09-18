@@ -125,7 +125,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 1
+        showFriendFamilyTable: 0
         abacusOperations: {fileID: 4900000, guid: 6d07c019e5c1a9246bc382a362f61154,
           type: 3}
       countBodyParts:
@@ -592,7 +592,7 @@ MonoBehaviour:
         active: 1
         showHand1: 1
         showHand2: 1
-        showFriendFamilyTable: 1
+        showFriendFamilyTable: 0
         abacusOperations: {fileID: 4900000, guid: e31328dda646034448ef93e517766acf,
           type: 3}
       countBodyParts:
