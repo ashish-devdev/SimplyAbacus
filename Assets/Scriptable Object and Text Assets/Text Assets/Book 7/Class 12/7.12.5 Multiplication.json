@@ -1,0 +1,147 @@
+{
+	"Mul":
+	[		
+	
+		{
+			"num_of_oprations":2,
+			"numbers":[3778,3],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[7842,9],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[8557,7],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[2391,9],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":2,
+			"numbers":[1686,6],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[9810,8],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[4130,8],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[7280,4],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[6626,4],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[866,8],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[4970,7],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[2572,4],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[6585,3],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[4846,4],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[1252,3],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[1436,3],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[6500,6],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[9583,3],
+			"Result":4,
+			"status":"unsolved"
+		},	
+
+		{
+			"num_of_oprations":2,
+			"numbers":[7682,5],
+			"Result":4,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[4977,9],
+			"Result":4,
+			"status":"unsolved"
+		}	
+
+	]
+
+}

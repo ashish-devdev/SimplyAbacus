@@ -1,0 +1,86 @@
+{
+	"Mul":
+	[		
+	
+		{
+			"num_of_oprations":2,
+			"numbers":[218,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[710,7],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[663,8],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[97,4],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[69,9],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[155,3],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[852,4],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[61,3],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[350,2],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		
+		{
+			"num_of_oprations":2,
+			"numbers":[12,7],
+			"Result":4,
+			"status":"unsolved"
+		}
+	
+	]
+
+}

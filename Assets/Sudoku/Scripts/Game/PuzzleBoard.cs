@@ -57,6 +57,7 @@ namespace BizzyBeeGames.Sudoku
         private bool isNotesOn;
         public int selectedNumber;
         public static bool clickedOnNumber;
+        public static bool clickedOnErase;
         public Activity activity;
         #endregion
 
@@ -143,6 +144,7 @@ namespace BizzyBeeGames.Sudoku
         public void SetNumber(int number)
         {
             clickedOnNumber = false;
+            clickedOnErase = false;
             if (activePuzzleData == null ||
                 selectedCellRow == -1 ||
                 selectedCellCol == -1 ||
@@ -487,6 +489,9 @@ namespace BizzyBeeGames.Sudoku
             SetCellsSelected(cellRow, cellCol);
             if (clickedOnNumber)
                 SetNumber(selectedNumber);
+            if (clickedOnErase)
+                Erase();
+
 
         }
 
@@ -881,6 +886,11 @@ namespace BizzyBeeGames.Sudoku
             }
         }
 
+        public void MakeClickedOnEraserTrue()
+        {
+
+            PuzzleBoard.clickedOnErase = true;
+        }
 
         public void HighlightSquareWithWrongOrNoNumber()
         {

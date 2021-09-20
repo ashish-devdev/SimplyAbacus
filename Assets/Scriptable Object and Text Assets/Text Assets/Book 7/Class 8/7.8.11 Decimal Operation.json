@@ -1,0 +1,71 @@
+{
+	"Add":
+	[		
+	
+		{
+			"num_of_oprations":8,
+			"numbers":[7.97,8.27,9.51,2.71,4.21,0.32,2.07,8.44],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[9.79,7.27,9.87,-6.58,5.77,6.41,2.18,-8.23],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[1.18,9.76,5.62,7.12,0.58,4.98,-8.69,3.35],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[1.43,2.67,5.88,-7.37,-0.83,5.24,4.27,2.89],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[40.61,83.74,-50.22,96.81,63.04,12.17,68.34,60.24],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[66.85,-50.88,96.55,46.61,63.44,-95.49,-10.44,71.85],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[89.08,-52.76,99.35,65.35,41.27,10.04,88.27,86.13],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[66.91,67.31,50.62,80.13,-92.54,-24.58,-39.54,74.12],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[18.18,81.86,32.06,43.81,39.13,-90.81,88.67,69.45],
+			"Result":4,
+			"status":"unsolved"
+		}
+		
+
+	]
+
+}

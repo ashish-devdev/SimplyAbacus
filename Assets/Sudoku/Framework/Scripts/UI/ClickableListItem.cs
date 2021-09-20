@@ -51,7 +51,7 @@ namespace BizzyBeeGames
         {
             if (UIButton != null)
             {
-                UIButton.onClick.AddListener(OnButtonClicked);
+                //  UIButton.onClick.AddListener(OnButtonClicked);
 
             }
             else
@@ -60,7 +60,7 @@ namespace BizzyBeeGames
             }
             cam = Camera.main;
             m_Raycaster = AccessGameObjectToPrefab.canvasWithGraphicRaycaster.GetComponent<GraphicRaycaster>();
-            m_EventSystem =GetComponent<EventSystem>();
+            m_EventSystem = GetComponent<EventSystem>();
 
         }
 
@@ -82,6 +82,7 @@ namespace BizzyBeeGames
                     }
 
                 }
+//                PuzzleBoard.clickedOnErase = false;
             }
         }
 
@@ -128,6 +129,7 @@ namespace BizzyBeeGames
             print(gameObject.name);
             OnButtonClicked();
             PuzzleBoard.clickedOnNumber = false;
+            PuzzleBoard.clickedOnErase = false;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -139,7 +141,11 @@ namespace BizzyBeeGames
         public void MakeClickedOnNumbersFalse()
         {
             PuzzleBoard.clickedOnNumber = false;
+            PuzzleBoard.clickedOnErase = false;
         }
+
+
+
 
 
 
