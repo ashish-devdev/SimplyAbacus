@@ -24,6 +24,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 14a0f7924a1c34e8c85765edcda3cf47, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -100,6 +101,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: faaf405ad15dc4179b3e750ae4e125c2, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -176,6 +178,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: ab7569b8973a34bd094471773c82f7ff, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -252,6 +255,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: c389b60bdc42d4a3cb7b3732500991d1, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -328,6 +332,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: cbb1554f3bf73410a9f263021eae6484, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -404,6 +409,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 48533ed976f954092bd5cfd6e8d84391, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -480,6 +486,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 1
       liftBeed01: 0
@@ -555,6 +562,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -565,12 +573,12 @@ MonoBehaviour:
       maze:
         active: 1
         totalMaze: 3
-        row: 4
-        col: 4
-        beginingSponingCol: 1
-        beginingSponingrow: 1
-        endingSponingcol: 2
-        endingSponingRow: 2
+        row: 5
+        col: 5
+        beginingSponingCol: 3
+        beginingSponingrow: 3
+        endingSponingcol: 4
+        endingSponingRow: 4
         floor: {fileID: 0}
         goalImage: {fileID: 0}
         startingImage: {fileID: 0}

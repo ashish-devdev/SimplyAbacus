@@ -330,7 +330,7 @@ public class Activity : MonoBehaviour
 
             for (int i = 0; i < classActivityList.Count; i++)
             {
-               
+
 
                 #region number of classes less or equal to previous update
                 if (classActivityList.Count <= classParent.classActivityCompletionHolderList.Count)
@@ -734,7 +734,7 @@ public class Activity : MonoBehaviour
                             {
                                 if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2 != null)
                                 {
-                                    if (isActivityAdded[w] == false)
+                                    if (isActivityAdded[w] == false && (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == classActivityList[i].classData.activityList[j].iD))
                                     {
                                         if (classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == null || classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w].maze2.id == classActivityList[i].classData.activityList[j].iD)
                                         {
@@ -1482,7 +1482,7 @@ public class Activity : MonoBehaviour
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1 = new AnimatingCountingTutorial1();
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].animatingCountingTutorial1.completed = new bool[classActivityList[i].classData.activityList[j].animatingCountingTutorial.numbes.Length];
 
-                                           // if(classParent.classActivityCompletionHolderList[i].classData.activityList[w].animatingCountingTutorial1.completed!=null)
+                                            // if(classParent.classActivityCompletionHolderList[i].classData.activityList[w].animatingCountingTutorial1.completed!=null)
                                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j] = classParent.classActivityCompletionHolderList[i].classData.activityList[w];
                                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j] = classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[w];
 
@@ -2128,7 +2128,7 @@ public class Activity : MonoBehaviour
                     for (int j = 0; j < classActivityList[i].classData.activityList.Count; j++)
                     {
 
-                       
+
                         tempclassParent.classActivityCompletionHolderList[i].classData.activityList.Add(new ActivityList1());
                         tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList.Add(new ActivityList2());
 

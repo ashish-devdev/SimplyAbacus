@@ -86,8 +86,11 @@ public class ProgressLoader : MonoBehaviour
 
         for (int i = 0; i < totalClass; i++)
         {
+            print(i);
             for (int j = 0; j < activity.classActivityList[i].classData.activityList.Count; j++)
             {
+                print(j);
+
                 if (activity.classActivityList[i].classData.activityList[j].matchShapeWithNumbers.Length > 0)
                 {
                     int completed = 0;
