@@ -1,0 +1,64 @@
+{	"div":
+	[	
+		{
+			"Problem":"89.1/9.9",
+			"answer":"89.1/9.9",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.693/0.77",
+			"answer":"0.693/0.77",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"4.65/0.97",
+			"answer":"4.65/0.97",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.369/4.1",
+			"answer":"0.369/4.1",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"68.2/0.031",
+			"answer":"68.2/0.031",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.857/10",
+			"answer":"0.857/10",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"8.8/20",
+			"answer":"8.8/20",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"3.54/0.003",
+			"answer":"3.54/0.003",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.679/9.7",
+			"answer":"0.679/9.7",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"4.05/45",
+			"answer":"4.05/45",
+			"status":"unsolved"
+		}
+
+	]
+}

@@ -16,14 +16,14 @@ MonoBehaviour:
     nameOfClass: B7C1
     activityList:
     - activityName: Adding made Super Simple I
-      iD: 
+      iD: 07.01.01
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 542d376b4e9af7a4fbe08a50de3ead3f, type: 3}
         showFriendTable: 1
-        showMultiplicationTable: 0
+        showMultiplicationTable: 1
         isLong: 0
       coloringPageImages: []
       speedWriting: 0
@@ -92,14 +92,14 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Adding made Super Simple II
-      iD: 
+      iD: 07.01.02
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 5c06387353141af4794cb7376fbf7e2c, type: 3}
         showFriendTable: 1
-        showMultiplicationTable: 0
+        showMultiplicationTable: 1
         isLong: 0
       coloringPageImages: []
       speedWriting: 0
@@ -168,15 +168,15 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Adding made Super Simple III
-      iD: 
+      iD: 07.01.03
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: a1a0f81e1ec2e924cbea92e0d485f238, type: 3}
         showFriendTable: 1
-        showMultiplicationTable: 0
-        isLong: 0
+        showMultiplicationTable: 1
+        isLong: 1
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -244,15 +244,15 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Adding made Super Simple IV
-      iD: 
+      iD: 07.01.04
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
         active: 1
         jsonData: {fileID: 4900000, guid: 3f404464a55f757419794e2bc477cef5, type: 3}
         showFriendTable: 1
-        showMultiplicationTable: 0
-        isLong: 0
+        showMultiplicationTable: 1
+        isLong: 1
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -320,7 +320,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Multiplying made Super Simple I
-      iD: 
+      iD: 07.01.05
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -396,7 +396,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Multiplying made Super Simple II
-      iD: 
+      iD: 07.01.06
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -472,7 +472,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Multiplying made Super Simple III
-      iD: 
+      iD: 07.01.07
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -548,7 +548,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Multiplying made Super Simple IV
-      iD: 
+      iD: 07.01.08
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -624,7 +624,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Multiplying made Super Simple V
-      iD: 
+      iD: 07.01.09
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -700,7 +700,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Dividing made Super Simple I
-      iD: 
+      iD: 07.01.10
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -776,7 +776,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Dividing made Super Simple II
-      iD: 
+      iD: 07.01.11
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -852,7 +852,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Dividing made Super Simple III
-      iD: 
+      iD: 07.01.12
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -928,7 +928,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Dividing made Super Simple IV
-      iD: 
+      iD: 07.01.13
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -1004,7 +1004,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Dividing made Super Simple V
-      iD: 
+      iD: 07.01.14
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:
@@ -1080,7 +1080,7 @@ MonoBehaviour:
         sudokuDifficultiMode: 0
         mazeSize: 0
     - activityName: Brain Skills II
-      iD: 
+      iD: 07.01.15
       matchValueWithImage: []
       matchShapeWithNumbers: []
       abacusOperations:

@@ -35,7 +35,7 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: 67a3b2041898f31489226d0d9dd0d33b, type: 3}
     background: {fileID: 21300000, guid: 672b6d39721ddfd4f961757fd2bdb904, type: 3}
     trailColor: {r: 1, g: 0.8980392, b: 0.43137255, a: 1}
-    noteMessage: Help the bird reach it's nest.
+    noteMessage: Help the bird reach its nest.
     wallColor: {r: 0.26666668, g: 0.9882353, b: 0.9647059, a: 1}
   - startSprite: {fileID: 21300000, guid: d57420e79a2b5424cb4a59c4e2fffd3a, type: 3}
     endSprite: {fileID: 21300000, guid: b4c8aafaada3936419008ea12c447570, type: 3}
@@ -71,7 +71,7 @@ MonoBehaviour:
     endSprite: {fileID: 21300000, guid: 29bc68e2d3990dc4eb84718755e2a9af, type: 3}
     background: {fileID: 21300000, guid: cff15a273ee5e17489f1688cdb72c1f5, type: 3}
     trailColor: {r: 0.40392157, g: 0.8, b: 0.81960785, a: 1}
-    noteMessage: Aliens wants to go back to their planet, help them.
+    noteMessage: Aliens want to go back to their planet, help them.
     wallColor: {r: 0.48235294, g: 0.7058824, b: 0.4117647, a: 1}
   - startSprite: {fileID: 21300000, guid: c6645864e977c1f43904812d97f0cdef, type: 3}
     endSprite: {fileID: 21300000, guid: 9b714aeb85899d34f84eb1c21b39147b, type: 3}

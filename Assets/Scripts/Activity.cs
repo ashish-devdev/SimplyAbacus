@@ -2179,7 +2179,7 @@ public class Activity : MonoBehaviour
                         if (classActivityList[i].classData.activityList[j].abacusOperations.active == true)
                         {
                             print("Created");
-
+                            print(i+""+j);
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations = new AbacusOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations = new bool[JsonUtility.FromJson<AdditionJsonWrapper>(classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text).Add.Length];
 

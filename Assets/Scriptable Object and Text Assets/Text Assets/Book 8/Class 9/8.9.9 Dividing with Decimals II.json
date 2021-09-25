@@ -1,0 +1,63 @@
+{	"div":
+	[	
+		{
+			"Problem":"360/15",
+			"answer":"360/15",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"420/60",
+			"answer":"420/60",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"136/68",
+			"answer":"136/68",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"459/27",
+			"answer":"459/27",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"747/83",
+			"answer":"747/83",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"27.6/4",
+			"answer":"27.6/4",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.53/0.053",
+			"answer":"0.53/0.053",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.244/0.02",
+			"answer":"0.244/0.02",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.568/0.008",
+			"answer":"0.568/0.008",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"30.8/0.04",
+			"answer":"30.8/0.04",
+			"status":"unsolved"
+		}
+	]
+}

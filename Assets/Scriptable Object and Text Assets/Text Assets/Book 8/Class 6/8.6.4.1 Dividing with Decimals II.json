@@ -1,0 +1,93 @@
+{	"div":
+	[	
+		{
+			"Problem":"0.19/0.007",
+			"answer":"0.19/0.007",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"25.2/9",
+			"answer":"25.2/9",
+			"status":"unsolved"
+		},
+		
+		{
+			"Problem":"6.3/0.003",
+			"answer":"6.3/0.003",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"20.5/0.5",
+			"answer":"20.5/0.5",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.42/0.07",
+			"answer":"0.42/0.07",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"8.82/0.006",
+			"answer":"8.82/0.006",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"0.632/0.4",
+			"answer":"0.632/0.4",
+			"status":"unsolved"
+		},
+		
+		{
+			"Problem":"320/0.04",
+			"answer":"320/0.04",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"480/0.08",
+			"answer":"480/0.08",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"38.7/0.3",
+			"answer":"38.7/0.3",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"2.1/3",
+			"answer":"2.1/3",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"9.38/7",
+			"answer":"9.38/7",
+			"status":"unsolved"
+		},
+		
+		{
+			"Problem":"0.658/0.007",
+			"answer":"0.658/0.007",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"12.8/0.008",
+			"answer":"12.8/0.008",
+			"status":"unsolved"
+		},
+
+		{
+			"Problem":"1.84/4",
+			"answer":"1.84/4",
+			"status":"unsolved"
+		}
+	]
+}

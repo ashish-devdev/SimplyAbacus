@@ -262,7 +262,7 @@ public class MixedOperations : MonoBehaviour
             questionText.text = questionText.text.Replace("/", " / ");
             questionText.text = questionText.text.Replace("+", " + ");
             questionText.text = questionText.text.Replace("-", " - ");
-            questionText.text = questionText.text.Replace("%", " % ");
+            questionText.text = questionText.text.Replace("%", "%");
             answer = Convert.ToDouble(new DataTable().Compute(jsonData.operation[Problem_Number].result.ToString(), ""));
             resultContainsdecimals = CheckForDecimals(answer);
             if (!resultContainsdecimals)
