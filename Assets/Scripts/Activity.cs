@@ -2248,6 +2248,7 @@ public class Activity : MonoBehaviour
                         }
                         if (classActivityList[i].classData.activityList[j].mutliplicationOperation.active == true)
                         {
+                            print("MULTIPLICATION " + i + "  " + j);
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].multiplicationOperation2 = new MultiplicationOperation2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1 = new MultiplicationOperation1();
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].multiplicationOperation1.completed = new bool[JsonUtility.FromJson<MultiplicationJsonWrapper>(classActivityList[i].classData.activityList[j].mutliplicationOperation.jsonData.text).Mul.Length];

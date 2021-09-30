@@ -50,6 +50,7 @@ public class VisualAdditionOperation : MonoBehaviour
     public LeanToggle leanCongratulation;
     public LeanToggle leanSideNote;
     public LeanToggle resetHandPositionLean;
+    public LeanToggle handsTipInfo;
     public Timer timer;
     public GameObject timer_gamObject;
     VisualHands2 visualHands2;
@@ -160,6 +161,7 @@ public class VisualAdditionOperation : MonoBehaviour
         {
             CongratulationText.text = Congratulation_message;
             leanCongratulation.TurnOn();// CongratulationPannel.SetActive(true);
+            reset.gameObject.SetActive(false);
             OperationNumbers_PARENT.gameObject.SetActive(false);
             visualHands2.currentSavedTime = 0;
             //activityList1.abacusOperations = true;
@@ -206,6 +208,7 @@ public class VisualAdditionOperation : MonoBehaviour
             {
                 CongratulationText.text = Congratulation_message;
                 leanCongratulation.TurnOn();// CongratulationPannel.SetActive(true);
+                reset.gameObject.SetActive(false);
                 OperationNumbers_PARENT.gameObject.SetActive(false);
                 leanSideNote.TurnOff();//sideNote.SetActive(false);
                 //activityList1.abacusOperations = true;
@@ -328,8 +331,16 @@ public class VisualAdditionOperation : MonoBehaviour
             ;
         }
 
+        try
+        {
+            notificationBtn.onClick.RemoveListener(showHandInfoTip);
+        }
+        catch
+        {; }
 
         MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
+
+
 
     }
 
@@ -357,6 +368,8 @@ public class VisualAdditionOperation : MonoBehaviour
                         {
                             if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].visualHands1.completed[m] == true)
                                 Problem_Number++;
+
+                           
                         }
 
                         if (activityScriptInstance.classActivityList[i].classData.activityList[j].visualHands.showHand2 == true)
@@ -369,6 +382,11 @@ public class VisualAdditionOperation : MonoBehaviour
                             leftHand.SetActive(false);
                         }
 
+                        if (activityScriptInstance.classActivityList[i].classData.activityList[j].iD == "03.01.012")
+                        { 
+                            notificationBtn.onClick.AddListener(showHandInfoTip);
+
+                        }
                         visualHands2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].visualHands2;
 
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
@@ -400,7 +418,14 @@ public class VisualAdditionOperation : MonoBehaviour
         loadingBar.BeginAllTransitions();
 
         notificationBtn.onClick.AddListener(StartTimer);
+
     }
+
+    public void showHandInfoTip()
+    {
+        handsTipInfo.TurnOn();
+    }
+
 
     public string RemoveExtraDecimalZeros(string str)
     {

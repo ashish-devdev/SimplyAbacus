@@ -65,7 +65,7 @@ public class MazeSpawner : MonoBehaviour
     int randomVal;
 
     private BasicMazeGenerator mMazeGenerator = null;
-
+    public int startValue = 0, endValue = 3; 
 
 
     public void StartTimer()
@@ -78,7 +78,10 @@ public class MazeSpawner : MonoBehaviour
     void OnEnable()
     {
 
-        R = Random.Range(0, mazeScriptableInputs.mazeDatas.Length);
+        R = Random.Range(startValue,endValue);
+        startValue += 3;
+        endValue += 3;
+        R = R % mazeScriptableInputs.mazeDatas.Length;
 
 
 
