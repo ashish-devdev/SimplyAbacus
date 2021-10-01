@@ -1,0 +1,96 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"5% of 372",
+			"result":"0.05*372",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 69",
+			"result":"0.08*69",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 101",
+			"result":"0.09*101",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 567",
+			"result":"0.08*567",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 229",
+			"result":"0.05*229",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"2% of 721",
+			"result":"0.02*721",
+			"status":"unsolved"
+		},
+
+		{
+			"problem":"4% of 674",
+			"result":"0.04*674",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 191",
+			"result":"0.03*191",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 169",
+			"result":"0.04*169",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 977",
+			"result":"0.08*977",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"6% of 197",
+			"result":"0.06*197",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 432",
+			"result":"0.07*432",
+			"status":"unsolved"
+		},
+		{
+			"problem":"8% of 813",
+			"result":"0.08*813",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 706",
+			"result":"0.03*706",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 745",
+			"result":"0.05*745",
+			"status":"unsolved"
+		}
+
+	]
+
+}

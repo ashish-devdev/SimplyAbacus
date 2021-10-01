@@ -1,0 +1,36 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"72.7+81.2-63.9",
+			"result":"72.7+81.2-63.9",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"58.5-35.4+38.7",
+			"result":"58.5-35.4+38.7",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"90.6-62.4-31.8",
+			"result":"90.6-62.4-31.8",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"35.2+45.7-31.8",
+			"result":"35.2+45.7-31.8",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"84.2-75.2+23.7",
+			"result":"84.2-75.2+23.7",
+			"status":"unsolved"
+		}
+	]
+
+}

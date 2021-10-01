@@ -43,6 +43,9 @@ public class VisualAdditionOperation : MonoBehaviour
     public Button reset;
     public GameObject sideNote;
     public GameObject CongratulationPannel;
+    public GameObject handParent;
+    public GameObject bulb;
+    
     public string Congratulation_message;
     public LeanImageFillAmount loadingBar;
     float total_problems;
@@ -164,6 +167,8 @@ public class VisualAdditionOperation : MonoBehaviour
             reset.gameObject.SetActive(false);
             OperationNumbers_PARENT.gameObject.SetActive(false);
             visualHands2.currentSavedTime = 0;
+            handParent.SetActive(false);
+            bulb.SetActive(false);
             //activityList1.abacusOperations = true;
             if (visualHands2.bestTime == -1)
             {
@@ -212,6 +217,9 @@ public class VisualAdditionOperation : MonoBehaviour
                 OperationNumbers_PARENT.gameObject.SetActive(false);
                 leanSideNote.TurnOff();//sideNote.SetActive(false);
                 //activityList1.abacusOperations = true;
+                handParent.SetActive(false);
+                bulb.SetActive(false);
+
                 SaveManager.Instance.saveDataToDisk(Activity.classParent);
                 //  return;
 

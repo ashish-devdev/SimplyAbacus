@@ -1,0 +1,1547 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b370786057072e040925e28ded26a69b, type: 3}
+  m_Name: Book 10 Class 12
+  m_EditorClassIdentifier: 
+  classData:
+    nameOfClass: B10C12
+    activityList:
+    - activityName: Adding made Super Simple I
+      iD: 10.12.01
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 369c610466bc78e4faee7ff9240acc82, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Adding made Super Simple II
+      iD: 10.12.02
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 8d4223545c2e48a4787969a0fd9148eb, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Multiplying made Super Simple I
+      iD: 10.12.03
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: d1749ef484d9c8846962d0d74dafae4e, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 1
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Mixed Operations made Super Simple I
+      iD: 10.12.04
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 1
+        isPercentage: 0
+        jsonData: {fileID: 4900000, guid: 3bfabf928f932f24b8ea46caaabe8751, type: 3}
+        showMultiplicationTable: 1
+        showFriendTable: 1
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Brain Skills II
+      iD: 10.12.05
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 1
+        animalImage: {fileID: 21300000, guid: e4cb1e1733233a5428fa06089415c981, type: 3}
+        animalName: monkeys
+        bodyPartAndCountOfOne:
+        - bodyPart: ears
+          count: 2
+        - bodyPart: eyes
+          count: 2
+        - bodyPart: tails
+          count: 1
+        - bodyPart: legs
+          count: 2
+        - bodyPart: mouths
+          count: 1
+        countOfAnimals: b03600000f270000
+        showMultiplicationTable: 1
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Adding made Super Simple III
+      iD: 10.12.06
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 3b17db94e832b8a45967341818f3965e, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 1
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Adding with Decimals
+      iD: 10.12.07
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: e14d810aa3b434d489cef536384ac3f7, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 1
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Adding made Super Simple IV
+      iD: 10.12.08
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 09ae8e2f6c9ecf345a6cc31366190521, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Multiplying with Decimals I
+      iD: 10.12.09
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: c6cf6738eecb535469993f85560016eb, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 1
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Multiplying made Super Simple II
+      iD: 10.12.10
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 321fc52d1b413a8479242c76c2ddf2ac, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 1
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Dividing with Decimals I
+      iD: 10.12.11
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 5d7ff4d9dba00844d921a1cefb0c73e1, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Mixed Operations made Super Simple II
+      iD: 10.12.12
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 1
+        isPercentage: 0
+        jsonData: {fileID: 4900000, guid: c1eef73da8c1de1459f3fa1d7a823d92, type: 3}
+        showMultiplicationTable: 1
+        showFriendTable: 1
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Adding made Super Simple V
+      iD: 10.12.13
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 3c4e47cc5c8607a47960e387db32e135, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 1
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Adding made Super Simple VI
+      iD: 10.12.14
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 98c6e62c8f1e19548b9453b866034085, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 1
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Multiplying made Super Simple III
+      iD: 10.12.15
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 4c5d0cd1a509d6a47aa23255a98ae992, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 1
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Mixed Operations made Super Simple III
+      iD: 10.12.16
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 1
+        isPercentage: 0
+        jsonData: {fileID: 4900000, guid: 59d2e27ee17486045954902af877dbcf, type: 3}
+        showMultiplicationTable: 1
+        showFriendTable: 1
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Multiplying with Decimals II
+      iD: 10.12.17
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 63bba1a3d7597f84dab2f516e877fd48, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 1
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Dividing with Decimals II
+      iD: 10.12.18
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 1
+        jsonData: {fileID: 4900000, guid: 41eda39707594f143aa0125232a0d090, type: 3}
+        showMutilplicationTable: 1
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Mixed Operations made Super Simple IV
+      iD: 10.12.19
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 1
+        isPercentage: 0
+        jsonData: {fileID: 4900000, guid: d9675cc054134ff458203c7120f0ee5f, type: 3}
+        showMultiplicationTable: 1
+        showFriendTable: 1
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0
+    - activityName: Speed Writing
+      iD: 10.12.20
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 1
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 0
+        sudokuDifficultiMode: 0
+        mazeSize: 0

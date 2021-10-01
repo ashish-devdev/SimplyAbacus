@@ -1,0 +1,37 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"9% of 9603",
+			"result":"0.09*9603",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 8748",
+			"result":"0.09*8748",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 9216",
+			"result":"0.08*9216",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 9176",
+			"result":"0.04*9176",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 2700",
+			"result":"0.04*2700",
+			"status":"unsolved"
+
+		}
+	]
+
+}

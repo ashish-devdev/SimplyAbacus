@@ -1,0 +1,65 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"39.3+65.6-11.9",
+			"result":"39.3+65.6-11.9",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"17.5+74.6-24.4",
+			"result":"17.5+74.6-24.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"15.4+61.3-56.4",
+			"result":"15.4+61.3-56.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"96.2-36.1+71.4",
+			"result":"96.2-36.1+71.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"96.6-88.7+32.5",
+			"result":"96.6-88.7+32.5",
+			"status":"unsolved"
+		},
+		{
+			"problem":"79.9-29.3+27.2",
+			"result":"79.9-29.3+27.2",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"53.2+21.2-40.4",
+			"result":"53.2+21.2-40.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"42.5-27.6+27.6",
+			"result":"42.5-27.6+27.6",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"46.4+85.2-75.6",
+			"result":"46.4+85.2-75.6",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"44.7+57.5-95.1",
+			"result":"44.7+57.5-95.1",
+			"status":"unsolved"
+		}
+	]
+
+}

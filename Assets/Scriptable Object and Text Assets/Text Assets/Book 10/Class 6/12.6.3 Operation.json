@@ -1,0 +1,78 @@
+ {
+	"Add":
+	[		
+	
+		{
+			"num_of_oprations":12,
+			"numbers":[9563,7640,-7681,8668,8962,-8601,-8988,1846,8815,9135,3798,7961],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":12,
+			"numbers":[4863,6465,7106,-2874,-8922,-1872,5183,-5570,8428,-8388,-5397,7493],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":12,
+			"numbers":[7066,-4542,7176,-1205,-3047,-3688,9456,-6679,9029,-2833,1765,9496],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":12,
+			"numbers":[5010,-1979,-1419,4970,-3581,8495,-8027,-3194,2981,1058,-1099,2086],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{	
+			"num_of_oprations":12,
+			"numbers":[5036,-3633,6826,8321,-4436,-6185,2553,-4213,3835,8749,8281,-6104],
+			"Result":1,
+			"status":"unsolved"
+		}, 
+		
+		{
+			"num_of_oprations":8,
+			"numbers":[4436,6185,2553,-7213,-3835,8749,8181,-6104,-5891],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{ 
+	
+			"num_of_oprations":8,
+			"numbers":[1312,4008,-2340,5290,6531,-9736,1234,-4690,9095],
+			"Result":2,
+			"status":"unsolved"
+		},
+		
+		{
+			"num_of_oprations":8,
+			"numbers":[5250,5544,3768,9990,-1485,-7600,9345,-5717,-6999],
+			"Result":3,
+			"status":"unsolved"
+		},
+
+		{
+			"num_of_oprations":8,
+			"numbers":[1913,-1445,6615,6399,-4476,-7175,5504,8454,-7040],
+			"Result":4,
+			"status":"unsolved"
+		},
+
+		{	
+			"num_of_oprations":8,
+			"numbers":[5463,7467,-6745,-1659,8535,-6358,-6145,4222,4262],
+			"Result":1,
+			"status":"unsolved"
+		}
+	]
+
+}

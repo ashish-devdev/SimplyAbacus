@@ -1,0 +1,66 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"40% of 90+(1/5)+28.5",
+			"result":"(0.4*90)+(1/5)+28.5",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"50% of 80+(2/5)+40.4",
+			"result":"(0.5*80)+(2/5)+40.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"60% of 70+(3/5)-24.8",
+			"result":"(0.6*70)+(3/5)-24.8",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"70% of 60+(4/5)-35.4",
+			"result":"(0.7*60)+(4/5)-35.4",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"80% of 80-(1/5)-10.65",
+			"result":"(0.8*80)-(1/5)-10.65",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(1/5)+90% of 200+85.6",
+			"result":"(1/5)+(0.9*200)+85.6",
+			"status":"unsolved"
+		},
+		{
+			"problem":"(2/5)+50% of 90+19.5",
+			"result":"(2/5)+(0.5*90)+19.5",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(3/5)+25% of 36+64.8",
+			"result":"(3/5)+(0.25*36)+64.8",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(4/5)+60% of 80+95.9",
+			"result":"(4/5)+(0.6*80)+95.9",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"89.98+(4/5)+80% of 50",
+			"result":"89.98+(4/5)+(0.8*50)",
+			"status":"unsolved"
+		}
+
+	]
+
+}

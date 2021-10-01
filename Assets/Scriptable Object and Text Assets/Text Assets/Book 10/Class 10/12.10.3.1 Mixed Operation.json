@@ -1,0 +1,36 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"40.8+46.8-59.2",
+			"result":"40.8+46.8-59.2",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"10.584.8-16.9",
+			"result":"10.584.8-16.9",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"31.4+74.2-89.1",
+			"result":"31.4+74.2-89.1",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"76.3-40.4+12.6",
+			"result":"76.3-40.4+12.6",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"27.2+97.3-50.7",
+			"result":"27.2+97.3-50.7",
+			"status":"unsolved"
+		}
+	]
+
+}

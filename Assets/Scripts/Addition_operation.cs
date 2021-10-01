@@ -277,7 +277,7 @@ public class Addition_operation : MonoBehaviour
         resultRectBG.anchorMax = new Vector2(0.906f, 0.9144f);
         resultRectBG.offsetMin = new Vector2(0, 0);
         resultRectBG.offsetMax = new Vector2(0, 0);
-        orignalFontSize = 75;
+        orignalFontSize = 68;
         updatedFontSize = orignalFontSize;
     }
 
@@ -346,7 +346,7 @@ public class Addition_operation : MonoBehaviour
             {
                 OperationNumbers_PARENT.GetChild(i).GetComponent<TextMeshProUGUI>().text = numbers[i].ToString();
                 if (isLong)
-                    OperationNumbers_PARENT.GetChild(i).GetComponent<TextMeshProUGUI>().fontSize = 75;
+                    OperationNumbers_PARENT.GetChild(i).GetComponent<TextMeshProUGUI>().fontSize = 68;
             }
             else
             {

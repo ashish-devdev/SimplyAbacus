@@ -1,0 +1,187 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"8% of 5864",
+			"result":"0.08*5864",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 4984",
+			"result":"0.04*4984",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 4691",
+			"result":"0.07*4691",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 7680",
+			"result":"0.08*7680",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 2660",
+			"result":"0.04*2660",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 2100",
+			"result":"0.07*2100",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"6% of 6078",
+			"result":"0.06*6078",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 9603",
+			"result":"0.09*9603",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 8748",
+			"result":"0.09*8748",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 9126",
+			"result":"0.08*9126",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 5544",
+			"result":"0.09*5544",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 1953",
+			"result":"0.09*1953",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 3087",
+			"result":"0.09*3087",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 5584",
+			"result":"0.08*5584",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 3768",
+			"result":"0.08*3768",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 2874",
+			"result":"0.03*2874",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 3168",
+			"result":"0.09*3168",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 7614",
+			"result":"0.03*7614",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"2% of 6052",
+			"result":"0.02*6052",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 6012",
+			"result":"0.04*6012",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 48888",
+			"result":"0.08*48888",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 33680",
+			"result":"0.05*33680",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"2% of 30065",
+			"result":"0.02*30065",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"6% of 76656",
+			"result":"0.06*76656",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 42882",
+			"result":"0.04*42882",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 44613",
+			"result":"0.05*44613",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"2% of 27930",
+			"result":"0.02*27930",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 57429",
+			"result":"0.09*57429",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 43284",
+			"result":"0.03*43284",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"2% of 94408",
+			"result":"0.02*94408",
+			"status":"unsolved"
+
+		}
+	]
+
+}

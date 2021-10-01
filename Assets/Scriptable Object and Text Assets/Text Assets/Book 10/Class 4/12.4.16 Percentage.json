@@ -1,0 +1,131 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"7% of 8667",
+			"result":"0.07*8667",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 1871",
+			"result":"0.05*1871",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 3367",
+			"result":"0.03*3367",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 3606",
+			"result":"0.05*3606",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"6% of 3046",
+			"result":"0.06*3046",
+			"status":"unsolved"
+
+		},
+
+		{
+			"problem":"2% of 2619",
+			"result":"0.02*2619",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 2752",
+			"result":"0.07*2752",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 5356",
+			"result":"0.07*5356",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 9415",
+			"result":"0.05*9415",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 1256",
+			"result":"0.04*1256",
+			"status":"unsolved"
+
+		},
+
+		{
+			"problem":"2% of 1897",
+			"result":"0.02*1897",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"4% of 4888",
+			"result":"0.04*4888",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 1043",
+			"result":"0.05*1043",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 9975",
+			"result":"0.08*9975",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 7706",
+			"result":"0.07*7706",
+			"status":"unsolved"
+
+		},
+
+		{
+			"problem":"4% of 9735",
+			"result":"0.04*9735",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 4140",
+			"result":"0.03*4140",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 509",
+			"result":"0.07*509",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"3% of 2515",
+			"result":"0.03*2515",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"5% of 1790",
+			"result":"0.05*1790",
+			"status":"unsolved"
+
+		}
+
+	]
+
+}

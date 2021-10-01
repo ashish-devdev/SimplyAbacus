@@ -2236,6 +2236,7 @@ public class Activity : MonoBehaviour
                         {
                             tempclassParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].mixedMathematicalOperations2 = new MixedMathematicalOperations2() { id = classActivityList[i].classData.activityList[j].iD };
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1 = new MixedMathematicalOperations1();
+                            print(i + "" + j);
                             tempclassParent.classActivityCompletionHolderList[i].classData.activityList[j].mixedMathematicalOperations1.completed = new bool[JsonUtility.FromJson<MixedOpeartionJsonWrapper>(classActivityList[i].classData.activityList[j].mixedMathematicalOperations.jsonData.text).operation.Length];
                         }
 

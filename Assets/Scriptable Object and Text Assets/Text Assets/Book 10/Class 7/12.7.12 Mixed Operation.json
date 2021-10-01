@@ -1,0 +1,66 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"(3/4)+9% of 200+12.67",
+			"result":"(3/4)+(0.09*200)+12.67",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(1/2)+35.72+11% of 300",
+			"result":"(1/2)+35.72+(0.11*300)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"85.65+(1/4)+20% of 180",
+			"result":"85.65+(1/4)+(0.2*180)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"65.74+25% of 40-(3/4)",
+			"result":"65.74+(0.25*40)-(3/4)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"372.65+15% of 80+(1/2)",
+			"result":"372.65+(0.15*80)+(1/2)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"143.7-(1/2)+13% of 300",
+			"result":"143.7-(1/2)+(0.13*300)",
+			"status":"unsolved"
+		},
+		{
+			"problem":"75.69+(3/4)-6% of 200",
+			"result":"75.69+(3/4)+(0.06*200)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"7% of 300-(1/4)+63.79",
+			"result":"(0.07*300)-(1/4)+63.79",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"8% of 300-(1/2)+24.6",
+			"result":"(0.08*300)-(1/2)+24.6",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(3/4)+85.67+3% of 300",
+			"result":"(3/4)+85.67+(0.03*300)",
+			"status":"unsolved"
+		}
+
+	]
+
+}

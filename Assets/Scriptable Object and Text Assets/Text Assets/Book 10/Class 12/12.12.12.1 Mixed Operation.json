@@ -1,0 +1,65 @@
+{
+	"operation":
+	[	
+
+		{
+			"problem":"14% of 200+(3/5)-10.45",
+			"result":"(0.14*200)+(3/5)-10.45",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"9% of 300-(4/5)+30.78",
+			"result":"(0.09*300)-(4/5)+30.78",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(1/5)+30.45+3% of 200",
+			"result":"(1/5)+30.45+(0.03*200)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(2/5)+456.9+4% of 150",
+			"result":"(2/5)+456.9+(0.04*150)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"(3/5)+4.654-2% of 200",
+			"result":"(3/5)+4.654-(0.02*200)",
+			"status":"unsolved"
+		},
+		{
+			"problem":"(4/5)+4.86+5% of 200",
+			"result":"(4/5)+4.86+(0.05*200)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"494.4+(1/5)-8% of 800",
+			"result":"494.4+(1/5)-(0.08*800)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"85.94+(2/5)-9% of 200",
+			"result":"85.94+(2/5)-(0.09*200)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"204.65-(3/5)+16% of 200",
+			"result":"204.65-(3/5)+(0.16*200)",
+			"status":"unsolved"
+
+		},
+		{
+			"problem":"319.6-(4/5)-30% of 80",
+			"result":"319.6-(4/5)-(0.3*80)",
+			"status":"unsolved"
+		}
+	]
+
+}
