@@ -400,6 +400,16 @@ public class VisualAdditionOperation : MonoBehaviour
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
 
                         jsonData = JsonUtility.FromJson<AdditionJsonWrapper>(activityScriptInstance.classActivityList[i].classData.activityList[j].visualHands.abacusOperations.text);
+
+                        for (int g = 0; g < jsonData.Add.Length; g++)
+                        {
+                            if (jsonData.Add[g].num_of_oprations != jsonData.Add[g].numbers.Length)
+                            {
+                                print("false" + g);
+                            }
+                        }
+
+
                         ResetBar.OnReset += ResetClicked;
                         reset.onClick.AddListener(ResetClicked);
                         nextOperationBtn.onClick.AddListener(ResetClicked);

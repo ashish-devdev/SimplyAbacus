@@ -39,7 +39,7 @@
 		}, 
 		
 		{
-			"num_of_oprations":8,
+			"num_of_oprations":7,
 			"numbers":[7600,9349,-5717,-6999,-1445,6612,6399],
 			"Result":4,
 			"status":"unsolved"

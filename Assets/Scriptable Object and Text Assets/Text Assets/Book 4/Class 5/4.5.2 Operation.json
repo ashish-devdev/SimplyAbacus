@@ -196,7 +196,7 @@
 		},
 
 		{
-			"num_of_oprations":4,
+			"num_of_oprations":3,
 			"numbers":[9,1,-8],
 			"Result":2,
 			"status":"unsolved"

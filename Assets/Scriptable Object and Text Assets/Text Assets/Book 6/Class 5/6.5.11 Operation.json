@@ -3,7 +3,7 @@
 	[		
 	
 		{
-			"num_of_oprations":8,
+			"num_of_oprations":9,
 			"numbers":[80,60,-61,71,45,-10,34,-11,66],
 			"Result":4,
 			"status":"unsolved"

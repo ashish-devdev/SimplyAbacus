@@ -210,6 +210,17 @@ public class Addition_operation : MonoBehaviour
                         abacusOperations2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations;
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
                         jsonData = JsonUtility.FromJson<AdditionJsonWrapper>(activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text);
+
+                        for (int g = 0; g < jsonData.Add.Length; g++)
+                        {
+                            if (jsonData.Add[g].num_of_oprations != jsonData.Add[g].numbers.Length)
+                            {
+                                print("false" + g);
+                            }
+                        }
+
+
+
                         ResetBar.OnReset += ResetClicked;
                         reset.onClick.AddListener(ResetClicked);
                         nextOperationBtn.onClick.AddListener(ResetClicked);

@@ -51,7 +51,7 @@
 		},
 
 		{
-			"num_of_oprations":4,
+			"num_of_oprations":3,
 			"numbers":[6,-2,2],
 			"Result":2,
 			"status":"unsolved"

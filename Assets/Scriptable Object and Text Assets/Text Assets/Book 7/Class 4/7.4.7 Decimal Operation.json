@@ -24,7 +24,7 @@
 		},
 
 		{
-			"num_of_oprations":10,
+			"num_of_oprations":9,
 			"numbers":[6.6,-0.7,9.8,-0.5,-8.9,-6.1,8.5,9.6,-1.2],
 			"Result":4,
 			"status":"unsolved"

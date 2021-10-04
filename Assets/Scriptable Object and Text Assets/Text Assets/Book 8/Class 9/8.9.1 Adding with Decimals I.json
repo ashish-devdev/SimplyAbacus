@@ -32,7 +32,7 @@
 		},
 
 		{	
-			"num_of_oprations":10,
+			"num_of_oprations":9,
 			"numbers":[70.2,39.9,60.9,-69.8,56.6,31.4,-24.6,16.4,22.8],
 			"Result":1,
 			"status":"unsolved"
