@@ -81,7 +81,7 @@ MonoBehaviour:
         showFriendTable: 0
       tutorialVideo:
         active: 1
-        URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/UpdatedVideos_16_09_21/Introduction+to+Abacus.mp4
+        URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/UpdatedVideos_19_10_21_16_44/Introduction+to+Abacus.mp4
         time: 30
       animatingCountingTutorial:
         active: 0

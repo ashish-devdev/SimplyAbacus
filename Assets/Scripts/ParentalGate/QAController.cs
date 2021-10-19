@@ -22,7 +22,7 @@ public class QAController : MonoBehaviour
     int temp;
     private void Start()
     {
-        qAs = JsonHelper.FromJson<QA>(questionsAndAnswers.ToString());
+        qAs = MyJsonHelper.FromJson<QA>(questionsAndAnswers.ToString());
         temp = 0;
         // LoadQuestion();
     }
