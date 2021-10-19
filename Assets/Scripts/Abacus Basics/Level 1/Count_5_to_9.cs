@@ -263,7 +263,6 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-
                     }
                     if (ValueCalculator.value == 5)
                     {
@@ -272,7 +271,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
-
+                        sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
 
@@ -296,6 +295,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 0)
             {
 
+                sidenoteText.text = notificationData[currentTask];
 
 
                 //finger down animation
@@ -395,6 +395,8 @@ public class Count_5_to_9 : MonoBehaviour
                     Invoke("DelayedleanPulseFingerUpAnimation", 0.5f);
                     Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
 
+                    sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
+
                     //move finger up
                     //move thumb down
                 }
@@ -408,6 +410,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                      */
 
+                    sidenoteText.text = notificationData[currentTask];
 
 
                     beed5.GetComponent<BoxCollider>().enabled = true;
@@ -444,6 +447,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                     indexDownAnimatingSprite.transform.gameObject.SetActive(true);
 
+                    sidenoteText.text = notificationData[currentTask];
 
                     beed5.GetComponent<BoxCollider>().enabled = true;
                     beed1.GetComponent<BoxCollider>().enabled = false;
@@ -490,15 +494,14 @@ public class Count_5_to_9 : MonoBehaviour
                     indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                    sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
+
                 }
 
             }
 
             if (ValueCalculator.value == 6 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
-
-
-
 
                 beed5.GetComponent<BoxCollider>().enabled = true;
 
@@ -522,6 +525,7 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
+                sidenoteText.text = notificationData[currentTask];
 
 
                 beed1.GetComponent<BoxCollider>().enabled = false;
@@ -551,6 +555,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 7)
             {
 
+                sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
 
@@ -630,6 +635,7 @@ public class Count_5_to_9 : MonoBehaviour
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                     thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
 
+                    sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
                 }
 
@@ -684,6 +690,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                        sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
                     }
@@ -730,6 +737,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                         Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
+                        sidenoteText.text = notificationData[currentTask];
 
 
 
@@ -763,6 +771,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                        sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
                     }
@@ -778,6 +787,7 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (ValueCalculator.value == 0)
             {
+                sidenoteText.text = notificationData[currentTask];
 
                 beed5.GetComponent<BoxCollider>().enabled = true;
                 beed1.GetComponent<BoxCollider>().enabled = false;
@@ -794,6 +804,8 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 beed5.GetComponent<BoxCollider>().enabled = true;
                 beed3.GetComponent<BoxCollider>().enabled = false;
+                sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
+
             }
 
             if (ValueCalculator.value == 3)
@@ -837,6 +849,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                 currentResetAnimation = resetCount4Animation;
                 Invoke("DelyedInvoke", 0.5f);
+                sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
             }
         }
@@ -858,6 +871,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                         Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        sidenoteText.text = notificationData[currentTask];
 
 
 
@@ -892,6 +906,7 @@ public class Count_5_to_9 : MonoBehaviour
                         indexDownAnimatingSprite.transform.gameObject.SetActive(false);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
                         thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                        sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
                     }
@@ -919,6 +934,8 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (ValueCalculator.value == 0)
             {
+                sidenoteText.text = notificationData[currentTask];
+
                 beed1.GetComponent<BoxCollider>().enabled = false;
                 beed5.GetComponent<BoxCollider>().enabled = true;
                 beed4.GetComponent<BoxCollider>().enabled = false;
@@ -932,6 +949,8 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 beed5.GetComponent<BoxCollider>().enabled = true;
                 beed4.GetComponent<BoxCollider>().enabled = false;
+                sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
+
             }
             if (ValueCalculator.value == 4)
             {
@@ -977,6 +996,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                 currentResetAnimation = resetCount5Animation;
                 Invoke("DelyedInvoke", 0.5f);
+                sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
             }
         }

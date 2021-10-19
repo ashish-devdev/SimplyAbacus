@@ -42,6 +42,7 @@ public class Addition_operation : MonoBehaviour
     public ValueCalculator valueClaculator;
 
     public Button reset;
+    public Button resetGraphicBtn;
     public GameObject sideNote;
     public GameObject CongratulationPannel;
     public string Congratulation_message;
@@ -85,78 +86,6 @@ public class Addition_operation : MonoBehaviour
     {
 
         Invoke("InvokeOnenableAfterDelay", 0.01f);
-
-        //orignalFontSize = OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize;
-        //updatedFontSize= orignalFontSize + 10;
-
-        //Problem_Number = 0;
-        //notificationText.text = "perform the operation";
-        //for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
-        //{
-        //    if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
-        //    {
-        //        for (int j = 0; j < activityScriptInstance.classActivityList[i].classData.activityList.Count; j++)
-        //        {
-        //            if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.active==true && activityScriptInstance.classActivityList[i].classData.activityList[j].activityName == ClassManager.currentActivityName)
-        //            {
-        //                for (int m = 0; m < Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations.Length; m++)
-        //                {
-        //                    if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[m] == true)
-        //                        Problem_Number++;
-        //                }
-        //                if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.showFriendTable)
-        //                    friendTableBtn.SetActive(true);
-        //                else
-        //                    friendTableBtn.SetActive(false);
-        //                if (activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.showMultiplicationTable)
-        //                    mulyiplicationTableBtn.SetActive(true);
-        //                else
-        //                    mulyiplicationTableBtn.SetActive(false);
-
-        //                abacusOperations2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].abacusOperations;
-        //                activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
-        //                jsonData = JsonUtility.FromJson<AdditionJsonWrapper>(activityScriptInstance.classActivityList[i].classData.activityList[j].abacusOperations.jsonData.text);
-        //                ResetBar.OnReset += ResetClicked;
-        //                reset.onClick.AddListener(ResetClicked);
-        //                nextOperationBtn.onClick.AddListener(ResetClicked);
-        //                MoveBeeds_1.dosomthing += compare_abacus_and_operation_value;
-        //                MoveBeeds_2.dosomthing += compare_abacus_and_operation_value;
-        //                performNext = true;
-        //                if (Problem_Number >= jsonData.Add.Length)
-        //                {
-        //                    for (int m = 0; m < Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations.Length; m++)
-        //                    {
-        //                        if (Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[m] == true)
-        //                            Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].abacusOperations[m] = false;
-        //                    }
-        //                    Problem_Number = 0;
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
-
-
-        //loadingBar.Data.FillAmount = (Problem_Number / (jsonData.Add.Length * 1f));
-        //loadingBar.BeginAllTransitions();
-
-        ////loadingBar.Data.SizeDelta.x = (Problem_Number / (jsonData.Add.Length * 1f)) * 500;
-        ////loadingBar.BeginAllTransitions();
-
-
-        ////jsonData = JsonUtility.FromJson<AdditionJsonWrapper>(addition_json_data.text);
-        ////ResetBar.OnReset += ResetClicked;
-        ////reset.onClick.AddListener(ResetClicked);
-        ////MoveBeeds_1.dosomthing += compare_abacus_and_operation_value;
-        ////MoveBeeds_2.dosomthing += compare_abacus_and_operation_value;
-        ////performNext = true;
-        ////if (Problem_Number >= jsonData.Add.Length)
-        ////{
-        ////    Problem_Number = 0;
-        ////}
-
-
-        //notificationBtn.onClick.AddListener(StartTimer);
 
     }
 
@@ -223,6 +152,8 @@ public class Addition_operation : MonoBehaviour
 
                         ResetBar.OnReset += ResetClicked;
                         reset.onClick.AddListener(ResetClicked);
+                        resetGraphicBtn.onClick.AddListener(ResetClicked);
+
                         nextOperationBtn.onClick.AddListener(ResetClicked);
                         MoveBeeds_1.dosomthing += compare_abacus_and_operation_value;
                         MoveBeeds_2.dosomthing += compare_abacus_and_operation_value;
@@ -297,13 +228,57 @@ public class Addition_operation : MonoBehaviour
         Timer.savedTime = abacusOperations2.currentSavedTime;
         timer_gamObject.SetActive(true);
 
-    }
 
+    }
 
     void Start()
     {
 
 
+    }
+
+    public void ResetActivity()
+    {
+        Problem_Number = 0;
+        performNext = true;
+        loadingBar.Data.FillAmount = (Problem_Number / (jsonData.Add.Length * 1f));
+        loadingBar.BeginAllTransitions();
+
+        for (int i = 0; i < OperationNumbers_PARENT.childCount; i++)
+        {
+            if (OperationNumbers_PARENT.GetChild(i).CompareTag("NumberClone"))
+            {
+                Destroy(OperationNumbers_PARENT.GetChild(i).gameObject);
+
+            }
+        }
+
+        for (int m = 0; m < activityList1.abacusOperations.Length; m++)
+        {
+            if (activityList1.abacusOperations[m] == true)
+                activityList1.abacusOperations[m] = false;
+        }
+
+        OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().color = Color.white;
+        OperationNumbers_PARENT.GetChild(suboperationIndex).GetComponent<TextMeshProUGUI>().fontSize = orignalFontSize;
+
+
+        OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().color = Color.red;
+        if (isLong)
+            OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = 75;
+        else
+            OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = updatedFontSize;
+
+        sub_operation_output = jsonData.Add[Problem_Number].numbers[0];
+        suboperationIndex = 0;
+
+        for (int i = 0; i < jsonData.Add.Length; i++)
+        {
+            jsonData.Add[i].status = "unsolved";
+        }
+
+        SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
+        SaveManager.Instance.saveDataToDisk(Activity.classParent);
     }
 
     void LateUpdate()
@@ -329,12 +304,13 @@ public class Addition_operation : MonoBehaviour
 
     }
 
-
     void CreateAnOperation(int num_of_oprations, double[] numbers, double Result)
     {
         int decimalPlace;
         int maxDigit;
         int p = 0;
+        resetGraphicBtn.interactable=true;
+
         MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
 
         Result_text.rectTransform.localPosition = new Vector3(Result_text.transform.localPosition.x, 0, Result_text.transform.localPosition.z);// Result_text.transform.localPosition = new Vector3(Result_text.transform.localPosition.x, -200, Result_text.transform.localPosition.z);
@@ -397,6 +373,7 @@ public class Addition_operation : MonoBehaviour
         {
             CongratulationText.text = Congratulation_message;
             leanCongratulation.TurnOn();// CongratulationPannel.SetActive(true);
+            resetGraphicBtn.gameObject.SetActive(false);
             OperationNumbers_PARENT.gameObject.SetActive(false);
             abacusOperations2.currentSavedTime = 0;
             //activityList1.abacusOperations = true;
@@ -408,7 +385,7 @@ public class Addition_operation : MonoBehaviour
             }
             else if (abacusOperations2.bestTime > Timer.currentTime)
             {
-                print(5555);
+
                 abacusOperations2.bestTime = Timer.currentTime;
                 abacusOperations2.bestTime_string = Timer.timerText.text;
                 SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
@@ -453,6 +430,7 @@ public class Addition_operation : MonoBehaviour
             {
                 CongratulationText.text = Congratulation_message;
                 leanCongratulation.TurnOn();// CongratulationPannel.SetActive(true);
+                resetGraphicBtn.gameObject.SetActive(false);
                 OperationNumbers_PARENT.gameObject.SetActive(false);
                 leanSideNote.TurnOff();//sideNote.SetActive(false);
                 //activityList1.abacusOperations = true;
@@ -498,8 +476,6 @@ public class Addition_operation : MonoBehaviour
 
     }
 
-
-
     void compare_abacus_and_operation_value()
     {
         if (RemoveExtraDecimalZeros(sub_operation_output.ToString()) == RemoveExtraDecimalZeros(ValueCalculator.value1.ToString(valueClaculator.decimalPlaceString)))
@@ -526,6 +502,8 @@ public class Addition_operation : MonoBehaviour
                 sub_operation_output = -1;
                 nextOperationBtn.gameObject.transform.parent.gameObject.SetActive(true);
                 reset.interactable = false;
+                resetGraphicBtn.interactable = false;
+
             }
             else if (sub_operation_output == -1)
             {
@@ -550,7 +528,6 @@ public class Addition_operation : MonoBehaviour
 
     }
 
-
     private void OnDisable()
     {
         OperationNumbers_PARENT.GetChild(0).GetComponent<TextMeshProUGUI>().fontSize = orignalFontSize;
@@ -562,7 +539,9 @@ public class Addition_operation : MonoBehaviour
         MoveBeeds_1.dosomthing -= compare_abacus_and_operation_value;
         MoveBeeds_2.dosomthing -= compare_abacus_and_operation_value;
         reset.interactable = true;
+        resetGraphicBtn.interactable = true;
         reset.onClick.RemoveListener(ResetClicked);
+        resetGraphicBtn.onClick.RemoveListener(ResetClicked);
         nextOperationBtn.onClick.RemoveListener(ResetClicked);
         SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
         ResetBar.OnReset -= ResetClicked;
@@ -613,6 +592,7 @@ public class Addition_operation : MonoBehaviour
         numberParentRectBG.offsetMax = new Vector2(0, 0);
 
     }
+
     public string RemoveExtraDecimalZeros(string str)
     {
         try
@@ -654,8 +634,6 @@ public class Addition_operation : MonoBehaviour
 
         return decimalPlaceString[decimalPlace];
     }
-
-
     public int FindMaxDigits(double[] numbers)
     {
         int maxDigits = 0;

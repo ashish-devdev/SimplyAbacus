@@ -35,6 +35,7 @@ public class Multiplication_operation : MonoBehaviour
     public Transform OperationNumbers_PARENT;
 
     public Button reset;
+    public Button resetGraphicBtn;
 
     int Problem_Number = 0;
 
@@ -145,6 +146,7 @@ public class Multiplication_operation : MonoBehaviour
 
         ResetBar.OnReset += ResetClicked;
         reset.onClick.AddListener(ResetClicked);
+        resetGraphicBtn.onClick.AddListener(ResetClicked);
         MoveBeeds_1.dosomthing += compare_abacus_and_operation_value;
         MoveBeeds_2.dosomthing += compare_abacus_and_operation_value;
 
@@ -366,12 +368,14 @@ public class Multiplication_operation : MonoBehaviour
             // OperationNumbers_PARENT.GetChild(1).GetComponent<TextMeshProUGUI>().color = Color.white;
             nextOperationBtnGameObject.SetActive(true);
             reset.interactable = false;
+            resetGraphicBtn.interactable = false;
             if (Problem_Number == jsonData.Mul.Length - 1)
             {
                 nextOperationBtnGameObject.SetActive(false);
 
                 CongratulationText.text = Congratulation_message;
                 leanCongratulation.TurnOn();
+                resetGraphicBtn.gameObject.SetActive(false);
                 OperationNumbers_PARENT.gameObject.SetActive(false);
                 leanSideNote.TurnOff();
                 timer_gamObject.SetActive(false);
@@ -452,6 +456,7 @@ public class Multiplication_operation : MonoBehaviour
         MoveBeeds_1.dosomthing -= compare_abacus_and_operation_value;
         MoveBeeds_2.dosomthing -= compare_abacus_and_operation_value;
         reset.onClick.RemoveListener(ResetClicked);
+        resetGraphicBtn.onClick.RemoveListener(ResetClicked);
         ResetBar.OnReset -= ResetClicked;
         SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
         //  nextOperationBtn.onClick.RemoveListener(DisplayProblem);
@@ -460,6 +465,7 @@ public class Multiplication_operation : MonoBehaviour
         multplicationTable.SetActive(false);
         timer_gamObject.SetActive(false);
         reset.interactable = true;
+        resetGraphicBtn.interactable = true;
         valueCalculator.decimalPlaceString = "F2";
         valueCalculator.numberOfDecimalPlaces = 2;
 

@@ -1,7 +1,10 @@
 ﻿using Lean.Gui;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UIElements;
 using UnityEngine.Video;
 
@@ -20,6 +23,12 @@ public class TutorialVideo : MonoBehaviour
     public Back BACK;
     bool videoCompleted;
     float tempTime = 0;
+    string currentBook;
+    string currentClass;
+    string currentActivity;
+    string remoteURL;
+
+
     private void OnEnable()
     {
         startVideo = false;
@@ -33,7 +42,10 @@ public class TutorialVideo : MonoBehaviour
                 {
                     if (activityScriptInstance.classActivityList[i].classData.activityList[j].tutorialVideo.active == true && ClassManager.currentActivityIndex == j)
                     {
-                        videoPlayer.url = activityScriptInstance.classActivityList[i].classData.activityList[j].tutorialVideo.URL;
+                        currentClass = ClassManager.currentClassName;
+                        currentActivity = ClassManager.currentActivityIndex.ToString();
+
+                        remoteURL = activityScriptInstance.classActivityList[i].classData.activityList[j].tutorialVideo.URL;
                         lengthOfTheVedioInSeconds = activityScriptInstance.classActivityList[i].classData.activityList[j].tutorialVideo.time;
                         videoStats = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].tutorialVideo2;
                         videoData = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j].tutorialVideo1;
@@ -46,11 +58,15 @@ public class TutorialVideo : MonoBehaviour
                 }
             }
         }
-        videoPlayer.Prepare();
-        
-        Invoke("StartVideo", 4f);
+        //videoPlayer.Prepare();
+
+       // Invoke("StartVideo", 4f);
         videoCompleted = false;
         tempTime = 0;
+        StartCoroutine(this.loadVideoFromThisURL(remoteURL));
+
+
+
     }
 
     // Update is called once per frame
@@ -59,7 +75,7 @@ public class TutorialVideo : MonoBehaviour
 
         if (startVideo)
         {
-            
+
 
             if (videoPlayer.time >= lengthOfTheVedioInSeconds - lengthOfTheVedioInSeconds + 5)
             {
@@ -92,7 +108,7 @@ public class TutorialVideo : MonoBehaviour
 
         }
 
-        if (videoPlayer.time >= lengthOfTheVedioInSeconds-1 || videoCompleted)
+        if (videoPlayer.time >= lengthOfTheVedioInSeconds - 1 || videoCompleted)
         {
             videoCompleted = true;
             tempTime++;
@@ -128,5 +144,84 @@ public class TutorialVideo : MonoBehaviour
 
 
     }
+
+
+    private IEnumerator loadVideoFromThisURL(string _url)
+    {
+        StartVideo();
+        string _pathToFile = Path.Combine(Application.persistentDataPath, "Video");
+        _pathToFile = Path.Combine(_pathToFile, currentClass);
+        _pathToFile = Path.Combine(_pathToFile, currentActivity + ".mp4");
+
+        if (File.Exists(_pathToFile))
+        {
+            StartCoroutine(this.playVideoInThisURL(_pathToFile));
+            yield return null;
+        }
+        else
+        {
+
+            UnityWebRequest _videoRequest = UnityWebRequest.Get(_url);
+            yield return _videoRequest.SendWebRequest();
+
+            if (_videoRequest.isDone == false || _videoRequest.error != null)
+            {
+                yield return null;
+            }
+            else
+            {
+                Debug.Log("Video Done - " + _videoRequest.isDone);
+                byte[] _videoBytes = _videoRequest.downloadHandler.data;
+                Directory.CreateDirectory(Path.Combine(Application.persistentDataPath, "Video"));
+                Directory.CreateDirectory(Path.Combine(Path.Combine(Application.persistentDataPath, "Video"),currentClass));
+                File.Create(Path.Combine(Path.Combine(Path.Combine(Application.persistentDataPath, "Video"), currentClass),currentActivity+".mp4"));
+
+                //FileStream fileStream = File.Open(_pathToFile, FileMode.Open, FileAccess.Write);
+              
+
+                int numAttempts = 0;
+                int maxAttempts = 100;
+                bool madeFile = false;
+                while (!madeFile)
+                {
+                    try
+                    {
+                        File.WriteAllBytes(_pathToFile, _videoBytes);
+                        madeFile = true;
+                    }
+                    catch (Exception)
+                    {
+                        numAttempts++;
+                        if (numAttempts > maxAttempts)
+                        {
+                            madeFile = true;
+                           // Debug.Log("Could not make file " + fName);
+                        }
+                    }
+                    // Add a small delay to allow the file system to no longer be busy
+                    yield return new WaitForSeconds(0.1f);
+                }
+              //  fileStream.Close();
+                StartCoroutine(this.playVideoInThisURL(_pathToFile));
+                yield return null;
+            }
+        }
+    }
+
+    private IEnumerator playVideoInThisURL(string _url)
+    {
+        videoPlayer.source = UnityEngine.Video.VideoSource.Url;
+        videoPlayer.url = _url;
+        videoPlayer.Prepare();
+
+        while (videoPlayer.isPrepared == false)
+        {  
+            yield return null;
+        }
+        videoLoadingScreen.SetActive(false);
+        videoPlayer.Play();
+
+    }
+
 
 }

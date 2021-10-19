@@ -758,8 +758,8 @@ public class StatsDisplayer : MonoBehaviour
                                     }
                                     else
                                     {
-                                        classCompleted = false;
-                                        break;
+                                        //classCompleted = false;
+                                        //break;
                                     }
 
 
