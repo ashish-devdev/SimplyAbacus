@@ -36,6 +36,8 @@ public class Division : MonoBehaviour
     public PositionRodsOfAbacus positionRodsOfAbacus;
 
     public LeanToggle leanCongratulation;
+    public LeanToggle leanforCompletionMessages;
+    public TextMeshProUGUI completionMessageText;
     public LeanToggle leanSideNote;
 
     [System.Serializable]
@@ -188,6 +190,30 @@ public class Division : MonoBehaviour
             problem_number++;
             loadingBar.Data.FillAmount = (problem_number / (jsonData.div.Length * 1f));
             loadingBar.BeginAllTransitions();
+
+            if (jsonData.div.Length >= 10)
+            {
+                if ((((problem_number + 1f) / jsonData.div.Length) >= 0.75f) && (((problem_number + 0f) / jsonData.div.Length) < 0.75f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "Wow, aren’t you a smartie!";
+                    print("done 75");
+                }
+                else if ((((problem_number + 1f) / jsonData.div.Length) >= 0.5f) && (((problem_number + 0f) / jsonData.div.Length) < 0.5f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "You’re getting very good at this";
+
+                    print("done 50");
+                }
+                else if ((((problem_number + 1f) / jsonData.div.Length) >= 0.3f) && (((problem_number + 0f) / jsonData.div.Length) < 0.3f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "Yay, You’re almost done";
+                    print("done 30");
+                }
+            }
+
             nextOperationBtn.transform.parent.gameObject.SetActive(true);
             resultText.text = "Result: " + (ValueCalculator.value1.ToString(decimalStringToCompare));
 

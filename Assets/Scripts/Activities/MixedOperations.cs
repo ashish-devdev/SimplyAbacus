@@ -32,6 +32,8 @@ public class MixedOperations : MonoBehaviour
 
     public LeanImageFillAmount loadingBar;
     public LeanToggle leanCongratulation;
+    public LeanToggle leanforCompletionMessages;
+    public TextMeshProUGUI completionMessageText;
     public LeanToggle leanSideNote;
     public MixedOpeartionJsonWrapper jsonData;
     public Activity activityScriptInstance;
@@ -171,6 +173,31 @@ public class MixedOperations : MonoBehaviour
             Problem_Number++;
             print(123);
 
+            if (jsonData.operation.Length >= 10)
+            {
+                if ((((Problem_Number + 1f) / jsonData.operation.Length) >= 0.75f) && (((Problem_Number + 0f) / jsonData.operation.Length) < 0.75f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "Wow, aren’t you a smartie!";
+                    print("done 75");
+                }
+                else if ((((Problem_Number + 1f) / jsonData.operation.Length) >= 0.5f) && (((Problem_Number + 0f) / jsonData.operation.Length) < 0.5f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "You’re getting very good at this";
+
+                    print("done 50");
+                }
+                else if ((((Problem_Number + 1f) / jsonData.operation.Length) >= 0.3f) && (((Problem_Number + 0f) / jsonData.operation.Length) < 0.3f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "Yay, You’re almost done";
+                    print("done 30");
+                }
+            }
+
+
+
             loadingBar.Data.FillAmount = (Problem_Number / (jsonData.operation.Length * 1f));
             loadingBar.BeginAllTransitions();
 
@@ -187,6 +214,31 @@ public class MixedOperations : MonoBehaviour
             //display next btn
             Problem_Number++;
             print(23);
+
+            if (jsonData.operation.Length >= 10)
+            {
+                if ((((Problem_Number + 1f) / jsonData.operation.Length) >= 0.75f) && (((Problem_Number + 0f) / jsonData.operation.Length) < 0.75f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "Wow, aren’t you a smartie!";
+                    print("done 75");
+                }
+                else if ((((Problem_Number + 1f) / jsonData.operation.Length) >= 0.5f) && (((Problem_Number + 0f) / jsonData.operation.Length) < 0.5f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "You’re getting very good at this";
+
+                    print("done 50");
+                }
+                else if ((((Problem_Number + 1f) / jsonData.operation.Length) >= 0.3f) && (((Problem_Number + 0f) / jsonData.operation.Length) < 0.3f))
+                {
+                    leanforCompletionMessages.TurnOn();
+                    completionMessageText.text = "Yay, You’re almost done";
+                    print("done 30");
+                }
+            }
+
+
 
             loadingBar.Data.FillAmount = (Problem_Number / (jsonData.operation.Length * 1f));
             loadingBar.BeginAllTransitions();

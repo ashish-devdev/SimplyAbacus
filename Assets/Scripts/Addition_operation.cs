@@ -51,6 +51,10 @@ public class Addition_operation : MonoBehaviour
     float total_problems;
 
     public LeanToggle leanCongratulation;
+    public LeanToggle leanforCompletionMessages;
+    public TextMeshProUGUI completionMessageText;
+
+
     public LeanToggle leanSideNote;
     public Timer timer;
     public GameObject timer_gamObject;
@@ -175,6 +179,8 @@ public class Addition_operation : MonoBehaviour
 
         loadingBar.Data.FillAmount = (Problem_Number / (jsonData.Add.Length * 1f));
         loadingBar.BeginAllTransitions();
+
+
 
         //loadingBar.Data.SizeDelta.x = (Problem_Number / (jsonData.Add.Length * 1f)) * 500;
         //loadingBar.BeginAllTransitions();
@@ -309,7 +315,7 @@ public class Addition_operation : MonoBehaviour
         int decimalPlace;
         int maxDigit;
         int p = 0;
-        resetGraphicBtn.interactable=true;
+        resetGraphicBtn.interactable = true;
 
         MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiIntractable();
 
@@ -496,6 +502,30 @@ public class Addition_operation : MonoBehaviour
                 SaveManager.Instance.saveDataToDisk(Activity.classParent);
                 loadingBar.Data.FillAmount = ((Problem_Number + 1) / (jsonData.Add.Length * 1f));
                 MakeGameObjectsUnintractable.MakeAllGameObjectsAndUiUnintractable();
+
+                if (jsonData.Add.Length >= 10)
+                {
+                    if ((((Problem_Number + 1f) / jsonData.Add.Length) >= 0.75f) && (((Problem_Number + 0f) / jsonData.Add.Length) < 0.75f))
+                    {
+                        leanforCompletionMessages.TurnOn();
+                        completionMessageText.text = "Wow, aren’t you a smartie!";
+                        print("done 75");
+                    }
+                    else if ((((Problem_Number + 1f) / jsonData.Add.Length) >= 0.5f) && (((Problem_Number + 0f) / jsonData.Add.Length) < 0.5f))
+                    {
+                        leanforCompletionMessages.TurnOn();
+                        completionMessageText.text = "You’re getting very good at this";
+
+                        print("done 50");
+                    }
+                    else if ((((Problem_Number + 1f) / jsonData.Add.Length) >= 0.3f) && (((Problem_Number + 0f) / jsonData.Add.Length) < 0.3f))
+                    {
+                        leanforCompletionMessages.TurnOn();
+                        completionMessageText.text = "Yay, You’re almost done";
+                        print("done 30");
+                    }
+                }
+
                 loadingBar.BeginAllTransitions();
                 Result_text.text = RemoveExtraDecimalZeros(sub_operation_output.ToString());
                 visual_result_text.text = "Result: " + Result_text.text;
