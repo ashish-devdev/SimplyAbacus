@@ -30,9 +30,11 @@ public class ExampleGestureHandler : MonoBehaviour
     public TextMeshProUGUI notificationText;
     ActivityList1 activityList1;
     public Button notificationBtn;
+    public Button notificationBtn2;
     public GameObject time;
 
     public GameObject sideNote;
+    public GameObject handTutorial;
     public LeanToggle sideNoteLean;
     public LeanToggle congratulationLean;
     public LeanToggle notificationLean;
@@ -44,6 +46,11 @@ public class ExampleGestureHandler : MonoBehaviour
     SpeedWriting2 speedWriting2;
     public int continuesWrongCount;
     bool isWrong;
+    bool handDissapear;
+    public GameObject stencileParent;
+    public Image stencileImage;
+    public GameObject blackScreen;
+    public List<Sprite> stencilImages;
 
 
     void OnEnable()
@@ -56,7 +63,7 @@ public class ExampleGestureHandler : MonoBehaviour
 
     public void OnEnableWithDelay()
     {
-
+        handDissapear = false;
         continuesWrongCount = 0;
         isWrong = false;
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
@@ -69,6 +76,11 @@ public class ExampleGestureHandler : MonoBehaviour
                     {
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
                         speedWriting2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting;
+
+                        if (ClassManager.currentClassName == "Class 1")
+                        {
+                            notificationBtn2.onClick.AddListener(ShowTutorialAnimation);
+                        }
                     }
                 }
             }
@@ -90,9 +102,23 @@ public class ExampleGestureHandler : MonoBehaviour
             recognizerInstance.patterns.Add(listOf_AllPatterns[currentIndex].patterns[i]);
         }
 
+
     }
 
+    public void ShowTutorialAnimation()
+    {
+        notificationBtn2.onClick.RemoveListener(ShowTutorialAnimation);
+        handTutorial.SetActive(true);
+        blackScreen.SetActive(true);
+        
+        Invoke(nameof(HandShouldDissapear), 0.1f);
 
+    }
+
+    public void HandShouldDissapear()
+    {
+        handDissapear = true;
+    }
 
     void StartTimer()
     {
@@ -245,6 +271,15 @@ public class ExampleGestureHandler : MonoBehaviour
     private void Update()
     {
         //  print(speedWriting2.bestTime + " " + speedWriting2.bestTime_string + " " + speedWriting2.currentSavedTime);
+        if (handTutorial.activeInHierarchy)
+        {
+            if (Input.touchCount > 0 && handDissapear)
+            {
+                handTutorial.SetActive(false);
+                blackScreen.SetActive(false);
+
+            }
+        }
 
 
         if (currentIndex > 20 && writingWithRightIsDone)
@@ -289,6 +324,12 @@ public class ExampleGestureHandler : MonoBehaviour
             sideNoteLean.TurnOff();
             //turn on notification and sAY write with left hand.
         }
+
+        if (continuesWrongCount != 2)
+        {
+            stencileParent.SetActive(false);
+        }
+
     }
 
     public void OpenNotification2Lean()
@@ -305,12 +346,18 @@ public class ExampleGestureHandler : MonoBehaviour
         {
             notificationBtn.onClick.RemoveListener(OpenNotification2Lean);
 
+
         }
         catch
         {
             print("in try catch");
         }
 
+        try
+        {
+            notificationBtn2.onClick.RemoveListener(ShowTutorialAnimation);
+        }
+        catch {; }
     }
 
     [System.Serializable]
@@ -329,6 +376,14 @@ public class ExampleGestureHandler : MonoBehaviour
             continuesWrongCount++;
         }
 
+
+        if (continuesWrongCount == 2)
+        {
+            stencileImage.sprite = stencilImages[currentIndex % 10];
+            stencileParent.SetActive(true);
+
+        }
+
         if (continuesWrongCount > 2)
         {
             // currentIndex++;
@@ -341,7 +396,7 @@ public class ExampleGestureHandler : MonoBehaviour
             textResult.fontSize = 300;
             if (currentIndex + 1 >= (Numbers.Count) && writingWithRightIsDone)
             {
-                textInstrction.text =  instructions[currentIndex].Replace("Congratulations.", "Well tried! You are doing very well!!\n");
+                textInstrction.text = instructions[currentIndex].Replace("Congratulations.", "Well tried! You are doing very well!!\n");
                 eraserBtnBGImage.color = Color.white;
                 //invoke congratulation box;
                 Invoke("invokeNotification", 0.2f);
