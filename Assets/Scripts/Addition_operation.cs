@@ -21,6 +21,7 @@ public class Addition_operation : MonoBehaviour
     public TextMeshProUGUI Result_text;
     public TextMeshProUGUI visual_result_text;
     public TextMeshProUGUI CongratulationText;
+    int l3;
 
 
     public Transform OperationNumbers_PARENT;

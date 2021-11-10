@@ -22,6 +22,7 @@ public class VisualAdditionOperation : MonoBehaviour
     public TextMeshProUGUI visible_result_text;
     public TextMeshProUGUI CongratulationText;
 
+    int l3;
 
     public Transform OperationNumbers_PARENT;
 

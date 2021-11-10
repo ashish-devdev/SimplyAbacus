@@ -15,6 +15,8 @@ public class Division : MonoBehaviour
     bool firstProblemCreated;
     string decimalStringToCompare;
     bool newQuestion;
+    int l3;
+
 
     DivisionOperation2 divisionOperation2;
     ActivityList1 activityList1;

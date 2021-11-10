@@ -21,6 +21,8 @@ public class MixedOperations : MonoBehaviour
     public TextMeshProUGUI questionText;
     public TextMeshProUGUI resultText;
     public TextMeshProUGUI congratulationText;
+    int l3;
+
 
     public Button notificationBtn;
     public Button nextOperationBtn;

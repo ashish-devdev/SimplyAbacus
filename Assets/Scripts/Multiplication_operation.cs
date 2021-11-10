@@ -22,6 +22,7 @@ public class Multiplication_operation : MonoBehaviour
     public GameObject friendTable;
     public LeanImageFillAmount loadingBar;
 
+    int l3;
 
     public TextAsset multiplication_json_data;
     public string Congratulation_message;
