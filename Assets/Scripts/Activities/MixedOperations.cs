@@ -464,6 +464,7 @@ public class MixedOperations : MonoBehaviour
         }
     }
 
+
     public int MaxDecimalPLaces(List<string> strOfNumbers)
     {
         int max = 0;
