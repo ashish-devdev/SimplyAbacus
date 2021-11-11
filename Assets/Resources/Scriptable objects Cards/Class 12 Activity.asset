@@ -257,7 +257,7 @@ MonoBehaviour:
         showMultiplicationTable: 0
         isLong: 0
       coloringPageImages:
-      - index: 0
+      - index: 5
         completed: 0
         numberOfImages: 
       speedWriting: 0
