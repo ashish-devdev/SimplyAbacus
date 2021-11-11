@@ -77,10 +77,9 @@ public class ExampleGestureHandler : MonoBehaviour
                         activityList1 = Activity.classParent.classActivityCompletionHolderList[i].classData.activityList[j];
                         speedWriting2 = Activity.classParentsStats.classActivityCompletionHolderList2[i].classData.activityList[j].speedWriting;
 
-                        if (ClassManager.currentClassName == "Class 1")
-                        {
-                            notificationBtn2.onClick.AddListener(ShowTutorialAnimation);
-                        }
+
+                        notificationBtn2.onClick.AddListener(ShowTutorialAnimation);
+
                     }
                 }
             }
@@ -110,7 +109,7 @@ public class ExampleGestureHandler : MonoBehaviour
         notificationBtn2.onClick.RemoveListener(ShowTutorialAnimation);
         handTutorial.SetActive(true);
         blackScreen.SetActive(true);
-        
+
         Invoke(nameof(HandShouldDissapear), 0.1f);
 
     }

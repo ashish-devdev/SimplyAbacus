@@ -65,7 +65,7 @@ public class CountingAnimationTutorial : MonoBehaviour
         fingerDownSprite.enabled = false;
 
         thumbsUpSprite.enabled = false;
-        MakeALlBeedsUnintractable();
+        //MakeALlBeedsUnintractable();
         for (int i = 0; i < activityScriptInstance.classActivityList.Count; i++)
         {
             if (ClassManager.currentClassName == activityScriptInstance.classActivityList[i].classData.nameOfClass)
@@ -127,6 +127,17 @@ public class CountingAnimationTutorial : MonoBehaviour
 
     private void Update()
     {
+        if (!notification.activeInHierarchy)
+        {
+            if (Input.touchCount > 0)
+            {
+                thumbsUpSprite.color = new Vector4(1, 1, 1, 0);
+                fingerDownSprite.color = new Vector4(1, 1, 1, 0);
+            }
+
+        }
+
+
         if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
         {
             fingerDownSprite.enabled = false;
@@ -176,7 +187,7 @@ public class CountingAnimationTutorial : MonoBehaviour
             currentValueToCheck = GetValueToCompare(numbersRequiredForAnimation);
 
 
-            MakeRequiredBeedIntractable();
+                MakeRequiredBeedIntractable();
         }
         else
         {
@@ -216,14 +227,14 @@ public class CountingAnimationTutorial : MonoBehaviour
                         thumbsUpSprite.transform.SetParent(beedInUnitsPlace[numbersRequiredForAnimation[currentSubTask] - 1].transform);
                         fingerDownSprite.transform.SetParent(beedInUnitsPlace[numbersRequiredForAnimation[currentSubTask] - 1].transform);
 
-                        if (countingUp && numbersRequiredForAnimation[currentSubTask] < 5|| !countingUp && numbersRequiredForAnimation[currentSubTask] == 5)
+                        if (countingUp && numbersRequiredForAnimation[currentSubTask] < 5 || !countingUp && numbersRequiredForAnimation[currentSubTask] == 5)
                         {
                             thumbsUpSprite.transform.localPosition = new Vector3(-1.25f, -0.25f, 2f);
                             thumbsUpSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
                             thumbsUpSprite.transform.gameObject.SetActive(true);
                             fingerDownSprite.transform.gameObject.SetActive(false);
                         }
-                        else if (!countingUp && numbersRequiredForAnimation[currentSubTask] < 5|| countingUp && numbersRequiredForAnimation[currentSubTask] == 5)
+                        else if (!countingUp && numbersRequiredForAnimation[currentSubTask] < 5 || countingUp && numbersRequiredForAnimation[currentSubTask] == 5)
                         {
                             fingerDownSprite.transform.localPosition = new Vector3(-1.25f, -2.3f, 2f);
                             fingerDownSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
@@ -266,8 +277,8 @@ public class CountingAnimationTutorial : MonoBehaviour
                         Highlight1.transform.SetParent(beedInTensPlace[(numbersRequiredForAnimation[currentSubTask] / 10) - 1].transform);
                         Highlight1.transform.localPosition = new Vector3(0, 0, 0);
 
-                        thumbsUpSprite.transform.SetParent(beedInTensPlace[(numbersRequiredForAnimation[currentSubTask]/10) - 1].transform);
-                        fingerDownSprite.transform.SetParent(beedInTensPlace[(numbersRequiredForAnimation[currentSubTask] /10)- 1].transform);
+                        thumbsUpSprite.transform.SetParent(beedInTensPlace[(numbersRequiredForAnimation[currentSubTask] / 10) - 1].transform);
+                        fingerDownSprite.transform.SetParent(beedInTensPlace[(numbersRequiredForAnimation[currentSubTask] / 10) - 1].transform);
 
                         if (countingUp && numbersRequiredForAnimation[currentSubTask] < 50 || !countingUp && numbersRequiredForAnimation[currentSubTask] == 50)
                         {
@@ -308,38 +319,50 @@ public class CountingAnimationTutorial : MonoBehaviour
                 }
             }
         }
+
+        MakeALlBeedsIntractable();
     }
 
     public void CompareValue()
     {
-
-        if (currentTask < totalTask)
-        {
-            if (ValueCalculator.value1 == currentValueToCheck[currentSubTask + 1] && countingUp)
-            {
-                currentSubTask++;
-            }
-            else if (ValueCalculator.value1 == currentValueToCheck[currentSubTask] && !countingUp)
-            {
-                currentSubTask--;
-
-            }
-
-
-        }
-
-        if (currentSubTask > totalSubTask - 1)
+        if (ValueCalculator.value1 == currentValueToCheck[currentValueToCheck.Count-1] && countingUp)
         {
             countingUp = false;
-            currentSubTask--;
+            sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
         }
-        if (currentSubTask < 0)
-        {
-            countingUp = true;
-            currentSubTask++;
-            counter++;
 
+        if (!countingUp && ValueCalculator.value1 == 0)
+        {
+            counter++;
         }
+
+        /*   if (currentTask < totalTask)
+           {
+               if (ValueCalculator.value1 == currentValueToCheck[currentSubTask + 1] && countingUp)
+               {
+                   currentSubTask++;
+               }
+               else if (ValueCalculator.value1 == currentValueToCheck[currentSubTask] && !countingUp)
+               {
+                   currentSubTask--;
+
+               }
+
+
+           }
+
+           if (currentSubTask > totalSubTask - 1)
+           {
+               countingUp = false;
+               currentSubTask--;
+           }
+           if (currentSubTask < 0)
+           {
+               countingUp = true;
+               currentSubTask++;
+               counter++;
+
+           }*/
 
         if (counter == numberOfTimeToRepeate)
         {
@@ -359,7 +382,7 @@ public class CountingAnimationTutorial : MonoBehaviour
             PerformTask();
         }
 
-        MakeRequiredBeedIntractable();
+           MakeRequiredBeedIntractable();
 
 
     }
@@ -448,6 +471,9 @@ public class CountingAnimationTutorial : MonoBehaviour
 
     private void OnDisable()
     {
+
+        thumbsUpSprite.color = new Vector4(1, 1, 1, 1);
+        fingerDownSprite.color = new Vector4(1, 1, 1, 1);
         SaveManager.Instance.SaveStatsToDisk(Activity.classParentsStats);
         SaveManager.Instance.saveDataToDisk(Activity.classParent);
         notificationBtn.onClick.RemoveListener(openSideNote);
@@ -481,7 +507,7 @@ public class CountingAnimationTutorial : MonoBehaviour
     }
     public void ShowHighlight()
     {
-        Highlight1.SetActive(true);
+        //Highlight1.SetActive(true);
     }
 
 }

@@ -73,18 +73,21 @@ public class Count_5_to_9 : MonoBehaviour
     void OnEnable()
     {
         Invoke(nameof(OnEnableWithDelay), 0.1f);
+        Highlight1.SetActive(false);
+        Highlight2.SetActive(false);
+        ResetHighlight.SetActive(false);
 
-        beed1.GetComponent<BoxCollider>().enabled = false;
-        beed2.GetComponent<BoxCollider>().enabled = false;
-        beed3.GetComponent<BoxCollider>().enabled = false;
-        beed4.GetComponent<BoxCollider>().enabled = false;
-        beed5.GetComponent<BoxCollider>().enabled = false;
+        /* beed1.GetComponent<BoxCollider>().enabled = false;
+         beed2.GetComponent<BoxCollider>().enabled = false;
+         beed3.GetComponent<BoxCollider>().enabled = false;
+         beed4.GetComponent<BoxCollider>().enabled = false;
+         beed5.GetComponent<BoxCollider>().enabled = false;
 
-        beed6.GetComponent<BoxCollider>().enabled = false;
-        beed7.GetComponent<BoxCollider>().enabled = false;
-        beed8.GetComponent<BoxCollider>().enabled = false;
-        beed9.GetComponent<BoxCollider>().enabled = false;
-        beed10.GetComponent<BoxCollider>().enabled = false;
+         beed6.GetComponent<BoxCollider>().enabled = false;
+         beed7.GetComponent<BoxCollider>().enabled = false;
+         beed8.GetComponent<BoxCollider>().enabled = false;
+         beed9.GetComponent<BoxCollider>().enabled = false;
+         beed10.GetComponent<BoxCollider>().enabled = false;*/
 
 
 
@@ -144,8 +147,8 @@ public class Count_5_to_9 : MonoBehaviour
         temp = false;
         loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue / 5;
         loadingBar.BeginAllTransitions();
-        Highlight1.SetActive(true);
-        Highlight2.SetActive(true);
+        //Highlight1.SetActive(true);
+        //Highlight2.SetActive(true);
         NotificationBtn.onClick.AddListener(DelayedInvokeAnimation);
         //NotificationBtn.onClick.AddListener(OpenSideNote);
         for (currentTask = 0; currentTask < Count_5_to_9_ModelData.TaskComplete.Length; currentTask++)
@@ -198,6 +201,17 @@ public class Count_5_to_9 : MonoBehaviour
     {
         // loadingBar.sizeDelta = new Vector2(Count_5_to_9_ModelData.barValue, loadingBar.sizeDelta.y);
 
+        if (!NotificationPannel.activeInHierarchy)
+        {
+            if (Input.touchCount > 0)
+            {
+                thumbUpAnimatingSprite.color = new Vector4(1, 1, 1, 0);
+                thumbDownAnimatingSprite.color = new Vector4(1, 1, 1, 0);
+                indexUpAnimatingSprite.color = new Vector4(1, 1, 1, 0);
+                indexDownAnimatingSprite.color = new Vector4(1, 1, 1, 0);
+            }
+        }
+
         if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
         {
             indexDownAnimatingSprite.enabled = false;
@@ -206,6 +220,7 @@ public class Count_5_to_9 : MonoBehaviour
 
             //Invoke("DelyedInvoke",0.5f);
         }
+
         try
         {
             if (!Notification.transform.gameObject.activeInHierarchy)
@@ -243,7 +258,7 @@ public class Count_5_to_9 : MonoBehaviour
 
         if (currentTask == 0)
         {
-            beed5.GetComponent<BoxCollider>().enabled = true;
+            //beed5.GetComponent<BoxCollider>().enabled = true;
 
 
             try
@@ -354,16 +369,16 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
-                beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
 
 
                 if (ValueCalculator.value == 5)
                 {
 
 
-                    beed5.GetComponent<BoxCollider>().enabled = false;
+                    //beed5.GetComponent<BoxCollider>().enabled = false;
 
-                    beed1.GetComponent<BoxCollider>().enabled = true;
+                    //beed1.GetComponent<BoxCollider>().enabled = true;
 
                     Invoke("DelayedleanPulseFingerUpAnimation", 0.5f);
 
@@ -376,9 +391,9 @@ public class Count_5_to_9 : MonoBehaviour
                     thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
                     indexDownAnimatingSprite.transform.SetParent(beed1.transform);
 
-                    beed5.GetComponent<BoxCollider>().enabled = false;
+                    //beed5.GetComponent<BoxCollider>().enabled = false;
 
-                    beed1.GetComponent<BoxCollider>().enabled = true;
+                    //beed1.GetComponent<BoxCollider>().enabled = true;
                     Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
 
                     //move thumb down
@@ -388,9 +403,9 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-                    beed5.GetComponent<BoxCollider>().enabled = true;
+                    //beed5.GetComponent<BoxCollider>().enabled = true;
 
-                    beed1.GetComponent<BoxCollider>().enabled = false;
+                    //beed1.GetComponent<BoxCollider>().enabled = false;
 
                     Invoke("DelayedleanPulseFingerUpAnimation", 0.5f);
                     Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
@@ -413,12 +428,12 @@ public class Count_5_to_9 : MonoBehaviour
                     sidenoteText.text = notificationData[currentTask];
 
 
-                    beed5.GetComponent<BoxCollider>().enabled = true;
-                    beed1.GetComponent<BoxCollider>().enabled = false;
+                    //beed5.GetComponent<BoxCollider>().enabled = true;
+                    //beed1.GetComponent<BoxCollider>().enabled = false;
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    Highlight1.SetActive(true);
+                    //Highlight1.SetActive(true);
                     ResetHighlight.SetActive(false);
                 }
                 if (currentSubTask == 2)
@@ -449,8 +464,8 @@ public class Count_5_to_9 : MonoBehaviour
 
                     sidenoteText.text = notificationData[currentTask];
 
-                    beed5.GetComponent<BoxCollider>().enabled = true;
-                    beed1.GetComponent<BoxCollider>().enabled = false;
+                    //beed5.GetComponent<BoxCollider>().enabled = true;
+                    //beed1.GetComponent<BoxCollider>().enabled = false;
                     Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
                 }
@@ -464,9 +479,9 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-                    beed5.GetComponent<BoxCollider>().enabled = false;
+                    //beed5.GetComponent<BoxCollider>().enabled = false;
 
-                    beed1.GetComponent<BoxCollider>().enabled = true;
+                    //beed1.GetComponent<BoxCollider>().enabled = true;
 
 
                 }
@@ -480,9 +495,9 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-                    beed5.GetComponent<BoxCollider>().enabled = false;
+                    //beed5.GetComponent<BoxCollider>().enabled = false;
 
-                    beed1.GetComponent<BoxCollider>().enabled = true;
+                    //beed1.GetComponent<BoxCollider>().enabled = true;
                     Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                     //move finger down
 
@@ -503,11 +518,11 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 6 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
 
-                beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
 
-                beed1.GetComponent<BoxCollider>().enabled = false;
+                //beed1.GetComponent<BoxCollider>().enabled = false;
 
-                ResetHighlight.SetActive(true);
+                //ResetHighlight.SetActive(true);
                 Highlight1.SetActive(false);
 
                 temp = true;
@@ -528,9 +543,9 @@ public class Count_5_to_9 : MonoBehaviour
                 sidenoteText.text = notificationData[currentTask];
 
 
-                beed1.GetComponent<BoxCollider>().enabled = false;
-                beed5.GetComponent<BoxCollider>().enabled = true;
-                beed2.GetComponent<BoxCollider>().enabled = false;
+                //beed1.GetComponent<BoxCollider>().enabled = false;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed2.GetComponent<BoxCollider>().enabled = false;
             }
             if (ValueCalculator.value == 5)
             {
@@ -539,8 +554,8 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed2.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed2.GetComponent<BoxCollider>().enabled = true;
             }
 
             if (ValueCalculator.value == 2)
@@ -549,8 +564,8 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed1.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed1.GetComponent<BoxCollider>().enabled = true;
             }
             if (ValueCalculator.value == 7)
             {
@@ -559,8 +574,8 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
-                beed5.GetComponent<BoxCollider>().enabled = true;
-                beed2.GetComponent<BoxCollider>().enabled = false;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed2.GetComponent<BoxCollider>().enabled = false;
             }
 
 
@@ -575,8 +590,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    Highlight1.SetActive(true);
-                    ResetHighlight.SetActive(false);
+                    //Highlight1.SetActive(true);
+                    //ResetHighlight.SetActive(false);
                     if (currentSubTask == 2)
                     {
                         Count_5_to_9_ModelData.barValue = ((1 + currentTask) * 1f) / 5;
@@ -704,13 +719,13 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (ValueCalculator.value == 7 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed2.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed2.GetComponent<BoxCollider>().enabled = true;
 
                 temp = true;
                 currentResetAnimation = resetCount3Animation;
                 Invoke("DelyedInvoke", 0.5f);
-                ResetHighlight.SetActive(true);
+                //ResetHighlight.SetActive(true);
                 Highlight1.SetActive(false);
 
 
@@ -789,29 +804,29 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 sidenoteText.text = notificationData[currentTask];
 
-                beed5.GetComponent<BoxCollider>().enabled = true;
-                beed1.GetComponent<BoxCollider>().enabled = false;
-                beed3.GetComponent<BoxCollider>().enabled = false;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed1.GetComponent<BoxCollider>().enabled = false;
+                //beed3.GetComponent<BoxCollider>().enabled = false;
 
             }
             if (ValueCalculator.value == 5)
             {
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed3.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed3.GetComponent<BoxCollider>().enabled = true;
             }
 
             if (ValueCalculator.value == 8)
             {
-                beed5.GetComponent<BoxCollider>().enabled = true;
-                beed3.GetComponent<BoxCollider>().enabled = false;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed3.GetComponent<BoxCollider>().enabled = false;
                 sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
             }
 
             if (ValueCalculator.value == 3)
             {
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed1.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed1.GetComponent<BoxCollider>().enabled = true;
             }
 
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
@@ -821,7 +836,7 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    Highlight1.SetActive(true);
+                    //Highlight1.SetActive(true);
                     ResetHighlight.SetActive(false);
 
                 }
@@ -844,7 +859,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 8 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                ResetHighlight.SetActive(true);
+                //ResetHighlight.SetActive(true);
                 Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount4Animation;
@@ -936,26 +951,26 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 sidenoteText.text = notificationData[currentTask];
 
-                beed1.GetComponent<BoxCollider>().enabled = false;
-                beed5.GetComponent<BoxCollider>().enabled = true;
-                beed4.GetComponent<BoxCollider>().enabled = false;
+                //beed1.GetComponent<BoxCollider>().enabled = false;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed4.GetComponent<BoxCollider>().enabled = false;
             }
             if (ValueCalculator.value == 5)
             {
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed4.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed4.GetComponent<BoxCollider>().enabled = true;
             }
             if (ValueCalculator.value == 9)
             {
-                beed5.GetComponent<BoxCollider>().enabled = true;
-                beed4.GetComponent<BoxCollider>().enabled = false;
+                //beed5.GetComponent<BoxCollider>().enabled = true;
+                //beed4.GetComponent<BoxCollider>().enabled = false;
                 sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
             }
             if (ValueCalculator.value == 4)
             {
-                beed5.GetComponent<BoxCollider>().enabled = false;
-                beed1.GetComponent<BoxCollider>().enabled = true;
+                //beed5.GetComponent<BoxCollider>().enabled = false;
+                //beed1.GetComponent<BoxCollider>().enabled = true;
 
             }
 
@@ -967,7 +982,7 @@ public class Count_5_to_9 : MonoBehaviour
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
                     ResetHighlight.SetActive(false);
-                    Highlight1.SetActive(true);
+                    //Highlight1.SetActive(true);
 
 
 
@@ -991,7 +1006,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 9 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                ResetHighlight.SetActive(true);
+                //ResetHighlight.SetActive(true);
                 Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount5Animation;
@@ -1101,6 +1116,11 @@ public class Count_5_to_9 : MonoBehaviour
         beed8.GetComponent<BoxCollider>().enabled = true;
         beed9.GetComponent<BoxCollider>().enabled = true;
         beed10.GetComponent<BoxCollider>().enabled = true;
+
+        thumbUpAnimatingSprite.color = new Vector4(1, 1, 1, 1);
+        thumbDownAnimatingSprite.color = new Vector4(1, 1, 1, 1);
+        indexUpAnimatingSprite.color = new Vector4(1, 1, 1, 1);
+        indexDownAnimatingSprite.color = new Vector4(1, 1, 1, 1);
 
         Highlight1.SetActive(false);
         Highlight2.SetActive(false);
