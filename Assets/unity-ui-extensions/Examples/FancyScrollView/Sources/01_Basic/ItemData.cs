@@ -17,7 +17,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         public int ID;
         public Sprite Img;
         public UnityEvent BtnEvent;
-        public UnityEvent OnClickedLock;
+        public UnityEvent[] OnClickedLock;
         public UnityAction BtnEvents;
         public UnityAction onClickedBook;
         public UnityAction onClickedClass;
@@ -33,7 +33,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
 
 
-        public ItemData(string message,int id,Sprite img,UnityEvent btnEvent,bool gameObjectIsClassContent,bool gameObjectIsBookContent,bool cardIsIntractable, UnityEvent onClickedLock=null ,float completionPercentage=0,Sprite numImage1 = null, Sprite numImage2 = null,Sprite fg_Image=null,string className="")
+        public ItemData(string message,int id,Sprite img,UnityEvent btnEvent,bool gameObjectIsClassContent,bool gameObjectIsBookContent,bool cardIsIntractable, UnityEvent[] onClickedLock=null ,float completionPercentage=0,Sprite numImage1 = null, Sprite numImage2 = null,Sprite fg_Image=null,string className="")
         {
             this.Message = message;
             this.ClassName = className;
@@ -54,7 +54,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
             //   ON_CLICK += Print_fn(id);
         }
-        public ItemData(string message,int id,Sprite img,UnityEvent btnEvent,bool gameObjectIsClassContent,bool gameObjectIsBookContent,UnityAction btnEvents,bool cardIsIntractable, UnityEvent onClickedLock=null,float completionPercentage=0)
+        public ItemData(string message,int id,Sprite img,UnityEvent btnEvent,bool gameObjectIsClassContent,bool gameObjectIsBookContent,UnityAction btnEvents,bool cardIsIntractable, UnityEvent[] onClickedLock=null,float completionPercentage=0)
         {
             this.Message = message;
             this.ID = id;

@@ -24,6 +24,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 5c3c7a47857aa0c40ba86554c9adae2a, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -99,6 +100,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -166,6 +168,83 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
+    - activityName: Sudoku I
+      iD: 04.10.025
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 0}
+        showFriendTable: 0
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 1
+        showHand2: 1
+        showFriendFamilyTable: 1
+        abacusOperations: {fileID: 4900000, guid: c6c4995fbe16cad49a9a0f943f52aa07,
+          type: 3}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 1
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Adding made Super Simple II
       iD: 04.10.03
       matchValueWithImage: []
@@ -175,6 +254,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 03c7c47da9793f049a3d19e42d0f1663, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -250,6 +330,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: f960d876862f40d49a2896fc064bae7a, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -316,6 +397,82 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
+    - activityName: Sudoku II
+      iD: 04.10.045
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 4900000, guid: f960d876862f40d49a2896fc064bae7a, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 1
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting II
       iD: 04.10.05
       matchValueWithImage: []
@@ -325,6 +482,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -401,6 +559,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: efe01c084066c854ab13b0fe2a5de185, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -467,6 +626,82 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
+    - activityName: Sudoku III
+      iD: 04.10.065
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 4900000, guid: efe01c084066c854ab13b0fe2a5de185, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 1
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting III
       iD: 04.10.07
       matchValueWithImage: []
@@ -476,6 +711,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -552,6 +788,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 6b6389422bd990f4da841b362766e127, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -618,6 +855,82 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
+    - activityName: Sudoku IV
+      iD: 04.10.085
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 4900000, guid: 6b6389422bd990f4da841b362766e127, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 1
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Everyday Fun Counting IV
       iD: 04.10.09
       matchValueWithImage: []
@@ -627,6 +940,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -703,6 +1017,7 @@ MonoBehaviour:
         jsonData: {fileID: 4900000, guid: 3e84fc9e7c6245c45b43139342ba763c, type: 3}
         showFriendTable: 1
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 0
       liftBeed01: 0
@@ -769,6 +1084,82 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
+    - activityName: Sudoku V
+      iD: 04.10.105
+      matchValueWithImage: []
+      matchShapeWithNumbers: []
+      abacusOperations:
+        active: 0
+        jsonData: {fileID: 4900000, guid: 3e84fc9e7c6245c45b43139342ba763c, type: 3}
+        showFriendTable: 1
+        showMultiplicationTable: 0
+        isLong: 0
+      coloringPageImages: []
+      speedWriting: 0
+      liftBeed01: 0
+      liftBeed02: 0
+      liftBeeds:
+        active: 0
+        numbers: 
+      maze:
+        active: 0
+        totalMaze: 3
+        row: 0
+        col: 0
+        beginingSponingCol: 0
+        beginingSponingrow: 0
+        endingSponingcol: 0
+        endingSponingRow: 0
+        floor: {fileID: 0}
+        goalImage: {fileID: 0}
+        startingImage: {fileID: 0}
+        sideNoteMessage: 
+      visualHands:
+        active: 0
+        showHand1: 0
+        showHand2: 0
+        showFriendFamilyTable: 0
+        abacusOperations: {fileID: 0}
+      countBodyParts:
+        active: 0
+        animalImage: {fileID: 0}
+        animalName: 
+        bodyPartAndCountOfOne: []
+        countOfAnimals: 
+        showMultiplicationTable: 0
+      mixedMathematicalOperations:
+        active: 0
+        isPercentage: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      multiplicationDivisionPuzzle:
+        active: 0
+        jsonData: {fileID: 0}
+        showMultiplicationTable: 0
+        showFriendTable: 0
+      mutliplicationOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      divisionOperation:
+        active: 0
+        jsonData: {fileID: 0}
+        showMutilplicationTable: 0
+        showFriendTable: 0
+      tutorialVideo:
+        active: 0
+        URL: 
+        time: 0
+      animatingCountingTutorial:
+        active: 0
+        numbes: []
+        numberOfTimesToRepeate: 0
+      sudokuGame:
+        active: 1
+        sudokuDifficultiMode: 0
+        mazeSize: 0
     - activityName: Speed Writing
       iD: 04.10.11
       matchValueWithImage: []
@@ -778,6 +1169,7 @@ MonoBehaviour:
         jsonData: {fileID: 0}
         showFriendTable: 0
         showMultiplicationTable: 0
+        isLong: 0
       coloringPageImages: []
       speedWriting: 1
       liftBeed01: 0

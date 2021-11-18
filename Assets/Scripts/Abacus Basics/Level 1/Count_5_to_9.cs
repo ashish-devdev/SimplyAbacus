@@ -70,24 +70,36 @@ public class Count_5_to_9 : MonoBehaviour
 
 
 
+    bool animate5Once;
+    bool animate6Once;
+    bool animate7Once;
+    bool animate8Once;
+    bool animate9Once;
+
+
+
+
     void OnEnable()
     {
         Invoke(nameof(OnEnableWithDelay), 0.1f);
-        Highlight1.SetActive(false);
-        Highlight2.SetActive(false);
-        ResetHighlight.SetActive(false);
 
-        /* beed1.GetComponent<BoxCollider>().enabled = false;
-         beed2.GetComponent<BoxCollider>().enabled = false;
-         beed3.GetComponent<BoxCollider>().enabled = false;
-         beed4.GetComponent<BoxCollider>().enabled = false;
-         beed5.GetComponent<BoxCollider>().enabled = false;
+        animate5Once = true;
+        animate6Once = true;
+        animate7Once = true;
+        animate8Once = true;
+        animate9Once = true;
 
-         beed6.GetComponent<BoxCollider>().enabled = false;
-         beed7.GetComponent<BoxCollider>().enabled = false;
-         beed8.GetComponent<BoxCollider>().enabled = false;
-         beed9.GetComponent<BoxCollider>().enabled = false;
-         beed10.GetComponent<BoxCollider>().enabled = false;*/
+        beed1.GetComponent<BoxCollider>().enabled = false;
+        beed2.GetComponent<BoxCollider>().enabled = false;
+        beed3.GetComponent<BoxCollider>().enabled = false;
+        beed4.GetComponent<BoxCollider>().enabled = false;
+        beed5.GetComponent<BoxCollider>().enabled = false;
+
+        beed6.GetComponent<BoxCollider>().enabled = false;
+        beed7.GetComponent<BoxCollider>().enabled = false;
+        beed8.GetComponent<BoxCollider>().enabled = false;
+        beed9.GetComponent<BoxCollider>().enabled = false;
+        beed10.GetComponent<BoxCollider>().enabled = false;
 
 
 
@@ -131,6 +143,7 @@ public class Count_5_to_9 : MonoBehaviour
 
 
         NotificationBtn.onClick.AddListener(OpenSideNote);
+        NotificationBtn.onClick.AddListener(MakeAllBeedUnintractive);
         NotificationBtn.onClick.AddListener(showindexFingerSpriteRenderer);
 
 
@@ -147,8 +160,8 @@ public class Count_5_to_9 : MonoBehaviour
         temp = false;
         loadingBar.Data.FillAmount = Count_5_to_9_ModelData.barValue / 5;
         loadingBar.BeginAllTransitions();
-        //Highlight1.SetActive(true);
-        //Highlight2.SetActive(true);
+        Highlight1.SetActive(true);
+        Highlight2.SetActive(true);
         NotificationBtn.onClick.AddListener(DelayedInvokeAnimation);
         //NotificationBtn.onClick.AddListener(OpenSideNote);
         for (currentTask = 0; currentTask < Count_5_to_9_ModelData.TaskComplete.Length; currentTask++)
@@ -171,6 +184,9 @@ public class Count_5_to_9 : MonoBehaviour
         indexUpAnimatingSprite.transform.SetParent(beed5.transform);
         indexUpAnimatingSprite.gameObject.SetActive(true);
         indexUpAnimatingSprite.transform.localPosition = new Vector3(-2.7f, 0, 2);*/
+        indexDownAnimatingSprite.enabled = false;
+
+        thumbUpAnimatingSprite.enabled = false;
 
     }
 
@@ -201,35 +217,23 @@ public class Count_5_to_9 : MonoBehaviour
     {
         // loadingBar.sizeDelta = new Vector2(Count_5_to_9_ModelData.barValue, loadingBar.sizeDelta.y);
 
-        if (!NotificationPannel.activeInHierarchy)
-        {
-            if (Input.touchCount > 0)
-            {
-                thumbUpAnimatingSprite.color = new Vector4(1, 1, 1, 0);
-                thumbDownAnimatingSprite.color = new Vector4(1, 1, 1, 0);
-                indexUpAnimatingSprite.color = new Vector4(1, 1, 1, 0);
-                indexDownAnimatingSprite.color = new Vector4(1, 1, 1, 0);
-            }
-        }
-
-        if (Input.touchCount > 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
+        if (Input.touchCount > 0 && currentTask == 0 && (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Began || Input.touches[0].phase == TouchPhase.Stationary))
         {
             indexDownAnimatingSprite.enabled = false;
 
             thumbUpAnimatingSprite.enabled = false;
 
-            //Invoke("DelyedInvoke",0.5f);
+            Invoke("DelyedInvoke", 0.5f);
         }
-
         try
         {
             if (!Notification.transform.gameObject.activeInHierarchy)
                 if (Input.touches[0].phase == TouchPhase.Ended)
                 {
-                    leanPulseFingerDownAnimation.RemainingPulses = 0;
-                    leanPulseThumbDownAnimation.RemainingPulses = 0;
-                    leanPulseThumbUpAnimation.RemainingPulses = 0;
-                    Invoke("DelayedInvokeResetAnimations", 0.5f);
+                    //leanPulseFingerDownAnimation.RemainingPulses = 0;
+                    //leanPulseThumbDownAnimation.RemainingPulses = 0;
+                    //leanPulseThumbUpAnimation.RemainingPulses = 0;
+                    //  Invoke("DelayedInvokeResetAnimations", 0.5f);
 
                 }
         }
@@ -270,11 +274,15 @@ public class Count_5_to_9 : MonoBehaviour
                     if (ValueCalculator.value == 0)
                     {
 
+
                         indexDownAnimatingSprite.transform.SetParent(beed5.transform);
                         thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
                         indexDownAnimatingSprite.transform.gameObject.SetActive(true);
                         Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        Invoke(nameof(MakeAllBeedIntractive), 1.2f);
+
+                        //Invoke(nameof(HideAnimatingSprites), 1.5f);
 
 
 
@@ -310,7 +318,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 0)
             {
 
-                sidenoteText.text = notificationData[currentTask];
+                sidenoteText.text = "Count to 5";//notificationData[currentTask];
 
 
                 //finger down animation
@@ -365,7 +373,9 @@ public class Count_5_to_9 : MonoBehaviour
 
         else if (currentTask == 1)
         {
-
+            Highlight2.SetActive(false);
+            Highlight1.SetActive(false);
+            ResetHighlight.SetActive(false);
 
             if (Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended && temp == true)
             {
@@ -386,15 +396,15 @@ public class Count_5_to_9 : MonoBehaviour
                 }
                 if (ValueCalculator.value == 1)
                 {
-                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
-                    indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+                    //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    //Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
 
+                    indexDownAnimatingSprite.transform.SetParent(beed1.transform);
                     //beed5.GetComponent<BoxCollider>().enabled = false;
 
                     //beed1.GetComponent<BoxCollider>().enabled = true;
-                    Invoke("DelayedleanPulseThumbDownAnimation", 0.5f);
 
                     //move thumb down
                 }
@@ -425,7 +435,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                      */
 
-                    sidenoteText.text = notificationData[currentTask];
+                    sidenoteText.text = "Count to 6"; //notificationData[currentTask];
 
 
                     //beed5.GetComponent<BoxCollider>().enabled = true;
@@ -433,7 +443,7 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //Highlight1.SetActive(true);
+                    Highlight1.SetActive(false);
                     ResetHighlight.SetActive(false);
                 }
                 if (currentSubTask == 2)
@@ -457,25 +467,43 @@ public class Count_5_to_9 : MonoBehaviour
             {
                 if (ValueCalculator.value == 0)
                 {
-                    indexDownAnimatingSprite.transform.SetParent(beed5.transform);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    if (animate6Once)
+                    {
+                        Highlight1.SetActive(false);
+                        ResetHighlight.SetActive(false);
+                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                        // thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
 
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        sidenoteText.text = "Count to 6";
 
-                    sidenoteText.text = notificationData[currentTask];
+                        //beed5.GetComponent<BoxCollider>().enabled = true;
+                        //beed1.GetComponent<BoxCollider>().enabled = false;
+                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        Invoke(nameof(HideIndexFinger), 1.2f);
 
-                    //beed5.GetComponent<BoxCollider>().enabled = true;
-                    //beed1.GetComponent<BoxCollider>().enabled = false;
-                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+
+
+                        //  indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        thumbUpAnimatingSprite.transform.SetParent(beed1.transform);
+                        Invoke("DelayedleanPulseThumbUpAnimation", 1.5f);
+                        Invoke(nameof(HideThumb), 2.7f);
+
+                        Invoke(nameof(HideAnimatingSprites), 3f);
+
+                        animate6Once = false;
+                    }
+
 
                 }
                 if (ValueCalculator.value == 5)
                 {
 
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.SetParent(beed1.transform);
-                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.SetParent(beed1.transform);
+                    //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -488,27 +516,27 @@ public class Count_5_to_9 : MonoBehaviour
                 if (ValueCalculator.value == 1)
                 {
 
-                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
-                    indexUpAnimatingSprite.transform.SetParent(beed1.transform);
+                    //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    //indexUpAnimatingSprite.transform.SetParent(beed1.transform);
+                    //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
 
 
                     //beed5.GetComponent<BoxCollider>().enabled = false;
 
                     //beed1.GetComponent<BoxCollider>().enabled = true;
-                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
                     //move finger down
 
                 }
 
                 if (ValueCalculator.value == 6)
                 {
-                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                    //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
                     sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
                 }
@@ -522,7 +550,7 @@ public class Count_5_to_9 : MonoBehaviour
 
                 //beed1.GetComponent<BoxCollider>().enabled = false;
 
-                //ResetHighlight.SetActive(true);
+                ResetHighlight.SetActive(false);
                 Highlight1.SetActive(false);
 
                 temp = true;
@@ -534,13 +562,16 @@ public class Count_5_to_9 : MonoBehaviour
 
         else if (currentTask == 2)
         {
+            Highlight2.SetActive(false);
+            Highlight1.SetActive(false);
+            ResetHighlight.SetActive(false);
             if (ValueCalculator.value == 0)
             {
 
 
 
 
-                sidenoteText.text = notificationData[currentTask];
+                sidenoteText.text = "Count to 7";//notificationData[currentTask];
 
 
                 //beed1.GetComponent<BoxCollider>().enabled = false;
@@ -590,8 +621,8 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //Highlight1.SetActive(true);
-                    //ResetHighlight.SetActive(false);
+                    Highlight1.SetActive(false);
+                    ResetHighlight.SetActive(false);
                     if (currentSubTask == 2)
                     {
                         Count_5_to_9_ModelData.barValue = ((1 + currentTask) * 1f) / 5;
@@ -610,11 +641,11 @@ public class Count_5_to_9 : MonoBehaviour
                 if (ValueCalculator.value == 0)
                 {
 
-                    indexDownAnimatingSprite.transform.SetParent(beed5.transform);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    //indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
 
 
 
@@ -623,10 +654,10 @@ public class Count_5_to_9 : MonoBehaviour
                 if (ValueCalculator.value == 5)
                 {
 
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
-                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
+                    //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -635,20 +666,20 @@ public class Count_5_to_9 : MonoBehaviour
 
                 if (ValueCalculator.value == 2)
                 {
-                    Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
-                    indexDownAnimatingSprite.transform.SetParent(beed2.transform);
+                    //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                    //indexDownAnimatingSprite.transform.SetParent(beed2.transform);
 
 
 
                 }
                 if (ValueCalculator.value == 7)
                 {
-                    Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
-                    indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                    thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                    thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                    //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                    //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                    //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                    //thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
 
                     sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
@@ -665,24 +696,38 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 0)
                     {
+                        if (animate7Once)
+                        {
 
-                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                            indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                            //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                            indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                            Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                            Invoke(nameof(HideIndexFinger), 1.2f);
 
 
+                            //  indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                            // thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                            thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
+                            Invoke("DelayedleanPulseThumbUpAnimation", 1.5f);
+                            Invoke(nameof(HideThumb), 2.7f);
+
+                            animate7Once = false;
+
+                            Invoke(nameof(HideAnimatingSprites), 3f);
+
+                        }
 
 
                     }
                     if (ValueCalculator.value == 5)
                     {
 
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
-                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.SetParent(beed2.transform);
+                        //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -691,20 +736,20 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 2)
                     {
-                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
-                        indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+                        //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        //indexDownAnimatingSprite.transform.SetParent(beed1.transform);
 
 
 
                     }
                     if (ValueCalculator.value == 7)
                     {
-                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                        //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
                         sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
@@ -725,7 +770,7 @@ public class Count_5_to_9 : MonoBehaviour
                 temp = true;
                 currentResetAnimation = resetCount3Animation;
                 Invoke("DelyedInvoke", 0.5f);
-                //ResetHighlight.SetActive(true);
+                ResetHighlight.SetActive(false);
                 Highlight1.SetActive(false);
 
 
@@ -737,6 +782,9 @@ public class Count_5_to_9 : MonoBehaviour
 
         else if (currentTask == 3)
         {
+            Highlight2.SetActive(false);
+            Highlight1.SetActive(false);
+            ResetHighlight.SetActive(false);
             try
             {
                 if (Input.touches[0].phase == TouchPhase.Ended)
@@ -745,14 +793,27 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 0)
                     {
+                        if (animate8Once)
+                        {
+                            indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                            // thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
-                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                            indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                            Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                            Invoke(nameof(HideIndexFinger), 1.2f);
 
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                            // indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                            // thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                            thumbUpAnimatingSprite.transform.SetParent(beed3.transform);
+                            Invoke("DelayedleanPulseThumbUpAnimation", 1.5f);
+                            Invoke(nameof(HideThumb), 2.7f);
 
-                        sidenoteText.text = notificationData[currentTask];
+                            Invoke(nameof(HideAnimatingSprites), 3f);
+                            animate8Once = false;
+                        }
+
+
+                        sidenoteText.text = "Count to 8";//notificationData[currentTask];
 
 
 
@@ -760,10 +821,10 @@ public class Count_5_to_9 : MonoBehaviour
                     if (ValueCalculator.value == 5)
                     {
 
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.SetParent(beed3.transform);
-                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.SetParent(beed3.transform);
+                        //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -772,20 +833,20 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 3)
                     {
-                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
-                        indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+                        //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        //indexDownAnimatingSprite.transform.SetParent(beed1.transform);
 
 
 
                     }
                     if (ValueCalculator.value == 8)
                     {
-                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                        //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
                         sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
@@ -802,7 +863,7 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (ValueCalculator.value == 0)
             {
-                sidenoteText.text = notificationData[currentTask];
+                sidenoteText.text = "Count to 8";//notificationData[currentTask];
 
                 //beed5.GetComponent<BoxCollider>().enabled = true;
                 //beed1.GetComponent<BoxCollider>().enabled = false;
@@ -836,7 +897,7 @@ public class Count_5_to_9 : MonoBehaviour
                     temp = false;
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
-                    //Highlight1.SetActive(true);
+                    Highlight1.SetActive(false);
                     ResetHighlight.SetActive(false);
 
                 }
@@ -859,7 +920,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 8 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                //ResetHighlight.SetActive(true);
+                ResetHighlight.SetActive(false);
                 Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount4Animation;
@@ -871,7 +932,9 @@ public class Count_5_to_9 : MonoBehaviour
 
         else if (currentTask == 4)
         {
-
+            Highlight2.SetActive(false);
+            Highlight1.SetActive(false);
+            ResetHighlight.SetActive(false);
             try
             {
                 if (Input.touches[0].phase == TouchPhase.Ended)
@@ -880,26 +943,38 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 0)
                     {
+                        if (animate9Once)
+                        {
 
-                        indexDownAnimatingSprite.transform.SetParent(beed5.transform);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                            indexDownAnimatingSprite.transform.SetParent(beed5.transform);
+                            // thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
-                        sidenoteText.text = notificationData[currentTask];
+                            indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                            Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                            sidenoteText.text = "Count to 9";//notificationData[currentTask];
+                            Invoke(nameof(HideIndexFinger), 1.2f);
 
 
+                            // indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                            //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                            thumbUpAnimatingSprite.transform.SetParent(beed4.transform);
+                            Invoke("DelayedleanPulseThumbUpAnimation", 1.5f);
+                            Invoke(nameof(HideThumb), 2.7f);
 
+                            Invoke(nameof(HideAnimatingSprites), 3f);
+
+                            animate9Once = false;
+                        }
 
                     }
                     if (ValueCalculator.value == 5)
                     {
 
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.SetParent(beed4.transform);
-                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.SetParent(beed4.transform);
+                        //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
 
 
 
@@ -907,20 +982,20 @@ public class Count_5_to_9 : MonoBehaviour
 
                     if (ValueCalculator.value == 4)
                     {
-                        Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
-                        indexDownAnimatingSprite.transform.SetParent(beed1.transform);
+                        //Invoke("DelayedleanPulseFingerDownAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+                        //indexDownAnimatingSprite.transform.SetParent(beed1.transform);
 
 
 
                     }
                     if (ValueCalculator.value == 9)
                     {
-                        Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
-                        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
-                        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
-                        thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
+                        //Invoke("DelayedleanPulseThumbUpAnimation", 0.5f);
+                        //indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+                        //thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+                        //thumbUpAnimatingSprite.transform.SetParent(beed5.transform);
                         sidenoteText.text = "<color=green>Well done!! Now, reset the abacus to 0</color>";
 
 
@@ -949,7 +1024,7 @@ public class Count_5_to_9 : MonoBehaviour
 
             if (ValueCalculator.value == 0)
             {
-                sidenoteText.text = notificationData[currentTask];
+                sidenoteText.text = "Count to 9";//notificationData[currentTask];
 
                 //beed1.GetComponent<BoxCollider>().enabled = false;
                 //beed5.GetComponent<BoxCollider>().enabled = true;
@@ -982,7 +1057,7 @@ public class Count_5_to_9 : MonoBehaviour
                     completedSubTask[currentSubTask] = true;
                     currentSubTask++;
                     ResetHighlight.SetActive(false);
-                    //Highlight1.SetActive(true);
+                    Highlight1.SetActive(false);
 
 
 
@@ -1006,7 +1081,7 @@ public class Count_5_to_9 : MonoBehaviour
             if (ValueCalculator.value == 9 && temp == false && Input.touchCount == 1 && Input.touches[0].phase == TouchPhase.Ended)
             {
                 temp = true;
-                //ResetHighlight.SetActive(true);
+                ResetHighlight.SetActive(false);
                 Highlight1.SetActive(false);
 
                 currentResetAnimation = resetCount5Animation;
@@ -1117,13 +1192,9 @@ public class Count_5_to_9 : MonoBehaviour
         beed9.GetComponent<BoxCollider>().enabled = true;
         beed10.GetComponent<BoxCollider>().enabled = true;
 
-        thumbUpAnimatingSprite.color = new Vector4(1, 1, 1, 1);
-        thumbDownAnimatingSprite.color = new Vector4(1, 1, 1, 1);
-        indexUpAnimatingSprite.color = new Vector4(1, 1, 1, 1);
-        indexDownAnimatingSprite.color = new Vector4(1, 1, 1, 1);
-
         Highlight1.SetActive(false);
         Highlight2.SetActive(false);
+
 
         valueCalculator.decimalPlaceString = "F2";
 
@@ -1134,6 +1205,8 @@ public class Count_5_to_9 : MonoBehaviour
 
         NotificationBtn.onClick.RemoveListener(showindexFingerSpriteRenderer);
         NotificationBtn.onClick.RemoveListener(OpenSideNote);
+        NotificationBtn.onClick.RemoveListener(MakeAllBeedUnintractive);
+
 
         activityList2.LiftingBeed22.currentSubActivity = SubTaskToSave;
 
@@ -1147,9 +1220,11 @@ public class Count_5_to_9 : MonoBehaviour
 
     public void DelayedleanPulseThumbUpAnimation()
     {
+        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
         thumbUpAnimatingSprite.transform.localPosition = new Vector3(-1.25f, -0.25f, 2f);
         thumbUpAnimatingSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
-        leanPulseThumbUpAnimation.RemainingPulses = 5;
+        thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+        leanPulseThumbUpAnimation.RemainingPulses = 1;
         //CancelInvoke("DelayedleanPulseThumbUpAnimation");
         if (leanPulseThumbUpAnimation.RemainingPulses <= 0)
         {
@@ -1160,24 +1235,38 @@ public class Count_5_to_9 : MonoBehaviour
             thumbUpAnimatingSprite.transform.localPosition = new Vector3(-1.25f, -0.25f, 2f);
             thumbUpAnimatingSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
         }
+        if (currentTask == 0)
+        {
+            leanPulseThumbUpAnimation.RemainingPulses = 5;
+            thumbUpAnimatingSprite.transform.gameObject.SetActive(true);
+            thumbUpAnimatingSprite.enabled = true;
+
+        }
 
     }
     public void DelayedleanPulseThumbDownAnimation()
     {
         CancelInvoke("DelayedleanPulseThumbDownAnimation");
-        leanPulseThumbDownAnimation.RemainingPulses = 5;
+        leanPulseThumbDownAnimation.RemainingPulses = 1;
     }
     public void DelayedleanPulseFingerUpAnimation()
     {
         CancelInvoke("DelayedleanPulseFingerUpAnimation");
-        leanPulseFingerUpAnimation.RemainingPulses = 5;
+        leanPulseFingerUpAnimation.RemainingPulses = 1;
 
     }
     public void DelayedleanPulseFingerDownAnimation()
     {
         indexDownAnimatingSprite.transform.localPosition = new Vector3(-1.25f, -2.8f, 2f);
         indexDownAnimatingSprite.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
-        leanPulseFingerDownAnimation.RemainingPulses = 5;
+        leanPulseFingerDownAnimation.RemainingPulses = 1;
+        if (currentTask == 0)
+        {
+            leanPulseFingerDownAnimation.RemainingPulses = 5;
+            indexDownAnimatingSprite.transform.gameObject.SetActive(true);
+            indexDownAnimatingSprite.enabled = true;
+
+        }
 
         CancelInvoke("DelayedleanPulseFingerDownAnimation");
         if (leanPulseFingerDownAnimation.RemainingPulses <= 0)
@@ -1189,20 +1278,75 @@ public class Count_5_to_9 : MonoBehaviour
     public void DelayedInvokeResetAnimations()
     {
         CancelInvoke("DelayedInvokeResetAnimations");
-        leanPulseFingerDownAnimation.RemainingPulses = 5;
+        leanPulseFingerDownAnimation.RemainingPulses = 1;
         leanPulseFingerDownAnimation.RemainingTime = 0;
         indexDownAnimatingSprite.enabled = true;
-        leanPulseThumbDownAnimation.RemainingPulses = 5;
+        leanPulseThumbDownAnimation.RemainingPulses = 1;
         leanPulseThumbDownAnimation.RemainingTime = 0;
 
         thumbUpAnimatingSprite.enabled = true;
-        leanPulseThumbUpAnimation.RemainingPulses = 5;
+        // leanPulseThumbUpAnimation.RemainingPulses = 1;
         leanPulseThumbUpAnimation.RemainingTime = 0;
 
         thumbUpAnimatingSprite.enabled = true;
     }
 
+    public void HideAnimatingSprites()
+    {
+        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+        print("Calling Hide animation");
+        indexUpAnimatingSprite.transform.gameObject.SetActive(false);
+        thumbDownAnimatingSprite.transform.gameObject.SetActive(false);
+        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
 
+        thumbUpAnimatingSprite.enabled = false;
+
+        indexDownAnimatingSprite.enabled = false;
+
+
+        MakeAllBeedIntractive();
+    }
+
+    public void MakeAllBeedIntractive()
+    {
+        beed1.GetComponent<BoxCollider>().enabled = true;
+        beed2.GetComponent<BoxCollider>().enabled = true;
+        beed3.GetComponent<BoxCollider>().enabled = true;
+        beed4.GetComponent<BoxCollider>().enabled = true;
+        beed5.GetComponent<BoxCollider>().enabled = true;
+
+        beed6.GetComponent<BoxCollider>().enabled = true;
+        beed7.GetComponent<BoxCollider>().enabled = true;
+        beed8.GetComponent<BoxCollider>().enabled = true;
+        beed9.GetComponent<BoxCollider>().enabled = true;
+        beed10.GetComponent<BoxCollider>().enabled = true;
+
+    }
+
+    public void MakeAllBeedUnintractive()
+    {
+        beed1.GetComponent<BoxCollider>().enabled = false;
+        beed2.GetComponent<BoxCollider>().enabled = false;
+        beed3.GetComponent<BoxCollider>().enabled = false;
+        beed4.GetComponent<BoxCollider>().enabled = false;
+        beed5.GetComponent<BoxCollider>().enabled = false;
+
+        beed6.GetComponent<BoxCollider>().enabled = false;
+        beed7.GetComponent<BoxCollider>().enabled = false;
+        beed8.GetComponent<BoxCollider>().enabled = false;
+        beed9.GetComponent<BoxCollider>().enabled = false;
+        beed10.GetComponent<BoxCollider>().enabled = false;
+
+    }
+
+    public void HideIndexFinger()
+    {
+        indexDownAnimatingSprite.transform.gameObject.SetActive(false);
+    }
+    public void HideThumb()
+    {
+        thumbUpAnimatingSprite.transform.gameObject.SetActive(false);
+    }
 
     public void DelayedInvokeAnimation()
     {

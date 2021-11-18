@@ -22,7 +22,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         [SerializeField] ScrollView scrollView = default;
         public static event Action<ClassActivity> onCurrentClassClicked;
         public UnityEvent btnEvent;
-        public UnityEvent onClickedLock;
+        public UnityEvent[] onClickedLock;
         public bool gameObjectIsClassContent;
         public bool gameObjectIsBookContent;
         public List<NumberImages> numberImages;
@@ -96,7 +96,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 {
                     //book
                     var items = Enumerable.Range(0, TabName.Count())
-                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent,/* cardIsIntractable[i]*/true, onClickedLock, completionPercentage[i]))
+                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, /*cardIsIntractable[i]*/true, onClickedLock, completionPercentage[i]))
                    .ToArray();
                     scrollView.UpdateData(items);
                 }

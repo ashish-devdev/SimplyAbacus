@@ -310,8 +310,8 @@ MonoBehaviour:
         showFriendTable: 0
       tutorialVideo:
         active: 1
-        URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/UpdatedVideos_16_09_21/Division-V04.mp4
-        time: 336
+        URL: https://simplyabacusvids.s3.ap-south-1.amazonaws.com/UpdatedVideos_18_11_21/Division.mp4
+        time: 202
       animatingCountingTutorial:
         active: 0
         numbes: []

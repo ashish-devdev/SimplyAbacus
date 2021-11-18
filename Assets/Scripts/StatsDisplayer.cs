@@ -72,7 +72,7 @@ public class StatsDisplayer : MonoBehaviour
             className.Add(activityScriptInstance.classActivityList[i].classData.nameOfClass);
         }
 
-        InstantiateActivityStatsCells(15);
+        InstantiateActivityStatsCells(35);
 
         for (int i = 0; i < bookBtn.Count; i++)
         {

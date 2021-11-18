@@ -19,12 +19,12 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         [SerializeField] bool gameObjectIsBookContent = default;
         [SerializeField] TextMeshProUGUI completionPercentage = default;
         [SerializeField] TextMeshProUGUI ClassTextString = default;
-        [SerializeField] Image numberImage1=default;
-        [SerializeField] Image numberImage2=default;
-        [SerializeField] Image FG_Image=default;
+        [SerializeField] Image numberImage1 = default;
+        [SerializeField] Image numberImage2 = default;
+        [SerializeField] Image FG_Image = default;
         [SerializeField] GameObject ClassText = default;
-        [SerializeField] Button cardBtn=default;
-        [SerializeField] Button lockBtn=default;
+        [SerializeField] Button cardBtn = default;
+        [SerializeField] Button lockBtn = default;
         [SerializeField] List<Color> colorsOfImageNumbers;
         [SerializeField] ParticleSystem cardGlow;
         [SerializeField] ParticleSystem spark;
@@ -55,7 +55,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
             ID = itemData.ID;
             gameObjectIsClassContent = itemData.GameObjectIsClassContent;
             gameObjectIsBookContent = itemData.GameObjectIsBookContent;
-            completionPercentage.text = itemData.CompletionPercentage.ToString("F0")+"<size=20>%</size>";
+            completionPercentage.text = itemData.CompletionPercentage.ToString("F0") + "<size=20>%</size>";
 
             cardBtn.interactable = itemData.CardIsIntractable;
 
@@ -68,14 +68,14 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 }
                 if (cardGlow != null)
                 {
-                   // cardGlow.GetComponent<Renderer>().enabled=true;
+                    // cardGlow.GetComponent<Renderer>().enabled=true;
                 }
                 if (spark != null)
-                { 
-                   // spark.GetComponent<Renderer>().enabled = true;
+                {
+                    // spark.GetComponent<Renderer>().enabled = true;
                 }
-            
-            }       
+
+            }
             if (itemData.CardIsIntractable == false)
             {
                 if (Lock != null)
@@ -86,15 +86,15 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
                 if (cardGlow != null)
                 {
-                   // cardGlow.GetComponent<Renderer>().enabled=false;
+                    // cardGlow.GetComponent<Renderer>().enabled=false;
                 }
                 if (spark != null)
-                { 
-                  //  spark.GetComponent<Renderer>().enabled = false;
+                {
+                    //  spark.GetComponent<Renderer>().enabled = false;
                 }
-            
+
             }
-         
+
             //Img = itemData.Img;
             // UnityEvent evnt = new UnityEvent(i);
             this.gameObject.transform.GetChild(0).GetComponent<Image>().sprite = itemData.Img;
@@ -135,13 +135,13 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                     FG_Image.preserveAspect = true;
                 }
 
-                
+
 
             }
 
-            itemData.onClickedClass = () => {  ClassManager.currentClassName = message.text; ClassManager.currentClassIndex = ID; };
-            itemData.onClickedActivity = () => {  ClassManager.currentActivityName = message.text;  ClassManager.currentActivityIndex = ID; print("ID" + ID); };
-            itemData.onClickedBook = () => { BookManager.currentBookName = message.text;  };
+            itemData.onClickedClass = () => { ClassManager.currentClassName = message.text; ClassManager.currentClassIndex = ID; };
+            itemData.onClickedActivity = () => { ClassManager.currentActivityName = message.text; ClassManager.currentActivityIndex = ID; print("ID" + ID); };
+            itemData.onClickedBook = () => { BookManager.currentBookName = message.text; };
             if (itemData.BtnEvents != null)
             {
                 if (btnAction != null)
@@ -151,7 +151,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 btnAction = itemData.BtnEvents;
                 this.gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Button>().onClick.AddListener(itemData.BtnEvents);
                 message.text = itemData.Message;
-                completionPercentage.text =  itemData.CompletionPercentage.ToString("F0")+ "<size=20>%</size>";
+                completionPercentage.text = itemData.CompletionPercentage.ToString("F0") + "<size=20>%</size>";
 
 
 
@@ -165,7 +165,25 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
 
 
             this.gameObject.transform.GetChild(0).transform.GetChild(1).GetComponent<Button>().onClick.AddListener(() => { itemData.BtnEvent.Invoke(); });
-            lockBtn.onClick.AddListener(() => { itemData.OnClickedLock.Invoke(); });
+
+            if (gameObjectIsClassContent)
+            {
+                int ID2 = itemData.ID;
+                lockBtn.onClick.AddListener(() =>
+                {
+                    if (itemData.ClassName == "Beginners" || itemData.ClassName == "Movers" || itemData.ClassName == "Shakers" || itemData.ClassName == "Riders" || itemData.ClassName == "Racers")
+                    {
+                        itemData.OnClickedLock[0].Invoke();
+                    }
+                    else
+                    {
+                        itemData.OnClickedLock[1].Invoke();
+
+                    }
+                });
+            }
+            else
+                lockBtn.onClick.AddListener(() => { itemData.OnClickedLock[0].Invoke(); });
 
             if (gameObjectIsBookContent)
             {
@@ -176,7 +194,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 this.gameObject.transform.GetChild(0).GetComponent<Image>().color = Color.white;
                 this.gameObject.transform.GetChild(0).GetComponent<ParticleSystem>().startColor = Color.white;
 
-               // print("name" + this.gameObject.transform.GetChild(0).gameObject.name + "   " + itemData.ID + " " + textColor[itemData.ID % 3]+ this.gameObject.transform.GetChild(0).GetComponent<Image>().color);
+                // print("name" + this.gameObject.transform.GetChild(0).gameObject.name + "   " + itemData.ID + " " + textColor[itemData.ID % 3]+ this.gameObject.transform.GetChild(0).GetComponent<Image>().color);
 
             }
 
@@ -223,5 +241,15 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
         float currentPosition = 0;
 
         void OnEnable() => UpdatePosition(currentPosition);
+
+        private void OnDisable()
+        {
+            try
+            { 
+                lockBtn.onClick.RemoveAllListeners(); 
+            }
+            catch
+            {; }
+        }
     }
 }
