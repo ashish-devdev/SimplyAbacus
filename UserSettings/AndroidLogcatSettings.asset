@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "45012743",
         "name": "com.StepByStep.SimplyAbacus",
-        "processId": 6075,
+        "processId": 12644,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -36,6 +36,18 @@
             "deviceId": "45012743",
             "name": "com.StepByStep.SimplyAbacus",
             "processId": 6075,
+            "exited": false
+        },
+        {
+            "deviceId": "45012743",
+            "name": "com.StepByStep.SimplyAbacus",
+            "processId": 12642,
+            "exited": false
+        },
+        {
+            "deviceId": "45012743",
+            "name": "com.StepByStep.SimplyAbacus",
+            "processId": 12644,
             "exited": false
         }
     ],

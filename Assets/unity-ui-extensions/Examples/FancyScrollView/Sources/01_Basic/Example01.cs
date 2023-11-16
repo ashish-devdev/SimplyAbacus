@@ -78,7 +78,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 //activity
 
                 var items = Enumerable.Range(0, TabName.Count())
-                           .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, btnEvents[i],/*cardIsIntractable[i]*/true, onClickedLock, completionPercentage[i]))
+                           .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, btnEvents[i],cardIsIntractable[i], onClickedLock, completionPercentage[i]))
                            .ToArray();
                 scrollView.UpdateData(items);
             }
@@ -88,7 +88,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 {
                     //class
                     var items = Enumerable.Range(0, TabName.Count())
-                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent,/*cardIsIntractable[i]*/true, onClickedLock, completionPercentage[i], numberImages[i % numberImages.Count].numImg1, numberImages[i % numberImages.Count].numImg2, FG_Images[i],className[i%12]))
+                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent,cardIsIntractable[i], onClickedLock, completionPercentage[i], numberImages[i % numberImages.Count].numImg1, numberImages[i % numberImages.Count].numImg2, FG_Images[i],className[i%12]))
                    .ToArray();
                     scrollView.UpdateData(items);
                 }
@@ -96,7 +96,7 @@ namespace UnityEngine.UI.Extensions.Examples.FancyScrollViewExample01
                 {
                     //book
                     var items = Enumerable.Range(0, TabName.Count())
-                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, /*cardIsIntractable[i]*/true, onClickedLock, completionPercentage[i]))
+                   .Select(i => new ItemData(/*$"Cell {i}" +*/ TabName[i], i, imgs[i], btnEvent, gameObjectIsClassContent, gameObjectIsBookContent, cardIsIntractable[i], onClickedLock, completionPercentage[i]))
                    .ToArray();
                     scrollView.UpdateData(items);
                 }

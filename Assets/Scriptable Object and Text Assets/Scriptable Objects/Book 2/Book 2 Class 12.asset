@@ -246,7 +246,7 @@ MonoBehaviour:
         active: 0
         sudokuDifficultiMode: 0
         mazeSize: 0
-    - activityName: Adding made Super Simple II
+    - activityName: Adding made Super Simple III
       iD: 02.12.03
       matchValueWithImage: []
       matchShapeWithNumbers: []

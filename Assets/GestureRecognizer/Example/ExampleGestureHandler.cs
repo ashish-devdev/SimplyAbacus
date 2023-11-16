@@ -86,6 +86,7 @@ public class ExampleGestureHandler : MonoBehaviour
         }
         references = referenceRoot.GetComponentsInChildren<GesturePatternDraw>();
         currentIndex = 0;
+        stencileImage.sprite = stencilImages[currentIndex];
         drawDetector.scoreToAccept = thresholdValue[currentIndex];
         loadingBar.Data.FillAmount = (currentIndex / (20 * 1f));
         loadingBar.BeginAllTransitions();
@@ -170,6 +171,7 @@ public class ExampleGestureHandler : MonoBehaviour
                 if (currentIndex < thresholdValue.Count)
                     drawDetector.scoreToAccept = thresholdValue[currentIndex];
                 Invoke("ClearLines", 0.6f);
+                Invoke(nameof(ShowCurrentStencilImage), 0.6f);
                 StartCoroutine(Blink(result.gesture.id));
                 if (writingWithRightIsDone)
                 {
@@ -328,6 +330,7 @@ public class ExampleGestureHandler : MonoBehaviour
         {
             stencileParent.SetActive(false);
         }
+        stencileParent.SetActive(true);
 
     }
 
@@ -366,6 +369,10 @@ public class ExampleGestureHandler : MonoBehaviour
         public List<GesturePattern> patterns;
     }
 
+    public void ShowCurrentStencilImage()
+    {
+        stencileImage.sprite = stencilImages[currentIndex % 10];
+    }
 
     public void IncrementContinuesWrongCount()
     {
@@ -376,14 +383,17 @@ public class ExampleGestureHandler : MonoBehaviour
         }
 
 
-        if (continuesWrongCount == 2)
+        if (continuesWrongCount == 1)
         {
             stencileImage.sprite = stencilImages[currentIndex % 10];
             stencileParent.SetActive(true);
 
         }
 
-        if (continuesWrongCount > 2)
+
+
+
+        if (continuesWrongCount > 1)
         {
             // currentIndex++;
             continuesWrongCount = 0;
@@ -413,6 +423,8 @@ public class ExampleGestureHandler : MonoBehaviour
             if (currentIndex < thresholdValue.Count)
                 drawDetector.scoreToAccept = thresholdValue[currentIndex];
             Invoke("ClearLines", 0.6f);
+            Invoke(nameof(ShowCurrentStencilImage), 0.6f);
+
             // StartCoroutine(Blink(result.gesture.id));
             if (writingWithRightIsDone)
             {
